@@ -1,9 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLUTImageSample", "GLUTImageSample.vcxproj", "{00032471-6C3B-4742-9E59-09B8E9533BE3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PollingSample", "PollingSample.vcxproj", "{BC40FA27-C893-4EC3-9287-5FE809563AC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{00032471-6C3B-4742-9E59-09B8E9533BE3}.Release|x64.Build.0 = Release|x64
 		{00032471-6C3B-4742-9E59-09B8E9533BE3}.Release|x86.ActiveCfg = Release|Win32
 		{00032471-6C3B-4742-9E59-09B8E9533BE3}.Release|x86.Build.0 = Release|Win32
+		{BC40FA27-C893-4EC3-9287-5FE809563AC3}.Debug|x64.ActiveCfg = Debug|x64
+		{BC40FA27-C893-4EC3-9287-5FE809563AC3}.Debug|x64.Build.0 = Debug|x64
+		{BC40FA27-C893-4EC3-9287-5FE809563AC3}.Debug|x86.ActiveCfg = Debug|Win32
+		{BC40FA27-C893-4EC3-9287-5FE809563AC3}.Debug|x86.Build.0 = Debug|Win32
+		{BC40FA27-C893-4EC3-9287-5FE809563AC3}.Release|x64.ActiveCfg = Release|x64
+		{BC40FA27-C893-4EC3-9287-5FE809563AC3}.Release|x64.Build.0 = Release|x64
+		{BC40FA27-C893-4EC3-9287-5FE809563AC3}.Release|x86.ActiveCfg = Release|Win32
+		{BC40FA27-C893-4EC3-9287-5FE809563AC3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

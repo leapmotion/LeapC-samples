@@ -22,6 +22,9 @@
     <ClCompile Include="samples\C\ExampleConnection.c" />
     <ClCompile Include="samples\C\PollingSample.c" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="samples\C\ExampleConnection.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{BC40FA27-C893-4EC3-9287-5FE809563AC3}</ProjectGuid>

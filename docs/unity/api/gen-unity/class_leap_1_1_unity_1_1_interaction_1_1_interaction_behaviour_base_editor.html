@@ -1,0 +1,551 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>InteractionBehaviourBaseEditor &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap::Unity::Interaction" href="namespace_leap_1_1_unity_1_1_interaction.html" />
+    <link rel="next" title="InteractionBrushBone" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_bone.html" />
+    <link rel="prev" title="InteractionBehaviourBase" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap_1_1_unity_1_1_interaction.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_bone.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap_1_1_unity_1_1_interaction.html" accesskey="U">Leap::Unity::Interaction</a>&raquo;
+  InteractionBehaviourBaseEditor
+</span> -->
+        
+  <div class="section" id="interactionbehaviourbaseeditor">
+<h1>InteractionBehaviourBaseEditor<a class="headerlink" href="#interactionbehaviourbaseeditor" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.Unity.Interaction.InteractionBehaviourBaseEditor Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Inherits <a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4.html">Leap.Unity.CustomEditorBase&lt; T &gt;</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9896c3f1f0e04abca622beb6e8d2d494"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html#a9896c3f1f0e04abca622beb6e8d2d494">OnInspectorGUI</a> ()</td></tr>
+<tr class="separator:a9896c3f1f0e04abca622beb6e8d2d494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a44b3c8dd7bdfc2f259e1a578d39c069d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html#a44b3c8dd7bdfc2f259e1a578d39c069d">OnEnable</a> ()</td></tr>
+<tr class="separator:a44b3c8dd7bdfc2f259e1a578d39c069d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ae6998560bdd0ecc3bdccbfe1af85c96a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html">InteractionManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html#ae6998560bdd0ecc3bdccbfe1af85c96a">_manager</a></td></tr>
+<tr class="separator:ae6998560bdd0ecc3bdccbfe1af85c96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4.html">Leap.Unity.CustomEditorBase&lt; T &gt;</a></td></tr>
+<tr class="memitem:a20eea7e492831d5b4cde7eeaf0ce749e inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4"><td class="memItemLeft" align="right" valign="top">new T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4.html#a20eea7e492831d5b4cde7eeaf0ce749e">target</a></td></tr>
+<tr class="separator:a20eea7e492831d5b4cde7eeaf0ce749e inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c7d33ed1e58869160ccc7d1a189264 inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4"><td class="memItemLeft" align="right" valign="top">new T[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4.html#ab3c7d33ed1e58869160ccc7d1a189264">targets</a></td></tr>
+<tr class="separator:ab3c7d33ed1e58869160ccc7d1a189264 inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base.html">Leap.Unity.CustomEditorBase</a></td></tr>
+<tr class="memitem:a77a273090e1bd8e51febf20a5d3c6776 inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memItemLeft" align="right" valign="top">HashSet&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base.html#a77a273090e1bd8e51febf20a5d3c6776">_beginHorizontalProperties</a></td></tr>
+<tr class="separator:a77a273090e1bd8e51febf20a5d3c6776 inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89fee7b2f381d7ad8bc73b50c5438c70 inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, List&lt; Func<br class="typebreak"/>
+&lt; bool &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base.html#a89fee7b2f381d7ad8bc73b50c5438c70">_conditionalProperties</a></td></tr>
+<tr class="separator:a89fee7b2f381d7ad8bc73b50c5438c70 inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe96db1938a49a60c41fc281034b8570 inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memItemLeft" align="right" valign="top">HashSet&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base.html#abe96db1938a49a60c41fc281034b8570">_endHorizontalProperties</a></td></tr>
+<tr class="separator:abe96db1938a49a60c41fc281034b8570 inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa07c1b890af9347fea4e1c12b236d6a inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memItemLeft" align="right" valign="top">List&lt; SerializedProperty &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base.html#aaa07c1b890af9347fea4e1c12b236d6a">_modifiedProperties</a> = new List&lt;SerializedProperty&gt;()</td></tr>
+<tr class="separator:aaa07c1b890af9347fea4e1c12b236d6a inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af804a14ad6dd64eb201ad9ee05d91b00 inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base.html#af804a14ad6dd64eb201ad9ee05d91b00">_showScriptField</a> = true</td></tr>
+<tr class="separator:af804a14ad6dd64eb201ad9ee05d91b00 inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc3732e9c94895dc160452773bb5e5fb inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, List<br class="typebreak"/>
+&lt; Action&lt; SerializedProperty &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base.html#abc3732e9c94895dc160452773bb5e5fb">_specifiedDecorators</a></td></tr>
+<tr class="separator:abc3732e9c94895dc160452773bb5e5fb inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4affc919a70f7d710d95c33e4c1f99d inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, Action<br class="typebreak"/>
+&lt; SerializedProperty &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base.html#ab4affc919a70f7d710d95c33e4c1f99d">_specifiedDrawers</a></td></tr>
+<tr class="separator:ab4affc919a70f7d710d95c33e4c1f99d inherit pro_attribs_class_leap_1_1_unity_1_1_custom_editor_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aed8430945b6a136cd32a646eb9bedbb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html#aed8430945b6a136cd32a646eb9bedbb8">managerDectorator</a> (SerializedProperty prop)</td></tr>
+<tr class="separator:aed8430945b6a136cd32a646eb9bedbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aed8430945b6a136cd32a646eb9bedbb8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.InteractionBehaviourBaseEditor.managerDectorator </td>
+          <td>(</td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>prop</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a44b3c8dd7bdfc2f259e1a578d39c069d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Leap.Unity.Interaction.InteractionBehaviourBaseEditor.OnEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4.html#a5c1183f1dd014fc6575cffdf1c03481b">Leap.Unity.CustomEditorBase&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9896c3f1f0e04abca622beb6e8d2d494"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Leap.Unity.Interaction.InteractionBehaviourBaseEditor.OnInspectorGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ae6998560bdd0ecc3bdccbfe1af85c96a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html">InteractionManager</a> Leap.Unity.Interaction.InteractionBehaviourBaseEditor._manager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_manager.html">ActivityManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_monitor.html">ActivityMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_monitor_lite.html">ActivityMonitorLite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_base_call_guard.html">BaseCallGuard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_base_not_called_exception.html">BaseNotCalledException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_begin_not_called_exception.html">BeginNotCalledException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_controller_container.html">ControllerContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_hand_array_builder.html">HandArrayBuilder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_holding_pose_controller_kabsch.html">HoldingPoseControllerKabsch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_activity_monitor.html">IActivityMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_controller_base.html">IControllerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html">IHoldingPoseController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_layer_controller.html">ILayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_move_to_controller.html">IMoveToController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_suspension_controller.html">ISuspensionController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_throwing_controller.html">IThrowingController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">InteractionBehaviourBase</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">InteractionBehaviourBaseEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_bone.html">InteractionBrushBone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_hand.html">InteractionBrushHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_grasp_detector.html">InteractionGraspDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_grasp_events.html">InteractionGraspEvents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_hand_events.html">InteractionHandEvents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html">InteractionManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_editor.html">InteractionManagerEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html">InteractionMaterial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material_editor.html">InteractionMaterialEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interactive_behavior_grasp_event.html">InteractiveBehaviorGraspEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_layer_controller_custom.html">LayerControllerCustom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_kinematic.html">MoveToControllerKinematic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_velocity.html">MoveToControllerVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_physic_material_replacer.html">PhysicMaterialReplacer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_interaction_1_1_physics_move_info.html">PhysicsMoveInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_physics_utility.html">PhysicsUtility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html">RigidbodyWarper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html">ShapeDescriptionPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_struct_allocator.html">StructAllocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_suspension_controller_default.html">SuspensionControllerDefault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_palm_velocity.html">ThrowingControllerPalmVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_sliding_window.html">ThrowingControllerSlidingWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_wrong_base_called_exception.html">WrongBaseCalledException</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

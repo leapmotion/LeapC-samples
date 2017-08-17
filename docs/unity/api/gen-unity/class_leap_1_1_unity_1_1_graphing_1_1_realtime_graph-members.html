@@ -1,0 +1,437 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>All RealtimeGraph members &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph-members.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph-members.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph-members.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph-members.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph-members.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph-members.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph-members.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph-members.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph-members.html";
+            } else {
+
+                    if( requestedAPI == 'cpp'){
+                        redirectedLocation = relPath + "cpp/index.html?proglang=cpp";
+                    }
+                    else if( requestedAPI == 'csharp'){
+                        redirectedLocation = relPath + "csharp/index.html?proglang=csharp";
+                    }
+                    else if( requestedAPI == 'unity'){
+                        redirectedLocation = relPath + "unity/index.html?proglang=unity";
+                    }
+                    else if( requestedAPI == 'objc'){
+                        redirectedLocation = relPath + "objc/index.html?proglang=objc";
+                    }
+                    else if( requestedAPI == 'java') {
+                        redirectedLocation = relPath + "java/index.html?proglang=java";
+                    }
+                    else if( requestedAPI == 'javascript'){
+                        redirectedLocation = relPath + "javascript/index.html?proglang=javascript";
+                    }
+                    else if( requestedAPI == 'python'){
+                        redirectedLocation = relPath + "python/index.html?proglang=python";
+                    }
+                    else if( requestedAPI == 'unreal') {
+                        redirectedLocation = relPath + "unreal/index.html?proglang=unreal";
+                    } else {
+                        redirectedLocation = relPath + "index.html";
+                    }
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph-members.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){    }
+    else if( character == "K" & e.altKey){
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../../javascript/index.html?proglang=javascript" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../../csharp/index.html?proglang=csharp" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../../cpp/index.html?proglang=cpp" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../../java/index.html?proglang=java" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../../python/index.html?proglang=python" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../../objc/index.html?proglang=objc" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../../unreal/index.html?proglang=unreal" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+  All RealtimeGraph members
+</span> -->
+        
+  <div class="section" id="all-realtimegraph-members">
+<h1>All RealtimeGraph members<a class="headerlink" href="#all-realtimegraph-members" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Leap.Unity.Graphing.RealtimeGraph Member List</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is the complete list of members for <a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#ac3f50ccb30702dc1537880e1df8f63bf">_cachedInstance</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#adcbe69721a7c3014dec19cea2bf3c76f">_colors</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a5950fc2084ca7dee54da7a0cfd8b56b3">_currentGraph</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#af3f21584fdf6266b116dc93f9c0ed427">_currentGraphStack</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a4d4257051487cba9e24000e54d97d551">_defaultGraph</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a5fbbdc656fd75c1bec29dd65deda9a53">_deltaLineSpacing</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a2bf49b21608cb2f9ffd768cfcd60e082">_fixedTicks</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#afbd899a4da143f4e4e0a906db9a3c59a">_framerateLineSpacing</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a56e66eb4f353a3a52e9ffba6e61f0bfa">_graphMode</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a5a823f33c56a8f4caf75d052dcf6d164">_graphRenderer</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a464b65389c0d306bc83c63a54ea1d452">_graphs</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#aa24125e2b773746f867ba1b1f9ef2d3f">_historyLength</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a4fc058803b5019829b2ad9b9b4e09a13">_keyBuffer</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a8709575a34d6179bccfbece7f81d7a29">_maxSmoothingDelay</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a52cadf64921d1dc3c65100b7e31d1239">_paused</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a348b4cbb1dcbbbbc38960e92cf2df9b3">_preCullTicks</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a62771c6bba3b8ab0bc54713776e0e4dc">_provider</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a7627231ecd8599ebc1ee49209576df1a">_renderTicks</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a437e7588b27a922805e4eeae1b1ee6ce">_sampleIndex</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#ad0edde69606e52451c62c91f5ddefa0e">_samplesPerFrame</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#ad02de8be7f9ebb5060d1ae0d8079abfc">_smoothedMax</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#ae023476df8f49870ccf2938b08777791">_smoothedValue</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#ab589271c95a231b7bd040910da07dbe6">_stopwatch</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#ae68b17ba5f52deb6dd15ce91e9a9e55f">_texture</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a415aeb06698ba66791be1d146dca04e3">_updateCount</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#ac4a2ce4854ecd3f82ddb20bcb458512c">_updatePeriod</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#ac36c550bb34586c883fe786f805bedb2">_valueSmoothingDelay</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a8a9c78c10d42c111e5d718ce80930ca3">addCallback</a>(Button button, string name)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#ad01c64326766708e4e8006d43114fe4e">AddSample</a>(string sampleName, GraphUnits units, long ticks)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a51867b685f0d3bbcbe45743085e86469">AddSample</a>(string sampleName, GraphUnits units, float ms)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a8693769ad964547e647b26ca986e3f27">Awake</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#ab7c25cbda013c2e2303d6e84f3b9e05e">BatchSizeFloat</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#aa483b792b35150c5f8af56602eb26317">BeginSample</a>(GraphKey key)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a104917d0e88d77eaab413f2a2d5d97a4">BeginSample</a>(string sampleName, GraphUnits units)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#aee748dfd3f02634e9ae2fd7846f80b80">customGraphPrefab</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a84b63b3be5b29b64386b349714df67ae">endOfFrameWaiter</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a5f19752df694d8e9ffaecf351064f4cc">EndSample</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a1c136b077577fe3f75bade90c179bc3a">FixedUpdate</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a2943d79b4ff15eabd9ea863df54e73c7">getGraph</a>(string name, GraphUnits units)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a450cc18de7587db11d960bf28f76290e">getGraphSpacing</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a853293ae903b951eee8e4b4cab12faa6">GraphMode</a> enum name</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a2cc22390c90e6b6c413e9aaa85e561ca">GraphModeFloat</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#aa580e44ec46321809676f44489fe5f24">GraphUnits</a> enum name</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a315cc8e0a432ced389e9f0df2c41d38d">Instance</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a114f09fe36719cb8908625dd368c7636">msToString</a>(float ms)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a2c1fa72a6aa64df2fe9972c0facbeace">msToTicks</a>(float ms)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#aa4e11a93aebac27fbfb489bf3b31231d">OnDisable</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#abe96fb4d56b62bd2d52d3fd16f538cf6">OnEnable</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a95886eb95d356cad23bfb97231ced62f">onPostRender</a>(Camera camera)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a7f0800c6ad074cddc0d318be1296ad39">onPreCull</a>(Camera camera)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#aefb672d3e3ddc61ae54fd93c532733cb">OnValidate</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#afd6f69ed9e20210b15314e390e97da26">replayKeys</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a2633d496c7b21e9a1c213b16887c46b9">Start</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a31d5d808df02fda805a5f8abb4d247ea">SwtichGraph</a>(string graphName)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a6568c06c829bd7b62a48d2f8462b1614">ticksToMs</a>(long ticks)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a2f338b2cb42395e6915bad222d3c213f">titleLabel</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a7c9aa3bc60231d45762fbc62ecfe1e72">TogglePaused</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a8619cb4a40b3bde11ba095b49600bb68">Update</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#ae8a862d9f8a41e28d94fe33780515b8f">UpdatePeriodFloat</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a86b73700b039579c44b6dabcfcebcc28">UpdateTexture</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html#a47a0f3e3478b282c8fb973bb63e083d6">valueMesh</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_graphing_1_1_realtime_graph.html">Leap.Unity.Graphing.RealtimeGraph</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+</table></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

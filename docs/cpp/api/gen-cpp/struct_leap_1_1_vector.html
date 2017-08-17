@@ -1,0 +1,1813 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Vector &mdash; Leap Motion C++ SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion C++ SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="Appendices" href="../../supplements/Leap_Supplements.html" />
+    <link rel="prev" title="ToolList" href="class_leap_1_1_tool_list.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'cpp';
+    var hasAPI = {};
+    hasAPI.cpp = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'cpp/api/gen-cpp/struct_leap_1_1_vector.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-cpp/struct_leap_1_1_vector.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-cpp/struct_leap_1_1_vector.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-cpp/struct_leap_1_1_vector.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-cpp/struct_leap_1_1_vector.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-cpp/struct_leap_1_1_vector.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-cpp/struct_leap_1_1_vector.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-cpp/struct_leap_1_1_vector.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-cpp/struct_leap_1_1_vector.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'cpp/api/gen-cpp/struct_leap_1_1_vector.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_tool_list.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("../../supplements/Leap_Supplements.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      C++
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  Vector
+</span> -->
+        
+  <div class="section" id="vector">
+<h1>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('struct_leap_1_1_vector.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="struct_leap_1_1_vector-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Vector Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> struct represents a three-component mathematical vector or point such as a direction or position in three-dimensional space.  
+ <a href="struct_leap_1_1_vector.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a3366e3f5f75fcfea031480906d2ebb71"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a3366e3f5f75fcfea031480906d2ebb71">angleTo</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;other) const </td></tr>
+<tr class="memdesc:a3366e3f5f75fcfea031480906d2ebb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">The angle between this vector and the specified vector in radians.  <a href="#a3366e3f5f75fcfea031480906d2ebb71">More...</a><br /></td></tr>
+<tr class="separator:a3366e3f5f75fcfea031480906d2ebb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599efb080a246fcba4c92c5220b19213"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a599efb080a246fcba4c92c5220b19213">cross</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;other) const </td></tr>
+<tr class="memdesc:a599efb080a246fcba4c92c5220b19213"><td class="mdescLeft">&#160;</td><td class="mdescRight">The cross product of this vector and the specified vector.  <a href="#a599efb080a246fcba4c92c5220b19213">More...</a><br /></td></tr>
+<tr class="separator:a599efb080a246fcba4c92c5220b19213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3de6a1bd7d39d48ab8ab3a339d876ea"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#ac3de6a1bd7d39d48ab8ab3a339d876ea">distanceTo</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;other) const </td></tr>
+<tr class="memdesc:ac3de6a1bd7d39d48ab8ab3a339d876ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance between the point represented by this <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object and a point represented by the specified <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object.  <a href="#ac3de6a1bd7d39d48ab8ab3a339d876ea">More...</a><br /></td></tr>
+<tr class="separator:ac3de6a1bd7d39d48ab8ab3a339d876ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0ad288a495233876e3b303756b6cfc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a6f0ad288a495233876e3b303756b6cfc">dot</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;other) const </td></tr>
+<tr class="memdesc:a6f0ad288a495233876e3b303756b6cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dot product of this vector with another vector.  <a href="#a6f0ad288a495233876e3b303756b6cfc">More...</a><br /></td></tr>
+<tr class="separator:a6f0ad288a495233876e3b303756b6cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a> () const </td></tr>
+<tr class="memdesc:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if all of the vector's components are finite.  <a href="#aac1b70a2ed67ead038c4d3f5ac4d8a81">More...</a><br /></td></tr>
+<tr class="separator:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac34716ef012faaabb24c1c8537d0b7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a0ac34716ef012faaabb24c1c8537d0b7">magnitude</a> () const </td></tr>
+<tr class="memdesc:a0ac34716ef012faaabb24c1c8537d0b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The magnitude, or length, of this vector.  <a href="#a0ac34716ef012faaabb24c1c8537d0b7">More...</a><br /></td></tr>
+<tr class="separator:a0ac34716ef012faaabb24c1c8537d0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6503a78d2f98caa161185e18ecb7c232"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a6503a78d2f98caa161185e18ecb7c232">magnitudeSquared</a> () const </td></tr>
+<tr class="memdesc:a6503a78d2f98caa161185e18ecb7c232"><td class="mdescLeft">&#160;</td><td class="mdescRight">The square of the magnitude, or length, of this vector.  <a href="#a6503a78d2f98caa161185e18ecb7c232">More...</a><br /></td></tr>
+<tr class="separator:a6503a78d2f98caa161185e18ecb7c232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3539481e3dc2d2ace49885ff466cb5f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a3539481e3dc2d2ace49885ff466cb5f4">normalized</a> () const </td></tr>
+<tr class="memdesc:a3539481e3dc2d2ace49885ff466cb5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A normalized copy of this vector.  <a href="#a3539481e3dc2d2ace49885ff466cb5f4">More...</a><br /></td></tr>
+<tr class="separator:a3539481e3dc2d2ace49885ff466cb5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16a9b1bc166dc07b235fcb54bba5e5cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a16a9b1bc166dc07b235fcb54bba5e5cb">operator!=</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;other) const </td></tr>
+<tr class="memdesc:a16a9b1bc166dc07b235fcb54bba5e5cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> inequality component-wise.  <a href="#a16a9b1bc166dc07b235fcb54bba5e5cb">More...</a><br /></td></tr>
+<tr class="separator:a16a9b1bc166dc07b235fcb54bba5e5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7912c64f544b15a50238c3e2572ae37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#ad7912c64f544b15a50238c3e2572ae37">operator*</a> (float scalar) const </td></tr>
+<tr class="memdesc:ad7912c64f544b15a50238c3e2572ae37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply vector by a scalar.  <a href="#ad7912c64f544b15a50238c3e2572ae37">More...</a><br /></td></tr>
+<tr class="separator:ad7912c64f544b15a50238c3e2572ae37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80142bfae707296d9e3c29f7f95dc682"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a80142bfae707296d9e3c29f7f95dc682">operator*=</a> (float scalar)</td></tr>
+<tr class="memdesc:a80142bfae707296d9e3c29f7f95dc682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply vector by a scalar and assign the product.  <a href="#a80142bfae707296d9e3c29f7f95dc682">More...</a><br /></td></tr>
+<tr class="separator:a80142bfae707296d9e3c29f7f95dc682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1cf015d856ef3399812497351d5f15b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#ae1cf015d856ef3399812497351d5f15b">operator+</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;other) const </td></tr>
+<tr class="memdesc:ae1cf015d856ef3399812497351d5f15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add vectors component-wise.  <a href="#ae1cf015d856ef3399812497351d5f15b">More...</a><br /></td></tr>
+<tr class="separator:ae1cf015d856ef3399812497351d5f15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a550d943a94093148ac72f536c7d64f2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a550d943a94093148ac72f536c7d64f2f">operator+=</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;other)</td></tr>
+<tr class="memdesc:a550d943a94093148ac72f536c7d64f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add vectors component-wise and assign the sum.  <a href="#a550d943a94093148ac72f536c7d64f2f">More...</a><br /></td></tr>
+<tr class="separator:a550d943a94093148ac72f536c7d64f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a729f1353c878b3c9ba3887e396f3d0a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a729f1353c878b3c9ba3887e396f3d0a5">operator-</a> () const </td></tr>
+<tr class="memdesc:a729f1353c878b3c9ba3887e396f3d0a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A copy of this vector pointing in the opposite direction.  <a href="#a729f1353c878b3c9ba3887e396f3d0a5">More...</a><br /></td></tr>
+<tr class="separator:a729f1353c878b3c9ba3887e396f3d0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a218c71e8a631ac0216c1e51f47f8dbe6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a218c71e8a631ac0216c1e51f47f8dbe6">operator-</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;other) const </td></tr>
+<tr class="memdesc:a218c71e8a631ac0216c1e51f47f8dbe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract vectors component-wise.  <a href="#a218c71e8a631ac0216c1e51f47f8dbe6">More...</a><br /></td></tr>
+<tr class="separator:a218c71e8a631ac0216c1e51f47f8dbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ed20f2ed0990b2575589608c196396"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a21ed20f2ed0990b2575589608c196396">operator-=</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;other)</td></tr>
+<tr class="memdesc:a21ed20f2ed0990b2575589608c196396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract vectors component-wise and assign the difference.  <a href="#a21ed20f2ed0990b2575589608c196396">More...</a><br /></td></tr>
+<tr class="separator:a21ed20f2ed0990b2575589608c196396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fefa4a33b87e5afe845007dc0539b25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a5fefa4a33b87e5afe845007dc0539b25">operator/</a> (float scalar) const </td></tr>
+<tr class="memdesc:a5fefa4a33b87e5afe845007dc0539b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide vector by a scalar.  <a href="#a5fefa4a33b87e5afe845007dc0539b25">More...</a><br /></td></tr>
+<tr class="separator:a5fefa4a33b87e5afe845007dc0539b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa50cf0ce7595612a5c02d166a995e847"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#aa50cf0ce7595612a5c02d166a995e847">operator/=</a> (float scalar)</td></tr>
+<tr class="memdesc:aa50cf0ce7595612a5c02d166a995e847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide vector by a scalar and assign the quotient.  <a href="#aa50cf0ce7595612a5c02d166a995e847">More...</a><br /></td></tr>
+<tr class="separator:aa50cf0ce7595612a5c02d166a995e847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7245886525537077899b47c783e692d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a7245886525537077899b47c783e692d8">operator==</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;other) const </td></tr>
+<tr class="memdesc:a7245886525537077899b47c783e692d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> equality component-wise.  <a href="#a7245886525537077899b47c783e692d8">More...</a><br /></td></tr>
+<tr class="separator:a7245886525537077899b47c783e692d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac505a1750ebc32460056b780c20b0e08"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#ac505a1750ebc32460056b780c20b0e08">operator[]</a> (unsigned int index) const </td></tr>
+<tr class="memdesc:ac505a1750ebc32460056b780c20b0e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index vector components numerically.  <a href="#ac505a1750ebc32460056b780c20b0e08">More...</a><br /></td></tr>
+<tr class="separator:ac505a1750ebc32460056b780c20b0e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4363cf3fd3813ebd5f143073e7019c39"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a4363cf3fd3813ebd5f143073e7019c39">pitch</a> () const </td></tr>
+<tr class="memdesc:a4363cf3fd3813ebd5f143073e7019c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pitch angle in radians.  <a href="#a4363cf3fd3813ebd5f143073e7019c39">More...</a><br /></td></tr>
+<tr class="separator:a4363cf3fd3813ebd5f143073e7019c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8fa97753489849034ed0f6b55c92681"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#ad8fa97753489849034ed0f6b55c92681">roll</a> () const </td></tr>
+<tr class="memdesc:ad8fa97753489849034ed0f6b55c92681"><td class="mdescLeft">&#160;</td><td class="mdescRight">The roll angle in radians.  <a href="#ad8fa97753489849034ed0f6b55c92681">More...</a><br /></td></tr>
+<tr class="separator:ad8fa97753489849034ed0f6b55c92681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab70f267fb314be5a2f0f203e6845157d"><td class="memItemLeft" align="right" valign="top">const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#ab70f267fb314be5a2f0f203e6845157d">toFloatPointer</a> () const </td></tr>
+<tr class="memdesc:ab70f267fb314be5a2f0f203e6845157d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast the vector to a float array.  <a href="#ab70f267fb314be5a2f0f203e6845157d">More...</a><br /></td></tr>
+<tr class="separator:ab70f267fb314be5a2f0f203e6845157d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a> () const </td></tr>
+<tr class="memdesc:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string containing this vector in a human readable format: (x, y, z).  <a href="#a3f23c97b6c9f2a88e1121d1c633ccafa">More...</a><br /></td></tr>
+<tr class="separator:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3080765fd4b21d1a53b782b0d5cf99bf"><td class="memTemplParams" colspan="2">template&lt;typename Vector3Type &gt; </td></tr>
+<tr class="memitem:a3080765fd4b21d1a53b782b0d5cf99bf"><td class="memTemplItemLeft" align="right" valign="top">const Vector3Type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a3080765fd4b21d1a53b782b0d5cf99bf">toVector3</a> () const </td></tr>
+<tr class="memdesc:a3080765fd4b21d1a53b782b0d5cf99bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Leap::Vector</a> to another 3-component <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> type.  <a href="#a3080765fd4b21d1a53b782b0d5cf99bf">More...</a><br /></td></tr>
+<tr class="separator:a3080765fd4b21d1a53b782b0d5cf99bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1381a73f3c8445bea23a744fd0161d"><td class="memTemplParams" colspan="2">template&lt;typename Vector4Type &gt; </td></tr>
+<tr class="memitem:a3b1381a73f3c8445bea23a744fd0161d"><td class="memTemplItemLeft" align="right" valign="top">const Vector4Type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a3b1381a73f3c8445bea23a744fd0161d">toVector4</a> (float w=0.0f) const </td></tr>
+<tr class="memdesc:a3b1381a73f3c8445bea23a744fd0161d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Leap::Vector</a> to another 4-component <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> type.  <a href="#a3b1381a73f3c8445bea23a744fd0161d">More...</a><br /></td></tr>
+<tr class="separator:a3b1381a73f3c8445bea23a744fd0161d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df026156780bc0ca651c342b7d6daa4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> ()</td></tr>
+<tr class="memdesc:a4df026156780bc0ca651c342b7d6daa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> with all components set to zero.  <a href="#a4df026156780bc0ca651c342b7d6daa4">More...</a><br /></td></tr>
+<tr class="separator:a4df026156780bc0ca651c342b7d6daa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a781d0ab346c40cb3b3c6ee550b933acd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a781d0ab346c40cb3b3c6ee550b933acd">Vector</a> (float _x, float _y, float _z)</td></tr>
+<tr class="memdesc:a781d0ab346c40cb3b3c6ee550b933acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> with the specified component values.  <a href="#a781d0ab346c40cb3b3c6ee550b933acd">More...</a><br /></td></tr>
+<tr class="separator:a781d0ab346c40cb3b3c6ee550b933acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf9375f5308b51ded585cae747683c7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#adf9375f5308b51ded585cae747683c7c">Vector</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;vector)</td></tr>
+<tr class="memdesc:adf9375f5308b51ded585cae747683c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the specified <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a>.  <a href="#adf9375f5308b51ded585cae747683c7c">More...</a><br /></td></tr>
+<tr class="separator:adf9375f5308b51ded585cae747683c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0f2058889f54c4ff25abcb5b1832e7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a1e0f2058889f54c4ff25abcb5b1832e7">yaw</a> () const </td></tr>
+<tr class="memdesc:a1e0f2058889f54c4ff25abcb5b1832e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The yaw angle in radians.  <a href="#a1e0f2058889f54c4ff25abcb5b1832e7">More...</a><br /></td></tr>
+<tr class="separator:a1e0f2058889f54c4ff25abcb5b1832e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae084ec9cf179e9e8d01f6297e66c768f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#ae084ec9cf179e9e8d01f6297e66c768f">backward</a> ()</td></tr>
+<tr class="memdesc:ae084ec9cf179e9e8d01f6297e66c768f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing backward along the positive z-axis: (0, 0, 1)  <a href="#ae084ec9cf179e9e8d01f6297e66c768f">More...</a><br /></td></tr>
+<tr class="separator:ae084ec9cf179e9e8d01f6297e66c768f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32069cc97b17596ab906f89843aef61f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a32069cc97b17596ab906f89843aef61f">down</a> ()</td></tr>
+<tr class="memdesc:a32069cc97b17596ab906f89843aef61f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing down along the negative y-axis: (0, -1, 0)  <a href="#a32069cc97b17596ab906f89843aef61f">More...</a><br /></td></tr>
+<tr class="separator:a32069cc97b17596ab906f89843aef61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5533572841b9877bea508bb7e105392f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a5533572841b9877bea508bb7e105392f">forward</a> ()</td></tr>
+<tr class="memdesc:a5533572841b9877bea508bb7e105392f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing forward along the negative z-axis: (0, 0, -1)  <a href="#a5533572841b9877bea508bb7e105392f">More...</a><br /></td></tr>
+<tr class="separator:a5533572841b9877bea508bb7e105392f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac962f49157c628c75a99ed7d8e2be6cd"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#ac962f49157c628c75a99ed7d8e2be6cd">left</a> ()</td></tr>
+<tr class="memdesc:ac962f49157c628c75a99ed7d8e2be6cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing left along the negative x-axis: (-1, 0, 0)  <a href="#ac962f49157c628c75a99ed7d8e2be6cd">More...</a><br /></td></tr>
+<tr class="separator:ac962f49157c628c75a99ed7d8e2be6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45aeb3eada5ad062300bc9381abbc06d"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a45aeb3eada5ad062300bc9381abbc06d">right</a> ()</td></tr>
+<tr class="memdesc:a45aeb3eada5ad062300bc9381abbc06d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing right along the positive x-axis: (1, 0, 0)  <a href="#a45aeb3eada5ad062300bc9381abbc06d">More...</a><br /></td></tr>
+<tr class="separator:a45aeb3eada5ad062300bc9381abbc06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f07045c80d08733035217e015138fe"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a62f07045c80d08733035217e015138fe">up</a> ()</td></tr>
+<tr class="memdesc:a62f07045c80d08733035217e015138fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing up along the positive y-axis: (0, 1, 0)  <a href="#a62f07045c80d08733035217e015138fe">More...</a><br /></td></tr>
+<tr class="separator:a62f07045c80d08733035217e015138fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae644750c6bca9dd9949fe8dfab2838"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#acae644750c6bca9dd9949fe8dfab2838">xAxis</a> ()</td></tr>
+<tr class="memdesc:acae644750c6bca9dd9949fe8dfab2838"><td class="mdescLeft">&#160;</td><td class="mdescRight">The x-axis unit vector: (1, 0, 0)  <a href="#acae644750c6bca9dd9949fe8dfab2838">More...</a><br /></td></tr>
+<tr class="separator:acae644750c6bca9dd9949fe8dfab2838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72392cdfddd5dcf24ebd0fc737fb709e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a72392cdfddd5dcf24ebd0fc737fb709e">yAxis</a> ()</td></tr>
+<tr class="memdesc:a72392cdfddd5dcf24ebd0fc737fb709e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The y-axis unit vector: (0, 1, 0)  <a href="#a72392cdfddd5dcf24ebd0fc737fb709e">More...</a><br /></td></tr>
+<tr class="separator:a72392cdfddd5dcf24ebd0fc737fb709e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8fd8445341e510e049c1355d4f6691"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a1d8fd8445341e510e049c1355d4f6691">zAxis</a> ()</td></tr>
+<tr class="memdesc:a1d8fd8445341e510e049c1355d4f6691"><td class="mdescLeft">&#160;</td><td class="mdescRight">The z-axis unit vector: (0, 0, 1)  <a href="#a1d8fd8445341e510e049c1355d4f6691">More...</a><br /></td></tr>
+<tr class="separator:a1d8fd8445341e510e049c1355d4f6691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595532e58e7dd474661546d46cc69bfa"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#a595532e58e7dd474661546d46cc69bfa">zero</a> ()</td></tr>
+<tr class="memdesc:a595532e58e7dd474661546d46cc69bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The zero vector: (0, 0, 0)  <a href="#a595532e58e7dd474661546d46cc69bfa">More...</a><br /></td></tr>
+<tr class="separator:a595532e58e7dd474661546d46cc69bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ad0da36b2558901e21e7a30f6c227a45e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></td></tr>
+<tr class="memdesc:ad0da36b2558901e21e7a30f6c227a45e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The horizontal component.  <a href="#ad0da36b2558901e21e7a30f6c227a45e">More...</a><br /></td></tr>
+<tr class="separator:ad0da36b2558901e21e7a30f6c227a45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f0d3eebc3c443f9be81bf48561a217"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></td></tr>
+<tr class="memdesc:aa4f0d3eebc3c443f9be81bf48561a217"><td class="mdescLeft">&#160;</td><td class="mdescRight">The vertical component.  <a href="#aa4f0d3eebc3c443f9be81bf48561a217">More...</a><br /></td></tr>
+<tr class="separator:aa4f0d3eebc3c443f9be81bf48561a217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73583b1e980b0aa03f9884812e9fd4d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#af73583b1e980b0aa03f9884812e9fd4d">z</a></td></tr>
+<tr class="memdesc:af73583b1e980b0aa03f9884812e9fd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The depth component.  <a href="#af73583b1e980b0aa03f9884812e9fd4d">More...</a><br /></td></tr>
+<tr class="separator:af73583b1e980b0aa03f9884812e9fd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ae295e87eb813266c27e75d2809df2acc"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html#ae295e87eb813266c27e75d2809df2acc">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;vector)</td></tr>
+<tr class="memdesc:ae295e87eb813266c27e75d2809df2acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the vector to the output stream using a human readable format: (x, y, z).  <a href="#ae295e87eb813266c27e75d2809df2acc">More...</a><br /></td></tr>
+<tr class="separator:ae295e87eb813266c27e75d2809df2acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> struct represents a three-component mathematical vector or point such as a direction or position in three-dimensional space. </p>
+<p>The <a class="el" href="namespace_leap.html">Leap</a> Motion software employs a right-handed Cartesian coordinate system. Values given are in units of real-world millimeters. The origin is centered at the center of the <a class="el" href="namespace_leap.html">Leap</a> Motion <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>. The x- and z-axes lie in the horizontal plane, with the x-axis running parallel to the long edge of the device. The y-axis is vertical, with positive values increasing upwards (in contrast to the downward orientation of most computer graphics coordinate systems). The z-axis has positive values increasing away from the computer screen.</p>
+<div class="image">
+<img src="Leap_Axes.png" alt="Leap_Axes.png"/>
+</div>
+ <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4df026156780bc0ca651c342b7d6daa4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> with all components set to zero. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a781d0ab346c40cb3b3c6ee550b933acd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> with the specified component values. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> newVector = <a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a>(0.5, 200.3, 67);</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adf9375f5308b51ded585cae747683c7c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copies the specified <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a>. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> copiedVector = <a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a>(otherVector);</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a3366e3f5f75fcfea031480906d2ebb71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float angleTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The angle between this vector and the specified vector in radians. </p>
+<p>The angle is measured in the plane formed by the two vectors. The angle returned is always the smaller of the two conjugate angles. Thus <code>A.angleTo(B) == B.angleTo(A)</code> and is always a positive value less than or equal to pi radians (180 degrees).</p>
+<p>If either vector has zero length, then this function returns zero.</p>
+<div class="image">
+<img src="Math_AngleTo.png" alt="Math_AngleTo.png"/>
+</div>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> angleInRadians = <a class="code" href="struct_leap_1_1_vector.html#acae644750c6bca9dd9949fe8dfab2838">Vector::xAxis</a>().<a class="code" href="struct_leap_1_1_vector.html#a3366e3f5f75fcfea031480906d2ebb71">angleTo</a>(<a class="code" href="struct_leap_1_1_vector.html#a72392cdfddd5dcf24ebd0fc737fb709e">Vector::yAxis</a>());</div>
+<div class="line"><span class="comment">// angleInRadians is PI/2 (90 degrees) -- the angle between the x and y axes</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The angle between this vector and the specified vector in radians. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae084ec9cf179e9e8d01f6297e66c768f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; backward </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing backward along the positive z-axis: (0, 0, 1) </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> backwardVector = <a class="code" href="struct_leap_1_1_vector.html#ae084ec9cf179e9e8d01f6297e66c768f">Vector::backward</a>();</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a599efb080a246fcba4c92c5220b19213"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> cross </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The cross product of this vector and the specified vector. </p>
+<p>The cross product is a vector orthogonal to both original vectors. It has a magnitude equal to the area of a parallelogram having the two vectors as sides. The direction of the returned vector is determined by the right-hand rule. Thus <code>A.cross(B) == -B.cross(A).</code></p>
+<div class="image">
+<img src="Math_Cross.png" alt="Math_Cross.png"/>
+</div>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> crossProduct = thisVector.cross(thatVector);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The cross product of this vector and the specified vector. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac3de6a1bd7d39d48ab8ab3a339d876ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float distanceTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The distance between the point represented by this <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object and a point represented by the specified <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> aPoint = <a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a>(10, 0, 0);</div>
+<div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> origin = <a class="code" href="struct_leap_1_1_vector.html#a595532e58e7dd474661546d46cc69bfa">Vector::zero</a>();</div>
+<div class="line"><span class="keywordtype">float</span> distance = origin.distanceTo(aPoint); <span class="comment">// distance = 10</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The distance from this point to the specified point. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6f0ad288a495233876e3b303756b6cfc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float dot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The dot product of this vector with another vector. </p>
+<p>The dot product is the magnitude of the projection of this vector onto the specified vector.</p>
+<div class="image">
+<img src="Math_Dot.png" alt="Math_Dot.png"/>
+</div>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> dotProduct = thisVector.dot(thatVector);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The dot product of this vector and the specified vector. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a32069cc97b17596ab906f89843aef61f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; down </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing down along the negative y-axis: (0, -1, 0) </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> downVector = <a class="code" href="struct_leap_1_1_vector.html#a32069cc97b17596ab906f89843aef61f">Vector::down</a>();</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5533572841b9877bea508bb7e105392f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; forward </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing forward along the negative z-axis: (0, 0, -1) </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> forwardVector = <a class="code" href="struct_leap_1_1_vector.html#a5533572841b9877bea508bb7e105392f">Vector::forward</a>();</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac1b70a2ed67ead038c4d3f5ac4d8a81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if all of the vector's components are finite. </p>
+<p>If any component is NaN or infinite, then this returns false.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> vectorIsValid = thisVector.isValid();</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac962f49157c628c75a99ed7d8e2be6cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; left </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing left along the negative x-axis: (-1, 0, 0) </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> leftVector = <a class="code" href="struct_leap_1_1_vector.html#ac962f49157c628c75a99ed7d8e2be6cd">Vector::left</a>();</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0ac34716ef012faaabb24c1c8537d0b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float magnitude </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The magnitude, or length, of this vector. </p>
+<p>The magnitude is the L2 norm, or Euclidean distance between the origin and the point represented by the (x, y, z) components of this <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> length = thisVector.magnitude();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The length of this vector. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6503a78d2f98caa161185e18ecb7c232"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float magnitudeSquared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The square of the magnitude, or length, of this vector. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> lengthSquared = thisVector.magnitudeSquared();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The square of the length of this vector. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3539481e3dc2d2ace49885ff466cb5f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> normalized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A normalized copy of this vector. </p>
+<p>A normalized vector has the same direction as the original vector, but with a length of one.</p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> normalizedVector = otherVector.normalized();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object with a length of one, pointing in the same direction as this <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a16a9b1bc166dc07b235fcb54bba5e5cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> inequality component-wise. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> vectorsNotEqual = thisVector != thatVector;</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad7912c64f544b15a50238c3e2572ae37"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Multiply vector by a scalar. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> product = thisVector * 5.0;</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a80142bfae707296d9e3c29f7f95dc682"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Multiply vector by a scalar and assign the product. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae1cf015d856ef3399812497351d5f15b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add vectors component-wise. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> sum = thisVector + thatVector;</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a550d943a94093148ac72f536c7d64f2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add vectors component-wise and assign the sum. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a729f1353c878b3c9ba3887e396f3d0a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> operator- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A copy of this vector pointing in the opposite direction. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> negation = -thisVector;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> object with all components negated. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a218c71e8a631ac0216c1e51f47f8dbe6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subtract vectors component-wise. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> difference = thisVector - thatVector;</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a21ed20f2ed0990b2575589608c196396"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subtract vectors component-wise and assign the difference. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5fefa4a33b87e5afe845007dc0539b25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> operator/ </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Divide vector by a scalar. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> quotient = thisVector/2.5;</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa50cf0ce7595612a5c02d166a995e847"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; operator/= </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Divide vector by a scalar and assign the quotient. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7245886525537077899b47c783e692d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> equality component-wise. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> vectorsAreEqual = thisVector == thatVector;</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac505a1750ebc32460056b780c20b0e08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float operator[] </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Index vector components numerically. </p>
+<p>Index 0 is x, index 1 is y, and index 2 is z. </p><dl class="section return"><dt>Returns</dt><dd>The x, y, or z component of this <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a>, if the specified index value is at least 0 and at most 2; otherwise, returns zero.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> <a class="code" href="struct_leap_1_1_vector.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> = thisVector[0];</div>
+<div class="line"><span class="keywordtype">float</span> <a class="code" href="struct_leap_1_1_vector.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> = thisVector[1];</div>
+<div class="line"><span class="keywordtype">float</span> <a class="code" href="struct_leap_1_1_vector.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> = thisVector[2];</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4363cf3fd3813ebd5f143073e7019c39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float pitch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The pitch angle in radians. </p>
+<p>Pitch is the angle between the negative z-axis and the projection of the vector onto the y-z plane. In other words, pitch represents rotation around the x-axis. If the vector points upward, the returned angle is between 0 and pi radians (180 degrees); if it points downward, the angle is between 0 and -pi radians.</p>
+<div class="image">
+<img src="Math_Pitch_Angle.png" alt="Math_Pitch_Angle.png"/>
+</div>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> pitchInRadians = thisVector.pitch();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The angle of this vector above or below the horizon (x-z plane). </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a45aeb3eada5ad062300bc9381abbc06d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; right </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing right along the positive x-axis: (1, 0, 0) </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> rightVector = <a class="code" href="struct_leap_1_1_vector.html#a45aeb3eada5ad062300bc9381abbc06d">Vector::right</a>();</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8fa97753489849034ed0f6b55c92681"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float roll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The roll angle in radians. </p>
+<p>Roll is the angle between the y-axis and the projection of the vector onto the x-y plane. In other words, roll represents rotation around the z-axis. If the vector points to the left of the y-axis, then the returned angle is between 0 and pi radians (180 degrees); if it points to the right, the angle is between 0 and -pi radians.</p>
+<div class="image">
+<img src="Math_Roll_Angle.png" alt="Math_Roll_Angle.png"/>
+</div>
+<p>Use this function to get roll angle of the plane to which this vector is a normal. For example, if this vector represents the normal to the palm, then this function returns the tilt or roll of the palm plane compared to the horizontal (x-z) plane.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> rollInRadians = thatVector.roll();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The angle of this vector to the right or left of the y-axis. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab70f267fb314be5a2f0f203e6845157d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float* toFloatPointer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cast the vector to a float array. </p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">float</span> *vectorData = thisVector.toFloatPointer();</div>
+<div class="line"><span class="keywordtype">float</span> x = *vectorData;</div>
+<div class="line"><span class="keywordtype">float</span> y = *(++vectorData);</div>
+<div class="line"><span class="keywordtype">float</span> z = *(++vectorData);</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f23c97b6c9f2a88e1121d1c633ccafa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a string containing this vector in a human readable format: (x, y, z). </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3080765fd4b21d1a53b782b0d5cf99bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Vector3Type toVector3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert a <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Leap::Vector</a> to another 3-component <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> type. </p>
+<p>The specified type must define a constructor that takes the x, y, and z components as separate parameters. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b1381a73f3c8445bea23a744fd0161d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Vector4Type toVector4 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em> = <code>0.0f</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert a <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Leap::Vector</a> to another 4-component <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> type. </p>
+<p>The specified type must define a constructor that takes the x, y, z, and w components as separate parameters. (The homogeneous coordinate, w, is set to zero by default, but you should typically set it to one for vectors representing a position.) </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a62f07045c80d08733035217e015138fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; up </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing up along the positive y-axis: (0, 1, 0) </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> upVector = <a class="code" href="struct_leap_1_1_vector.html#a62f07045c80d08733035217e015138fe">Vector::up</a>();</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acae644750c6bca9dd9949fe8dfab2838"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; xAxis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The x-axis unit vector: (1, 0, 0) </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> xAxisVector = <a class="code" href="struct_leap_1_1_vector.html#acae644750c6bca9dd9949fe8dfab2838">Vector::xAxis</a>();</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1e0f2058889f54c4ff25abcb5b1832e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float yaw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The yaw angle in radians. </p>
+<p>Yaw is the angle between the negative z-axis and the projection of the vector onto the x-z plane. In other words, yaw represents rotation around the y-axis. If the vector points to the right of the negative z-axis, then the returned angle is between 0 and pi radians (180 degrees); if it points to the left, the angle is between 0 and -pi radians.</p>
+<div class="image">
+<img src="Math_Yaw_Angle.png" alt="Math_Yaw_Angle.png"/>
+</div>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> yawInRadians = thisVector.yaw();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The angle of this vector to the right or left of the negative z-axis. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a72392cdfddd5dcf24ebd0fc737fb709e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; yAxis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The y-axis unit vector: (0, 1, 0) </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> yAxisVector = <a class="code" href="struct_leap_1_1_vector.html#a72392cdfddd5dcf24ebd0fc737fb709e">Vector::yAxis</a>();</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1d8fd8445341e510e049c1355d4f6691"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; zAxis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The z-axis unit vector: (0, 0, 1) </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> zAxisVector = <a class="code" href="struct_leap_1_1_vector.html#a1d8fd8445341e510e049c1355d4f6691">Vector::zAxis</a>();</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a595532e58e7dd474661546d46cc69bfa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_leap_1_1_vector.html">Vector</a>&amp; zero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The zero vector: (0, 0, 0) </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html#a4df026156780bc0ca651c342b7d6daa4">Vector</a> zeroVector = <a class="code" href="struct_leap_1_1_vector.html#a595532e58e7dd474661546d46cc69bfa">Vector::zero</a>();</div>
+</div><!-- fragment --> <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="ae295e87eb813266c27e75d2809df2acc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>vector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the vector to the output stream using a human readable format: (x, y, z). </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ad0da36b2558901e21e7a30f6c227a45e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The horizontal component. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa4f0d3eebc3c443f9be81bf48561a217"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The vertical component. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af73583b1e980b0aa03f9884812e9fd4d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The depth component. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">C++ Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_circle_gesture.html">CircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger_list.html">FingerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_float_array.html">FloatArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture.html">Gesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture_list.html">GestureList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand_list.html">HandList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image_list.html">ImageList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_key_tap_gesture.html">KeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_listener.html">Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable.html">Pointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable_list.html">PointableList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool.html">Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool_list.html">ToolList</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>C++</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

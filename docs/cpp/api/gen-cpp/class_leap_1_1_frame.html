@@ -1,0 +1,1569 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Frame &mdash; Leap Motion C++ SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion C++ SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="Gesture" href="class_leap_1_1_gesture.html" />
+    <link rel="prev" title="FloatArray" href="struct_leap_1_1_float_array.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'cpp';
+    var hasAPI = {};
+    hasAPI.cpp = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'cpp/api/gen-cpp/class_leap_1_1_frame.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-cpp/class_leap_1_1_frame.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-cpp/class_leap_1_1_frame.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-cpp/class_leap_1_1_frame.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-cpp/class_leap_1_1_frame.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-cpp/class_leap_1_1_frame.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-cpp/class_leap_1_1_frame.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-cpp/class_leap_1_1_frame.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-cpp/class_leap_1_1_frame.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'cpp/api/gen-cpp/class_leap_1_1_frame.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("struct_leap_1_1_float_array.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_gesture.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      C++
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  Frame
+</span> -->
+        
+  <div class="section" id="frame">
+<h1>Frame<a class="headerlink" href="#frame" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_frame.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="class_leap_1_1_frame-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Frame Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> class represents a set of hand and finger tracking data detected in a single frame.  
+ <a href="class_leap_1_1_frame.html#details">More...</a></p>
+
+<p>Inherits Interface.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1547e5c5dc8a0d7f88691a6d53fc214f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a1547e5c5dc8a0d7f88691a6d53fc214f">currentFramesPerSecond</a> () const </td></tr>
+<tr class="memdesc:a1547e5c5dc8a0d7f88691a6d53fc214f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The instantaneous frame rate.  <a href="#a1547e5c5dc8a0d7f88691a6d53fc214f">More...</a><br /></td></tr>
+<tr class="separator:a1547e5c5dc8a0d7f88691a6d53fc214f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff8cf1970aee948138c9cd4406025e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#adff8cf1970aee948138c9cd4406025e2">deserialize</a> (const std::string &amp;str)</td></tr>
+<tr class="memdesc:adff8cf1970aee948138c9cd4406025e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes a byte string to replace the properties of this <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a>.  <a href="#adff8cf1970aee948138c9cd4406025e2">More...</a><br /></td></tr>
+<tr class="separator:adff8cf1970aee948138c9cd4406025e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ffe9e9232417bfdc0af6b3a531506b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a64ffe9e9232417bfdc0af6b3a531506b">deserialize</a> (const unsigned char *ptr, int length)</td></tr>
+<tr class="separator:a64ffe9e9232417bfdc0af6b3a531506b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b5532f1b733e6f5b42ef0133dd69f2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_finger.html">Finger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a6b5532f1b733e6f5b42ef0133dd69f2a">finger</a> (int32_t <a class="el" href="class_leap_1_1_frame.html#aa0ee47d68c234d391656c86468028b08">id</a>) const </td></tr>
+<tr class="memdesc:a6b5532f1b733e6f5b42ef0133dd69f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object with the specified ID in this frame.  <a href="#a6b5532f1b733e6f5b42ef0133dd69f2a">More...</a><br /></td></tr>
+<tr class="separator:a6b5532f1b733e6f5b42ef0133dd69f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f871d62c006a2426fc2164f91584ec4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_finger_list.html">FingerList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a9f871d62c006a2426fc2164f91584ec4">fingers</a> () const </td></tr>
+<tr class="memdesc:a9f871d62c006a2426fc2164f91584ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> objects detected in this frame, given in arbitrary order.  <a href="#a9f871d62c006a2426fc2164f91584ec4">More...</a><br /></td></tr>
+<tr class="separator:a9f871d62c006a2426fc2164f91584ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c8c6eba9fd6f243c5ba7abc98b0f35b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a7c8c6eba9fd6f243c5ba7abc98b0f35b">Frame</a> (FrameImplementation *)</td></tr>
+<tr class="separator:a7c8c6eba9fd6f243c5ba7abc98b0f35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71e6ee46f0c2593266f9a62d9c5e029"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#ab71e6ee46f0c2593266f9a62d9c5e029">Frame</a> ()</td></tr>
+<tr class="memdesc:ab71e6ee46f0c2593266f9a62d9c5e029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object.  <a href="#ab71e6ee46f0c2593266f9a62d9c5e029">More...</a><br /></td></tr>
+<tr class="separator:ab71e6ee46f0c2593266f9a62d9c5e029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a138683bff90b364b998c1b508469c308"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a138683bff90b364b998c1b508469c308">gesture</a> (int32_t <a class="el" href="class_leap_1_1_frame.html#aa0ee47d68c234d391656c86468028b08">id</a>) const </td></tr>
+<tr class="memdesc:a138683bff90b364b998c1b508469c308"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object with the specified ID in this frame.  <a href="#a138683bff90b364b998c1b508469c308">More...</a><br /></td></tr>
+<tr class="separator:a138683bff90b364b998c1b508469c308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7d79842325405f41784cddf0c979db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_gesture_list.html">GestureList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#aff7d79842325405f41784cddf0c979db">gestures</a> () const </td></tr>
+<tr class="memdesc:aff7d79842325405f41784cddf0c979db"><td class="mdescLeft">&#160;</td><td class="mdescRight">The gestures recognized or continuing in this frame.  <a href="#aff7d79842325405f41784cddf0c979db">More...</a><br /></td></tr>
+<tr class="separator:aff7d79842325405f41784cddf0c979db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab301585245818511c8a860aae8dc6a03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_gesture_list.html">GestureList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#ab301585245818511c8a860aae8dc6a03">gestures</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;sinceFrame) const </td></tr>
+<tr class="memdesc:ab301585245818511c8a860aae8dc6a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="class_leap_1_1_gesture_list.html" title="The GestureList class represents a list of Gesture objects. ">GestureList</a> containing all gestures that have occurred since the specified frame.  <a href="#ab301585245818511c8a860aae8dc6a03">More...</a><br /></td></tr>
+<tr class="separator:ab301585245818511c8a860aae8dc6a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6251adfa492a6d81efa4ba06b6c60a05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a6251adfa492a6d81efa4ba06b6c60a05">hand</a> (int32_t <a class="el" href="class_leap_1_1_frame.html#aa0ee47d68c234d391656c86468028b08">id</a>) const </td></tr>
+<tr class="memdesc:a6251adfa492a6d81efa4ba06b6c60a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object with the specified ID in this frame.  <a href="#a6251adfa492a6d81efa4ba06b6c60a05">More...</a><br /></td></tr>
+<tr class="separator:a6251adfa492a6d81efa4ba06b6c60a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788e21d8ff5d1f54209e75f14a27110b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_hand_list.html">HandList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a788e21d8ff5d1f54209e75f14a27110b">hands</a> () const </td></tr>
+<tr class="memdesc:a788e21d8ff5d1f54209e75f14a27110b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> objects detected in this frame, given in arbitrary order.  <a href="#a788e21d8ff5d1f54209e75f14a27110b">More...</a><br /></td></tr>
+<tr class="separator:a788e21d8ff5d1f54209e75f14a27110b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0ee47d68c234d391656c86468028b08"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#aa0ee47d68c234d391656c86468028b08">id</a> () const </td></tr>
+<tr class="memdesc:aa0ee47d68c234d391656c86468028b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">A unique ID for this <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a>.  <a href="#aa0ee47d68c234d391656c86468028b08">More...</a><br /></td></tr>
+<tr class="separator:aa0ee47d68c234d391656c86468028b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85588dbb02a8ff793cf2ced9067f8263"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_image_list.html">ImageList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a85588dbb02a8ff793cf2ced9067f8263">images</a> () const </td></tr>
+<tr class="memdesc:a85588dbb02a8ff793cf2ced9067f8263"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of IR images from the <a class="el" href="namespace_leap.html">Leap</a> Motion cameras.  <a href="#a85588dbb02a8ff793cf2ced9067f8263">More...</a><br /></td></tr>
+<tr class="separator:a85588dbb02a8ff793cf2ced9067f8263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab407fe57c95dff2a43d4bf53fd780c4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_interaction_box.html">InteractionBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#ab407fe57c95dff2a43d4bf53fd780c4e">interactionBox</a> () const </td></tr>
+<tr class="memdesc:ab407fe57c95dff2a43d4bf53fd780c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current <a class="el" href="class_leap_1_1_interaction_box.html" title="The InteractionBox class represents a box-shaped region completely within the field of view of the Le...">InteractionBox</a> for the frame.  <a href="#ab407fe57c95dff2a43d4bf53fd780c4e">More...</a><br /></td></tr>
+<tr class="separator:ab407fe57c95dff2a43d4bf53fd780c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a> () const </td></tr>
+<tr class="memdesc:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> instance is valid.  <a href="#aac1b70a2ed67ead038c4d3f5ac4d8a81">More...</a><br /></td></tr>
+<tr class="separator:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedef2de0a3286a8a8695ba609229eafd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#aedef2de0a3286a8a8695ba609229eafd">operator!=</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;) const </td></tr>
+<tr class="memdesc:aedef2de0a3286a8a8695ba609229eafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object inequality.  <a href="#aedef2de0a3286a8a8695ba609229eafd">More...</a><br /></td></tr>
+<tr class="separator:aedef2de0a3286a8a8695ba609229eafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac49f1bef175836ba4a5de19893e2f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#acac49f1bef175836ba4a5de19893e2f6">operator==</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;) const </td></tr>
+<tr class="memdesc:acac49f1bef175836ba4a5de19893e2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object equality.  <a href="#acac49f1bef175836ba4a5de19893e2f6">More...</a><br /></td></tr>
+<tr class="separator:acac49f1bef175836ba4a5de19893e2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b471f61ee1b7514d37747bd7b95e73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_pointable.html">Pointable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a47b471f61ee1b7514d37747bd7b95e73">pointable</a> (int32_t <a class="el" href="class_leap_1_1_frame.html#aa0ee47d68c234d391656c86468028b08">id</a>) const </td></tr>
+<tr class="memdesc:a47b471f61ee1b7514d37747bd7b95e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object with the specified ID in this frame.  <a href="#a47b471f61ee1b7514d37747bd7b95e73">More...</a><br /></td></tr>
+<tr class="separator:a47b471f61ee1b7514d37747bd7b95e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b73aa8053337ed8d142fc912703e43e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_pointable_list.html">PointableList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a9b73aa8053337ed8d142fc912703e43e">pointables</a> () const </td></tr>
+<tr class="memdesc:a9b73aa8053337ed8d142fc912703e43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects (fingers and tools) detected in this frame, given in arbitrary order.  <a href="#a9b73aa8053337ed8d142fc912703e43e">More...</a><br /></td></tr>
+<tr class="separator:a9b73aa8053337ed8d142fc912703e43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6111d1167ae69e1b5358fbe861aafa99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_image_list.html">ImageList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a6111d1167ae69e1b5358fbe861aafa99">rawImages</a> () const </td></tr>
+<tr class="memdesc:a6111d1167ae69e1b5358fbe861aafa99"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of Raw images from the <a class="el" href="namespace_leap.html">Leap</a> Motion cameras.  <a href="#a6111d1167ae69e1b5358fbe861aafa99">More...</a><br /></td></tr>
+<tr class="separator:a6111d1167ae69e1b5358fbe861aafa99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cbf95036199c5e627ff43562c8d68ba"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a0cbf95036199c5e627ff43562c8d68ba">rotationAngle</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;sinceFrame) const </td></tr>
+<tr class="memdesc:a0cbf95036199c5e627ff43562c8d68ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The angle of rotation around the rotation axis derived from the overall rotational motion between the current frame and the specified frame.  <a href="#a0cbf95036199c5e627ff43562c8d68ba">More...</a><br /></td></tr>
+<tr class="separator:a0cbf95036199c5e627ff43562c8d68ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2e2bc18122afe55573b7615ea13919"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#acd2e2bc18122afe55573b7615ea13919">rotationAngle</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;sinceFrame, const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;axis) const </td></tr>
+<tr class="memdesc:acd2e2bc18122afe55573b7615ea13919"><td class="mdescLeft">&#160;</td><td class="mdescRight">The angle of rotation around the specified axis derived from the overall rotational motion between the current frame and the specified frame.  <a href="#acd2e2bc18122afe55573b7615ea13919">More...</a><br /></td></tr>
+<tr class="separator:acd2e2bc18122afe55573b7615ea13919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96f629de9655ab1fca1a153d5dbac99b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a96f629de9655ab1fca1a153d5dbac99b">rotationAxis</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;sinceFrame) const </td></tr>
+<tr class="memdesc:a96f629de9655ab1fca1a153d5dbac99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The axis of rotation derived from the overall rotational motion between the current frame and the specified frame.  <a href="#a96f629de9655ab1fca1a153d5dbac99b">More...</a><br /></td></tr>
+<tr class="separator:a96f629de9655ab1fca1a153d5dbac99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a305bc1f67a6a8d34d4292c3d2d8ba933"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a305bc1f67a6a8d34d4292c3d2d8ba933">rotationMatrix</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;sinceFrame) const </td></tr>
+<tr class="memdesc:a305bc1f67a6a8d34d4292c3d2d8ba933"><td class="mdescLeft">&#160;</td><td class="mdescRight">The transform matrix expressing the rotation derived from the overall rotational motion between the current frame and the specified frame.  <a href="#a305bc1f67a6a8d34d4292c3d2d8ba933">More...</a><br /></td></tr>
+<tr class="separator:a305bc1f67a6a8d34d4292c3d2d8ba933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ca8e1c8efc5858fe213198012697dc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a98ca8e1c8efc5858fe213198012697dc">rotationProbability</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;sinceFrame) const </td></tr>
+<tr class="memdesc:a98ca8e1c8efc5858fe213198012697dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated probability that the overall motion between the current frame and the specified frame is intended to be a rotating motion.  <a href="#a98ca8e1c8efc5858fe213198012697dc">More...</a><br /></td></tr>
+<tr class="separator:a98ca8e1c8efc5858fe213198012697dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c97d459821c0b36fb11c6a2b74f5d4c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a5c97d459821c0b36fb11c6a2b74f5d4c">scaleFactor</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;sinceFrame) const </td></tr>
+<tr class="memdesc:a5c97d459821c0b36fb11c6a2b74f5d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scale factor derived from the overall motion between the current frame and the specified frame.  <a href="#a5c97d459821c0b36fb11c6a2b74f5d4c">More...</a><br /></td></tr>
+<tr class="separator:a5c97d459821c0b36fb11c6a2b74f5d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424b5e4459b1f2707500ec8d8362fd4d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a424b5e4459b1f2707500ec8d8362fd4d">scaleProbability</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;sinceFrame) const </td></tr>
+<tr class="memdesc:a424b5e4459b1f2707500ec8d8362fd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated probability that the overall motion between the current frame and the specified frame is intended to be a scaling motion.  <a href="#a424b5e4459b1f2707500ec8d8362fd4d">More...</a><br /></td></tr>
+<tr class="separator:a424b5e4459b1f2707500ec8d8362fd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa163dee25d1f498f7b52279c3eb2c38e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#aa163dee25d1f498f7b52279c3eb2c38e">serialize</a> () const </td></tr>
+<tr class="memdesc:aa163dee25d1f498f7b52279c3eb2c38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encodes this <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object as a byte string.  <a href="#aa163dee25d1f498f7b52279c3eb2c38e">More...</a><br /></td></tr>
+<tr class="separator:aa163dee25d1f498f7b52279c3eb2c38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a426939aacb06a7a391e9a3095c2f8b17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a426939aacb06a7a391e9a3095c2f8b17">serialize</a> (unsigned char *ptr) const </td></tr>
+<tr class="separator:a426939aacb06a7a391e9a3095c2f8b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a161ab4561c2bd1023f6248ef7d8c7715"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a161ab4561c2bd1023f6248ef7d8c7715">serializeLength</a> () const </td></tr>
+<tr class="separator:a161ab4561c2bd1023f6248ef7d8c7715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94fc974ee7b1ef76c26c6607efe27d3b"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a94fc974ee7b1ef76c26c6607efe27d3b">timestamp</a> () const </td></tr>
+<tr class="memdesc:a94fc974ee7b1ef76c26c6607efe27d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The frame capture time in microseconds elapsed since an arbitrary point in time in the past.  <a href="#a94fc974ee7b1ef76c26c6607efe27d3b">More...</a><br /></td></tr>
+<tr class="separator:a94fc974ee7b1ef76c26c6607efe27d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbfeb0a32af8f68e94a5f9f29b08b63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_tool.html">Tool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a9dbfeb0a32af8f68e94a5f9f29b08b63">tool</a> (int32_t <a class="el" href="class_leap_1_1_frame.html#aa0ee47d68c234d391656c86468028b08">id</a>) const </td></tr>
+<tr class="memdesc:a9dbfeb0a32af8f68e94a5f9f29b08b63"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_tool.html" title="The Tool class represents a tracked tool. ">Tool</a> object with the specified ID in this frame.  <a href="#a9dbfeb0a32af8f68e94a5f9f29b08b63">More...</a><br /></td></tr>
+<tr class="separator:a9dbfeb0a32af8f68e94a5f9f29b08b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05cba9e8a5f3db32fb66f3ba60fb514c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_tool_list.html">ToolList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a05cba9e8a5f3db32fb66f3ba60fb514c">tools</a> () const </td></tr>
+<tr class="memdesc:a05cba9e8a5f3db32fb66f3ba60fb514c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of <a class="el" href="class_leap_1_1_tool.html" title="The Tool class represents a tracked tool. ">Tool</a> objects detected in this frame, given in arbitrary order.  <a href="#a05cba9e8a5f3db32fb66f3ba60fb514c">More...</a><br /></td></tr>
+<tr class="separator:a05cba9e8a5f3db32fb66f3ba60fb514c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a> () const </td></tr>
+<tr class="memdesc:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string containing a brief, human readable description of the <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object.  <a href="#a3f23c97b6c9f2a88e1121d1c633ccafa">More...</a><br /></td></tr>
+<tr class="separator:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8ab3b10320b326d3f1b90615da21016"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#aa8ab3b10320b326d3f1b90615da21016">translation</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;sinceFrame) const </td></tr>
+<tr class="memdesc:aa8ab3b10320b326d3f1b90615da21016"><td class="mdescLeft">&#160;</td><td class="mdescRight">The change of position derived from the overall linear motion between the current frame and the specified frame.  <a href="#aa8ab3b10320b326d3f1b90615da21016">More...</a><br /></td></tr>
+<tr class="separator:aa8ab3b10320b326d3f1b90615da21016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e57401c2c211333f94cdb4848daabb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a98e57401c2c211333f94cdb4848daabb">translationProbability</a> (const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;sinceFrame) const </td></tr>
+<tr class="memdesc:a98e57401c2c211333f94cdb4848daabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated probability that the overall motion between the current frame and the specified frame is intended to be a translating motion.  <a href="#a98e57401c2c211333f94cdb4848daabb">More...</a><br /></td></tr>
+<tr class="separator:a98e57401c2c211333f94cdb4848daabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:afe9f4538ff2c639bd9ee77677f9d7396"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#afe9f4538ff2c639bd9ee77677f9d7396">invalid</a> ()</td></tr>
+<tr class="memdesc:afe9f4538ff2c639bd9ee77677f9d7396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an invalid <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object.  <a href="#afe9f4538ff2c639bd9ee77677f9d7396">More...</a><br /></td></tr>
+<tr class="separator:afe9f4538ff2c639bd9ee77677f9d7396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a93ae459899bc696130af880cb7b9edb3"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html#a93ae459899bc696130af880cb7b9edb3">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;)</td></tr>
+<tr class="memdesc:a93ae459899bc696130af880cb7b9edb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a brief, human readable description of the <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object to an output stream.  <a href="#a93ae459899bc696130af880cb7b9edb3">More...</a><br /></td></tr>
+<tr class="separator:a93ae459899bc696130af880cb7b9edb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> class represents a set of hand and finger tracking data detected in a single frame. </p>
+<p>The <a class="el" href="namespace_leap.html">Leap</a> Motion software detects hands, fingers and tools within the tracking area, reporting their positions, orientations, gestures, and motions in frames at the <a class="el" href="namespace_leap.html">Leap</a> Motion frame rate.</p>
+<p>Access <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> objects through an instance of the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> class:</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>( controller.<a class="code" href="class_leap_1_1_controller.html#a180fa55a4bf36580963bed9e3e09c227">isConnected</a>()) <span class="comment">//controller is a Controller object</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> frame = controller.<a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a>(); <span class="comment">//The latest frame</span></div>
+<div class="line">    <a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> previous = controller.<a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a>(1); <span class="comment">//The previous frame</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Implement a <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> subclass to receive a callback event when a new <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> is available. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a7c8c6eba9fd6f243c5ba7abc98b0f35b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_frame.html">Frame</a> </td>
+          <td>(</td>
+          <td class="paramtype">FrameImplementation *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab71e6ee46f0c2593266f9a62d9c5e029"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_frame.html">Frame</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object. </p>
+<p><a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> instances created with this constructor are invalid. Get valid <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> objects by calling the <a class="el" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62" title="Returns a frame of tracking data from the Leap Motion software. ">Controller::frame()</a> function.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> current = controller.<a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a>();</div>
+<div class="line"><a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> previous = controller.<a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a>(1);</div>
+</div><!-- fragment --><p>The only time you should use this constructor is before deserializing serialized frame data. Call <code>Frame::deserialize(string)</code> to recreate a saved <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a>.</p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1547e5c5dc8a0d7f88691a6d53fc214f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float currentFramesPerSecond </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The instantaneous frame rate. </p>
+<p>The rate at which the <a class="el" href="namespace_leap.html">Leap</a> Motion software is providing frames of data (in frames per second). The frame rate can fluctuate depending on available computing resources, activity within the device field of view, software tracking settings, and other factors.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> instantaneousFrameRate = frame.<a class="code" href="class_leap_1_1_frame.html#a1547e5c5dc8a0d7f88691a6d53fc214f">currentFramesPerSecond</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>An estimate of frames per second of the <a class="el" href="namespace_leap.html">Leap</a> Motion <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adff8cf1970aee948138c9cd4406025e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deserialize </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decodes a byte string to replace the properties of this <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a>. </p>
+<p>A <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object must be instantiated for this function to succeed, but it does not need to be connected. To extract gestures from the deserialized frame, you must enable the appropriate gestures first.</p>
+<p>Any existing data in the frame is destroyed. If you have references to child objects (hands, fingers, etc.), these are preserved as long as the references remain in scope.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_controller.html">Leap::Controller</a> controller; <span class="comment">//An instance must exist</span></div>
+<div class="line">std::ifstream inputFile(<span class="stringliteral">&quot;frame.data&quot;</span>);</div>
+<div class="line">std::string frameData((std::istreambuf_iterator&lt;char&gt;(inputFile)), std::istreambuf_iterator&lt;char&gt;());</div>
+<div class="line"><a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> reconstructedFrame;</div>
+<div class="line">reconstructedFrame.<a class="code" href="class_leap_1_1_frame.html#adff8cf1970aee948138c9cd4406025e2">deserialize</a>(frameData);</div>
+</div><!-- fragment --><p><b>Note:</b> The behavior when calling functions which take another <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object as a parameter is undefined when either frame has been deserialized.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>A std:string object containing the serialized bytes of a frame.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a64ffe9e9232417bfdc0af6b3a531506b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deserialize </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6b5532f1b733e6f5b42ef0133dd69f2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_finger.html">Finger</a> finger </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object with the specified ID in this frame. </p>
+<p>Use the <a class="el" href="class_leap_1_1_frame.html#a6b5532f1b733e6f5b42ef0133dd69f2a" title="The Finger object with the specified ID in this frame. ">Frame::finger()</a> function to retrieve the <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object from this frame using an ID value obtained from a previous frame. This function always returns a <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object, but if no finger with the specified ID is present, an invalid <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object is returned.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a> fingerOfinterest = frame.<a class="code" href="class_leap_1_1_frame.html#a6b5532f1b733e6f5b42ef0133dd69f2a">finger</a>(fingerID);</div>
+</div><!-- fragment --><p>Note that ID values persist across frames, but only until tracking of a particular object is lost. If tracking of a finger is lost and subsequently regained, the new <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object representing that physical finger may have a different ID than that representing the finger in an earlier frame.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The ID value of a <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object from a previous frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object with the matching ID if one exists in this frame; otherwise, an invalid <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object is returned. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9f871d62c006a2426fc2164f91584ec4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_finger_list.html">FingerList</a> fingers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The list of <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> objects detected in this frame, given in arbitrary order. </p>
+<p>The list can be empty if no fingers are detected.</p>
+<p>Use <a class="el" href="class_leap_1_1_pointable_list.html#ac76c27053c572b30c72063c03093e059" title="Returns a new list containing those members of the current list that are extended. ">PointableList::extended()</a> to remove non-extended fingers from the list.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_finger_list.html">Leap::FingerList</a> fingersInFrame = frame.<a class="code" href="class_leap_1_1_frame.html#a9f871d62c006a2426fc2164f91584ec4">fingers</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_leap_1_1_finger_list.html" title="The FingerList class represents a list of Finger objects. ">FingerList</a> containing all <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> objects detected in this frame. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a138683bff90b364b998c1b508469c308"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a> gesture </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object with the specified ID in this frame. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_gesture.html">Leap::Gesture</a> gestureOfInterest = frame.<a class="code" href="class_leap_1_1_frame.html#a138683bff90b364b998c1b508469c308">gesture</a>(gestureID);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The ID of an <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object from a previous frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object in the frame with the specified ID if one exists; Otherwise, an Invalid <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000098">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aff7d79842325405f41784cddf0c979db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_gesture_list.html">GestureList</a> gestures </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The gestures recognized or continuing in this frame. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_gesture_list.html">Leap::GestureList</a> gesturesInFrame = frame.<a class="code" href="class_leap_1_1_frame.html#aff7d79842325405f41784cddf0c979db">gestures</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_leap_1_1_gesture_list.html" title="The GestureList class represents a list of Gesture objects. ">GestureList</a> the list of gestures. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000099">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab301585245818511c8a860aae8dc6a03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_gesture_list.html">GestureList</a> gestures </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a <a class="el" href="class_leap_1_1_gesture_list.html" title="The GestureList class represents a list of Gesture objects. ">GestureList</a> containing all gestures that have occurred since the specified frame. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_gesture_list.html">Leap::GestureList</a> gesturesSinceFrame = frame.<a class="code" href="class_leap_1_1_frame.html#aff7d79842325405f41784cddf0c979db">gestures</a>(lastProcessedFrame);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>An earlier <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object. The starting frame must still be in the frame history cache, which has a default length of 60 frames. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_leap_1_1_gesture_list.html" title="The GestureList class represents a list of Gesture objects. ">GestureList</a> The list of the <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> objects that have occurred since the specified frame. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000100">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6251adfa492a6d81efa4ba06b6c60a05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_hand.html">Hand</a> hand </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object with the specified ID in this frame. </p>
+<p>Use the <a class="el" href="class_leap_1_1_frame.html#a6251adfa492a6d81efa4ba06b6c60a05" title="The Hand object with the specified ID in this frame. ">Frame::hand()</a> function to retrieve the <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object from this frame using an ID value obtained from a previous frame. This function always returns a <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object, but if no hand with the specified ID is present, an invalid <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object is returned.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_hand.html">Leap::Hand</a> handOfInterest = frame.<a class="code" href="class_leap_1_1_frame.html#a6251adfa492a6d81efa4ba06b6c60a05">hand</a>(handID);</div>
+</div><!-- fragment --><p>Note that ID values persist across frames, but only until tracking of a particular object is lost. If tracking of a hand is lost and subsequently regained, the new <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object representing that physical hand may have a different ID than that representing the physical hand in an earlier frame.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The ID value of a <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object from a previous frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object with the matching ID if one exists in this frame; otherwise, an invalid <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object is returned. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a788e21d8ff5d1f54209e75f14a27110b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_hand_list.html">HandList</a> hands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The list of <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> objects detected in this frame, given in arbitrary order. </p>
+<p>The list can be empty if no hands are detected.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_hand_list.html">Leap::HandList</a> handsInFrame = frame.<a class="code" href="class_leap_1_1_frame.html#a788e21d8ff5d1f54209e75f14a27110b">hands</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_leap_1_1_hand_list.html" title="The HandList class represents a list of Hand objects. ">HandList</a> containing all <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> objects detected in this frame. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa0ee47d68c234d391656c86468028b08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A unique ID for this <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a>. </p>
+<p>Consecutive frames processed by the <a class="el" href="namespace_leap.html">Leap</a> Motion software have consecutive increasing values. You can use the frame ID to avoid processing the same <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object twice:</p>
+<div class="fragment"><div class="line">int64_t lastFrameID = 0;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> processFrame( <a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> frame )</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span>( frame.<a class="code" href="class_leap_1_1_frame.html#aa0ee47d68c234d391656c86468028b08">id</a>() == lastFrameID ) <span class="keywordflow">return</span>;</div>
+<div class="line">    <span class="comment">//...</span></div>
+<div class="line">    lastFrameID = frame.<a class="code" href="class_leap_1_1_frame.html#aa0ee47d68c234d391656c86468028b08">id</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>As well as to make sure that your application processes every frame:</p>
+<div class="fragment"><div class="line">int64_t lastProcessedFrameID = 0;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> nextFrame( <a class="code" href="class_leap_1_1_controller.html">Leap::Controller</a> controller )</div>
+<div class="line">{</div>
+<div class="line">    int64_t currentID = controller.<a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a>().<a class="code" href="class_leap_1_1_frame.html#aa0ee47d68c234d391656c86468028b08">id</a>();</div>
+<div class="line">    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> history = 0; history &lt; currentID - lastProcessedFrameID; history++)</div>
+<div class="line">    {</div>
+<div class="line">        processNextFrame( controller.<a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a>(history) );</div>
+<div class="line">    }</div>
+<div class="line">    lastProcessedFrameID = currentID;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> processNextFrame( <a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> frame )</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span>( frame.<a class="code" href="class_leap_1_1_frame.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a>() )</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">//...</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The frame ID. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a85588dbb02a8ff793cf2ced9067f8263"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_image_list.html">ImageList</a> images </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The list of IR images from the <a class="el" href="namespace_leap.html">Leap</a> Motion cameras. </p>
+<p>If the system is in Robust mode, these will be slightly post processed</p>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="class_leap_1_1_image_list.html" title="The ImageList class represents a list of Image objects. ">ImageList</a> object containing the camera images analyzed to create this <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000101">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab407fe57c95dff2a43d4bf53fd780c4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_interaction_box.html">InteractionBox</a> interactionBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current <a class="el" href="class_leap_1_1_interaction_box.html" title="The InteractionBox class represents a box-shaped region completely within the field of view of the Le...">InteractionBox</a> for the frame. </p>
+<p>See the <a class="el" href="class_leap_1_1_interaction_box.html" title="The InteractionBox class represents a box-shaped region completely within the field of view of the Le...">InteractionBox</a> class documentation for more details on how this class should be used.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_interaction_box.html">Leap::InteractionBox</a> box = frame.<a class="code" href="class_leap_1_1_frame.html#ab407fe57c95dff2a43d4bf53fd780c4e">interactionBox</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The current <a class="el" href="class_leap_1_1_interaction_box.html" title="The InteractionBox class represents a box-shaped region completely within the field of view of the Le...">InteractionBox</a> object. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afe9f4538ff2c639bd9ee77677f9d7396"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_leap_1_1_frame.html">Frame</a>&amp; invalid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an invalid <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object. </p>
+<p>You can use the instance returned by this function in comparisons testing whether a given <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> instance is valid or invalid. (You can also use the <a class="el" href="class_leap_1_1_frame.html#aac1b70a2ed67ead038c4d3f5ac4d8a81" title="Reports whether this Frame instance is valid. ">Frame::isValid()</a> function.)</p>
+<div class="fragment"><div class="line"><span class="comment">//Average a finger position for the last 10 frames</span></div>
+<div class="line"><span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> average = <a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a>();</div>
+<div class="line"><a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a> fingerToAverage = frame.<a class="code" href="class_leap_1_1_frame.html#a9f871d62c006a2426fc2164f91584ec4">fingers</a>()[0];</div>
+<div class="line"><span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; 10; i++ )</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a> fingerFromFrame = controller.<a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a>(i).<a class="code" href="class_leap_1_1_frame.html#a6b5532f1b733e6f5b42ef0133dd69f2a">finger</a>(fingerToAverage.<a class="code" href="class_leap_1_1_pointable.html#a87daef5bdd8501be1f113684cfc61074">id</a>());</div>
+<div class="line">    <span class="keywordflow">if</span>( fingerFromFrame.<a class="code" href="class_leap_1_1_pointable.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a>() )</div>
+<div class="line">    {</div>
+<div class="line">        average += fingerFromFrame.<a class="code" href="class_leap_1_1_pointable.html#a495779027d8771a7980b3ca08335f017">tipPosition</a>();</div>
+<div class="line">        count++;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line">average /= count;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The invalid <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> instance. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac1b70a2ed67ead038c4d3f5ac4d8a81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports whether this <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> instance is valid. </p>
+<p>A valid <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> is one generated by the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Leap::Controller</a> object that contains tracking data for all detected entities. An invalid <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> contains no actual tracking data, but you can call its functions without risk of a null pointer exception. The invalid <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> mechanism makes it more convenient to track individual data across the frame history. For example, you can invoke:</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a> finger = controller.<a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a>(n).<a class="code" href="class_leap_1_1_frame.html#a6b5532f1b733e6f5b42ef0133dd69f2a">finger</a>(fingerID);</div>
+</div><!-- fragment --><p>for an arbitrary <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> history value, "n", without first checking whether frame(n) returned a null object. (You should still check that the returned <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> instance is valid.)</p>
+<dl class="section return"><dt>Returns</dt><dd>True, if this is a valid <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object; false otherwise. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aedef2de0a3286a8a8695ba609229eafd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object inequality. </p>
+<div class="fragment"><div class="line">thisFrame != thatFrame;</div>
+</div><!-- fragment --><p>Two <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> objects are equal if and only if both <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> objects represent the exact same frame of tracking data and both <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> objects are valid. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acac49f1bef175836ba4a5de19893e2f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object equality. </p>
+<div class="fragment"><div class="line">thisFrame == thatFrame;</div>
+</div><!-- fragment --><p>Two <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> objects are equal if and only if both <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> objects represent the exact same frame of tracking data and both <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> objects are valid. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a47b471f61ee1b7514d37747bd7b95e73"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_pointable.html">Pointable</a> pointable </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object with the specified ID in this frame. </p>
+<p>Use the <a class="el" href="class_leap_1_1_frame.html#a47b471f61ee1b7514d37747bd7b95e73" title="The Pointable object with the specified ID in this frame. ">Frame::pointable()</a> function to retrieve the <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object from this frame using an ID value obtained from a previous frame. This function always returns a <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object, but if no finger or tool with the specified ID is present, an invalid <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object is returned.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_pointable.html">Leap::Pointable</a> pointableOfInterest = frame.<a class="code" href="class_leap_1_1_frame.html#a47b471f61ee1b7514d37747bd7b95e73">pointable</a>(pointableID);</div>
+</div><!-- fragment --><p>Note that ID values persist across frames, but only until tracking of a particular object is lost. If tracking of a finger or tool is lost and subsequently regained, the new <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object representing that finger or tool may have a different ID than that representing the finger or tool in an earlier frame.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The ID value of a <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object from a previous frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object with the matching ID if one exists in this frame; otherwise, an invalid <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object is returned. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9b73aa8053337ed8d142fc912703e43e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_pointable_list.html">PointableList</a> pointables </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The list of <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects (fingers and tools) detected in this frame, given in arbitrary order. </p>
+<p>The list can be empty if no fingers or tools are detected.</p>
+<p>Use <a class="el" href="class_leap_1_1_pointable_list.html#ac76c27053c572b30c72063c03093e059" title="Returns a new list containing those members of the current list that are extended. ">PointableList::extended()</a> to remove non-extended fingers from the list.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_pointable_list.html">Leap::PointableList</a> pointablesInFrame = frame.<a class="code" href="class_leap_1_1_frame.html#a9b73aa8053337ed8d142fc912703e43e">pointables</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_leap_1_1_pointable_list.html" title="The PointableList class represents a list of Pointable objects. ">PointableList</a> containing all <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects detected in this frame. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6111d1167ae69e1b5358fbe861aafa99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_image_list.html">ImageList</a> rawImages </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The list of Raw images from the <a class="el" href="namespace_leap.html">Leap</a> Motion cameras. </p>
+<p>These will never be postprocessed and closely match the raw sensor output.</p>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="class_leap_1_1_image_list.html" title="The ImageList class represents a list of Image objects. ">ImageList</a> object containing the camera images analyzed to create this <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a>. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.3 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0cbf95036199c5e627ff43562c8d68ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rotationAngle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The angle of rotation around the rotation axis derived from the overall rotational motion between the current frame and the specified frame. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> rotationInFrame = frame.<a class="code" href="class_leap_1_1_frame.html#a0cbf95036199c5e627ff43562c8d68ba">rotationAngle</a>(startFrame);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting frame for computing the relative rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A positive value containing the heuristically determined rotational change between the current frame and that specified in the sinceFrame parameter. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000105">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acd2e2bc18122afe55573b7615ea13919"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rotationAngle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinceFrame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>axis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The angle of rotation around the specified axis derived from the overall rotational motion between the current frame and the specified frame. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> rotationAroundXAxis = frame.<a class="code" href="class_leap_1_1_frame.html#a0cbf95036199c5e627ff43562c8d68ba">rotationAngle</a>(startFrame, <a class="code" href="struct_leap_1_1_vector.html#acae644750c6bca9dd9949fe8dfab2838">Leap::Vector::xAxis</a>());</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting frame for computing the relative rotation. </td></tr>
+    <tr><td class="paramname">axis</td><td>The axis to measure rotation around. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value containing the heuristically determined rotational change between the current frame and that specified in the sinceFrame parameter around the given axis. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000106">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a96f629de9655ab1fca1a153d5dbac99b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> rotationAxis </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The axis of rotation derived from the overall rotational motion between the current frame and the specified frame. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> axisOfRotation = frame.<a class="code" href="class_leap_1_1_frame.html#a96f629de9655ab1fca1a153d5dbac99b">rotationAxis</a>(startFrame);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting frame for computing the relative rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A normalized direction <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> representing the axis of the heuristically determined rotational change between the current frame and that specified in the sinceFrame parameter. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000104">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a305bc1f67a6a8d34d4292c3d2d8ba933"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> rotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The transform matrix expressing the rotation derived from the overall rotational motion between the current frame and the specified frame. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_matrix.html">Leap::Matrix</a> rotationTransform = frame.<a class="code" href="class_leap_1_1_frame.html#a305bc1f67a6a8d34d4292c3d2d8ba933">rotationMatrix</a>(startFrame);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting frame for computing the relative rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A transformation <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> containing the heuristically determined rotational change between the current frame and that specified in the sinceFrame parameter. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000107">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a98ca8e1c8efc5858fe213198012697dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rotationProbability </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The estimated probability that the overall motion between the current frame and the specified frame is intended to be a rotating motion. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> rotationDominance = frame.<a class="code" href="class_leap_1_1_frame.html#a98ca8e1c8efc5858fe213198012697dc">rotationProbability</a>(startFrame);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting frame for computing the relative rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value between 0 and 1 representing the estimated probability that the overall motion between the current frame and the specified frame is intended to be a rotating motion. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000108">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c97d459821c0b36fb11c6a2b74f5d4c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float scaleFactor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The scale factor derived from the overall motion between the current frame and the specified frame. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> zoomFactor = frame.<a class="code" href="class_leap_1_1_frame.html#a5c97d459821c0b36fb11c6a2b74f5d4c">scaleFactor</a>(startFrame);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting frame for computing the relative scaling. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A positive value representing the heuristically determined scaling change ratio between the current frame and that specified in the sinceFrame parameter. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000109">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a424b5e4459b1f2707500ec8d8362fd4d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float scaleProbability </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The estimated probability that the overall motion between the current frame and the specified frame is intended to be a scaling motion. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> scaleDominance = frame.<a class="code" href="class_leap_1_1_frame.html#a424b5e4459b1f2707500ec8d8362fd4d">scaleProbability</a>(startFrame);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting frame for computing the relative scaling. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value between 0 and 1 representing the estimated probability that the overall motion between the current frame and the specified frame is intended to be a scaling motion. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000110">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa163dee25d1f498f7b52279c3eb2c38e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string serialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Encodes this <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object as a byte string. </p>
+<div class="fragment"><div class="line">std::ofstream outputFile(<span class="stringliteral">&quot;frame.data&quot;</span>);</div>
+<div class="line"><span class="keyword">const</span> std::string serializedFrame = frame.<a class="code" href="class_leap_1_1_frame.html#aa163dee25d1f498f7b52279c3eb2c38e">serialize</a>();</div>
+<div class="line">outputFile &lt;&lt; serializedFrame;</div>
+<div class="line">outputFile.close();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The serialized string encoding the data for this frame. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a426939aacb06a7a391e9a3095c2f8b17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void serialize </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a161ab4561c2bd1023f6248ef7d8c7715"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int serializeLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a94fc974ee7b1ef76c26c6607efe27d3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t timestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The frame capture time in microseconds elapsed since an arbitrary point in time in the past. </p>
+<p>Use <a class="el" href="class_leap_1_1_controller.html#a629420c35d3c1192bc44e61f64d1e461" title="Returns a timestamp value as close as possible to the current time. ">Controller::now()</a> to calculate the age of the frame.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> framePeriod = frame.<a class="code" href="class_leap_1_1_frame.html#a94fc974ee7b1ef76c26c6607efe27d3b">timestamp</a>() - controller.<a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a>(1).<a class="code" href="class_leap_1_1_frame.html#a94fc974ee7b1ef76c26c6607efe27d3b">timestamp</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The timestamp in microseconds. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9dbfeb0a32af8f68e94a5f9f29b08b63"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_tool.html">Tool</a> tool </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_leap_1_1_tool.html" title="The Tool class represents a tracked tool. ">Tool</a> object with the specified ID in this frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The ID value of a <a class="el" href="class_leap_1_1_tool.html" title="The Tool class represents a tracked tool. ">Tool</a> object from a previous frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_leap_1_1_tool.html" title="The Tool class represents a tracked tool. ">Tool</a> object with the matching ID if one exists in this frame; otherwise, an invalid <a class="el" href="class_leap_1_1_tool.html" title="The Tool class represents a tracked tool. ">Tool</a> object is returned. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000097">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a05cba9e8a5f3db32fb66f3ba60fb514c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_tool_list.html">ToolList</a> tools </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The list of <a class="el" href="class_leap_1_1_tool.html" title="The Tool class represents a tracked tool. ">Tool</a> objects detected in this frame, given in arbitrary order. </p>
+<p>The list can be empty if no tools are detected.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_tool_list.html">Leap::ToolList</a> toolsInFrame = frame.<a class="code" href="class_leap_1_1_frame.html#a05cba9e8a5f3db32fb66f3ba60fb514c">tools</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_leap_1_1_tool_list.html" title="The ToolList class represents a list of Tool objects. ">ToolList</a> containing all <a class="el" href="class_leap_1_1_tool.html" title="The Tool class represents a tracked tool. ">Tool</a> objects detected in this frame. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000096">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f23c97b6c9f2a88e1121d1c633ccafa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A string containing a brief, human readable description of the <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>A description of the <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> as a string. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa8ab3b10320b326d3f1b90615da21016"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> translation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The change of position derived from the overall linear motion between the current frame and the specified frame. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> linearMovement = frame.<a class="code" href="class_leap_1_1_frame.html#aa8ab3b10320b326d3f1b90615da21016">translation</a>(startFrame);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting frame for computing the relative translation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> representing the heuristically determined change in position of all objects between the current frame and that specified in the sinceFrame parameter. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000102">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a98e57401c2c211333f94cdb4848daabb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float translationProbability </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The estimated probability that the overall motion between the current frame and the specified frame is intended to be a translating motion. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> translationDominance = frame.<a class="code" href="class_leap_1_1_frame.html#a98e57401c2c211333f94cdb4848daabb">translationProbability</a>(startFrame);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting frame for computing the translation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value between 0 and 1 representing the estimated probability that the overall motion between the current frame and the specified frame is intended to be a translating motion. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000103">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a93ae459899bc696130af880cb7b9edb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_frame.html">Frame</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes a brief, human readable description of the <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object to an output stream. </p>
+<div class="fragment"><div class="line">std::cout &lt;&lt; frame &lt;&lt; std::endl;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">C++ Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_circle_gesture.html">CircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger_list.html">FingerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_float_array.html">FloatArray</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture.html">Gesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture_list.html">GestureList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand_list.html">HandList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image_list.html">ImageList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_key_tap_gesture.html">KeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_listener.html">Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable.html">Pointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable_list.html">PointableList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool.html">Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool_list.html">ToolList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>C++</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,417 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>All LeapVector members &mdash; Leap Motion Objective-C SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Objective-C SDK v3.2 Beta documentation" href="../../index.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'objc';
+    var hasAPI = {};
+    hasAPI.objc = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'objc/api/gen-objc/interface_leap_vector-members.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-objc/interface_leap_vector-members.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-objc/interface_leap_vector-members.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-objc/interface_leap_vector-members.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-objc/interface_leap_vector-members.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-objc/interface_leap_vector-members.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-objc/interface_leap_vector-members.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-objc/interface_leap_vector-members.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-objc/interface_leap_vector-members.html";
+            } else {
+
+                    if( requestedAPI == 'cpp'){
+                        redirectedLocation = relPath + "cpp/index.html?proglang=cpp";
+                    }
+                    else if( requestedAPI == 'csharp'){
+                        redirectedLocation = relPath + "csharp/index.html?proglang=csharp";
+                    }
+                    else if( requestedAPI == 'unity'){
+                        redirectedLocation = relPath + "unity/index.html?proglang=unity";
+                    }
+                    else if( requestedAPI == 'objc'){
+                        redirectedLocation = relPath + "objc/index.html?proglang=objc";
+                    }
+                    else if( requestedAPI == 'java') {
+                        redirectedLocation = relPath + "java/index.html?proglang=java";
+                    }
+                    else if( requestedAPI == 'javascript'){
+                        redirectedLocation = relPath + "javascript/index.html?proglang=javascript";
+                    }
+                    else if( requestedAPI == 'python'){
+                        redirectedLocation = relPath + "python/index.html?proglang=python";
+                    }
+                    else if( requestedAPI == 'unreal') {
+                        redirectedLocation = relPath + "unreal/index.html?proglang=unreal";
+                    } else {
+                        redirectedLocation = relPath + "index.html";
+                    }
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'objc/api/gen-objc/interface_leap_vector-members.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){    }
+    else if( character == "K" & e.altKey){
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../../javascript/index.html?proglang=javascript" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../../unity/index.html?proglang=unity" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../../csharp/index.html?proglang=csharp" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../../cpp/index.html?proglang=cpp" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../../java/index.html?proglang=java" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../../python/index.html?proglang=python" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      Objective-C
+    
+  </li>
+  <li>
+      <a href="../../unreal/index.html?proglang=unreal" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+  All LeapVector members
+</span> -->
+        
+  <div class="section" id="all-leapvector-members">
+<h1>All LeapVector members<a class="headerlink" href="#all-leapvector-members" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.13 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('interface_leap_vector.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">LeapVector Member List</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is the complete list of members for <a class="el" href="interface_leap_vector.html">LeapVector</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a3e3d4b24dcea0016acb0a75c6b5e8c21">angleTo:</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">+&#160;</td><td><a class="el" href="interface_leap_vector.html#aeb6b0cc33c18aad296f1d0ae9137bcd9">backward</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#afd5e86a36f08d4404265590fdc02ef05">cross:</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a0920dc7935061bc57daab91706be5934">description</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a262fd0724d586c7624c771f286078360">distanceTo:</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a54092845eac92205f13f82d176a1b049">divide:</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a0db862e5be2e1bd573f37ee9ee143a5e">dot:</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">+&#160;</td><td><a class="el" href="interface_leap_vector.html#acb557118cc263b8c533a3a46a99f3086">down</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#aa4136eb552793660a595cc8c13ccfba4">equals:</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">+&#160;</td><td><a class="el" href="interface_leap_vector.html#ac9cf02f46238c9efea8a2f02797f26c5">forward</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a5807cf4714577e4f79eeab749896738d">initWithVector:</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a9ebb4e15ddb5199b6daa1941883221b9">initWithX:y:z:</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">+&#160;</td><td><a class="el" href="interface_leap_vector.html#a37f8f43bf98b73a77c471fd10113ab6c">left</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"></td><td class="entry"><a class="el" href="interface_leap_vector.html#a90598eb01c338f4bbab41ad4aab9fcc0">magnitude</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a9d8a8375ec7a44b0b893822c876e6b6a">magnitude</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"></td><td class="entry"><a class="el" href="interface_leap_vector.html#a7e2c055fb056bc6211f4e6ef08904d48">magnitudeSquared</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a44a7879791964fb1522d9412edfc5d44">magnitudeSquared</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a981906b92caf838ee6df23e27cabb7a2">minus:</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a4e61d0f3fd4eece055f4cfbe2bb53ca3">negate</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"></td><td class="entry"><a class="el" href="interface_leap_vector.html#abad213d2c174233be0dfe9c0af474f33">normalized</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#ade718011f5aa85758689715779fd0baa">normalized</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"></td><td class="entry"><a class="el" href="interface_leap_vector.html#a282e7d4378d4a18a805b8980295ac86c">pitch</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#ab314f041e4b1e838181629715418725a">pitch</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a1e8fdd0826ec308a3d63ce27808f604b">plus:</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">+&#160;</td><td><a class="el" href="interface_leap_vector.html#a84fa047103429d222ce04f954dc97a62">right</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"></td><td class="entry"><a class="el" href="interface_leap_vector.html#a26fd84d522945b6038221d9e38c7cc39">roll</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a4f12c6baba5d6f0bf8bc919f9800104b">roll</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a995dedd1960cb7c593eeb1fced90010c">times:</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"></td><td class="entry"><a class="el" href="interface_leap_vector.html#a3558c7dfe1e663f91de2ba74a2b89dec">toFloatPointer</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#ac28b14e82648752a4843d433ca96bc74">toFloatPointer</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"></td><td class="entry"><a class="el" href="interface_leap_vector.html#a4631a5f23167c03ad7f91e4317f8e138">toNSArray</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#ac4d8a3aaf890473a70efbc5190e48c71">toNSArray</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">+&#160;</td><td><a class="el" href="interface_leap_vector.html#a9830589eebbc19011cde15adfc9bfc83">up</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"></td><td class="entry"><a class="el" href="interface_leap_vector.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">+&#160;</td><td><a class="el" href="interface_leap_vector.html#a727725cf5f2b94f6c621bade11d4eaf2">xAxis</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"></td><td class="entry"><a class="el" href="interface_leap_vector.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"></td><td class="entry"><a class="el" href="interface_leap_vector.html#a7efc219781df4a1e281cb5d348b7fbf9">yaw</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">-&#160;</td><td><a class="el" href="interface_leap_vector.html#a1b55893c916866d03fb7150ff3cb8a58">yaw</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">+&#160;</td><td><a class="el" href="interface_leap_vector.html#a5885d2029c91830c654b165629c81c36">yAxis</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"></td><td class="entry"><a class="el" href="interface_leap_vector.html#af73583b1e980b0aa03f9884812e9fd4d">z</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">+&#160;</td><td><a class="el" href="interface_leap_vector.html#abe7441dedfa7323e15a4d2b6a100ccc4">zAxis</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry">+&#160;</td><td><a class="el" href="interface_leap_vector.html#a243c8902a3151917721e16e474d038d4">zero</a></td><td class="entry"><a class="el" href="interface_leap_vector.html">LeapVector</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Objective-C Docs (v3.2)</a></li>
+          </ul><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Leap_Classes.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>Objective-C</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

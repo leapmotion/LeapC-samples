@@ -1,0 +1,905 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>CompressibleUI &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap::Unity::InputModule" href="namespace_leap_1_1_unity_1_1_input_module.html" />
+    <link rel="next" title="Cursor3D" href="class_leap_1_1_unity_1_1_input_module_1_1_cursor3_d.html" />
+    <link rel="prev" title="Leap::Unity::InputModule" href="namespace_leap_1_1_unity_1_1_input_module.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap_1_1_unity_1_1_input_module.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("namespace_leap_1_1_unity_1_1_input_module.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_input_module_1_1_cursor3_d.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap_1_1_unity_1_1_input_module.html" accesskey="U">Leap::Unity::InputModule</a>&raquo;
+  CompressibleUI
+</span> -->
+        
+  <div class="section" id="compressibleui">
+<h1>CompressibleUI<a class="headerlink" href="#compressibleui" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.Unity.InputModule.CompressibleUI Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Supports layer-based, compressible animations that lend a 3D affordance to otherwise flat UI elements.  
+ <a href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#details">More...</a></p>
+
+<p>Inherits MonoBehaviour, and <a class="el" href="interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget.html">Leap.Unity.InputModule.ILeapWidget</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:struct_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i_1_1_layer"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#struct_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i_1_1_layer">Layer</a></td></tr>
+<tr class="memdesc:struct_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">The properties of a <a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html" title="Supports layer-based, compressible animations that lend a 3D affordance to otherwise flat UI elements...">CompressibleUI</a> layer.  <a href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#struct_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i_1_1_layer">More...</a><br/></td></tr>
+<tr class="separator:struct_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1b3ec7e88cefb80497d52b604ea6d556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#a1b3ec7e88cefb80497d52b604ea6d556">DivideLayerHeightsOnToggle</a> (Toggle toggle)</td></tr>
+<tr class="separator:a1b3ec7e88cefb80497d52b604ea6d556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d45837d61d7ae4108ab8ea27ad4cca9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#a3d45837d61d7ae4108ab8ea27ad4cca9">Expand</a> ()</td></tr>
+<tr class="memdesc:a3d45837d61d7ae4108ab8ea27ad4cca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the layer members to their, extended, floating positions.  <a href="#a3d45837d61d7ae4108ab8ea27ad4cca9"></a><br/></td></tr>
+<tr class="separator:a3d45837d61d7ae4108ab8ea27ad4cca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46b1c42340d8ad9203ecfce0e5cbd4a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#a46b1c42340d8ad9203ecfce0e5cbd4a3">HoverDistance</a> (float distance)</td></tr>
+<tr class="memdesc:a46b1c42340d8ad9203ecfce0e5cbd4a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually sets the current hover distance.  <a href="#a46b1c42340d8ad9203ecfce0e5cbd4a3"></a><br/></td></tr>
+<tr class="separator:a46b1c42340d8ad9203ecfce0e5cbd4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8acf3ccd8483b86ffabdc60d50f017"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#a0d8acf3ccd8483b86ffabdc60d50f017">Retract</a> ()</td></tr>
+<tr class="memdesc:a0d8acf3ccd8483b86ffabdc60d50f017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore the layer members to their non-floating positions.  <a href="#a0d8acf3ccd8483b86ffabdc60d50f017"></a><br/></td></tr>
+<tr class="separator:a0d8acf3ccd8483b86ffabdc60d50f017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget.html">Leap.Unity.InputModule.ILeapWidget</a></td></tr>
+<tr class="memitem:a9ac0b8d459b4c5474a7e859a14dcd5d0 inherit pub_methods_interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget.html#a9ac0b8d459b4c5474a7e859a14dcd5d0">Expand</a> ()</td></tr>
+<tr class="separator:a9ac0b8d459b4c5474a7e859a14dcd5d0 inherit pub_methods_interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8536b9a5779324d2570305485fd1e70d inherit pub_methods_interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget.html#a8536b9a5779324d2570305485fd1e70d">HoverDistance</a> (float distance)</td></tr>
+<tr class="separator:a8536b9a5779324d2570305485fd1e70d inherit pub_methods_interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a146412de1aa047a6a8efa61fb96f1809 inherit pub_methods_interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget.html#a146412de1aa047a6a8efa61fb96f1809">Retract</a> ()</td></tr>
+<tr class="separator:a146412de1aa047a6a8efa61fb96f1809 inherit pub_methods_interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ae2aa14ac2f15474781a14857e4426c0e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#ae2aa14ac2f15474781a14857e4426c0e">ContractSpeed</a> = 0.1f</td></tr>
+<tr class="memdesc:ae2aa14ac2f15474781a14857e4426c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">How fast the layer will move to its retracted position.  <a href="#ae2aa14ac2f15474781a14857e4426c0e"></a><br/></td></tr>
+<tr class="separator:ae2aa14ac2f15474781a14857e4426c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace8325e4a645b1900f54852a7af1d049"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#ace8325e4a645b1900f54852a7af1d049">ExpandSpeed</a> = 0.1f</td></tr>
+<tr class="memdesc:ace8325e4a645b1900f54852a7af1d049"><td class="mdescLeft">&#160;</td><td class="mdescRight">How fast the layer will move to its distended position.  <a href="#ace8325e4a645b1900f54852a7af1d049"></a><br/></td></tr>
+<tr class="separator:ace8325e4a645b1900f54852a7af1d049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4a7386f3f804e3cde27143253cd241"><td class="memItemLeft" align="right" valign="top">UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#a6c4a7386f3f804e3cde27143253cd241">LayerCollapse</a></td></tr>
+<tr class="memdesc:a6c4a7386f3f804e3cde27143253cd241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatched when the layer retracts, if TriggerLayerEvent is set to true.  <a href="#a6c4a7386f3f804e3cde27143253cd241"></a><br/></td></tr>
+<tr class="separator:a6c4a7386f3f804e3cde27143253cd241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada6d41788e2bca1ef0100f1857601a07"><td class="memItemLeft" align="right" valign="top">UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#ada6d41788e2bca1ef0100f1857601a07">LayerDepress</a></td></tr>
+<tr class="memdesc:ada6d41788e2bca1ef0100f1857601a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatched when the layer is depressed, if TriggerLayerEvent is set to true.  <a href="#ada6d41788e2bca1ef0100f1857601a07"></a><br/></td></tr>
+<tr class="separator:ada6d41788e2bca1ef0100f1857601a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e11eada7f36e6f3b44535fc311b946b"><td class="memItemLeft" align="right" valign="top">UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#a7e11eada7f36e6f3b44535fc311b946b">LayerExpand</a></td></tr>
+<tr class="memdesc:a7e11eada7f36e6f3b44535fc311b946b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatched when the layer expands, if TriggerLayerEvent is set to true.  <a href="#a7e11eada7f36e6f3b44535fc311b946b"></a><br/></td></tr>
+<tr class="separator:a7e11eada7f36e6f3b44535fc311b946b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef275e8d78b091d8051c71febf0395ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#struct_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i_1_1_layer">Layer</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#aef275e8d78b091d8051c71febf0395ec">Layers</a></td></tr>
+<tr class="memdesc:aef275e8d78b091d8051c71febf0395ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">The layers created for this <a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html" title="Supports layer-based, compressible animations that lend a 3D affordance to otherwise flat UI elements...">CompressibleUI</a> instance.  <a href="#aef275e8d78b091d8051c71febf0395ec"></a><br/></td></tr>
+<tr class="separator:aef275e8d78b091d8051c71febf0395ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1d53f01e8cbe23ba4e497b886c432d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#acb1d53f01e8cbe23ba4e497b886c432d">PushPaddingDistance</a> = 0.01f</td></tr>
+<tr class="memdesc:acb1d53f01e8cbe23ba4e497b886c432d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Padding added before a control enters the hovered state.  <a href="#acb1d53f01e8cbe23ba4e497b886c432d"></a><br/></td></tr>
+<tr class="separator:acb1d53f01e8cbe23ba4e497b886c432d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4fd24da323da6783286c34da53c15eba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#a4fd24da323da6783286c34da53c15eba">OnApplicationQuit</a> ()</td></tr>
+<tr class="separator:a4fd24da323da6783286c34da53c15eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf493af642ff65d5cc4de0b93caae071"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#acf493af642ff65d5cc4de0b93caae071">OnValidate</a> ()</td></tr>
+<tr class="separator:acf493af642ff65d5cc4de0b93caae071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a5c77e61a151517ceeb299ba8f03b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#ae2a5c77e61a151517ceeb299ba8f03b7">Start</a> ()</td></tr>
+<tr class="separator:ae2a5c77e61a151517ceeb299ba8f03b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebefdc692969b2bbf5b382d76f1c6a5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#aebefdc692969b2bbf5b382d76f1c6a5f">Update</a> ()</td></tr>
+<tr class="separator:aebefdc692969b2bbf5b382d76f1c6a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa502fd214270a830363afb7ddb80facf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#aa502fd214270a830363afb7ddb80facf">curLerpSpeed</a> = 0.1f</td></tr>
+<tr class="separator:aa502fd214270a830363afb7ddb80facf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33c44d40d258294419aa8ed68b56522"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#ac33c44d40d258294419aa8ed68b56522">currentlyFloating</a> = false</td></tr>
+<tr class="separator:ac33c44d40d258294419aa8ed68b56522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7a6696564bbe83431d1bc9afe6841df"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#ad7a6696564bbe83431d1bc9afe6841df">HoveringDistance</a> = 0f</td></tr>
+<tr class="separator:ad7a6696564bbe83431d1bc9afe6841df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a487e4f5c982c3b309df98b8ea7d9fe05"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#a487e4f5c982c3b309df98b8ea7d9fe05">TimeLastHovered</a> = 0f</td></tr>
+<tr class="separator:a487e4f5c982c3b309df98b8ea7d9fe05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Supports layer-based, compressible animations that lend a 3D affordance to otherwise flat UI elements. </p>
+<p>The <a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html" title="Supports layer-based, compressible animations that lend a 3D affordance to otherwise flat UI elements...">CompressibleUI</a> script lets you separate the components of a UI and individual controls into floating layers that depress when the user touches them. The <a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html" title="Supports layer-based, compressible animations that lend a 3D affordance to otherwise flat UI elements...">CompressibleUI</a> can make it easier for a user to use a control. </p>
+</div><hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="struct_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i_1_1_layer" id="struct_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i_1_1_layer"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct Leap::Unity::InputModule::CompressibleUI::Layer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>The properties of a <a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html" title="Supports layer-based, compressible animations that lend a 3D affordance to otherwise flat UI elements...">CompressibleUI</a> layer. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ac197b3c772e67b1b9af9b35f1c5bf461"></a>float</td>
+<td class="fieldname">
+CurrentFloatingDistance</td>
+<td class="fielddoc">
+The current distance at which members of the layer are floating. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a006b78787b0177775f4437b08c1fe5da"></a>float</td>
+<td class="fieldname">
+distanceToAboveLayer</td>
+<td class="fielddoc">
+The distance to the parent layer. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ad68e3759c8d7529e460bf535df95179a"></a>string</td>
+<td class="fieldname">
+Label</td>
+<td class="fielddoc">
+A name for the layer. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="add591b30bcde445e177ee382f29907c7"></a>RectTransform</td>
+<td class="fieldname">
+LayerTransform</td>
+<td class="fielddoc">
+The child UI Element to float above the parent element. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="aa25b7d10238bf8f9133a00e9f87326bd"></a>float</td>
+<td class="fieldname">
+maxDistanceToAboveLayer</td>
+<td class="fielddoc">
+The maximum allowed distance to the parent layer. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a265a11a1b7c3082461767578c9cf1bb0"></a>float</td>
+<td class="fieldname">
+MaxFloatDistance</td>
+<td class="fielddoc">
+The height above this (base) element that the <a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#struct_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i_1_1_layer" title="The properties of a CompressibleUI layer.">Layer</a> will float. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a2f859c29c3707887afc28aac53e0a454"></a>float</td>
+<td class="fieldname">
+MaxShadowOpacity</td>
+<td class="fielddoc">
+The maximum value used for drop shadow opacity. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="aa059600e03bee841644d1afd57b1a710"></a>float</td>
+<td class="fieldname">
+MinFloatDistance</td>
+<td class="fielddoc">
+The minimum height that this layer can be compressed to. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="abd0c664ace06138e094473e79bf7d64a"></a>UI</td>
+<td class="fieldname">
+Shadow</td>
+<td class="fielddoc">
+An optional dropshadow image component. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="acb9e09daddff0911c2ac42aed5a68b1e"></a>bool</td>
+<td class="fieldname">
+ShadowOnAboveLayer</td>
+<td class="fielddoc">
+Whether the shadow effect is not a child of this layer, but rather, a child of the layer above it (for masking purposes). </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="afda44c7d8100e375a9e75279bef1a888"></a>bool</td>
+<td class="fieldname">
+touchingFinger</td>
+<td class="fielddoc">
+Whether or not a finger is touching members of this layer. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="acdef772577e9249aa2c435e795964eb9"></a>bool</td>
+<td class="fieldname">
+TriggerLayerEvent</td>
+<td class="fielddoc">
+Whether a layer event is triggered upon touching this layer. </td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1b3ec7e88cefb80497d52b604ea6d556"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.CompressibleUI.DivideLayerHeightsOnToggle </td>
+          <td>(</td>
+          <td class="paramtype">Toggle&#160;</td>
+          <td class="paramname"><em>toggle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3d45837d61d7ae4108ab8ea27ad4cca9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.CompressibleUI.Expand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Move the layer members to their, extended, floating positions. </p>
+
+</div>
+</div>
+<a class="anchor" id="a46b1c42340d8ad9203ecfce0e5cbd4a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.CompressibleUI.HoverDistance </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>distance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Manually sets the current hover distance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">distance</td><td>the distance above the base of the button in millimeters. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4fd24da323da6783286c34da53c15eba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.CompressibleUI.OnApplicationQuit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acf493af642ff65d5cc4de0b93caae071"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.CompressibleUI.OnValidate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0d8acf3ccd8483b86ffabdc60d50f017"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.CompressibleUI.Retract </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Restore the layer members to their non-floating positions. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae2a5c77e61a151517ceeb299ba8f03b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.CompressibleUI.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aebefdc692969b2bbf5b382d76f1c6a5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.CompressibleUI.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ae2aa14ac2f15474781a14857e4426c0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.CompressibleUI.ContractSpeed = 0.1f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>How fast the layer will move to its retracted position. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa502fd214270a830363afb7ddb80facf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.CompressibleUI.curLerpSpeed = 0.1f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac33c44d40d258294419aa8ed68b56522"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.CompressibleUI.currentlyFloating = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ace8325e4a645b1900f54852a7af1d049"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.CompressibleUI.ExpandSpeed = 0.1f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>How fast the layer will move to its distended position. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad7a6696564bbe83431d1bc9afe6841df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.CompressibleUI.HoveringDistance = 0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6c4a7386f3f804e3cde27143253cd241"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEvent Leap.Unity.InputModule.CompressibleUI.LayerCollapse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dispatched when the layer retracts, if TriggerLayerEvent is set to true. </p>
+
+</div>
+</div>
+<a class="anchor" id="ada6d41788e2bca1ef0100f1857601a07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEvent Leap.Unity.InputModule.CompressibleUI.LayerDepress</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dispatched when the layer is depressed, if TriggerLayerEvent is set to true. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7e11eada7f36e6f3b44535fc311b946b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEvent Leap.Unity.InputModule.CompressibleUI.LayerExpand</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dispatched when the layer expands, if TriggerLayerEvent is set to true. </p>
+
+</div>
+</div>
+<a class="anchor" id="aef275e8d78b091d8051c71febf0395ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html#struct_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i_1_1_layer">Layer</a> [] Leap.Unity.InputModule.CompressibleUI.Layers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The layers created for this <a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html" title="Supports layer-based, compressible animations that lend a 3D affordance to otherwise flat UI elements...">CompressibleUI</a> instance. </p>
+<p>All layers move together, but can have different float distances. </p>
+
+</div>
+</div>
+<a class="anchor" id="acb1d53f01e8cbe23ba4e497b886c432d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.CompressibleUI.PushPaddingDistance = 0.01f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Padding added before a control enters the hovered state. </p>
+
+</div>
+</div>
+<a class="anchor" id="a487e4f5c982c3b309df98b8ea7d9fe05"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.CompressibleUI.TimeLastHovered = 0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">CompressibleUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_cursor3_d.html">Cursor3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_extension_methods.html">ExtensionMethods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget.html">ILeapWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">LeapInputModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_physics_u_i.html">PhysicsUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_scroll_rect_volume.html">ScrollRectVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_slider_shadow.html">SliderShadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_slider_volume.html">SliderVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_toggle_toggler.html">ToggleToggler</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

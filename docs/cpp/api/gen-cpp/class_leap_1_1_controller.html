@@ -1,0 +1,1173 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Controller &mdash; Leap Motion C++ SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion C++ SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="Device" href="class_leap_1_1_device.html" />
+    <link rel="prev" title="Config" href="class_leap_1_1_config.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'cpp';
+    var hasAPI = {};
+    hasAPI.cpp = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'cpp/api/gen-cpp/class_leap_1_1_controller.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-cpp/class_leap_1_1_controller.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-cpp/class_leap_1_1_controller.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-cpp/class_leap_1_1_controller.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-cpp/class_leap_1_1_controller.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-cpp/class_leap_1_1_controller.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-cpp/class_leap_1_1_controller.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-cpp/class_leap_1_1_controller.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-cpp/class_leap_1_1_controller.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'cpp/api/gen-cpp/class_leap_1_1_controller.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_config.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_device.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      C++
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  Controller
+</span> -->
+        
+  <div class="section" id="controller">
+<h1>Controller<a class="headerlink" href="#controller" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_controller.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="class_leap_1_1_controller-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Controller Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> class is your main interface to the <a class="el" href="namespace_leap.html">Leap</a> Motion <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>.  
+ <a href="class_leap_1_1_controller.html#details">More...</a></p>
+
+<p>Inherits Interface.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aef594fa2a5136b5264e9c0682f08daa3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a> <tr class="memdesc:aef594fa2a5136b5264e9c0682f08daa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The supported controller policies.  <a href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">More...</a><br /></td></tr>
+<tr class="separator:aef594fa2a5136b5264e9c0682f08daa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a147babfb14a3297648d684ea226dc5a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a147babfb14a3297648d684ea226dc5a2">addListener</a> (<a class="el" href="class_leap_1_1_listener.html">Listener</a> &amp;listener)</td></tr>
+<tr class="memdesc:a147babfb14a3297648d684ea226dc5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a listener to this <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>.  <a href="#a147babfb14a3297648d684ea226dc5a2">More...</a><br /></td></tr>
+<tr class="separator:a147babfb14a3297648d684ea226dc5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad66275c15919dd2f34d199a92a606c50"><td class="memItemLeft" align="right" valign="top">BugReport&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#ad66275c15919dd2f34d199a92a606c50">bugReport</a> () const </td></tr>
+<tr class="separator:ad66275c15919dd2f34d199a92a606c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b46593a96240c7462125a8452667e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#ac3b46593a96240c7462125a8452667e0">clearPolicy</a> (<a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a> policy) const </td></tr>
+<tr class="memdesc:ac3b46593a96240c7462125a8452667e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests clearing a policy.  <a href="#ac3b46593a96240c7462125a8452667e0">More...</a><br /></td></tr>
+<tr class="separator:ac3b46593a96240c7462125a8452667e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af75c5cdc0275a4af12a841369592e5f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#af75c5cdc0275a4af12a841369592e5f2">config</a> () const </td></tr>
+<tr class="memdesc:af75c5cdc0275a4af12a841369592e5f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="class_leap_1_1_config.html" title="The Config class provides access to Leap Motion system configuration information. ...">Config</a> object, which you can use to query the <a class="el" href="namespace_leap.html">Leap</a> Motion system for configuration information.  <a href="#af75c5cdc0275a4af12a841369592e5f2">More...</a><br /></td></tr>
+<tr class="separator:af75c5cdc0275a4af12a841369592e5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80a58c5649f9beaadb797b18259d71b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#ab80a58c5649f9beaadb797b18259d71b">Controller</a> (ControllerImplementation *)</td></tr>
+<tr class="separator:ab80a58c5649f9beaadb797b18259d71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee02f1e6f84f42452208c1bf0bb62cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#aeee02f1e6f84f42452208c1bf0bb62cf">Controller</a> ()</td></tr>
+<tr class="memdesc:aeee02f1e6f84f42452208c1bf0bb62cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object.  <a href="#aeee02f1e6f84f42452208c1bf0bb62cf">More...</a><br /></td></tr>
+<tr class="separator:aeee02f1e6f84f42452208c1bf0bb62cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf8686875ab3681a080786ee0e8d3fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a8bf8686875ab3681a080786ee0e8d3fc">Controller</a> (<a class="el" href="class_leap_1_1_listener.html">Listener</a> &amp;listener)</td></tr>
+<tr class="memdesc:a8bf8686875ab3681a080786ee0e8d3fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object.  <a href="#a8bf8686875ab3681a080786ee0e8d3fc">More...</a><br /></td></tr>
+<tr class="separator:a8bf8686875ab3681a080786ee0e8d3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54659799281c4b8839bc7531fb2d8552"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_device_list.html">DeviceList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a54659799281c4b8839bc7531fb2d8552">devices</a> () const </td></tr>
+<tr class="memdesc:a54659799281c4b8839bc7531fb2d8552"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of currently attached and recognized <a class="el" href="namespace_leap.html">Leap</a> Motion controller devices.  <a href="#a54659799281c4b8839bc7531fb2d8552">More...</a><br /></td></tr>
+<tr class="separator:a54659799281c4b8839bc7531fb2d8552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771d9c0aa2093b63124a55b3daa8d39e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a771d9c0aa2093b63124a55b3daa8d39e">enableGesture</a> (<a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">Gesture::Type</a> type, bool enable=true) const </td></tr>
+<tr class="memdesc:a771d9c0aa2093b63124a55b3daa8d39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables reporting of a specified gesture type.  <a href="#a771d9c0aa2093b63124a55b3daa8d39e">More...</a><br /></td></tr>
+<tr class="separator:a771d9c0aa2093b63124a55b3daa8d39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b969a03cd7dff28965a1aac1be1766"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a44b969a03cd7dff28965a1aac1be1766">failedDevices</a> () const </td></tr>
+<tr class="memdesc:a44b969a03cd7dff28965a1aac1be1766"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of any <a class="el" href="namespace_leap.html">Leap</a> Motion hardware devices that are physically connected to the client computer, but are not functioning correctly.  <a href="#a44b969a03cd7dff28965a1aac1be1766">More...</a><br /></td></tr>
+<tr class="separator:a44b969a03cd7dff28965a1aac1be1766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a25f3894cf82667f423dad20d7d6b62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_frame.html">Frame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a> (int history=0) const </td></tr>
+<tr class="memdesc:a1a25f3894cf82667f423dad20d7d6b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a frame of tracking data from the <a class="el" href="namespace_leap.html">Leap</a> Motion software.  <a href="#a1a25f3894cf82667f423dad20d7d6b62">More...</a><br /></td></tr>
+<tr class="separator:a1a25f3894cf82667f423dad20d7d6b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec44e083a954233dffcb64615c8061c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#aeec44e083a954233dffcb64615c8061c">hasFocus</a> () const </td></tr>
+<tr class="memdesc:aeec44e083a954233dffcb64615c8061c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this application is the focused, foreground application.  <a href="#aeec44e083a954233dffcb64615c8061c">More...</a><br /></td></tr>
+<tr class="separator:aeec44e083a954233dffcb64615c8061c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85588dbb02a8ff793cf2ced9067f8263"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_image_list.html">ImageList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a85588dbb02a8ff793cf2ced9067f8263">images</a> () const </td></tr>
+<tr class="memdesc:a85588dbb02a8ff793cf2ced9067f8263"><td class="mdescLeft">&#160;</td><td class="mdescRight">The most recent set of images from the <a class="el" href="namespace_leap.html">Leap</a> Motion cameras.  <a href="#a85588dbb02a8ff793cf2ced9067f8263">More...</a><br /></td></tr>
+<tr class="separator:a85588dbb02a8ff793cf2ced9067f8263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a180fa55a4bf36580963bed9e3e09c227"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a180fa55a4bf36580963bed9e3e09c227">isConnected</a> () const </td></tr>
+<tr class="memdesc:a180fa55a4bf36580963bed9e3e09c227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> is connected to the <a class="el" href="namespace_leap.html">Leap</a> Motion service and the <a class="el" href="namespace_leap.html">Leap</a> Motion hardware is plugged in.  <a href="#a180fa55a4bf36580963bed9e3e09c227">More...</a><br /></td></tr>
+<tr class="separator:a180fa55a4bf36580963bed9e3e09c227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b842601adce8a11214e0058ab3c4d86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a7b842601adce8a11214e0058ab3c4d86">isGestureEnabled</a> (<a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">Gesture::Type</a> type) const </td></tr>
+<tr class="memdesc:a7b842601adce8a11214e0058ab3c4d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether the specified gesture type is enabled.  <a href="#a7b842601adce8a11214e0058ab3c4d86">More...</a><br /></td></tr>
+<tr class="separator:a7b842601adce8a11214e0058ab3c4d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eaf52e4ed386823bd1051f44d511fe6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a0eaf52e4ed386823bd1051f44d511fe6">isPaused</a> () const </td></tr>
+<tr class="memdesc:a0eaf52e4ed386823bd1051f44d511fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether the <a class="el" href="namespace_leap.html">Leap</a> Motion service is currently paused.  <a href="#a0eaf52e4ed386823bd1051f44d511fe6">More...</a><br /></td></tr>
+<tr class="separator:a0eaf52e4ed386823bd1051f44d511fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033ebfdf3fe02566075be65269938313"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a033ebfdf3fe02566075be65269938313">isPolicySet</a> (<a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a> policy) const </td></tr>
+<tr class="memdesc:a033ebfdf3fe02566075be65269938313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the active setting for a specific policy.  <a href="#a033ebfdf3fe02566075be65269938313">More...</a><br /></td></tr>
+<tr class="separator:a033ebfdf3fe02566075be65269938313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43d650dd9a40aec97b774ff6f0849ff1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a43d650dd9a40aec97b774ff6f0849ff1">isServiceConnected</a> () const </td></tr>
+<tr class="memdesc:a43d650dd9a40aec97b774ff6f0849ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether your application has a connection to the <a class="el" href="namespace_leap.html">Leap</a> Motion daemon/service.  <a href="#a43d650dd9a40aec97b774ff6f0849ff1">More...</a><br /></td></tr>
+<tr class="separator:a43d650dd9a40aec97b774ff6f0849ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a629420c35d3c1192bc44e61f64d1e461"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a629420c35d3c1192bc44e61f64d1e461">now</a> () const </td></tr>
+<tr class="memdesc:a629420c35d3c1192bc44e61f64d1e461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a timestamp value as close as possible to the current time.  <a href="#a629420c35d3c1192bc44e61f64d1e461">More...</a><br /></td></tr>
+<tr class="separator:a629420c35d3c1192bc44e61f64d1e461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fb10f7d2f159d77bf9f25718b7e6dc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a0fb10f7d2f159d77bf9f25718b7e6dc5">policyFlags</a> () const </td></tr>
+<tr class="memdesc:a0fb10f7d2f159d77bf9f25718b7e6dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function has been deprecated.  <a href="#a0fb10f7d2f159d77bf9f25718b7e6dc5">More...</a><br /></td></tr>
+<tr class="separator:a0fb10f7d2f159d77bf9f25718b7e6dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6111d1167ae69e1b5358fbe861aafa99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_image_list.html">ImageList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a6111d1167ae69e1b5358fbe861aafa99">rawImages</a> () const </td></tr>
+<tr class="separator:a6111d1167ae69e1b5358fbe861aafa99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ca389d1a7f610e7f11833a1fd4c678"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a49ca389d1a7f610e7f11833a1fd4c678">removeListener</a> (<a class="el" href="class_leap_1_1_listener.html">Listener</a> &amp;listener)</td></tr>
+<tr class="memdesc:a49ca389d1a7f610e7f11833a1fd4c678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a listener from the list of listeners that will receive <a class="el" href="namespace_leap.html">Leap</a> Motion events.  <a href="#a49ca389d1a7f610e7f11833a1fd4c678">More...</a><br /></td></tr>
+<tr class="separator:a49ca389d1a7f610e7f11833a1fd4c678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafab2fafdec7ae38b9da6676ccf01e77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#aafab2fafdec7ae38b9da6676ccf01e77">setPaused</a> (bool pause)</td></tr>
+<tr class="memdesc:aafab2fafdec7ae38b9da6676ccf01e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses or resumes the <a class="el" href="namespace_leap.html">Leap</a> Motion service.  <a href="#aafab2fafdec7ae38b9da6676ccf01e77">More...</a><br /></td></tr>
+<tr class="separator:aafab2fafdec7ae38b9da6676ccf01e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b4a8342124b2c29955ce3fc8c0d31f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a31b4a8342124b2c29955ce3fc8c0d31f">setPolicy</a> (<a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a> policy) const </td></tr>
+<tr class="memdesc:a31b4a8342124b2c29955ce3fc8c0d31f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests setting a policy.  <a href="#a31b4a8342124b2c29955ce3fc8c0d31f">More...</a><br /></td></tr>
+<tr class="separator:a31b4a8342124b2c29955ce3fc8c0d31f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83fe28bd0d9de4aaad86596ea476e1fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#a83fe28bd0d9de4aaad86596ea476e1fd">setPolicyFlags</a> (<a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a> flags) const </td></tr>
+<tr class="memdesc:a83fe28bd0d9de4aaad86596ea476e1fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function has been deprecated.  <a href="#a83fe28bd0d9de4aaad86596ea476e1fd">More...</a><br /></td></tr>
+<tr class="separator:a83fe28bd0d9de4aaad86596ea476e1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa011221412a27880b3c75933c83e0160"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html#aa011221412a27880b3c75933c83e0160">~Controller</a> ()</td></tr>
+<tr class="separator:aa011221412a27880b3c75933c83e0160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> class is your main interface to the <a class="el" href="namespace_leap.html">Leap</a> Motion <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>. </p>
+<p>Create an instance of this <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> class to access frames of tracking data and configuration information. <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> data can be polled at any time using the <a class="el" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62" title="Returns a frame of tracking data from the Leap Motion software. ">Controller::frame()</a> function. Call <a class="el" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62" title="Returns a frame of tracking data from the Leap Motion software. ">frame()</a> or frame(0) to get the most recent frame. Set the history parameter to a positive integer to access previous frames. A controller stores up to 60 frames in its frame history.</p>
+<p>Polling is an appropriate strategy for applications which already have an intrinsic update loop, such as a game. You can also add an instance of a subclass of <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Leap::Listener</a> to the controller to handle events as they occur. The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> dispatches events to the listener upon initialization and exiting, on connection changes, when the application gains and loses the OS input focus, and when a new frame of tracking data is available. When these events occur, the controller object invokes the appropriate callback function defined in your subclass of <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a>.</p>
+<p>To access frames of tracking data as they become available:</p>
+<ol type="1">
+<li>Implement a subclass of the <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> class and override the <a class="el" href="class_leap_1_1_listener.html#abda5aa2c81ae8cefe01301bc5f87c8d1" title="Called when a new frame of hand and finger tracking data is available. ">Listener::onFrame()</a> function.</li>
+<li>In your <a class="el" href="class_leap_1_1_listener.html#abda5aa2c81ae8cefe01301bc5f87c8d1" title="Called when a new frame of hand and finger tracking data is available. ">Listener::onFrame()</a> function, call the <a class="el" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62" title="Returns a frame of tracking data from the Leap Motion software. ">Controller::frame()</a> function to access the newest frame of tracking data.</li>
+<li>To start receiving frames, create a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object and add an instance of the <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> subclass to the <a class="el" href="class_leap_1_1_controller.html#a147babfb14a3297648d684ea226dc5a2" title="Adds a listener to this Controller. ">Controller::addListener()</a> function.</li>
+</ol>
+<p>When an instance of a <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> subclass is added to a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object, it calls the <a class="el" href="class_leap_1_1_listener.html#a40b6cfe4f9679aa0d1334c12fed3b9c3" title="Called once, when this Listener object is newly added to a Controller. ">Listener::onInit()</a> function when the listener is ready for use. When a connection is established between the controller and the <a class="el" href="namespace_leap.html">Leap</a> Motion software, the controller calls the <a class="el" href="class_leap_1_1_listener.html#a6b0dd62da959d048a3cc7917cca1ccba" title="Called when the Controller object connects to the Leap Motion software and the Leap Motion hardware d...">Listener::onConnect()</a> function. At this point, your application will start receiving frames of data. The controller calls the <a class="el" href="class_leap_1_1_listener.html#abda5aa2c81ae8cefe01301bc5f87c8d1" title="Called when a new frame of hand and finger tracking data is available. ">Listener::onFrame()</a> function each time a new frame is available. If the controller loses its connection with the <a class="el" href="namespace_leap.html">Leap</a> Motion software or device for any reason, it calls the <a class="el" href="class_leap_1_1_listener.html#a399521092032c7f8c8da9e62636ad6d6" title="Called when the Controller object disconnects from the Leap Motion software or the Leap Motion hardwa...">Listener::onDisconnect()</a> function. If the listener is removed from the controller or the controller is destroyed, it calls the <a class="el" href="class_leap_1_1_listener.html#ac2e32940081a691303e0fa83ab098bef" title="Called when this Listener object is removed from the Controller or the Controller instance is destroy...">Listener::onExit()</a> function. At that point, unless the listener is added to another controller again, it will no longer receive frames of tracking data.</p>
+<p>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object is multithreaded and calls the <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> functions on its own thread, not on an application thread. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="aef594fa2a5136b5264e9c0682f08daa3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The supported controller policies. </p>
+<p>The supported policy flags are:</p>
+<p><b>POLICY_BACKGROUND_FRAMES</b> &ndash; requests that your application receives frames when it is not the foreground application for user input.</p>
+<p>The background frames policy determines whether an application receives frames of tracking data while in the background. By default, the <a class="el" href="namespace_leap.html">Leap</a> Motion software only sends tracking data to the foreground application. Only applications that need this ability should request the background frames policy. The "Allow Background Apps" checkbox must be enabled in the <a class="el" href="namespace_leap.html">Leap</a> Motion Control Panel or this policy will be denied.</p>
+<p><b>POLICY_IMAGES</b> &ndash; request that your application receives images from the device cameras. The "Allow Images" checkbox must be enabled in the <a class="el" href="namespace_leap.html">Leap</a> Motion Control Panel or this policy will be denied.</p>
+<p>The images policy determines whether an application receives image data from the <a class="el" href="namespace_leap.html">Leap</a> Motion sensors with each frame of data. By default, this data is not sent. Only applications that use the image data should request this policy.</p>
+<p><b>POLICY_OPTIMIZE_HMD</b> &ndash; request that the tracking be optimized for head-mounted tracking.</p>
+<p>The optimize HMD policy improves tracking in situations where the <a class="el" href="namespace_leap.html">Leap</a> Motion hardware is attached to a head-mounted display. This policy is not granted for devices that cannot be mounted to an HMD, such as <a class="el" href="namespace_leap.html">Leap</a> Motion controllers embedded in a laptop or keyboard.</p>
+<p><b>POLICY_ALLOW_PAUSE_RESUME</b> &ndash; request that the application be allowed to pause and unpause the <a class="el" href="namespace_leap.html">Leap</a> Motion service.</p>
+<p>Some policies can be denied if the user has disabled the feature on their <a class="el" href="namespace_leap.html">Leap</a> Motion control panel.</p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aef594fa2a5136b5264e9c0682f08daa3a761687f97f938174f2562fbcca317828"></a>POLICY_DEFAULT&#160;</td><td class="fielddoc">
+<p>The default policy. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aef594fa2a5136b5264e9c0682f08daa3a5ad8c0383636ea16bb83d9ff5bf77bec"></a>POLICY_BACKGROUND_FRAMES&#160;</td><td class="fielddoc">
+<p>Receive background frames. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aef594fa2a5136b5264e9c0682f08daa3a2b391b43ef156516746281d25e0eb6a6"></a>POLICY_IMAGES&#160;</td><td class="fielddoc">
+<p>Receive images from sensor cameras. </p>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aef594fa2a5136b5264e9c0682f08daa3a3f0f80cdc83e58a01fce791fdd8b880d"></a>POLICY_OPTIMIZE_HMD&#160;</td><td class="fielddoc">
+<p>Optimize the tracking for head-mounted device. </p>
+<dl class="section since"><dt>Since</dt><dd>2.1.2 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aef594fa2a5136b5264e9c0682f08daa3a427d6c2900872444c7346050a737971a"></a>POLICY_ALLOW_PAUSE_RESUME&#160;</td><td class="fielddoc">
+<p>Allow pausing and unpausing of the <a class="el" href="namespace_leap.html">Leap</a> Motion service. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aef594fa2a5136b5264e9c0682f08daa3af60ddf46d7d555d3a1c2d282dd6df30a"></a>POLICY_RAW_IMAGES&#160;</td><td class="fielddoc">
+<p>Receive raw images. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ab80a58c5649f9beaadb797b18259d71b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_controller.html">Controller</a> </td>
+          <td>(</td>
+          <td class="paramtype">ControllerImplementation *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeee02f1e6f84f42452208c1bf0bb62cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_controller.html">Controller</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object. </p>
+<p>When creating a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object, you may optionally pass in a reference to an instance of a subclass of <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Leap::Listener</a>. Alternatively, you may add a listener using the <a class="el" href="class_leap_1_1_controller.html#a147babfb14a3297648d684ea226dc5a2" title="Adds a listener to this Controller. ">Controller::addListener()</a> function.</p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa011221412a27880b3c75933c83e0160"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="class_leap_1_1_controller.html">Controller</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8bf8686875ab3681a080786ee0e8d3fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_controller.html">Controller</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_listener.html">Listener</a> &amp;&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object. </p>
+<p>When creating a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object, you may optionally pass in a reference to an instance of a subclass of <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Leap::Listener</a>. Alternatively, you may add a listener using the <a class="el" href="class_leap_1_1_controller.html#a147babfb14a3297648d684ea226dc5a2" title="Adds a listener to this Controller. ">Controller::addListener()</a> function.</p>
+<div class="fragment"><div class="line">SampleListener listenerSubclass;</div>
+<div class="line"><a class="code" href="class_leap_1_1_controller.html#aeee02f1e6f84f42452208c1bf0bb62cf">Controller</a> leapController = <a class="code" href="class_leap_1_1_controller.html#aeee02f1e6f84f42452208c1bf0bb62cf">Controller</a>(listenerSubclass);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>An instance of <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Leap::Listener</a> implementing the callback functions for the <a class="el" href="namespace_leap.html">Leap</a> Motion events you want to handle in your application. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a147babfb14a3297648d684ea226dc5a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool addListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_listener.html">Listener</a> &amp;&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a listener to this <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>. </p>
+<p>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> dispatches <a class="el" href="namespace_leap.html">Leap</a> Motion events to each associated listener. The order in which listener callback functions are invoked is arbitrary. If you pass a listener to the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>'s constructor function, it is automatically added to the list and can be removed with the <a class="el" href="class_leap_1_1_controller.html#a49ca389d1a7f610e7f11833a1fd4c678" title="Remove a listener from the list of listeners that will receive Leap Motion events. ">Controller::removeListener()</a> function.</p>
+<div class="fragment"><div class="line">SampleListener listener;</div>
+<div class="line">controller.addListener(listener);</div>
+</div><!-- fragment --><p>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> does not keep a strong reference to the <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> instance. Ensure that you maintain a reference until the listener is removed from the controller.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>A subclass of <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Leap::Listener</a> implementing the callback functions for the <a class="el" href="namespace_leap.html">Leap</a> Motion events you want to handle in your application. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the listener was successfully added to the list of listeners. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad66275c15919dd2f34d199a92a606c50"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BugReport bugReport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac3b46593a96240c7462125a8452667e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clearPolicy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a>&#160;</td>
+          <td class="paramname"><em>policy</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requests clearing a policy. </p>
+<p>Policy changes are completed asynchronously and, because they are subject to user approval or system compatibility checks, may not complete successfully. Call <a class="el" href="class_leap_1_1_controller.html#a033ebfdf3fe02566075be65269938313" title="Gets the active setting for a specific policy. ">Controller::isPolicySet()</a> after a suitable interval to test whether the change was accepted.</p>
+<div class="fragment"><div class="line">controller.clearPolicy(<a class="code" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3a5ad8c0383636ea16bb83d9ff5bf77bec">Leap::Controller::POLICY_BACKGROUND_FRAMES</a>);</div>
+<div class="line">controller.clearPolicy(<a class="code" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3a3f0f80cdc83e58a01fce791fdd8b880d">Leap::Controller::POLICY_OPTIMIZE_HMD</a>);</div>
+<div class="line">controller.clearPolicy(<a class="code" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3a2b391b43ef156516746281d25e0eb6a6">Leap::Controller::POLICY_IMAGES</a>);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>A PolicyFlag value indicating the policy to request. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>2.1.6 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af75c5cdc0275a4af12a841369592e5f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_config.html">Config</a> config </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a <a class="el" href="class_leap_1_1_config.html" title="The Config class provides access to Leap Motion system configuration information. ...">Config</a> object, which you can use to query the <a class="el" href="namespace_leap.html">Leap</a> Motion system for configuration information. </p>
+<div class="fragment"><div class="line">controller.config().setFloat(<span class="stringliteral">&quot;Gesture.Circle.MinRadius&quot;</span>, 15);</div>
+<div class="line">controller.config().setFloat(<span class="stringliteral">&quot;Gesture.Circle.MinArc&quot;</span>, 1.7);</div>
+<div class="line"><span class="keywordtype">bool</span> saved = controller.config().save();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>'s <a class="el" href="class_leap_1_1_config.html" title="The Config class provides access to Leap Motion system configuration information. ...">Config</a> object. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a54659799281c4b8839bc7531fb2d8552"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_device_list.html">DeviceList</a> devices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The list of currently attached and recognized <a class="el" href="namespace_leap.html">Leap</a> Motion controller devices. </p>
+<p>The <a class="el" href="class_leap_1_1_device.html" title="The Device class represents a physically connected device. ">Device</a> objects in the list describe information such as the range and tracking volume.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_device_list.html">Leap::DeviceList</a> connectedLeaps = controller.devices();</div>
+</div><!-- fragment --><p>Currently, the <a class="el" href="namespace_leap.html">Leap</a> Motion <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> only allows a single active device at a time, however there may be multiple devices physically attached and listed here. Any active device(s) are guaranteed to be listed first, however order is not determined beyond that.</p>
+<dl class="section return"><dt>Returns</dt><dd>The list of <a class="el" href="namespace_leap.html">Leap</a> Motion controllers. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a771d9c0aa2093b63124a55b3daa8d39e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enableGesture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">Gesture::Type</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables or disables reporting of a specified gesture type. </p>
+<div class="fragment"><div class="line">controller.enableGesture(<a class="code" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7ab2eb90403a01de900f57a32876c8bb27">Leap::Gesture::TYPE_CIRCLE</a>);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of gesture to enable or disable. Must be a member of the <a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7" title="The supported types of gestures. ">Gesture::Type</a> enumeration. </td></tr>
+    <tr><td class="paramname">enable</td><td>True, to enable the specified gesture type; False, to disable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_leap_1_1_controller.html#a7b842601adce8a11214e0058ab3c4d86" title="Reports whether the specified gesture type is enabled. ">Controller::isGestureEnabled()</a> </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000113">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a44b969a03cd7dff28965a1aac1be1766"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a> failedDevices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A list of any <a class="el" href="namespace_leap.html">Leap</a> Motion hardware devices that are physically connected to the client computer, but are not functioning correctly. </p>
+<p>The list contains <a class="el" href="class_leap_1_1_failed_device.html" title="The FailedDevice class provides information about Leap Motion hardware that has been physically conne...">FailedDevice</a> objects containing the pnpID and the reason for failure. No other device information is available.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_failed_device_list.html">Leap::FailedDeviceList</a> badDevices = controller.failedDevices();</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1a25f3894cf82667f423dad20d7d6b62"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_frame.html">Frame</a> frame </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>history</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a frame of tracking data from the <a class="el" href="namespace_leap.html">Leap</a> Motion software. </p>
+<p>Use the optional history parameter to specify which frame to retrieve. Call <a class="el" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62" title="Returns a frame of tracking data from the Leap Motion software. ">frame()</a> or frame(0) to access the most recent frame; call frame(1) to access the previous frame, and so on. If you use a history value greater than the number of stored frames, then the controller returns an invalid frame.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>( controller.isConnected()) <span class="comment">//controller is a Controller object</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> <a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a> = controller.frame(); <span class="comment">//The latest frame</span></div>
+<div class="line">    <a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> previous = controller.frame(1); <span class="comment">//The previous frame</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You can call this function in your <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> implementation to get frames at the <a class="el" href="namespace_leap.html">Leap</a> Motion frame rate:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>FrameListener : <a class="code" href="class_leap_1_1_listener.html">Leap::Listener</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">void</span> onFrame(<a class="code" href="class_leap_1_1_controller.html">Leap::Controller</a> &amp;controller)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> frame = controller.<a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a>(); <span class="comment">//The latest frame</span></div>
+<div class="line">        <a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> previous = controller.<a class="code" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62">frame</a>(1); <span class="comment">//The previous frame</span></div>
+<div class="line">        <span class="comment">//...</span></div>
+<div class="line">    }</div>
+<div class="line">};</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">history</td><td>The age of the frame to return, counting backwards from the most recent frame (0) into the past and up to the maximum age (59). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The specified frame; or, if no history parameter is specified, the newest frame. If a frame is not available at the specified history position, an invalid <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> is returned. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeec44e083a954233dffcb64615c8061c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasFocus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports whether this application is the focused, foreground application. </p>
+<p>By default, your application only receives tracking information from the <a class="el" href="namespace_leap.html">Leap</a> Motion controller when it has the operating system input focus. To receive tracking data when your application is in the background, the background frames policy flag must be set.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(controller.<a class="code" href="class_leap_1_1_controller.html#aeec44e083a954233dffcb64615c8061c">hasFocus</a>()){</div>
+<div class="line">    <span class="comment">//perform action that requires application to be focused</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if application has focus; false otherwise.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_leap_1_1_controller.html#a83fe28bd0d9de4aaad86596ea476e1fd" title="This function has been deprecated. ">Controller::setPolicyFlags()</a> </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a85588dbb02a8ff793cf2ced9067f8263"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_image_list.html">ImageList</a> images </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The most recent set of images from the <a class="el" href="namespace_leap.html">Leap</a> Motion cameras. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_image_list.html">Leap::ImageList</a> <a class="code" href="class_leap_1_1_controller.html#a85588dbb02a8ff793cf2ced9067f8263">images</a> = controller.<a class="code" href="class_leap_1_1_controller.html#a85588dbb02a8ff793cf2ced9067f8263">images</a>();</div>
+</div><!-- fragment --><p>Depending on timing and the current processing frame rate, the images obtained with this function can be newer than images obtained from the current frame of tracking data.</p>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="class_leap_1_1_image_list.html" title="The ImageList class represents a list of Image objects. ">ImageList</a> object containing the most recent camera images. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.2.1 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a180fa55a4bf36580963bed9e3e09c227"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports whether this <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> is connected to the <a class="el" href="namespace_leap.html">Leap</a> Motion service and the <a class="el" href="namespace_leap.html">Leap</a> Motion hardware is plugged in. </p>
+<p>When you first create a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object, <a class="el" href="class_leap_1_1_controller.html#a180fa55a4bf36580963bed9e3e09c227" title="Reports whether this Controller is connected to the Leap Motion service and the Leap Motion hardware ...">isConnected()</a> returns false. After the controller finishes initializing and connects to the <a class="el" href="namespace_leap.html">Leap</a> Motion software and if the <a class="el" href="namespace_leap.html">Leap</a> Motion hardware is plugged in, <a class="el" href="class_leap_1_1_controller.html#a180fa55a4bf36580963bed9e3e09c227" title="Reports whether this Controller is connected to the Leap Motion service and the Leap Motion hardware ...">isConnected()</a> returns true.</p>
+<p>You can either handle the onConnect event using a <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> instance or poll the <a class="el" href="class_leap_1_1_controller.html#a180fa55a4bf36580963bed9e3e09c227" title="Reports whether this Controller is connected to the Leap Motion service and the Leap Motion hardware ...">isConnected()</a> function if you need to wait for your application to be connected to the <a class="el" href="namespace_leap.html">Leap</a> Motion software before performing some other operation.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(controller.<a class="code" href="class_leap_1_1_controller.html#a180fa55a4bf36580963bed9e3e09c227">isConnected</a>()){</div>
+<div class="line">    <span class="comment">//perform action that requires a connected controller</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>True, if connected; false otherwise. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7b842601adce8a11214e0058ab3c4d86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isGestureEnabled </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">Gesture::Type</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports whether the specified gesture type is enabled. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(!controller.<a class="code" href="class_leap_1_1_controller.html#a7b842601adce8a11214e0058ab3c4d86">isGestureEnabled</a>(<a class="code" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7ae07a8a5039bd5a0dffa7737c484566e5">Leap::Gesture::TYPE_SWIPE</a>)){</div>
+<div class="line">    controller.<a class="code" href="class_leap_1_1_controller.html#a771d9c0aa2093b63124a55b3daa8d39e">enableGesture</a>(<a class="code" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7ae07a8a5039bd5a0dffa7737c484566e5">Leap::Gesture::TYPE_SWIPE</a>);</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of gesture to check; a member of the <a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7" title="The supported types of gestures. ">Gesture::Type</a> enumeration. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True, if the specified type is enabled; false, otherwise. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_leap_1_1_controller.html#a771d9c0aa2093b63124a55b3daa8d39e" title="Enables or disables reporting of a specified gesture type. ">Controller::enableGesture()</a> </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000114">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0eaf52e4ed386823bd1051f44d511fe6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPaused </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports whether the <a class="el" href="namespace_leap.html">Leap</a> Motion service is currently paused. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(controller.<a class="code" href="class_leap_1_1_controller.html#a0eaf52e4ed386823bd1051f44d511fe6">isPaused</a>()){</div>
+<div class="line">    <span class="comment">//Display message to user.</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if the service is paused; false, otherwise. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a033ebfdf3fe02566075be65269938313"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPolicySet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a>&#160;</td>
+          <td class="paramname"><em>policy</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the active setting for a specific policy. </p>
+<p>Keep in mind that setting a policy flag is asynchronous, so changes are not effective immediately after calling setPolicyFlag(). In addition, a policy request can be declined by the user. You should always set the policy flags required by your application at startup and check that the policy change request was successful after an appropriate interval.</p>
+<p>If the controller object is not connected to the <a class="el" href="namespace_leap.html">Leap</a> Motion software, then the default state for the selected policy is returned.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> isImagePolicyActive = controller.<a class="code" href="class_leap_1_1_controller.html#a033ebfdf3fe02566075be65269938313">isPolicySet</a>(<a class="code" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3a2b391b43ef156516746281d25e0eb6a6">Leap::Controller::POLICY_IMAGES</a>);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>A PolicyFlag value indicating the policy to query. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether the specified policy has been set. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.1.6 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a43d650dd9a40aec97b774ff6f0849ff1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isServiceConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports whether your application has a connection to the <a class="el" href="namespace_leap.html">Leap</a> Motion daemon/service. </p>
+<p>Can be true even if the <a class="el" href="namespace_leap.html">Leap</a> Motion hardware is not available. </p><dl class="section since"><dt>Since</dt><dd>1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a629420c35d3c1192bc44e61f64d1e461"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t now </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a timestamp value as close as possible to the current time. </p>
+<p>Values are in microseconds, as with all the other timestamp values.</p>
+<dl class="section since"><dt>Since</dt><dd>2.2.7 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0fb10f7d2f159d77bf9f25718b7e6dc5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a> policyFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function has been deprecated. </p>
+<p>Use <a class="el" href="class_leap_1_1_controller.html#a033ebfdf3fe02566075be65269938313" title="Gets the active setting for a specific policy. ">isPolicySet()</a> instead. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000111">Deprecated:</a></b></dt><dd>2.1.6 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6111d1167ae69e1b5358fbe861aafa99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_image_list.html">ImageList</a> rawImages </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a49ca389d1a7f610e7f11833a1fd4c678"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool removeListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_listener.html">Listener</a> &amp;&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a listener from the list of listeners that will receive <a class="el" href="namespace_leap.html">Leap</a> Motion events. </p>
+<p>A listener must be removed if its lifetime is shorter than the controller to which it is listening.</p>
+<div class="fragment"><div class="line">SampleListener listenerObject;</div>
+<div class="line">leapController.addListener(listenerObject);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// ... much later</span></div>
+<div class="line">leapController.removeListener(listenerObject);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The listener to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the listener was successfully removed from the list of listeners. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aafab2fafdec7ae38b9da6676ccf01e77"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPaused </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pause</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pauses or resumes the <a class="el" href="namespace_leap.html">Leap</a> Motion service. </p>
+<p>When the service is paused no applications receive tracking data and the service itself uses minimal CPU time.</p>
+<p>Before changing the state of the service, you must set the POLICY_ALLOW_PAUSE_RESUME using the <a class="el" href="class_leap_1_1_controller.html#a31b4a8342124b2c29955ce3fc8c0d31f" title="Requests setting a policy. ">Controller::setPolicy()</a> function. Policies must be set every time the application is run.</p>
+<div class="fragment"><div class="line">controller.<a class="code" href="class_leap_1_1_controller.html#aafab2fafdec7ae38b9da6676ccf01e77">setPaused</a>(<span class="keyword">true</span>);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pause</td><td>Set true to pause the service; false to resume. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a31b4a8342124b2c29955ce3fc8c0d31f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPolicy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a>&#160;</td>
+          <td class="paramname"><em>policy</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requests setting a policy. </p>
+<p>A request to change a policy is subject to user approval and a policy can be changed by the user at any time (using the <a class="el" href="namespace_leap.html">Leap</a> Motion settings dialog). The desired policy flags must be set every time an application runs.</p>
+<p>Policy changes are completed asynchronously and, because they are subject to user approval or system compatibility checks, may not complete successfully. Call <a class="el" href="class_leap_1_1_controller.html#a033ebfdf3fe02566075be65269938313" title="Gets the active setting for a specific policy. ">Controller::isPolicySet()</a> after a suitable interval to test whether the change was accepted.</p>
+<div class="fragment"><div class="line">controller.<a class="code" href="class_leap_1_1_controller.html#a31b4a8342124b2c29955ce3fc8c0d31f">setPolicy</a>(<a class="code" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3a5ad8c0383636ea16bb83d9ff5bf77bec">Leap::Controller::POLICY_BACKGROUND_FRAMES</a>);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">policy</td><td>A PolicyFlag value indicating the policy to request. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>2.1.6 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a83fe28bd0d9de4aaad86596ea476e1fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPolicyFlags </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_controller.html#aef594fa2a5136b5264e9c0682f08daa3">PolicyFlag</a>&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function has been deprecated. </p>
+<p>Use <a class="el" href="class_leap_1_1_controller.html#a31b4a8342124b2c29955ce3fc8c0d31f" title="Requests setting a policy. ">setPolicy()</a> and <a class="el" href="class_leap_1_1_controller.html#ac3b46593a96240c7462125a8452667e0" title="Requests clearing a policy. ">clearPolicy()</a> instead. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000112">Deprecated:</a></b></dt><dd>2.1.6 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">C++ Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_circle_gesture.html">CircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_config.html">Config</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger_list.html">FingerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_float_array.html">FloatArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture.html">Gesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture_list.html">GestureList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand_list.html">HandList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image_list.html">ImageList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_key_tap_gesture.html">KeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_listener.html">Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable.html">Pointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable_list.html">PointableList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool.html">Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool_list.html">ToolList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>C++</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

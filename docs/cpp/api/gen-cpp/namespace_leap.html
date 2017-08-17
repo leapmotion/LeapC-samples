@@ -1,0 +1,628 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Leap &mdash; Leap Motion C++ SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion C++ SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="Listener" href="class_leap_1_1_listener.html" />
+    <link rel="prev" title="KeyTapGesture" href="class_leap_1_1_key_tap_gesture.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'cpp';
+    var hasAPI = {};
+    hasAPI.cpp = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'cpp/api/gen-cpp/namespace_leap.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-cpp/namespace_leap.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-cpp/namespace_leap.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-cpp/namespace_leap.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-cpp/namespace_leap.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-cpp/namespace_leap.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-cpp/namespace_leap.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-cpp/namespace_leap.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-cpp/namespace_leap.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'cpp/api/gen-cpp/namespace_leap.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_key_tap_gesture.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_listener.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      C++
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  Leap
+</span> -->
+        
+  <div class="section" id="leap">
+<h1>Leap<a class="headerlink" href="#leap" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('namespace_leap.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap Namespace Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_arm.html">Arm</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_arm.html" title="The Arm class represents the forearm. ">Arm</a> class represents the forearm.  <a href="class_leap_1_1_arm.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html">Bone</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> class represents a tracked bone.  <a href="class_leap_1_1_bone.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_circle_gesture.html">CircleGesture</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_circle_gesture.html" title="The CircleGesture classes represents a circular finger movement. ">CircleGesture</a> classes represents a circular finger movement.  <a href="class_leap_1_1_circle_gesture.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html">Config</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_config.html" title="The Config class provides access to Leap Motion system configuration information. ...">Config</a> class provides access to <a class="el" href="namespace_leap.html">Leap</a> Motion system configuration information.  <a href="class_leap_1_1_config.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_controller.html">Controller</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> class is your main interface to the <a class="el" href="namespace_leap.html">Leap</a> Motion <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>.  <a href="class_leap_1_1_controller.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_device.html">Device</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_device.html" title="The Device class represents a physically connected device. ">Device</a> class represents a physically connected device.  <a href="class_leap_1_1_device.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_device_list.html">DeviceList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_device_list.html" title="The DeviceList class represents a list of Device objects. ">DeviceList</a> class represents a list of <a class="el" href="class_leap_1_1_device.html" title="The Device class represents a physically connected device. ">Device</a> objects.  <a href="class_leap_1_1_device_list.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_failed_device.html">FailedDevice</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_failed_device.html" title="The FailedDevice class provides information about Leap Motion hardware that has been physically conne...">FailedDevice</a> class provides information about <a class="el" href="namespace_leap.html">Leap</a> Motion hardware that has been physically connected to the client computer, but is not operating correctly.  <a href="class_leap_1_1_failed_device.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of <a class="el" href="class_leap_1_1_failed_device.html" title="The FailedDevice class provides information about Leap Motion hardware that has been physically conne...">FailedDevice</a> objects contains an entry for every failed <a class="el" href="namespace_leap.html">Leap</a> Motion hardware device connected to the client computer.  <a href="class_leap_1_1_failed_device_list.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger.html">Finger</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> class represents a tracked finger.  <a href="class_leap_1_1_finger.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger_list.html">FingerList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_finger_list.html" title="The FingerList class represents a list of Finger objects. ">FingerList</a> class represents a list of <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> objects.  <a href="class_leap_1_1_finger_list.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_float_array.html">FloatArray</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="struct_leap_1_1_float_array.html" title="The FloatArray struct is used to allow the returning of native float arrays without requiring dynamic...">FloatArray</a> struct is used to allow the returning of native float arrays without requiring dynamic memory allocation.  <a href="struct_leap_1_1_float_array.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_frame.html">Frame</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> class represents a set of hand and finger tracking data detected in a single frame.  <a href="class_leap_1_1_frame.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> class represents a recognized movement by the user.  <a href="class_leap_1_1_gesture.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture_list.html">GestureList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_gesture_list.html" title="The GestureList class represents a list of Gesture objects. ">GestureList</a> class represents a list of <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> objects.  <a href="class_leap_1_1_gesture_list.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_hand.html">Hand</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> class reports the physical characteristics of a detected hand.  <a href="class_leap_1_1_hand.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_hand_list.html">HandList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_hand_list.html" title="The HandList class represents a list of Hand objects. ">HandList</a> class represents a list of <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> objects.  <a href="class_leap_1_1_hand_list.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html">Image</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras. ">Image</a> class represents a single image from one of the <a class="el" href="namespace_leap.html">Leap</a> Motion cameras.  <a href="class_leap_1_1_image.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image_list.html">ImageList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_image_list.html" title="The ImageList class represents a list of Image objects. ">ImageList</a> class represents a list of <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras. ">Image</a> objects.  <a href="class_leap_1_1_image_list.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_interaction_box.html">InteractionBox</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_interaction_box.html" title="The InteractionBox class represents a box-shaped region completely within the field of view of the Le...">InteractionBox</a> class represents a box-shaped region completely within the field of view of the <a class="el" href="namespace_leap.html">Leap</a> Motion controller.  <a href="class_leap_1_1_interaction_box.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_key_tap_gesture.html">KeyTapGesture</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_key_tap_gesture.html" title="The KeyTapGesture class represents a tapping gesture by a finger or tool. ">KeyTapGesture</a> class represents a tapping gesture by a finger or tool.  <a href="class_leap_1_1_key_tap_gesture.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html">Listener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> class defines a set of callback functions that you can override in a subclass to respond to events dispatched by the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object.  <a href="class_leap_1_1_listener.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> struct represents a transformation matrix.  <a href="struct_leap_1_1_matrix.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html">Pointable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> class reports the physical characteristics of a detected finger or tool.  <a href="class_leap_1_1_pointable.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable_list.html">PointableList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_pointable_list.html" title="The PointableList class represents a list of Pointable objects. ">PointableList</a> class represents a list of <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects.  <a href="class_leap_1_1_pointable_list.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_screen_tap_gesture.html" title="The ScreenTapGesture class represents a tapping gesture by a finger or tool. ">ScreenTapGesture</a> class represents a tapping gesture by a finger or tool.  <a href="class_leap_1_1_screen_tap_gesture.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_swipe_gesture.html" title="The SwipeGesture class represents a swiping motion a finger or tool. ">SwipeGesture</a> class represents a swiping motion a finger or tool.  <a href="class_leap_1_1_swipe_gesture.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_tool.html">Tool</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_tool.html" title="The Tool class represents a tracked tool. ">Tool</a> class represents a tracked tool.  <a href="class_leap_1_1_tool.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_tool_list.html">ToolList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_tool_list.html" title="The ToolList class represents a list of Tool objects. ">ToolList</a> class represents a list of <a class="el" href="class_leap_1_1_tool.html" title="The Tool class represents a tracked tool. ">Tool</a> objects.  <a href="class_leap_1_1_tool_list.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_vector.html">Vector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> struct represents a three-component mathematical vector or point such as a direction or position in three-dimensional space.  <a href="struct_leap_1_1_vector.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:aa62b2fead9be8c13d38ddf19498dd67e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_leap.html#aa62b2fead9be8c13d38ddf19498dd67e">MessageSeverity</a> <tr class="memdesc:aa62b2fead9be8c13d38ddf19498dd67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether the message is for a severe failure, a recoverable warning, or a status change.  <a href="namespace_leap.html#aa62b2fead9be8c13d38ddf19498dd67e">More...</a><br /></td></tr>
+<tr class="separator:aa62b2fead9be8c13d38ddf19498dd67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a82c16156ec36c277a82b4c0bb8a11bd0"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_leap.html#a82c16156ec36c277a82b4c0bb8a11bd0">DEG_TO_RAD</a> = 0.0174532925f</td></tr>
+<tr class="memdesc:a82c16156ec36c277a82b4c0bb8a11bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant ratio to convert an angle measure from degrees to radians.  <a href="#a82c16156ec36c277a82b4c0bb8a11bd0">More...</a><br /></td></tr>
+<tr class="separator:a82c16156ec36c277a82b4c0bb8a11bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84b0a39a5bcd3e4bd1a2d19b015bde9"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_leap.html#ab84b0a39a5bcd3e4bd1a2d19b015bde9">EPSILON</a> = 1.192092896e-07f</td></tr>
+<tr class="memdesc:ab84b0a39a5bcd3e4bd1a2d19b015bde9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The difference between 1 and the least value greater than 1 that is representable as a float.  <a href="#ab84b0a39a5bcd3e4bd1a2d19b015bde9">More...</a><br /></td></tr>
+<tr class="separator:ab84b0a39a5bcd3e4bd1a2d19b015bde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa08a577393243b86dfd2a97e61443673"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_leap.html#aa08a577393243b86dfd2a97e61443673">PI</a> = 3.1415926536f</td></tr>
+<tr class="memdesc:aa08a577393243b86dfd2a97e61443673"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant pi as a single precision floating point number.  <a href="#aa08a577393243b86dfd2a97e61443673">More...</a><br /></td></tr>
+<tr class="separator:aa08a577393243b86dfd2a97e61443673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374e8373687339ac309e4f02b305fb0f"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_leap.html#a374e8373687339ac309e4f02b305fb0f">RAD_TO_DEG</a> = 57.295779513f</td></tr>
+<tr class="memdesc:a374e8373687339ac309e4f02b305fb0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant ratio to convert an angle measure from radians to degrees.  <a href="#a374e8373687339ac309e4f02b305fb0f">More...</a><br /></td></tr>
+<tr class="separator:a374e8373687339ac309e4f02b305fb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="aa62b2fead9be8c13d38ddf19498dd67e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespace_leap.html#aa62b2fead9be8c13d38ddf19498dd67e">MessageSeverity</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports whether the message is for a severe failure, a recoverable warning, or a status change. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aa62b2fead9be8c13d38ddf19498dd67ea55ec5d63a47bc66de4ad55fc63043dc0"></a>MESSAGE_UNKNOWN&#160;</td><td class="fielddoc">
+<p>Unknown severity, indicates an error. </p>
+<p>The rest of the data may be invalid. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa62b2fead9be8c13d38ddf19498dd67ea3e218470116f2ca76a7ecf4bdeca78d1"></a>MESSAGE_CRITICAL&#160;</td><td class="fielddoc">
+<p>A problem severe enough to stop tracking. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa62b2fead9be8c13d38ddf19498dd67eaa0da5a01a18f78c0f248941ad32cc816"></a>MESSAGE_WARNING&#160;</td><td class="fielddoc">
+<p>A correctable issue or status that can impact tracking. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa62b2fead9be8c13d38ddf19498dd67ea7c67175dfb6af3e42428b6fcfcbe7d94"></a>MESSAGE_INFORMATION&#160;</td><td class="fielddoc">
+<p>A verbose, informational message. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a82c16156ec36c277a82b4c0bb8a11bd0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float DEG_TO_RAD = 0.0174532925f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The constant ratio to convert an angle measure from degrees to radians. </p>
+<p>Multiply a value in degrees by this constant to convert to radians. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab84b0a39a5bcd3e4bd1a2d19b015bde9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float EPSILON = 1.192092896e-07f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The difference between 1 and the least value greater than 1 that is representable as a float. </p>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa08a577393243b86dfd2a97e61443673"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float PI = 3.1415926536f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The constant pi as a single precision floating point number. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a374e8373687339ac309e4f02b305fb0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float RAD_TO_DEG = 57.295779513f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The constant ratio to convert an angle measure from radians to degrees. </p>
+<p>Multiply a value in radians by this constant to convert to degrees. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">C++ Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_circle_gesture.html">CircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger_list.html">FingerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_float_array.html">FloatArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture.html">Gesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture_list.html">GestureList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand_list.html">HandList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image_list.html">ImageList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_key_tap_gesture.html">KeyTapGesture</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_listener.html">Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable.html">Pointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable_list.html">PointableList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool.html">Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool_list.html">ToolList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>C++</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

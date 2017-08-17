@@ -1,0 +1,839 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LeapObjectiveC.h &mdash; Leap Motion Objective-C SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Objective-C SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="LeapPointable" href="interface_leap_pointable.html" />
+    <link rel="prev" title="LeapMatrix" href="interface_leap_matrix.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'objc';
+    var hasAPI = {};
+    hasAPI.objc = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'objc/api/gen-objc/_leap_objective_c_8h.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-objc/_leap_objective_c_8h.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-objc/_leap_objective_c_8h.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-objc/_leap_objective_c_8h.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-objc/_leap_objective_c_8h.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-objc/_leap_objective_c_8h.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-objc/_leap_objective_c_8h.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-objc/_leap_objective_c_8h.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-objc/_leap_objective_c_8h.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'objc/api/gen-objc/_leap_objective_c_8h.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("interface_leap_matrix.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("interface_leap_pointable.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      Objective-C
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  LeapObjectiveC.h
+</span> -->
+        
+  <div class="section" id="leapobjectivec-h">
+<h1>LeapObjectiveC.h<a class="headerlink" href="#leapobjectivec-h" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.13 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_leap_objective_c_8h.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">LeapObjectiveC.h File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a34e51eba2166fcbe13ff5f0a543c83ed"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#a34e51eba2166fcbe13ff5f0a543c83ed">LeapBoneType</a> { <a class="el" href="_leap_objective_c_8h.html#a34e51eba2166fcbe13ff5f0a543c83eda5c3ddc07421e3934a45cddf1808f8401">LEAP_BONE_TYPE_METACARPAL</a> = 0, 
+<a class="el" href="_leap_objective_c_8h.html#a34e51eba2166fcbe13ff5f0a543c83eda1eb940fd4814a51b4693e02032b7edf3">LEAP_BONE_TYPE_PROXIMAL</a> = 1, 
+<a class="el" href="_leap_objective_c_8h.html#a34e51eba2166fcbe13ff5f0a543c83eda47406e9b214c2cd3914b41c08bc85b7f">LEAP_BONE_TYPE_INTERMEDIATE</a> = 2, 
+<a class="el" href="_leap_objective_c_8h.html#a34e51eba2166fcbe13ff5f0a543c83eda96a581ae093cb0616308b75dab7999ec">LEAP_BONE_TYPE_DISTAL</a> = 3
+ }<tr class="memdesc:a34e51eba2166fcbe13ff5f0a543c83ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the names of the bones.  <a href="_leap_objective_c_8h.html#a34e51eba2166fcbe13ff5f0a543c83ed">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a34e51eba2166fcbe13ff5f0a543c83ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec221ce37ff5945a0eced27a63d0294"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#a5ec221ce37ff5945a0eced27a63d0294">LeapDeviceFailureType</a> { <br />
+&#160;&#160;<a class="el" href="_leap_objective_c_8h.html#a5ec221ce37ff5945a0eced27a63d0294a6e586e92d7dc2d991a23ca303d2269b2">LEAP_DEVICE_FAIL_UNKNOWN</a>, 
+<a class="el" href="_leap_objective_c_8h.html#a5ec221ce37ff5945a0eced27a63d0294af7d6ba2c35d5fc31e60919e5a862bd92">LEAP_DEVICE_FAIL_CALIBRATION</a>, 
+<a class="el" href="_leap_objective_c_8h.html#a5ec221ce37ff5945a0eced27a63d0294a18c980e0c46ee2a40200135c3a161a96">LEAP_DEVICE_FAIL_FIRMWARE</a>, 
+<a class="el" href="_leap_objective_c_8h.html#a5ec221ce37ff5945a0eced27a63d0294af6d89b246fd88b485d4194c868fb56b6">LEAP_DEVICE_FAIL_TRANSPORT</a>, 
+<br />
+&#160;&#160;<a class="el" href="_leap_objective_c_8h.html#a5ec221ce37ff5945a0eced27a63d0294abac5ff1fe795c16c1d3f2b6aa0569f7b">LEAP_DEVICE_FAIL_CONTROL</a>, 
+<a class="el" href="_leap_objective_c_8h.html#a5ec221ce37ff5945a0eced27a63d0294acb4de4b8589ba2c470ae1a0070aad5cd">LEAP_DEVICE_FAIL_COUNT</a>
+<br />
+ }<tr class="memdesc:a5ec221ce37ff5945a0eced27a63d0294"><td class="mdescLeft">&#160;</td><td class="mdescRight">The errors that can cause a device to fail to properly connect to the service.  <a href="_leap_objective_c_8h.html#a5ec221ce37ff5945a0eced27a63d0294">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a5ec221ce37ff5945a0eced27a63d0294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac365a5fdffe72cce8d62b1b7dfbcdc2c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#ac365a5fdffe72cce8d62b1b7dfbcdc2c">LeapDeviceType</a> { <a class="el" href="_leap_objective_c_8h.html#ac365a5fdffe72cce8d62b1b7dfbcdc2ca45b092404343d4f6ad85d208d626e63d">DEVICE_PERIPHERAL</a> = 1, 
+<a class="el" href="_leap_objective_c_8h.html#ac365a5fdffe72cce8d62b1b7dfbcdc2ca94f0ed019b2da944a6e4fe0a17c0cea6">DEVICE_KEYBOARD</a>, 
+<a class="el" href="_leap_objective_c_8h.html#ac365a5fdffe72cce8d62b1b7dfbcdc2ca8d4f962c6fe3156b38dce840714b6e75">DEVICE_LAPTOP</a>
+ }<tr class="memdesc:ac365a5fdffe72cce8d62b1b7dfbcdc2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The available types of Leap Motion controllers.  <a href="_leap_objective_c_8h.html#ac365a5fdffe72cce8d62b1b7dfbcdc2c">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ac365a5fdffe72cce8d62b1b7dfbcdc2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed654a91dbd67444e3d8bed90a2b80bb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#aed654a91dbd67444e3d8bed90a2b80bb">LeapFingerJoint</a> { <a class="el" href="_leap_objective_c_8h.html#aed654a91dbd67444e3d8bed90a2b80bbaaaa51b0a7ff61816e837978fa6b9d09f">LEAP_FINGER_JOINT_MCP</a> = 0, 
+<a class="el" href="_leap_objective_c_8h.html#aed654a91dbd67444e3d8bed90a2b80bbad961f6c9d38658b4247e8fcbb04d04ca">LEAP_FINGER_JOINT_PIP</a> = 1, 
+<a class="el" href="_leap_objective_c_8h.html#aed654a91dbd67444e3d8bed90a2b80bbab803d5204ffff743739e3ee2f2af91d3">LEAP_FINGER_JOINT_DIP</a> = 2, 
+<a class="el" href="_leap_objective_c_8h.html#aed654a91dbd67444e3d8bed90a2b80bbadd41f7524b5de8aab6f021d4bc25b1e2">LEAP_FINGER_JOINT_TIP</a> = 3
+ }<tr class="memdesc:aed654a91dbd67444e3d8bed90a2b80bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the joints of a finger.  <a href="_leap_objective_c_8h.html#aed654a91dbd67444e3d8bed90a2b80bb">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:aed654a91dbd67444e3d8bed90a2b80bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2438677d1bbdfd875fafaa82d53600df"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#a2438677d1bbdfd875fafaa82d53600df">LeapFingerType</a> { <br />
+&#160;&#160;<a class="el" href="_leap_objective_c_8h.html#a2438677d1bbdfd875fafaa82d53600dfaac8c1712fde7247a628aadd05a044500">LEAP_FINGER_TYPE_THUMB</a> = 0, 
+<a class="el" href="_leap_objective_c_8h.html#a2438677d1bbdfd875fafaa82d53600dfac74686657647dd4afc73911153bbb760">LEAP_FINGER_TYPE_INDEX</a> = 1, 
+<a class="el" href="_leap_objective_c_8h.html#a2438677d1bbdfd875fafaa82d53600dfa365f67274737c79eeda3b28d69f112dd">LEAP_FINGER_TYPE_MIDDLE</a> = 2, 
+<a class="el" href="_leap_objective_c_8h.html#a2438677d1bbdfd875fafaa82d53600dfa1d66201ddb34828fd1985e4ec4f21b4c">LEAP_FINGER_TYPE_RING</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="_leap_objective_c_8h.html#a2438677d1bbdfd875fafaa82d53600dfa346d552cf9e12e5c13efe71b27b203d6">LEAP_FINGER_TYPE_PINKY</a> = 4
+<br />
+ }<tr class="memdesc:a2438677d1bbdfd875fafaa82d53600df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the names of the fingers.  <a href="_leap_objective_c_8h.html#a2438677d1bbdfd875fafaa82d53600df">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a2438677d1bbdfd875fafaa82d53600df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf36a1aeae959a7331c587f3836d1591"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#abf36a1aeae959a7331c587f3836d1591">LeapGestureState</a> { <a class="el" href="_leap_objective_c_8h.html#abf36a1aeae959a7331c587f3836d1591afbe5c425c68ed977c9e2c57e919a0672">LEAP_GESTURE_STATE_INVALID</a> = -1, 
+<a class="el" href="_leap_objective_c_8h.html#abf36a1aeae959a7331c587f3836d1591a43333d50dffec40a936699254fbcc4af">LEAP_GESTURE_STATE_START</a> = 1, 
+<a class="el" href="_leap_objective_c_8h.html#abf36a1aeae959a7331c587f3836d1591a5fc19ab88ddd07a94e8b84a43a7697ec">LEAP_GESTURE_STATE_UPDATE</a> = 2, 
+<a class="el" href="_leap_objective_c_8h.html#abf36a1aeae959a7331c587f3836d1591a12b0cb3de8da14340da2224c276d531f">LEAP_GESTURE_STATE_STOP</a> = 3
+ }<tr class="memdesc:abf36a1aeae959a7331c587f3836d1591"><td class="mdescLeft">&#160;</td><td class="mdescRight">The possible gesture states.  <a href="_leap_objective_c_8h.html#abf36a1aeae959a7331c587f3836d1591">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:abf36a1aeae959a7331c587f3836d1591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c460c6560fb7fc11a6f92594ddf41f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#a24c460c6560fb7fc11a6f92594ddf41f">LeapGestureType</a> { <br />
+&#160;&#160;<a class="el" href="_leap_objective_c_8h.html#a24c460c6560fb7fc11a6f92594ddf41fac18bbc38f78896a7553ea6b7c93890db">LEAP_GESTURE_TYPE_INVALID</a> = -1, 
+<a class="el" href="_leap_objective_c_8h.html#a24c460c6560fb7fc11a6f92594ddf41fa25ed250ed632f5fbdfc801e8e007ee74">LEAP_GESTURE_TYPE_SWIPE</a> = 1, 
+<a class="el" href="_leap_objective_c_8h.html#a24c460c6560fb7fc11a6f92594ddf41fa6eb54c9504684278057006df1e7409e7">LEAP_GESTURE_TYPE_CIRCLE</a> = 4, 
+<a class="el" href="_leap_objective_c_8h.html#a24c460c6560fb7fc11a6f92594ddf41fa1d754a6eb8e56386bbc6eac644f08818">LEAP_GESTURE_TYPE_SCREEN_TAP</a> = 5, 
+<br />
+&#160;&#160;<a class="el" href="_leap_objective_c_8h.html#a24c460c6560fb7fc11a6f92594ddf41fa5468826bd3a364cfeba5090db14678bc">LEAP_GESTURE_TYPE_KEY_TAP</a> = 6
+<br />
+ }<tr class="memdesc:a24c460c6560fb7fc11a6f92594ddf41f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The supported types of gestures.  <a href="_leap_objective_c_8h.html#a24c460c6560fb7fc11a6f92594ddf41f">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a24c460c6560fb7fc11a6f92594ddf41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e2ac93452ec94ccd9f1c23a1031cf0e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#a3e2ac93452ec94ccd9f1c23a1031cf0e">LeapImageFormatType</a> <tr class="memdesc:a3e2ac93452ec94ccd9f1c23a1031cf0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the possible image formats.  <a href="_leap_objective_c_8h.html#a3e2ac93452ec94ccd9f1c23a1031cf0e">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a3e2ac93452ec94ccd9f1c23a1031cf0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017415a4ee2a2813b631418e2d382dbd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#a017415a4ee2a2813b631418e2d382dbd">LeapPointableZone</a> { <a class="el" href="_leap_objective_c_8h.html#a017415a4ee2a2813b631418e2d382dbda22058637eed7b6a91ea3e76f84f03221">LEAP_POINTABLE_ZONE_NONE</a> = 0, 
+<a class="el" href="_leap_objective_c_8h.html#a017415a4ee2a2813b631418e2d382dbdaa5e11caba9cb3f052c0ee31eccc5417d">LEAP_POINTABLE_ZONE_HOVERING</a> = 1, 
+<a class="el" href="_leap_objective_c_8h.html#a017415a4ee2a2813b631418e2d382dbdae20be98dfb82aed95258f3ba3a952b84">LEAP_POINTABLE_ZONE_TOUCHING</a> = 2
+ }<tr class="memdesc:a017415a4ee2a2813b631418e2d382dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the values for reporting the state of a Pointable object in relation to an adaptive touch plane.  <a href="_leap_objective_c_8h.html#a017415a4ee2a2813b631418e2d382dbd">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a017415a4ee2a2813b631418e2d382dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa22bef437233780cb028928be5490d1a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#aa22bef437233780cb028928be5490d1a">LeapPolicyFlag</a> { <br />
+&#160;&#160;<a class="el" href="_leap_objective_c_8h.html#aa22bef437233780cb028928be5490d1aa053a993a443e4f0a394ae1f882473f30">LEAP_POLICY_DEFAULT</a> = 0, 
+<a class="el" href="_leap_objective_c_8h.html#aa22bef437233780cb028928be5490d1aa8573995ef66bd1348394402babdc984b">LEAP_POLICY_BACKGROUND_FRAMES</a> = (1 &lt;&lt; 0), 
+<a class="el" href="_leap_objective_c_8h.html#aa22bef437233780cb028928be5490d1aa9a9a024d4d7a70b7fda244d98cf9db40">LEAP_POLICY_IMAGES</a> = (1 &lt;&lt; 1), 
+<a class="el" href="_leap_objective_c_8h.html#aa22bef437233780cb028928be5490d1aad419d97a6f48d5ce0700ad0f1f06cd5a">LEAP_POLICY_OPTIMIZE_HMD</a> = (1 &lt;&lt; 2), 
+<br />
+&#160;&#160;<a class="el" href="_leap_objective_c_8h.html#aa22bef437233780cb028928be5490d1aac44a5c3e61f3281ff113017465ba64aa">LEAP_POLICY_ALLOW_PAUSE_RESUME</a> = (1 &lt;&lt; 3)
+<br />
+ }<tr class="memdesc:aa22bef437233780cb028928be5490d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The supported controller policies.  <a href="_leap_objective_c_8h.html#aa22bef437233780cb028928be5490d1a">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:aa22bef437233780cb028928be5490d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4186af0a75457d4d54a73e7a00df664b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#a4186af0a75457d4d54a73e7a00df664b">LeapValueType</a> <tr class="memdesc:a4186af0a75457d4d54a73e7a00df664b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the possible data types for configuration values.  <a href="_leap_objective_c_8h.html#a4186af0a75457d4d54a73e7a00df664b">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a4186af0a75457d4d54a73e7a00df664b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2a3a4e309cac526622c432b359092aa1"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#a2a3a4e309cac526622c432b359092aa1">LEAP_DEG_TO_RAD</a></td></tr>
+<tr class="memdesc:a2a3a4e309cac526622c432b359092aa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant ratio to convert an angle measure from degrees to radians.  <a href="#a2a3a4e309cac526622c432b359092aa1">More...</a><br /></td></tr>
+<tr class="separator:a2a3a4e309cac526622c432b359092aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6434a0fff27e4c62f9197302dac3953d"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#a6434a0fff27e4c62f9197302dac3953d">LEAP_PI</a></td></tr>
+<tr class="memdesc:a6434a0fff27e4c62f9197302dac3953d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant pi as a single precision floating point number.  <a href="#a6434a0fff27e4c62f9197302dac3953d">More...</a><br /></td></tr>
+<tr class="separator:a6434a0fff27e4c62f9197302dac3953d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3281d544db74b799dc982961dfc25dd"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_leap_objective_c_8h.html#af3281d544db74b799dc982961dfc25dd">LEAP_RAD_TO_DEG</a></td></tr>
+<tr class="memdesc:af3281d544db74b799dc982961dfc25dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant ratio to convert an angle measure from radians to degrees.  <a href="#af3281d544db74b799dc982961dfc25dd">More...</a><br /></td></tr>
+<tr class="separator:af3281d544db74b799dc982961dfc25dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a34e51eba2166fcbe13ff5f0a543c83ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34e51eba2166fcbe13ff5f0a543c83ed">&#9670;&nbsp;</a></span>LeapBoneType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_leap_objective_c_8h.html#a34e51eba2166fcbe13ff5f0a543c83ed">LeapBoneType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates the names of the bones. </p>
+<dl class="section user"><dt>Since 2.0</dt><dd></dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a34e51eba2166fcbe13ff5f0a543c83eda5c3ddc07421e3934a45cddf1808f8401"></a>LEAP_BONE_TYPE_METACARPAL&#160;</td><td class="fielddoc"><p>The metacarpal bone connecting to the wrist. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34e51eba2166fcbe13ff5f0a543c83eda1eb940fd4814a51b4693e02032b7edf3"></a>LEAP_BONE_TYPE_PROXIMAL&#160;</td><td class="fielddoc"><p>The first finger phalanx bone. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34e51eba2166fcbe13ff5f0a543c83eda47406e9b214c2cd3914b41c08bc85b7f"></a>LEAP_BONE_TYPE_INTERMEDIATE&#160;</td><td class="fielddoc"><p>The middle finger phalanx bone. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34e51eba2166fcbe13ff5f0a543c83eda96a581ae093cb0616308b75dab7999ec"></a>LEAP_BONE_TYPE_DISTAL&#160;</td><td class="fielddoc"><p>The finger phalanx bone at the end of the finger. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5ec221ce37ff5945a0eced27a63d0294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec221ce37ff5945a0eced27a63d0294">&#9670;&nbsp;</a></span>LeapDeviceFailureType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_leap_objective_c_8h.html#a5ec221ce37ff5945a0eced27a63d0294">LeapDeviceFailureType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The errors that can cause a device to fail to properly connect to the service. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5ec221ce37ff5945a0eced27a63d0294a6e586e92d7dc2d991a23ca303d2269b2"></a>LEAP_DEVICE_FAIL_UNKNOWN&#160;</td><td class="fielddoc"><p>The cause of the error is unknown. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="a5ec221ce37ff5945a0eced27a63d0294af7d6ba2c35d5fc31e60919e5a862bd92"></a>LEAP_DEVICE_FAIL_CALIBRATION&#160;</td><td class="fielddoc"><p>The device has a bad calibration record. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="a5ec221ce37ff5945a0eced27a63d0294a18c980e0c46ee2a40200135c3a161a96"></a>LEAP_DEVICE_FAIL_FIRMWARE&#160;</td><td class="fielddoc"><p>The device firmware is corrupt or failed to update. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="a5ec221ce37ff5945a0eced27a63d0294af6d89b246fd88b485d4194c868fb56b6"></a>LEAP_DEVICE_FAIL_TRANSPORT&#160;</td><td class="fielddoc"><p>The device is unresponsive. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="a5ec221ce37ff5945a0eced27a63d0294abac5ff1fe795c16c1d3f2b6aa0569f7b"></a>LEAP_DEVICE_FAIL_CONTROL&#160;</td><td class="fielddoc"><p>The service cannot establish the required USB control interfaces. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="a5ec221ce37ff5945a0eced27a63d0294acb4de4b8589ba2c470ae1a0070aad5cd"></a>LEAP_DEVICE_FAIL_COUNT&#160;</td><td class="fielddoc"><p>Not currently used. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ac365a5fdffe72cce8d62b1b7dfbcdc2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac365a5fdffe72cce8d62b1b7dfbcdc2c">&#9670;&nbsp;</a></span>LeapDeviceType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_leap_objective_c_8h.html#ac365a5fdffe72cce8d62b1b7dfbcdc2c">LeapDeviceType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The available types of Leap Motion controllers. </p>
+<dl class="section since"><dt>Since</dt><dd>1.2 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac365a5fdffe72cce8d62b1b7dfbcdc2ca45b092404343d4f6ad85d208d626e63d"></a>DEVICE_PERIPHERAL&#160;</td><td class="fielddoc"><p>A standalone USB peripheral. </p>
+<p>The original Leap Motion controller device. </p><dl class="section since"><dt>Since</dt><dd>1.2 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="ac365a5fdffe72cce8d62b1b7dfbcdc2ca94f0ed019b2da944a6e4fe0a17c0cea6"></a>DEVICE_KEYBOARD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac365a5fdffe72cce8d62b1b7dfbcdc2ca8d4f962c6fe3156b38dce840714b6e75"></a>DEVICE_LAPTOP&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="aed654a91dbd67444e3d8bed90a2b80bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed654a91dbd67444e3d8bed90a2b80bb">&#9670;&nbsp;</a></span>LeapFingerJoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_leap_objective_c_8h.html#aed654a91dbd67444e3d8bed90a2b80bb">LeapFingerJoint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates the joints of a finger. </p>
+<p>The joints along the finger are indexed from 0 to 3 (tip to knuckle). The same joint identifiers are used for the thumb, even though the thumb has one less phalanx bone than the other digits. This puts the base joint (JOINT_MCP) at the base of thumb's metacarpal bone.</p>
+<p>Pass a member of this enumeration to [<a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> jointPosition] to get the physical position of that joint.</p>
+<p>Note: The term "joint" is applied loosely here and the set of joints includes the finger tip even though it is not an anatomical joint.</p>
+<dl class="section user"><dt>Since 2.0</dt><dd></dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aed654a91dbd67444e3d8bed90a2b80bbaaaa51b0a7ff61816e837978fa6b9d09f"></a>LEAP_FINGER_JOINT_MCP&#160;</td><td class="fielddoc"><p>The metacarpophalangeal joint, or knuckle, of the finger. </p>
+<p>The metacarpophalangeal joint is located at the base of a finger between the metacarpal bone and the first phalanx. The common name for this joint is the knuckle.</p>
+<p>On a thumb, which has one less phalanx than a finger, this joint index identifies the thumb joint near the base of the hand, between the carpal and metacarpal bones. </p><dl class="section user"><dt>Since 2.0</dt><dd></dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="aed654a91dbd67444e3d8bed90a2b80bbad961f6c9d38658b4247e8fcbb04d04ca"></a>LEAP_FINGER_JOINT_PIP&#160;</td><td class="fielddoc"><p>The proximal interphalangeal joint of the finger. </p>
+<p>This joint is the middle joint of a finger.</p>
+<p>The proximal interphalangeal joint is located between the two finger segments closest to the hand (the proximal and the intermediate phalanges). On a thumb, which lacks an intermediate phalanx, this joint index identifies the knuckle joint between the proximal phalanx and the metacarpal bone.</p>
+<dl class="section user"><dt>Since 2.0</dt><dd></dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="aed654a91dbd67444e3d8bed90a2b80bbab803d5204ffff743739e3ee2f2af91d3"></a>LEAP_FINGER_JOINT_DIP&#160;</td><td class="fielddoc"><p>The distal interphalangeal joint of the finger. </p>
+<p>This joint is closest to the tip.</p>
+<p>The distal interphalangeal joint is located between the most extreme segment of the finger (the distal phalanx) and the middle segment (the intermediate phalanx).</p>
+<dl class="section user"><dt>Since 2.0</dt><dd></dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="aed654a91dbd67444e3d8bed90a2b80bbadd41f7524b5de8aab6f021d4bc25b1e2"></a>LEAP_FINGER_JOINT_TIP&#160;</td><td class="fielddoc"><p>The tip of the finger. </p>
+<dl class="section user"><dt>Since 2.0</dt><dd></dd></dl>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a2438677d1bbdfd875fafaa82d53600df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2438677d1bbdfd875fafaa82d53600df">&#9670;&nbsp;</a></span>LeapFingerType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_leap_objective_c_8h.html#a2438677d1bbdfd875fafaa82d53600df">LeapFingerType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates the names of the fingers. </p>
+<p>Members of this enumeration are returned by [<a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> type] to identify a Finger object. </p><dl class="section user"><dt>Since 2.0</dt><dd></dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2438677d1bbdfd875fafaa82d53600dfaac8c1712fde7247a628aadd05a044500"></a>LEAP_FINGER_TYPE_THUMB&#160;</td><td class="fielddoc"><p>The thumb. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2438677d1bbdfd875fafaa82d53600dfac74686657647dd4afc73911153bbb760"></a>LEAP_FINGER_TYPE_INDEX&#160;</td><td class="fielddoc"><p>The index or forefinger. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2438677d1bbdfd875fafaa82d53600dfa365f67274737c79eeda3b28d69f112dd"></a>LEAP_FINGER_TYPE_MIDDLE&#160;</td><td class="fielddoc"><p>The middle finger. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2438677d1bbdfd875fafaa82d53600dfa1d66201ddb34828fd1985e4ec4f21b4c"></a>LEAP_FINGER_TYPE_RING&#160;</td><td class="fielddoc"><p>The ring finger. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2438677d1bbdfd875fafaa82d53600dfa346d552cf9e12e5c13efe71b27b203d6"></a>LEAP_FINGER_TYPE_PINKY&#160;</td><td class="fielddoc"><p>The pinky or little finger. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="abf36a1aeae959a7331c587f3836d1591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf36a1aeae959a7331c587f3836d1591">&#9670;&nbsp;</a></span>LeapGestureState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_leap_objective_c_8h.html#abf36a1aeae959a7331c587f3836d1591">LeapGestureState</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The possible gesture states. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abf36a1aeae959a7331c587f3836d1591afbe5c425c68ed977c9e2c57e919a0672"></a>LEAP_GESTURE_STATE_INVALID&#160;</td><td class="fielddoc"><p>An invalid state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abf36a1aeae959a7331c587f3836d1591a43333d50dffec40a936699254fbcc4af"></a>LEAP_GESTURE_STATE_START&#160;</td><td class="fielddoc"><p>The gesture is starting. </p>
+<p>Just enough has happened to recognize it. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abf36a1aeae959a7331c587f3836d1591a5fc19ab88ddd07a94e8b84a43a7697ec"></a>LEAP_GESTURE_STATE_UPDATE&#160;</td><td class="fielddoc"><p>The gesture is in progress. </p>
+<p>(Note: not all gestures have updates). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abf36a1aeae959a7331c587f3836d1591a12b0cb3de8da14340da2224c276d531f"></a>LEAP_GESTURE_STATE_STOP&#160;</td><td class="fielddoc"><p>The gesture has completed or stopped. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a24c460c6560fb7fc11a6f92594ddf41f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c460c6560fb7fc11a6f92594ddf41f">&#9670;&nbsp;</a></span>LeapGestureType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_leap_objective_c_8h.html#a24c460c6560fb7fc11a6f92594ddf41f">LeapGestureType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The supported types of gestures. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a24c460c6560fb7fc11a6f92594ddf41fac18bbc38f78896a7553ea6b7c93890db"></a>LEAP_GESTURE_TYPE_INVALID&#160;</td><td class="fielddoc"><p>An invalid type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24c460c6560fb7fc11a6f92594ddf41fa25ed250ed632f5fbdfc801e8e007ee74"></a>LEAP_GESTURE_TYPE_SWIPE&#160;</td><td class="fielddoc"><p>A straight line movement by the hand with fingers extended. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24c460c6560fb7fc11a6f92594ddf41fa6eb54c9504684278057006df1e7409e7"></a>LEAP_GESTURE_TYPE_CIRCLE&#160;</td><td class="fielddoc"><p>A circular movement by a finger. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24c460c6560fb7fc11a6f92594ddf41fa1d754a6eb8e56386bbc6eac644f08818"></a>LEAP_GESTURE_TYPE_SCREEN_TAP&#160;</td><td class="fielddoc"><p>A forward tapping movement by a finger. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24c460c6560fb7fc11a6f92594ddf41fa5468826bd3a364cfeba5090db14678bc"></a>LEAP_GESTURE_TYPE_KEY_TAP&#160;</td><td class="fielddoc"><p>A downward tapping movement by a finger. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a3e2ac93452ec94ccd9f1c23a1031cf0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e2ac93452ec94ccd9f1c23a1031cf0e">&#9670;&nbsp;</a></span>LeapImageFormatType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_leap_objective_c_8h.html#a3e2ac93452ec94ccd9f1c23a1031cf0e">LeapImageFormatType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates the possible image formats. </p>
+<p>The [<a class="el" href="interface_leap_image.html" title="The LeapImage class represents a single greyscale image from one of the the Leap Motion cameras...">LeapImage</a> format] method returns an item from the LEAP_IMAGE_FORMAT_TYPE enumeration. </p><dl class="section user"><dt>Since 2.2.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a017415a4ee2a2813b631418e2d382dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017415a4ee2a2813b631418e2d382dbd">&#9670;&nbsp;</a></span>LeapPointableZone</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_leap_objective_c_8h.html#a017415a4ee2a2813b631418e2d382dbd">LeapPointableZone</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines the values for reporting the state of a Pointable object in relation to an adaptive touch plane. </p>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a017415a4ee2a2813b631418e2d382dbda22058637eed7b6a91ea3e76f84f03221"></a>LEAP_POINTABLE_ZONE_NONE&#160;</td><td class="fielddoc"><p>The Pointable object is too far from the plane to be considered hovering or touching. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a017415a4ee2a2813b631418e2d382dbdaa5e11caba9cb3f052c0ee31eccc5417d"></a>LEAP_POINTABLE_ZONE_HOVERING&#160;</td><td class="fielddoc"><p>The Pointable object is close to, but not touching the plane. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a017415a4ee2a2813b631418e2d382dbdae20be98dfb82aed95258f3ba3a952b84"></a>LEAP_POINTABLE_ZONE_TOUCHING&#160;</td><td class="fielddoc"><p>The Pointable has penetrated the plane. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aa22bef437233780cb028928be5490d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22bef437233780cb028928be5490d1a">&#9670;&nbsp;</a></span>LeapPolicyFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_leap_objective_c_8h.html#aa22bef437233780cb028928be5490d1a">LeapPolicyFlag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The supported controller policies. </p>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa22bef437233780cb028928be5490d1aa053a993a443e4f0a394ae1f882473f30"></a>LEAP_POLICY_DEFAULT&#160;</td><td class="fielddoc"><p>The default policy. </p>
+<p>Since 1.0 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa22bef437233780cb028928be5490d1aa8573995ef66bd1348394402babdc984b"></a>LEAP_POLICY_BACKGROUND_FRAMES&#160;</td><td class="fielddoc"><p>Receive background frames. </p>
+<p>Since 1.0 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa22bef437233780cb028928be5490d1aa9a9a024d4d7a70b7fda244d98cf9db40"></a>LEAP_POLICY_IMAGES&#160;</td><td class="fielddoc"><p>Receive raw images from sensor cameras. </p>
+<p>Since 2.0.5 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa22bef437233780cb028928be5490d1aad419d97a6f48d5ce0700ad0f1f06cd5a"></a>LEAP_POLICY_OPTIMIZE_HMD&#160;</td><td class="fielddoc"><p>Optimize the tracking for head-mounted device. </p>
+<p>Since 2.1.3 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa22bef437233780cb028928be5490d1aac44a5c3e61f3281ff113017465ba64aa"></a>LEAP_POLICY_ALLOW_PAUSE_RESUME&#160;</td><td class="fielddoc"><p>Allow pausing and unpausing of the Leap Motion service. </p>
+<p>Since 2.2.0 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a4186af0a75457d4d54a73e7a00df664b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4186af0a75457d4d54a73e7a00df664b">&#9670;&nbsp;</a></span>LeapValueType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_leap_objective_c_8h.html#a4186af0a75457d4d54a73e7a00df664b">LeapValueType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates the possible data types for configuration values. </p>
+<p>The [<a class="el" href="interface_leap_config.html" title="The LeapConfig class provides access to Leap system configuration information. ">LeapConfig</a> type] property returns an item from the LeapValueType enumeration. </p><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a2a3a4e309cac526622c432b359092aa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3a4e309cac526622c432b359092aa1">&#9670;&nbsp;</a></span>LEAP_DEG_TO_RAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float LEAP_DEG_TO_RAD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The constant ratio to convert an angle measure from degrees to radians. </p>
+<p>Multiply a value in degrees by this constant to convert to radians. </p><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a6434a0fff27e4c62f9197302dac3953d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6434a0fff27e4c62f9197302dac3953d">&#9670;&nbsp;</a></span>LEAP_PI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float LEAP_PI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The constant pi as a single precision floating point number. </p>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="af3281d544db74b799dc982961dfc25dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3281d544db74b799dc982961dfc25dd">&#9670;&nbsp;</a></span>LEAP_RAD_TO_DEG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float LEAP_RAD_TO_DEG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The constant ratio to convert an angle measure from radians to degrees. </p>
+<p>Multiply a value in radians by this constant to convert to degrees. </p><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Objective-C Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_arm.html">LeapArm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_bone.html">LeapBone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_circle_gesture.html">LeapCircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_config.html">LeapConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_controller.html">LeapController</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol_leap_delegate-p.html">LeapDelegate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_device.html">LeapDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_failed_device.html">LeapFailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_finger.html">LeapFinger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_frame.html">LeapFrame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_gesture.html">LeapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_hand.html">LeapHand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_image.html">LeapImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_interaction_box.html">LeapInteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_key_tap_gesture.html">LeapKeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol_leap_listener-p.html">LeapListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_matrix.html">LeapMatrix</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">LeapObjectiveC.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_pointable.html">LeapPointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_screen_tap_gesture.html">LeapScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_swipe_gesture.html">LeapSwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_tool.html">LeapTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_vector.html">LeapVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category_n_s_array_07_leap_pointable_or_hand_list_08.html">NSArray(LeapPointableOrHandList)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>Objective-C</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

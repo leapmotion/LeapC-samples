@@ -1,0 +1,954 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Pointable &mdash; Leap Motion Java SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Java SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="Pointable.Zone" href="enumcom_1_1leapmotion_1_1leap_1_1_pointable_1_1_zone.html" />
+    <link rel="prev" title="MessageSeverity" href="enumcom_1_1leapmotion_1_1leap_1_1_message_severity.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'java';
+    var hasAPI = {};
+    hasAPI.java = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'java/api/gen-java/classcom_1_1leapmotion_1_1leap_1_1_pointable.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-java/classcom_1_1leapmotion_1_1leap_1_1_pointable.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-java/classcom_1_1leapmotion_1_1leap_1_1_pointable.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-java/classcom_1_1leapmotion_1_1leap_1_1_pointable.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-java/classcom_1_1leapmotion_1_1leap_1_1_pointable.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-java/classcom_1_1leapmotion_1_1leap_1_1_pointable.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-java/classcom_1_1leapmotion_1_1leap_1_1_pointable.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-java/classcom_1_1leapmotion_1_1leap_1_1_pointable.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-java/classcom_1_1leapmotion_1_1leap_1_1_pointable.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'java/api/gen-java/classcom_1_1leapmotion_1_1leap_1_1_pointable.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("enumcom_1_1leapmotion_1_1leap_1_1_message_severity.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("enumcom_1_1leapmotion_1_1leap_1_1_pointable_1_1_zone.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      Java
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  Pointable
+</span> -->
+        
+  <div class="section" id="pointable">
+<h1>Pointable<a class="headerlink" href="#pointable" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classcom_1_1leapmotion_1_1leap_1_1_pointable.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classcom_1_1leapmotion_1_1leap_1_1_pointable-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Pointable Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> class reports the physical characteristics of a detected finger or tool.  
+ <a href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#details">More...</a></p>
+
+<p>Inherits Interface.</p>
+
+<p>Inherited by <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_finger.html">Finger</a>, and <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_tool.html">Tool</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumcom_1_1leapmotion_1_1leap_1_1_pointable_1_1_zone.html">Zone</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the values for reporting the state of a <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object in relation to an adaptive touch plane.  <a href="enumcom_1_1leapmotion_1_1leap_1_1_pointable_1_1_zone.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af64662b010bb83b86bed0a30280fabff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#af64662b010bb83b86bed0a30280fabff">direction</a> ()</td></tr>
+<tr class="memdesc:af64662b010bb83b86bed0a30280fabff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The direction in which this finger is pointing.  <a href="#af64662b010bb83b86bed0a30280fabff">More...</a><br /></td></tr>
+<tr class="separator:af64662b010bb83b86bed0a30280fabff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca25964504825a090668651d6e29ae1b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#aca25964504825a090668651d6e29ae1b">equals</a> (<a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html">Pointable</a> arg0)</td></tr>
+<tr class="memdesc:aca25964504825a090668651d6e29ae1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object equality.  <a href="#aca25964504825a090668651d6e29ae1b">More...</a><br /></td></tr>
+<tr class="separator:aca25964504825a090668651d6e29ae1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927587df126a877842a884f4a536dd8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_frame.html">Frame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a927587df126a877842a884f4a536dd8c">frame</a> ()</td></tr>
+<tr class="memdesc:a927587df126a877842a884f4a536dd8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> associated with this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object.  <a href="#a927587df126a877842a884f4a536dd8c">More...</a><br /></td></tr>
+<tr class="separator:a927587df126a877842a884f4a536dd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25dea9334ce543e55077a4547becd199"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_hand.html">Hand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a25dea9334ce543e55077a4547becd199">hand</a> ()</td></tr>
+<tr class="memdesc:a25dea9334ce543e55077a4547becd199"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> associated with a finger.  <a href="#a25dea9334ce543e55077a4547becd199">More...</a><br /></td></tr>
+<tr class="separator:a25dea9334ce543e55077a4547becd199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a716406d3d9d4fdbbe46f100e648f3b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a4a716406d3d9d4fdbbe46f100e648f3b">id</a> ()</td></tr>
+<tr class="memdesc:a4a716406d3d9d4fdbbe46f100e648f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A unique ID assigned to this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object, whose value remains the same across consecutive frames while the tracked finger remains visible.  <a href="#a4a716406d3d9d4fdbbe46f100e648f3b">More...</a><br /></td></tr>
+<tr class="separator:a4a716406d3d9d4fdbbe46f100e648f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada0cf872bb60b0b7b8d2ab94f4c77047"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#ada0cf872bb60b0b7b8d2ab94f4c77047">isExtended</a> ()</td></tr>
+<tr class="memdesc:ada0cf872bb60b0b7b8d2ab94f4c77047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is in an extended posture.  <a href="#ada0cf872bb60b0b7b8d2ab94f4c77047">More...</a><br /></td></tr>
+<tr class="separator:ada0cf872bb60b0b7b8d2ab94f4c77047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad53c8d7ea3b606bad4b33446c647ba"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a5ad53c8d7ea3b606bad4b33446c647ba">isFinger</a> ()</td></tr>
+<tr class="memdesc:a5ad53c8d7ea3b606bad4b33446c647ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is classified as a finger.  <a href="#a5ad53c8d7ea3b606bad4b33446c647ba">More...</a><br /></td></tr>
+<tr class="separator:a5ad53c8d7ea3b606bad4b33446c647ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b423af9addf50644181ed36e530955"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a23b423af9addf50644181ed36e530955">isTool</a> ()</td></tr>
+<tr class="memdesc:a23b423af9addf50644181ed36e530955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is classified as a tool.  <a href="#a23b423af9addf50644181ed36e530955">More...</a><br /></td></tr>
+<tr class="separator:a23b423af9addf50644181ed36e530955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a487d5f454cff4db530ed7b5b690ec71d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a487d5f454cff4db530ed7b5b690ec71d">isValid</a> ()</td></tr>
+<tr class="memdesc:a487d5f454cff4db530ed7b5b690ec71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this is a valid <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object.  <a href="#a487d5f454cff4db530ed7b5b690ec71d">More...</a><br /></td></tr>
+<tr class="separator:a487d5f454cff4db530ed7b5b690ec71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff6176152126e0e2e946d4add73fda0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#aaff6176152126e0e2e946d4add73fda0">length</a> ()</td></tr>
+<tr class="memdesc:aaff6176152126e0e2e946d4add73fda0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated length of the finger in millimeters.  <a href="#aaff6176152126e0e2e946d4add73fda0">More...</a><br /></td></tr>
+<tr class="separator:aaff6176152126e0e2e946d4add73fda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a398664eabda6168d32738ac4fc92577f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a398664eabda6168d32738ac4fc92577f">Pointable</a> ()</td></tr>
+<tr class="memdesc:a398664eabda6168d32738ac4fc92577f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object.  <a href="#a398664eabda6168d32738ac4fc92577f">More...</a><br /></td></tr>
+<tr class="separator:a398664eabda6168d32738ac4fc92577f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a911134a7be4d118d320769b3049f0c08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a911134a7be4d118d320769b3049f0c08">stabilizedTipPosition</a> ()</td></tr>
+<tr class="memdesc:a911134a7be4d118d320769b3049f0c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stabilized tip position of this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a>.  <a href="#a911134a7be4d118d320769b3049f0c08">More...</a><br /></td></tr>
+<tr class="separator:a911134a7be4d118d320769b3049f0c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b95e667f0c9b2de381c5cc0fd48800c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a2b95e667f0c9b2de381c5cc0fd48800c">timeVisible</a> ()</td></tr>
+<tr class="memdesc:a2b95e667f0c9b2de381c5cc0fd48800c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The duration of time this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> has been visible to the Leap Motion <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>.  <a href="#a2b95e667f0c9b2de381c5cc0fd48800c">More...</a><br /></td></tr>
+<tr class="separator:a2b95e667f0c9b2de381c5cc0fd48800c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96cf628961be23093d1cb2108622f3f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a96cf628961be23093d1cb2108622f3f2">tipPosition</a> ()</td></tr>
+<tr class="memdesc:a96cf628961be23093d1cb2108622f3f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tip position in millimeters from the Leap Motion origin.  <a href="#a96cf628961be23093d1cb2108622f3f2">More...</a><br /></td></tr>
+<tr class="separator:a96cf628961be23093d1cb2108622f3f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258f42477d9bffb409703cb82bd08e79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a258f42477d9bffb409703cb82bd08e79">tipVelocity</a> ()</td></tr>
+<tr class="memdesc:a258f42477d9bffb409703cb82bd08e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rate of change of the tip position in millimeters/second.  <a href="#a258f42477d9bffb409703cb82bd08e79">More...</a><br /></td></tr>
+<tr class="separator:a258f42477d9bffb409703cb82bd08e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad146fa8579a5f8a876c4688cc5a68520"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#ad146fa8579a5f8a876c4688cc5a68520">toString</a> ()</td></tr>
+<tr class="memdesc:ad146fa8579a5f8a876c4688cc5a68520"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string containing a brief, human readable description of the <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object.  <a href="#ad146fa8579a5f8a876c4688cc5a68520">More...</a><br /></td></tr>
+<tr class="separator:ad146fa8579a5f8a876c4688cc5a68520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4ac28124ffbc5e485c76e64b979b918"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#ab4ac28124ffbc5e485c76e64b979b918">touchDistance</a> ()</td></tr>
+<tr class="memdesc:ab4ac28124ffbc5e485c76e64b979b918"><td class="mdescLeft">&#160;</td><td class="mdescRight">A value proportional to the distance between this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object and the adaptive touch plane.  <a href="#ab4ac28124ffbc5e485c76e64b979b918">More...</a><br /></td></tr>
+<tr class="separator:ab4ac28124ffbc5e485c76e64b979b918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039ad18771219decb5929d83fa7016c6"><td class="memItemLeft" align="right" valign="top">Pointable.Zone&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a039ad18771219decb5929d83fa7016c6">touchZone</a> ()</td></tr>
+<tr class="memdesc:a039ad18771219decb5929d83fa7016c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current touch zone of this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object.  <a href="#a039ad18771219decb5929d83fa7016c6">More...</a><br /></td></tr>
+<tr class="separator:a039ad18771219decb5929d83fa7016c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af97de69a7fb9e061115793fac20ab5d7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#af97de69a7fb9e061115793fac20ab5d7">width</a> ()</td></tr>
+<tr class="memdesc:af97de69a7fb9e061115793fac20ab5d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated width of the finger in millimeters.  <a href="#af97de69a7fb9e061115793fac20ab5d7">More...</a><br /></td></tr>
+<tr class="separator:af97de69a7fb9e061115793fac20ab5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a376708ed9a7b5f6ddbcc4fd9d0405594"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html">Pointable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a376708ed9a7b5f6ddbcc4fd9d0405594">invalid</a> ()</td></tr>
+<tr class="memdesc:a376708ed9a7b5f6ddbcc4fd9d0405594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an invalid <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object.  <a href="#a376708ed9a7b5f6ddbcc4fd9d0405594">More...</a><br /></td></tr>
+<tr class="separator:a376708ed9a7b5f6ddbcc4fd9d0405594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> class reports the physical characteristics of a detected finger or tool. </p>
+<p>Both fingers and tools are classified as <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects. Use the <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a5ad53c8d7ea3b606bad4b33446c647ba" title="Whether or not this Pointable is classified as a finger. ">Pointable::isFinger()</a> function to determine whether a <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object represents a finger. Use the <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a23b423af9addf50644181ed36e530955" title="Whether or not this Pointable is classified as a tool. ">Pointable::isTool()</a> function to determine whether a <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object represents a tool. The Leap Motion software classifies a detected entity as a tool when it is thinner, straighter, and longer than a typical finger.</p>
+<div class="fragment"><div class="line"><a class="code" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a398664eabda6168d32738ac4fc92577f">Pointable</a> pointable = frame.pointables().frontmost();</div>
+<div class="line">Vector direction = pointable.direction();</div>
+<div class="line"><span class="keywordtype">float</span> length = pointable.length();</div>
+<div class="line"><span class="keywordtype">float</span> width = pointable.width();</div>
+<div class="line">Vector stabilizedPosition = pointable.stabilizedTipPosition();</div>
+<div class="line">Vector position = pointable.tipPosition();</div>
+<div class="line">Vector speed = pointable.tipVelocity();</div>
+<div class="line"><span class="keywordtype">float</span> <a class="code" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#ab4ac28124ffbc5e485c76e64b979b918">touchDistance</a> = pointable.touchDistance();</div>
+<div class="line"><a class="code" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a398664eabda6168d32738ac4fc92577f">Pointable</a>.Zone zone = pointable.touchZone();</div>
+</div><!-- fragment --><p>To provide touch emulation, the Leap Motion software associates a floating touch plane that adapts to the user's finger movement and hand posture. The Leap Motion interprets purposeful movements toward this plane as potential touch points.</p>
+<p>Note that <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects can be invalid, which means that they do not contain valid tracking data and do not correspond to a physical entity. Invalid <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects can be the result of asking for a <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object using an ID from an earlier frame when no <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects with that ID exist in the current frame. A <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object created from the <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> constructor is also invalid. Test for validity with the <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a487d5f454cff4db530ed7b5b690ec71d" title="Reports whether this is a valid Pointable object. ">Pointable::isValid()</a> function.</p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a398664eabda6168d32738ac4fc92577f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html">Pointable</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </p>
+<p>An uninitialized pointable is considered invalid. Get valid <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects from a <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> or a <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object.</p>
+<div class="fragment"><div class="line"><a class="code" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a398664eabda6168d32738ac4fc92577f">Pointable</a> pointable = frame.pointables().frontmost();</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af64662b010bb83b86bed0a30280fabff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html">Vector</a> direction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The direction in which this finger is pointing. </p>
+<div class="fragment"><div class="line">Vector pointingToward = pointable.direction();</div>
+</div><!-- fragment --><p>The direction is expressed as a unit vector pointing in the same direction as the tip.</p>
+<div class="image">
+<img src="Leap_Finger_Model.png" alt="Leap_Finger_Model.png"/>
+</div>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> pointing in the same direction as the tip of this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aca25964504825a090668651d6e29ae1b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html">Pointable</a>&#160;</td>
+          <td class="paramname"><em>arg0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object equality. </p>
+<div class="fragment"><div class="line">Boolean pointableIsEqual = thisPointable.equals(thatPointable);</div>
+</div><!-- fragment --><p>Two <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects are equal if and only if both <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects represent the exact same physical entities in the same frame and both <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects are valid. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a927587df126a877842a884f4a536dd8c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_frame.html">Frame</a> frame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> associated with this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </p>
+<div class="fragment"><div class="line">Frame frameOfThisPointableObject = pointable.frame();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The associated <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object, if available; otherwise, an invalid <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object is returned. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a25dea9334ce543e55077a4547becd199"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_hand.html">Hand</a> hand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> associated with a finger. </p>
+<div class="fragment"><div class="line">Hand attachedHand = pointable.hand();</div>
+</div><!-- fragment --><p>This function always returns an invalid <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object.</p>
+<dl class="section return"><dt>Returns</dt><dd>The associated <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object, if available; otherwise, an invalid <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object is returned. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4a716406d3d9d4fdbbe46f100e648f3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A unique ID assigned to this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object, whose value remains the same across consecutive frames while the tracked finger remains visible. </p>
+<p>If tracking is lost (for example, when a finger is occluded by another finger or when it is withdrawn from the Leap Motion <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> field of view), the Leap Motion software may assign a new ID when it detects the entity in a future frame.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> theID = pointable.id();</div>
+</div><!-- fragment --><p>Use the ID value with the <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_frame.html#a140f6ce2dd976ea925c07d048615066e" title="The Pointable object with the specified ID in this frame. ">Frame::pointable()</a> function to find this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object in future frames.</p>
+<p>IDs should be from 1 to 100 (inclusive). If more than 100 objects are tracked an IDs of -1 will be used until an ID in the defined range is available.</p>
+<dl class="section return"><dt>Returns</dt><dd>The ID assigned to this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a376708ed9a7b5f6ddbcc4fd9d0405594"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html">Pointable</a> invalid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an invalid <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </p>
+<p>You can use the instance returned by this function in comparisons testing whether a given <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> instance is valid or invalid. (You can also use the <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a487d5f454cff4db530ed7b5b690ec71d" title="Reports whether this is a valid Pointable object. ">Pointable::isValid()</a> function.)</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(!pointable.equals(<a class="code" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html#a398664eabda6168d32738ac4fc92577f">Pointable</a>.invalid())) {</div>
+<div class="line">    <span class="comment">//Use it...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The invalid <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> instance. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ada0cf872bb60b0b7b8d2ab94f4c77047"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean isExtended </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether or not this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is in an extended posture. </p>
+<p>A finger is considered extended if it is extended straight from the hand as if pointing. A finger is not extended when it is bent down and curled towards the palm.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> extendedFingers = 0;</div>
+<div class="line"><span class="keywordflow">for</span> (Finger finger : hand.fingers())</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span>(finger.isExtended()) extendedFingers++;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if the pointable is extended. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5ad53c8d7ea3b606bad4b33446c647ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean isFinger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether or not this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is classified as a finger. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (pointable.isTool()) {</div>
+<div class="line">    Tool tool = <span class="keyword">new</span> Tool(pointable);</div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    Finger finger = <span class="keyword">new</span> Finger(pointable);</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is classified as a finger. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a23b423af9addf50644181ed36e530955"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean isTool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether or not this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is classified as a tool. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (pointable.isTool()) {</div>
+<div class="line">    Tool tool = <span class="keyword">new</span> Tool(pointable);</div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    Finger finger = <span class="keyword">new</span> Finger(pointable);</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>false </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000068">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a487d5f454cff4db530ed7b5b690ec71d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports whether this is a valid <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>( pointable.isValid()) {</div>
+<div class="line">    <span class="comment">//Use it...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object contains valid tracking data. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaff6176152126e0e2e946d4add73fda0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The estimated length of the finger in millimeters. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> apparentlength = pointable.length();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The estimated length of this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a911134a7be4d118d320769b3049f0c08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html">Vector</a> stabilizedTipPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The stabilized tip position of this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a>. </p>
+<p>Smoothing and stabilization is performed in order to make this value more suitable for interaction with 2D content. The stabilized position lags behind the tip position by a variable amount, depending primarily on the speed of movement.</p>
+<div class="fragment"><div class="line">Vector stabilizedPosition = pointable.stabilizedTipPosition();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A modified tip position of this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object with some additional smoothing and stabilization applied. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2b95e667f0c9b2de381c5cc0fd48800c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float timeVisible </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The duration of time this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> has been visible to the Leap Motion <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> lifetime = pointable.timeVisible();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The duration (in seconds) that this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> has been tracked. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a96cf628961be23093d1cb2108622f3f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html">Vector</a> tipPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The tip position in millimeters from the Leap Motion origin. </p>
+<div class="fragment"><div class="line">Vector currentPosition = pointable.tipPosition();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> containing the coordinates of the tip position. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a258f42477d9bffb409703cb82bd08e79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html">Vector</a> tipVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The rate of change of the tip position in millimeters/second. </p>
+<div class="fragment"><div class="line">Vector currentSpeed = pointable.tipVelocity();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> containing the coordinates of the tip velocity. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad146fa8579a5f8a876c4688cc5a68520"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A string containing a brief, human readable description of the <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>A description of the <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object as a string. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab4ac28124ffbc5e485c76e64b979b918"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float touchDistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A value proportional to the distance between this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object and the adaptive touch plane. </p>
+<div class="image">
+<img src="Leap_Touch_Plane.png" alt="Leap_Touch_Plane.png"/>
+</div>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> distance = pointable.touchDistance();</div>
+<div class="line"><span class="keywordflow">if</span> (distance &gt; 0) {</div>
+<div class="line">    <span class="comment">//Handle hovering ...</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">//Handle touching ...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The normalized touch distance of this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000070">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a039ad18771219decb5929d83fa7016c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pointable.Zone touchZone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current touch zone of this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">switch</span> (pointable.touchZone()) {</div>
+<div class="line">    <span class="keywordflow">case</span> ZONE_NONE:</div>
+<div class="line">        <span class="comment">//Handle distant pointable</span></div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    <span class="keywordflow">case</span> ZONE_HOVERING:</div>
+<div class="line">        <span class="comment">//Handle pointable near touch plane</span></div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    <span class="keywordflow">case</span> ZONE_TOUCHING:</div>
+<div class="line">        <span class="comment">//Handle pointable penetrating touch plane</span></div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    <span class="keywordflow">default</span>:</div>
+<div class="line">        <span class="comment">//Handle error cases...</span></div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The touch zone of this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000069">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af97de69a7fb9e061115793fac20ab5d7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The estimated width of the finger in millimeters. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> averageThickness = pointable.width();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The estimated width of this <a class="el" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Java Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_bone_1_1_type.html">Bone.Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_circle_gesture.html">CircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_config_1_1_value_type.html">Config.ValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_controller_1_1_policy_flag.html">Controller.PolicyFlag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_device_1_1_type.html">Device.Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_failed_device_1_1_failure_type.html">FailedDevice.FailureType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_finger_1_1_joint.html">Finger.Joint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_finger_1_1_type.html">Finger.Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_finger_list.html">FingerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_gesture.html">Gesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_state.html">Gesture.State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html">Gesture.Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_gesture_list.html">GestureList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_hand_list.html">HandList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_image_1_1_format_type.html">Image.FormatType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_image_list.html">ImageList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_key_tap_gesture.html">KeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_listener.html">Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_message_severity.html">MessageSeverity</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Pointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_pointable_1_1_zone.html">Pointable.Zone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_pointable_list.html">PointableList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_swipe_gesture.html">SwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_tool.html">Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_tool_list.html">ToolList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_tool_list_1_1_tool_list_iterator.html">ToolListIterator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>Java</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

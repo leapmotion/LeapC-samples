@@ -1,0 +1,410 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>All SwipeGesture members &mdash; Leap Motion C++ SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion C++ SDK v3.2 Beta documentation" href="../../index.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'cpp';
+    var hasAPI = {};
+    hasAPI.cpp = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'cpp/api/gen-cpp/class_leap_1_1_swipe_gesture-members.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-cpp/class_leap_1_1_swipe_gesture-members.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-cpp/class_leap_1_1_swipe_gesture-members.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-cpp/class_leap_1_1_swipe_gesture-members.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-cpp/class_leap_1_1_swipe_gesture-members.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-cpp/class_leap_1_1_swipe_gesture-members.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-cpp/class_leap_1_1_swipe_gesture-members.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-cpp/class_leap_1_1_swipe_gesture-members.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-cpp/class_leap_1_1_swipe_gesture-members.html";
+            } else {
+
+                    if( requestedAPI == 'cpp'){
+                        redirectedLocation = relPath + "cpp/index.html?proglang=cpp";
+                    }
+                    else if( requestedAPI == 'csharp'){
+                        redirectedLocation = relPath + "csharp/index.html?proglang=csharp";
+                    }
+                    else if( requestedAPI == 'unity'){
+                        redirectedLocation = relPath + "unity/index.html?proglang=unity";
+                    }
+                    else if( requestedAPI == 'objc'){
+                        redirectedLocation = relPath + "objc/index.html?proglang=objc";
+                    }
+                    else if( requestedAPI == 'java') {
+                        redirectedLocation = relPath + "java/index.html?proglang=java";
+                    }
+                    else if( requestedAPI == 'javascript'){
+                        redirectedLocation = relPath + "javascript/index.html?proglang=javascript";
+                    }
+                    else if( requestedAPI == 'python'){
+                        redirectedLocation = relPath + "python/index.html?proglang=python";
+                    }
+                    else if( requestedAPI == 'unreal') {
+                        redirectedLocation = relPath + "unreal/index.html?proglang=unreal";
+                    } else {
+                        redirectedLocation = relPath + "index.html";
+                    }
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'cpp/api/gen-cpp/class_leap_1_1_swipe_gesture-members.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){    }
+    else if( character == "K" & e.altKey){
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../../javascript/index.html?proglang=javascript" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../../unity/index.html?proglang=unity" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../../csharp/index.html?proglang=csharp" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      C++
+    
+  </li>
+  <li>
+      <a href="../../java/index.html?proglang=java" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../../python/index.html?proglang=python" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../../objc/index.html?proglang=objc" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../../unreal/index.html?proglang=unreal" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+  All SwipeGesture members
+</span> -->
+        
+  <div class="section" id="all-swipegesture-members">
+<h1>All SwipeGesture members<a class="headerlink" href="#all-swipegesture-members" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_swipe_gesture.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">SwipeGesture Member List</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is the complete list of members for <a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html#ab6525d8b3efe0b1ddbf99cd8d4cc1dce">classType</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html#a8cf9153b5f55c95ea44d0e0a3bdc8a75">direction</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a43aeae80706c4089acf73e4095891fa5">duration</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#abac9920e8988b2743222ce1729ac6601">durationSeconds</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a43fd476e22d0607d5caae64402b2cffa">frame</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a3a579de3c16c6e07dfa770c06c6a9b65">Gesture</a>(GestureImplementation *)</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a003d8e2b689e1e80a9d9f5547f26d831">Gesture</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a90982875b1a1e8b54302e1325de490cd">Gesture</a>(const Gesture &amp;rhs)</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a788e21d8ff5d1f54209e75f14a27110b">hands</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a87daef5bdd8501be1f113684cfc61074">id</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a4788a29ee0630494dbd62bdbcabc8a2c">invalid</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a7d26edde0f247f1556ebcc6d15053515">operator!=</a>(const Gesture &amp;rhs) const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#ae811cd825aca7239e86c5e7314bb7448">operator==</a>(const Gesture &amp;rhs) const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html#a249c63ba650070ad9bbfec7fc497443a">pointable</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a9b73aa8053337ed8d142fc912703e43e">pointables</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html#a02ff807561faf278bb5dd46b0ea17ce7">position</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html#a055e9dc8167598af360254f4775a27c9">speed</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html#a2b44d026f2c2828300acc9efcd1f29b0">startPosition</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> enum name</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a3804c9648e6d1325751536cca350f2bf">state</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8a56285fc9e39dbb4dd2f0a34e561a79fd">STATE_INVALID</a> enum value</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8a1844f314039d713261df43a309145446">STATE_START</a> enum value</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8aacbe6cbcad841c9cfd0cbf67bd0784d2">STATE_STOP</a> enum value</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8ad7ed6145fc50e38bed3750b71718bb01">STATE_UPDATE</a> enum value</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html#a91a20a63981f8568ae880e9dc1da25ce">SwipeGesture</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html#a60917252be21bb4a0969fb05b4b14dc5">SwipeGesture</a>(const Gesture &amp;rhs)</td><td class="entry"><a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> enum name</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#afbd0fa31db28593e9669c3c56711c0a7">type</a>() const </td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7ab2eb90403a01de900f57a32876c8bb27">TYPE_CIRCLE</a> enum value</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7afeec3d92b10ebeaa68bbb56e4d08691c">TYPE_INVALID</a> enum value</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7a15be4430e17eed803e3da0ac5ad3a4e2">TYPE_KEY_TAP</a> enum value</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7adfee59f075c8ae10f2fb0671c7af2c42">TYPE_SCREEN_TAP</a> enum value</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7ae07a8a5039bd5a0dffa7737c484566e5">TYPE_SWIPE</a> enum value</td><td class="entry"><a class="el" href="class_leap_1_1_gesture.html">Gesture</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">C++ Docs (v3.2)</a></li>
+          </ul><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Leap_Classes.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>C++</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

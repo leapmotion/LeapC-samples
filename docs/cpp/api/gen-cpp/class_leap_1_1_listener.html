@@ -1,0 +1,1039 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Listener &mdash; Leap Motion C++ SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion C++ SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="Matrix" href="struct_leap_1_1_matrix.html" />
+    <link rel="prev" title="Leap" href="namespace_leap.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'cpp';
+    var hasAPI = {};
+    hasAPI.cpp = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'cpp/api/gen-cpp/class_leap_1_1_listener.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-cpp/class_leap_1_1_listener.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-cpp/class_leap_1_1_listener.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-cpp/class_leap_1_1_listener.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-cpp/class_leap_1_1_listener.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-cpp/class_leap_1_1_listener.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-cpp/class_leap_1_1_listener.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-cpp/class_leap_1_1_listener.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-cpp/class_leap_1_1_listener.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'cpp/api/gen-cpp/class_leap_1_1_listener.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("namespace_leap.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("struct_leap_1_1_matrix.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      C++
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  Listener
+</span> -->
+        
+  <div class="section" id="listener">
+<h1>Listener<a class="headerlink" href="#listener" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_listener.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="class_leap_1_1_listener-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Listener Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> class defines a set of callback functions that you can override in a subclass to respond to events dispatched by the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object.  
+ <a href="class_leap_1_1_listener.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9d5e4fb3349a6d39f973a4c1715f696f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#a9d5e4fb3349a6d39f973a4c1715f696f">Listener</a> ()</td></tr>
+<tr class="memdesc:a9d5e4fb3349a6d39f973a4c1715f696f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> object.  <a href="#a9d5e4fb3349a6d39f973a4c1715f696f">More...</a><br /></td></tr>
+<tr class="separator:a9d5e4fb3349a6d39f973a4c1715f696f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0dd62da959d048a3cc7917cca1ccba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#a6b0dd62da959d048a3cc7917cca1ccba">onConnect</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:a6b0dd62da959d048a3cc7917cca1ccba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object connects to the <a class="el" href="namespace_leap.html">Leap</a> Motion software and the <a class="el" href="namespace_leap.html">Leap</a> Motion hardware device is plugged in, or when this <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> object is added to a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> that is already connected.  <a href="#a6b0dd62da959d048a3cc7917cca1ccba">More...</a><br /></td></tr>
+<tr class="separator:a6b0dd62da959d048a3cc7917cca1ccba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4549d8930274ed8178edc003c7f555e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#ac4549d8930274ed8178edc003c7f555e">onDeviceChange</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:ac4549d8930274ed8178edc003c7f555e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a <a class="el" href="namespace_leap.html">Leap</a> Motion controller is plugged in, unplugged, or the device changes state.  <a href="#ac4549d8930274ed8178edc003c7f555e">More...</a><br /></td></tr>
+<tr class="separator:ac4549d8930274ed8178edc003c7f555e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a7b9699500d33a6d9a7907efd1f59ef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#a0a7b9699500d33a6d9a7907efd1f59ef">onDeviceFailure</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:a0a7b9699500d33a6d9a7907efd1f59ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a <a class="el" href="namespace_leap.html">Leap</a> Motion controller device is plugged into the client computer, but fails to operate properly.  <a href="#a0a7b9699500d33a6d9a7907efd1f59ef">More...</a><br /></td></tr>
+<tr class="separator:a0a7b9699500d33a6d9a7907efd1f59ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a399521092032c7f8c8da9e62636ad6d6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#a399521092032c7f8c8da9e62636ad6d6">onDisconnect</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:a399521092032c7f8c8da9e62636ad6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object disconnects from the <a class="el" href="namespace_leap.html">Leap</a> Motion software or the <a class="el" href="namespace_leap.html">Leap</a> Motion hardware is unplugged.  <a href="#a399521092032c7f8c8da9e62636ad6d6">More...</a><br /></td></tr>
+<tr class="separator:a399521092032c7f8c8da9e62636ad6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2e32940081a691303e0fa83ab098bef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#ac2e32940081a691303e0fa83ab098bef">onExit</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:ac2e32940081a691303e0fa83ab098bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when this <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> object is removed from the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> or the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> instance is destroyed.  <a href="#ac2e32940081a691303e0fa83ab098bef">More...</a><br /></td></tr>
+<tr class="separator:ac2e32940081a691303e0fa83ab098bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab341438c051361cdbe9e5ac2c9734e31"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#ab341438c051361cdbe9e5ac2c9734e31">onFocusGained</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:ab341438c051361cdbe9e5ac2c9734e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when this application becomes the foreground application.  <a href="#ab341438c051361cdbe9e5ac2c9734e31">More...</a><br /></td></tr>
+<tr class="separator:ab341438c051361cdbe9e5ac2c9734e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98976f58b5138306f25784f9a9c5e37"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#af98976f58b5138306f25784f9a9c5e37">onFocusLost</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:af98976f58b5138306f25784f9a9c5e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when this application loses the foreground focus.  <a href="#af98976f58b5138306f25784f9a9c5e37">More...</a><br /></td></tr>
+<tr class="separator:af98976f58b5138306f25784f9a9c5e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda5aa2c81ae8cefe01301bc5f87c8d1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#abda5aa2c81ae8cefe01301bc5f87c8d1">onFrame</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:abda5aa2c81ae8cefe01301bc5f87c8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a new frame of hand and finger tracking data is available.  <a href="#abda5aa2c81ae8cefe01301bc5f87c8d1">More...</a><br /></td></tr>
+<tr class="separator:abda5aa2c81ae8cefe01301bc5f87c8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b82f6f7fb940f58dccd05ee1090741"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#af6b82f6f7fb940f58dccd05ee1090741">onImages</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:af6b82f6f7fb940f58dccd05ee1090741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when new images are available.  <a href="#af6b82f6f7fb940f58dccd05ee1090741">More...</a><br /></td></tr>
+<tr class="separator:af6b82f6f7fb940f58dccd05ee1090741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b6cfe4f9679aa0d1334c12fed3b9c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#a40b6cfe4f9679aa0d1334c12fed3b9c3">onInit</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:a40b6cfe4f9679aa0d1334c12fed3b9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called once, when this <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> object is newly added to a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>.  <a href="#a40b6cfe4f9679aa0d1334c12fed3b9c3">More...</a><br /></td></tr>
+<tr class="separator:a40b6cfe4f9679aa0d1334c12fed3b9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4e218ef71341222db60c53d970bd65"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#acf4e218ef71341222db60c53d970bd65">onLogMessage</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;, <a class="el" href="namespace_leap.html#aa62b2fead9be8c13d38ddf19498dd67e">MessageSeverity</a> severity, int64_t timestamp, const char *msg)</td></tr>
+<tr class="memdesc:acf4e218ef71341222db60c53d970bd65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the service emits a log message to report an error, warning, or status change.  <a href="#acf4e218ef71341222db60c53d970bd65">More...</a><br /></td></tr>
+<tr class="separator:acf4e218ef71341222db60c53d970bd65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c6ee18f27472c24dc51f7e262ebc1d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#a92c6ee18f27472c24dc51f7e262ebc1d">onServiceChange</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:a92c6ee18f27472c24dc51f7e262ebc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the <a class="el" href="namespace_leap.html">Leap</a> Motion service is paused or resumed or when a controller policy is changed.  <a href="#a92c6ee18f27472c24dc51f7e262ebc1d">More...</a><br /></td></tr>
+<tr class="separator:a92c6ee18f27472c24dc51f7e262ebc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455ff66aa2bf13e717bc9055037d8a63"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#a455ff66aa2bf13e717bc9055037d8a63">onServiceConnect</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:a455ff66aa2bf13e717bc9055037d8a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the <a class="el" href="namespace_leap.html">Leap</a> Motion daemon/service connects to your application <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>.  <a href="#a455ff66aa2bf13e717bc9055037d8a63">More...</a><br /></td></tr>
+<tr class="separator:a455ff66aa2bf13e717bc9055037d8a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d6bea3d250cf7094775a2f4f5a31b01"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#a1d6bea3d250cf7094775a2f4f5a31b01">onServiceDisconnect</a> (const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;)</td></tr>
+<tr class="memdesc:a1d6bea3d250cf7094775a2f4f5a31b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called if the <a class="el" href="namespace_leap.html">Leap</a> Motion daemon/service disconnects from your application <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>.  <a href="#a1d6bea3d250cf7094775a2f4f5a31b01">More...</a><br /></td></tr>
+<tr class="separator:a1d6bea3d250cf7094775a2f4f5a31b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada53738ce6b4084f3589b630e0e77df5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_listener.html#ada53738ce6b4084f3589b630e0e77df5">~Listener</a> ()</td></tr>
+<tr class="memdesc:ada53738ce6b4084f3589b630e0e77df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> object.  <a href="#ada53738ce6b4084f3589b630e0e77df5">More...</a><br /></td></tr>
+<tr class="separator:ada53738ce6b4084f3589b630e0e77df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> class defines a set of callback functions that you can override in a subclass to respond to events dispatched by the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object. </p>
+<p>To handle <a class="el" href="namespace_leap.html">Leap</a> Motion events, create an instance of a <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> subclass and assign it to the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> instance. The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> calls the relevant <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> callback function when an event occurs, passing in a reference to itself. You do not have to implement callbacks for events you do not want to handle.</p>
+<p>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object calls these <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> functions from a thread created by the <a class="el" href="namespace_leap.html">Leap</a> Motion library, not the thread used to create or set the <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> instance. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a9d5e4fb3349a6d39f973a4c1715f696f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_listener.html">Listener</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> object. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ada53738ce6b4084f3589b630e0e77df5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="class_leap_1_1_listener.html">Listener</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroys this <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> object. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6b0dd62da959d048a3cc7917cca1ccba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onConnect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object connects to the <a class="el" href="namespace_leap.html">Leap</a> Motion software and the <a class="el" href="namespace_leap.html">Leap</a> Motion hardware device is plugged in, or when this <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> object is added to a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> that is already connected. </p>
+<p>When this callback is invoked, <a class="el" href="class_leap_1_1_controller.html#a43d650dd9a40aec97b774ff6f0849ff1" title="Reports whether your application has a connection to the Leap Motion daemon/service. ">Controller::isServiceConnected</a> is true, <a class="el" href="class_leap_1_1_controller.html#a54659799281c4b8839bc7531fb2d8552" title="The list of currently attached and recognized Leap Motion controller devices. ">Controller::devices()</a> is not empty, and, for at least one of the <a class="el" href="class_leap_1_1_device.html" title="The Device class represents a physically connected device. ">Device</a> objects in the list, <a class="el" href="class_leap_1_1_device.html#a4832273044ac75dec5c8cbeeeedc2d69" title="Reports whether this device is streaming data to your application. ">Device::isStreaming()</a> is true.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onConnect(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Connected&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac4549d8930274ed8178edc003c7f555e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onDeviceChange </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when a <a class="el" href="namespace_leap.html">Leap</a> Motion controller is plugged in, unplugged, or the device changes state. </p>
+<p>State changes include entering or leaving robust mode and low resource mode. Note that there is no direct way to query whether the device is in these modes, although you can use Controller::isLightingBad() to check if there are environmental IR lighting problems.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onDeviceChange(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Device change &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0a7b9699500d33a6d9a7907efd1f59ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onDeviceFailure </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when a <a class="el" href="namespace_leap.html">Leap</a> Motion controller device is plugged into the client computer, but fails to operate properly. </p>
+<p>Get the list containing all failed devices using <a class="el" href="class_leap_1_1_controller.html#a44b969a03cd7dff28965a1aac1be1766" title="A list of any Leap Motion hardware devices that are physically connected to the client computer...">Controller::failedDevices()</a>. The members of this list provide the device pnpID and reason for failure.</p>
+<div class="fragment"></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a399521092032c7f8c8da9e62636ad6d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onDisconnect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object disconnects from the <a class="el" href="namespace_leap.html">Leap</a> Motion software or the <a class="el" href="namespace_leap.html">Leap</a> Motion hardware is unplugged. </p>
+<p>The controller can disconnect when the <a class="el" href="namespace_leap.html">Leap</a> Motion device is unplugged, the user shuts the <a class="el" href="namespace_leap.html">Leap</a> Motion software down, or the <a class="el" href="namespace_leap.html">Leap</a> Motion software encounters an unrecoverable error.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onDisconnect(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Disconnected&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Note: When you launch a Leap-enabled application in a debugger, the <a class="el" href="namespace_leap.html">Leap</a> Motion library does not disconnect from the application. This is to allow you to step through code without losing the connection because of time outs.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac2e32940081a691303e0fa83ab098bef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onExit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when this <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> object is removed from the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> or the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> instance is destroyed. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onExit(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Exited&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab341438c051361cdbe9e5ac2c9734e31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onFocusGained </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when this application becomes the foreground application. </p>
+<p>Only the foreground application receives tracking data from the <a class="el" href="namespace_leap.html">Leap</a> Motion <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>. This function is only called when the controller object is in a connected state.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onFocusGained(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Focus gained &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af98976f58b5138306f25784f9a9c5e37"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onFocusLost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when this application loses the foreground focus. </p>
+<p>Only the foreground application receives tracking data from the <a class="el" href="namespace_leap.html">Leap</a> Motion <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>. This function is only called when the controller object is in a connected state.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onFocusLost(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Focus lost &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abda5aa2c81ae8cefe01301bc5f87c8d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onFrame </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when a new frame of hand and finger tracking data is available. </p>
+<p>Access the new frame data using the <a class="el" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62" title="Returns a frame of tracking data from the Leap Motion software. ">Controller::frame()</a> function.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onFrame(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;New frame available&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">    <a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> frame = controller.frame();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Note, the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> skips any pending onFrame events while your onFrame handler executes. If your implementation takes too long to return, one or more frames can be skipped. The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> still inserts the skipped frames into the frame history. You can access recent frames by setting the history parameter when calling the <a class="el" href="class_leap_1_1_controller.html#a1a25f3894cf82667f423dad20d7d6b62" title="Returns a frame of tracking data from the Leap Motion software. ">Controller::frame()</a> function. You can determine if any pending onFrame events were skipped by comparing the ID of the most recent frame with the ID of the last received frame.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af6b82f6f7fb940f58dccd05ee1090741"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onImages </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when new images are available. </p>
+<p>Access the new frame data using the <a class="el" href="class_leap_1_1_controller.html#a85588dbb02a8ff793cf2ced9067f8263" title="The most recent set of images from the Leap Motion cameras. ">Controller::images()</a> function.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onImages(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;New images available &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">    <a class="code" href="class_leap_1_1_image_list.html">Leap::ImageList</a> images = controller.images();</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>2.2.1 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a40b6cfe4f9679aa0d1334c12fed3b9c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onInit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called once, when this <a class="el" href="class_leap_1_1_listener.html" title="The Listener class defines a set of callback functions that you can override in a subclass to respond...">Listener</a> object is newly added to a <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onInit(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Initialized&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acf4e218ef71341222db60c53d970bd65"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onLogMessage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_leap.html#aa62b2fead9be8c13d38ddf19498dd67e">MessageSeverity</a>&#160;</td>
+          <td class="paramname"><em>severity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when the service emits a log message to report an error, warning, or status change. </p>
+<p>Log message text is provided as ASCII-encoded english.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+    <tr><td class="paramname">severity</td><td>The severity of the error, if known. </td></tr>
+    <tr><td class="paramname">timestamp</td><td>The timestamp of the error in microseconds. (Use <a class="el" href="class_leap_1_1_controller.html#a629420c35d3c1192bc44e61f64d1e461" title="Returns a timestamp value as close as possible to the current time. ">Controller::now()</a> - timestamp to compute the age of the message.) </td></tr>
+    <tr><td class="paramname">msg</td><td>The log message. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a92c6ee18f27472c24dc51f7e262ebc1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onServiceChange </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when the <a class="el" href="namespace_leap.html">Leap</a> Motion service is paused or resumed or when a controller policy is changed. </p>
+<p>The service can change states because the computer user changes settings in the <a class="el" href="namespace_leap.html">Leap</a> Motion Control Panel application or because an application connected to the service triggers a change. Any application can pause or unpause the service, but only runtime policy changes you make apply to your own application.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onServiceChange(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Service state change &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You can query the pause state of the controller with <a class="el" href="class_leap_1_1_controller.html#a0eaf52e4ed386823bd1051f44d511fe6" title="Reports whether the Leap Motion service is currently paused. ">Controller::isPaused()</a>. You can check the state of those policies you are interested in with <a class="el" href="class_leap_1_1_controller.html#a033ebfdf3fe02566075be65269938313" title="Gets the active setting for a specific policy. ">Controller::isPolicySet()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a455ff66aa2bf13e717bc9055037d8a63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onServiceConnect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when the <a class="el" href="namespace_leap.html">Leap</a> Motion daemon/service connects to your application <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onServiceConnect(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Service connected &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1d6bea3d250cf7094775a2f4f5a31b01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onServiceDisconnect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_controller.html">Controller</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called if the <a class="el" href="namespace_leap.html">Leap</a> Motion daemon/service disconnects from your application <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>. </p>
+<p>Normally, this callback is not invoked. It is only called if some external event or problem shuts down the service or otherwise interrupts the connection.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SampleListener::onServiceDisconnect(<span class="keyword">const</span> Controller&amp; controller) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Service disconnected &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> object invoking this callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.2 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">C++ Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_circle_gesture.html">CircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger_list.html">FingerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_float_array.html">FloatArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture.html">Gesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture_list.html">GestureList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand_list.html">HandList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image_list.html">ImageList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_key_tap_gesture.html">KeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable.html">Pointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable_list.html">PointableList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool.html">Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool_list.html">ToolList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>C++</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

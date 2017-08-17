@@ -1,0 +1,459 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>All LeapInputModule members &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module-members.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module-members.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module-members.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module-members.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module-members.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module-members.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module-members.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module-members.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module-members.html";
+            } else {
+
+                    if( requestedAPI == 'cpp'){
+                        redirectedLocation = relPath + "cpp/index.html?proglang=cpp";
+                    }
+                    else if( requestedAPI == 'csharp'){
+                        redirectedLocation = relPath + "csharp/index.html?proglang=csharp";
+                    }
+                    else if( requestedAPI == 'unity'){
+                        redirectedLocation = relPath + "unity/index.html?proglang=unity";
+                    }
+                    else if( requestedAPI == 'objc'){
+                        redirectedLocation = relPath + "objc/index.html?proglang=objc";
+                    }
+                    else if( requestedAPI == 'java') {
+                        redirectedLocation = relPath + "java/index.html?proglang=java";
+                    }
+                    else if( requestedAPI == 'javascript'){
+                        redirectedLocation = relPath + "javascript/index.html?proglang=javascript";
+                    }
+                    else if( requestedAPI == 'python'){
+                        redirectedLocation = relPath + "python/index.html?proglang=python";
+                    }
+                    else if( requestedAPI == 'unreal') {
+                        redirectedLocation = relPath + "unreal/index.html?proglang=unreal";
+                    } else {
+                        redirectedLocation = relPath + "index.html";
+                    }
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module-members.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){    }
+    else if( character == "K" & e.altKey){
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../../javascript/index.html?proglang=javascript" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../../csharp/index.html?proglang=csharp" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../../cpp/index.html?proglang=cpp" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../../java/index.html?proglang=java" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../../python/index.html?proglang=python" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../../objc/index.html?proglang=objc" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../../unreal/index.html?proglang=unreal" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+  All LeapInputModule members
+</span> -->
+        
+  <div class="section" id="all-leapinputmodule-members">
+<h1>All LeapInputModule members<a class="headerlink" href="#all-leapinputmodule-members" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Leap.Unity.InputModule.LeapInputModule Member List</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is the complete list of members for <a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a80ccb7ececec59abc4e73009a29eedec">BeginHoverSound</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aaca19a1c1d3f4297e1591c74d7bb556c">BeginMissedSound</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ac16c89bda7c47db44039fccb2867c32e">BeginTriggerSound</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a92f6fa38b66700501c38dbfce1d8db90">canvases</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#adc614fb8e9a445e452e9a56aebc807e9">currentGo</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a53b0f9635432cf84689360060388c21f">currentGoing</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a1b9568077ff368d08342ad245688fb70">currentOverGo</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ad55dd57864ddaece48dda8cbff31f6e2">CurrentRotation</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a78de1c136e1687f7187e87ac5732b1f6">DebugSphereQueue</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a73e6f9f36fba14dc973153a46fa815f1">distanceOfTipToElement</a>(Transform UIElement, int whichHand, int whichFinger)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a11123295e0aad3f03f0d34a624ae3db4">distanceOfTipToPointer</a>(int whichPointer, int whichHand, int whichFinger)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a140c992820fa00caf02cca6a7ca25945">DragBeginPosition</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a966ac42eb269be96cc1d245048dc58f4">DragLoopSound</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#abaef64b660684da08094cb7db534a0e8">DrawDebug</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a2fcba60112a1c39462a5e317d17445b9">EndHoverSound</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a34e127e11941faf52ce54a51114a0420">EndMissedSound</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ac5824e1e12dfa0a83dad6ad425593351">EndTriggerSound</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ab2f1607433a7c56a35ad21c45d2ec5d7">environmentPinch</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a59825979fec53a796dcd994a6b2640ec">EnvironmentPointer</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ae71241d3066bf14575ae68e18e2ed5a8">evaluatePointerSize</a>(int whichPointer)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a4156decdc82734e9115d5cd4cb51dbcb">forceProjective</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a9fdabae61d7d3b5636db6797b95bfcde">forceTactile</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aca53943fa0d042c4ea9fb90f35541081">GetLookPointerEventData</a>(int whichPointer, int whichHand, int whichFinger, Vector3 Origin, Vector3 Direction, bool forceTipRaycast)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a3a7e40d0581bfa470dfdb01983cc2de3">getTouchingMode</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a92922a67ee51f0b004453a2b8f70dc61">getTouchingMode</a>(int whichPointer)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a861e69e1a89559f7556e04b2624fcc47">HoveringColor</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ac9e60568b4e88f27bf4617a76a7a890d">InnerPointer</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aaf77cccd3b81255a352930225e96e105">InnerPointerOpacityScalar</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a5be8c37a4993221df2994701568a49e4">InnerPointers</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ade2b926e8491acc864531d10cc4b3e1c">InteractionCapability</a> enum name</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a10ebe56a58cfad89183b65e00203210c">InteractionMode</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a0bb6ee9b39d981abce5fb36b59052dca">isTriggeringInteraction</a>(int whichPointer, int whichHand, int whichFinger)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a403375d0866618c339b1968e5696c00d">LeapDataProvider</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a68a70feafa2085a94af5cdc334dabf94">LeftHandDetector</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a787587aea827b0473d8edf2e3da3b76b">lerpPointerColor</a>(int whichPointer, Color color, float lerpalpha)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a8129eb472d1fcc0749bc2f32535e27e3">MovingReferenceFrame</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#acb60c0b71a886df1b37212de34f7d988">NumberOfPointers</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ad865ef8c45ce02b99c9d651d7e96fe1b">OldCameraFoV</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a9c8c32a508f091c6505e03773b8e5656">OldCameraPos</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a4adcf2cd3ae81b1d8fd161d7586de813">OldCameraRot</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a333be0dc88b80af2ee110be22dd7a61a">onClickDown</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ac2a5239705a8ced913583604559307b1">onClickUp</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a710ad9624eba6f4699c7fe2884460564">OnDrawGizmos</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a030e67ee75cc6deda2dbf2950c7c5202">onHover</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#acf6535059f01c9d0df8813360ab6a5ca">OverrideScrollViewClicks</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ae1787c7ed0d1ffc4ec14caaefbdff430">perFingerPointer</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a51c7e543ea8f586474a6517755bf9825">PinchingThreshold</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a904b27bf12f32d2d96843b141ab0057f">PointerDistanceScale</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#acaebe433ddb0b9e8d92314044f77e871">PointerLines</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a2cca17eef221572d6d6d360e96581801">PointerMaterial</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a46cda97d7a4615fca79923ab770d35c6">PointerPinchScale</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a7ffa925e434e21899eae131bd2a10f7b">Pointers</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a00f1409b1c8eb905fbdcb41e58a5f6f3">PointerSprite</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a8ed798885627c3f341397a748f45d703">pointerState</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">pointerStates</a> enum name</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a984192d29703e5c5175c83c72aaaaf77">PointEvents</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a3378d50743ff29e307b79aebc09fdc95">prevOverGo</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#acbcb3ef40b3da63692248c45bb3c1da5">PrevScreenPosition</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#abab48911a9d2edb46987b8d6e88e9423">PrevState</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a9cce80397ee9fb0a52fc933daf928e46">PrevTouchingMode</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a5f4591c9adb34013e104c11a34c14597">PrevTriggeringInteraction</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#abb35a45ceb80fb4278a7f55ce47dab84">Process</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a1574c1442dc40f9cbaeb3450bed6344e">ProcessState</a>(int whichPointer, int whichHand, int whichFinger, bool forceTipRaycast)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aa9f7a877c856c6adb5445daf300fdd91">ProcessStateEvents</a>(int whichPointer)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a5c16cbaac6167f3f6bc8db234ce0997e">ProjectiveToTactileTransitionDistance</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ada38b980e9d0837e0829ee08dcef12eb">RetractUI</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a338511a635553eb185373a1237e9697b">RightHandDetector</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aa65395acd2713faf30b54b06c1afde0c">SendUpdateEventToSelectedObject</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ad2fce1bb68785fdb4dac4141e4235f35">ShouldActivateModule</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#af98d4c79dd1849475681dd4573640895">ShowAdvancedOptions</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#af05216ab8cadb7ce46961d800d0c6952">ShowExperimentalOptions</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a15b59ce587e4304fd8210828898454c5">SoundPlayer</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a0ec7c7970917082af137fdf07006cb04">StandardColor</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a0da536e019c8788b62483ec1004a993a">Start</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aa802b2d1eed4e609b2584856a680db93">TactilePadding</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#abf2378bd19042a620748e5cd22ee4f00">timeEnteredCanvas</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aa11c0ff84b99df36482d07049c887896">TriggerHoverOnElementSwitch</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a115d8a4a8baa97591ca5dec2d82163ee">TriggeringColor</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a5ad8911842c78eff052f03d4305421bb">TriggerMissedColor</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a1aff69cd061588cecaa83eeddcd1f042">Update</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a9166dc63f6ba74e7aa417bd29ba889b4">UpdatePointer</a>(int whichPointer, PointerEventData pointData, GameObject UIComponent)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aab52c02e13ed48944b7e32304fb6c69b">updatePointerColor</a>(int whichPointer, int whichHand, int whichFinger)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a7304ac60165f9986656abc6622b24e86">whileClickHeld</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html">Leap.Unity.InputModule.LeapInputModule</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

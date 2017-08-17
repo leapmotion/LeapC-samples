@@ -1,0 +1,1462 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LeapHand &mdash; Leap Motion Objective-C SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Objective-C SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="LeapImage" href="interface_leap_image.html" />
+    <link rel="prev" title="LeapGesture" href="interface_leap_gesture.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'objc';
+    var hasAPI = {};
+    hasAPI.objc = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'objc/api/gen-objc/interface_leap_hand.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-objc/interface_leap_hand.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-objc/interface_leap_hand.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-objc/interface_leap_hand.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-objc/interface_leap_hand.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-objc/interface_leap_hand.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-objc/interface_leap_hand.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-objc/interface_leap_hand.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-objc/interface_leap_hand.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'objc/api/gen-objc/interface_leap_hand.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("interface_leap_gesture.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("interface_leap_image.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      Objective-C
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  LeapHand
+</span> -->
+        
+  <div class="section" id="leaphand">
+<h1>LeapHand<a class="headerlink" href="#leaphand" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('interface_leap_hand.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Instance Methods</a> &#124;
+<a href="#pub-static-methods">Class Methods</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+<div class="title">LeapHand Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> class reports the physical characteristics of a detected hand.  
+ <a href="interface_leap_hand.html#details">More...</a></p>
+
+<p>Inherits NSObject.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Instance Methods</h2></td></tr>
+<tr class="memitem:a91fb6a840465b46396bbbe332aa3baf1"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_finger.html">LeapFinger</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_hand.html#a91fb6a840465b46396bbbe332aa3baf1">finger:</a></td></tr>
+<tr class="memdesc:a91fb6a840465b46396bbbe332aa3baf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> object with the specified ID attached to this hand.  <a href="#a91fb6a840465b46396bbbe332aa3baf1">More...</a><br /></td></tr>
+<tr class="separator:a91fb6a840465b46396bbbe332aa3baf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a8cb3ce02d19fe2207d2817c842ae84"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_pointable.html">LeapPointable</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_hand.html#a1a8cb3ce02d19fe2207d2817c842ae84">pointable:</a></td></tr>
+<tr class="memdesc:a1a8cb3ce02d19fe2207d2817c842ae84"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> object with the specified ID associated with this hand.  <a href="#a1a8cb3ce02d19fe2207d2817c842ae84">More...</a><br /></td></tr>
+<tr class="separator:a1a8cb3ce02d19fe2207d2817c842ae84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac560c2ee6e018c5cbb142f140e484194"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_hand.html#ac560c2ee6e018c5cbb142f140e484194">rotationAngle:</a></td></tr>
+<tr class="memdesc:ac560c2ee6e018c5cbb142f140e484194"><td class="mdescLeft">&#160;</td><td class="mdescRight">The angle of rotation around the rotation axis derived from the change in orientation of this hand, and associated fingers, between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>.  <a href="#ac560c2ee6e018c5cbb142f140e484194">More...</a><br /></td></tr>
+<tr class="separator:ac560c2ee6e018c5cbb142f140e484194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2148131ea9d5268d940a31bf299184fe"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_hand.html#a2148131ea9d5268d940a31bf299184fe">rotationAngle:axis:</a></td></tr>
+<tr class="memdesc:a2148131ea9d5268d940a31bf299184fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The angle of rotation around the specified axis derived from the change in orientation of this hand, and associated fingers, between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>.  <a href="#a2148131ea9d5268d940a31bf299184fe">More...</a><br /></td></tr>
+<tr class="separator:a2148131ea9d5268d940a31bf299184fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af30685de63d73da5a119082d7fdf3935"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_hand.html#af30685de63d73da5a119082d7fdf3935">rotationAxis:</a></td></tr>
+<tr class="memdesc:af30685de63d73da5a119082d7fdf3935"><td class="mdescLeft">&#160;</td><td class="mdescRight">The axis of rotation derived from the change in orientation of this hand, and associated fingers, between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>.  <a href="#af30685de63d73da5a119082d7fdf3935">More...</a><br /></td></tr>
+<tr class="separator:af30685de63d73da5a119082d7fdf3935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a934111feb0c869e20dc28c16ec2694a4"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_matrix.html">LeapMatrix</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_hand.html#a934111feb0c869e20dc28c16ec2694a4">rotationMatrix:</a></td></tr>
+<tr class="memdesc:a934111feb0c869e20dc28c16ec2694a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The transform matrix expressing the rotation derived from the change in orientation of this hand, and associated fingers, between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>.  <a href="#a934111feb0c869e20dc28c16ec2694a4">More...</a><br /></td></tr>
+<tr class="separator:a934111feb0c869e20dc28c16ec2694a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae432a55ee291fe54f08b9ee21b569718"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_hand.html#ae432a55ee291fe54f08b9ee21b569718">rotationProbability:</a></td></tr>
+<tr class="memdesc:ae432a55ee291fe54f08b9ee21b569718"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated probability that the hand motion between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> is intended to be a rotating motion.  <a href="#ae432a55ee291fe54f08b9ee21b569718">More...</a><br /></td></tr>
+<tr class="separator:ae432a55ee291fe54f08b9ee21b569718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951385673d102ac7a84f38bf0ebd6bc0"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_hand.html#a951385673d102ac7a84f38bf0ebd6bc0">scaleFactor:</a></td></tr>
+<tr class="memdesc:a951385673d102ac7a84f38bf0ebd6bc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scale factor derived from this hand's motion between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>.  <a href="#a951385673d102ac7a84f38bf0ebd6bc0">More...</a><br /></td></tr>
+<tr class="separator:a951385673d102ac7a84f38bf0ebd6bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad661a74300008c4a10004f42e5f0ec82"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_hand.html#ad661a74300008c4a10004f42e5f0ec82">scaleProbability:</a></td></tr>
+<tr class="memdesc:ad661a74300008c4a10004f42e5f0ec82"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated probability that the hand motion between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> is intended to be a scaling motion.  <a href="#ad661a74300008c4a10004f42e5f0ec82">More...</a><br /></td></tr>
+<tr class="separator:ad661a74300008c4a10004f42e5f0ec82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e6452430efe67847090f8248540e5f"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_hand.html#a27e6452430efe67847090f8248540e5f">translation:</a></td></tr>
+<tr class="memdesc:a27e6452430efe67847090f8248540e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The change of position of this hand between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>.  <a href="#a27e6452430efe67847090f8248540e5f">More...</a><br /></td></tr>
+<tr class="separator:a27e6452430efe67847090f8248540e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f54f7d192a3bc91f8d721a0e1354ac"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_hand.html#a30f54f7d192a3bc91f8d721a0e1354ac">translationProbability:</a></td></tr>
+<tr class="memdesc:a30f54f7d192a3bc91f8d721a0e1354ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated probability that the hand motion between the current frame and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> is intended to be a translating motion.  <a href="#a30f54f7d192a3bc91f8d721a0e1354ac">More...</a><br /></td></tr>
+<tr class="separator:a30f54f7d192a3bc91f8d721a0e1354ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Class Methods</h2></td></tr>
+<tr class="memitem:ae885e542697ae6f9da9d527318ea6db5"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_hand.html">LeapHand</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_hand.html#ae885e542697ae6f9da9d527318ea6db5">invalid</a></td></tr>
+<tr class="memdesc:ae885e542697ae6f9da9d527318ea6db5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an invalid <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> object.  <a href="#ae885e542697ae6f9da9d527318ea6db5">More...</a><br /></td></tr>
+<tr class="separator:ae885e542697ae6f9da9d527318ea6db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:af184266145b2473fa824f3a2bf594baf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_leap_arm.html">LeapArm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#af184266145b2473fa824f3a2bf594baf">arm</a></td></tr>
+<tr class="memdesc:af184266145b2473fa824f3a2bf594baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The arm to which this hand is attached.  <a href="#af184266145b2473fa824f3a2bf594baf">More...</a><br /></td></tr>
+<tr class="separator:af184266145b2473fa824f3a2bf594baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c454981536f69f4f2a3012704ccd95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_leap_matrix.html">LeapMatrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a66c454981536f69f4f2a3012704ccd95">basis</a></td></tr>
+<tr class="memdesc:a66c454981536f69f4f2a3012704ccd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The orientation of the hand as a basis matrix.  <a href="#a66c454981536f69f4f2a3012704ccd95">More...</a><br /></td></tr>
+<tr class="separator:a66c454981536f69f4f2a3012704ccd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a058b8558da894ebfbef73d1a9b57deaa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a058b8558da894ebfbef73d1a9b57deaa">confidence</a></td></tr>
+<tr class="memdesc:a058b8558da894ebfbef73d1a9b57deaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rates how well the internal hand model fits the observed data.  <a href="#a058b8558da894ebfbef73d1a9b57deaa">More...</a><br /></td></tr>
+<tr class="separator:a058b8558da894ebfbef73d1a9b57deaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a652fa364f40a7ecfc7a5bdbe489cc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_leap_vector.html">LeapVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a4a652fa364f40a7ecfc7a5bdbe489cc2">direction</a></td></tr>
+<tr class="memdesc:a4a652fa364f40a7ecfc7a5bdbe489cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The direction from the palm position toward the fingers.  <a href="#a4a652fa364f40a7ecfc7a5bdbe489cc2">More...</a><br /></td></tr>
+<tr class="separator:a4a652fa364f40a7ecfc7a5bdbe489cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070739131dde3afb2aee1cdc4701923c"><td class="memItemLeft" align="right" valign="top">NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a070739131dde3afb2aee1cdc4701923c">fingers</a></td></tr>
+<tr class="memdesc:a070739131dde3afb2aee1cdc4701923c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> objects detected in this frame that are attached to this hand, given in arbitrary order.  <a href="#a070739131dde3afb2aee1cdc4701923c">More...</a><br /></td></tr>
+<tr class="separator:a070739131dde3afb2aee1cdc4701923c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a713a7fb019622a3a2628a6ff9f8ce6dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_leap_frame.html">LeapFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a713a7fb019622a3a2628a6ff9f8ce6dd">frame</a></td></tr>
+<tr class="memdesc:a713a7fb019622a3a2628a6ff9f8ce6dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> associated with this Hand.  <a href="#a713a7fb019622a3a2628a6ff9f8ce6dd">More...</a><br /></td></tr>
+<tr class="separator:a713a7fb019622a3a2628a6ff9f8ce6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b5827414b5f9b0b15dfba9ab015a8de"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a6b5827414b5f9b0b15dfba9ab015a8de">grabAngle</a></td></tr>
+<tr class="memdesc:a6b5827414b5f9b0b15dfba9ab015a8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">The angle between the fingers and the hand of a grab hand pose.  <a href="#a6b5827414b5f9b0b15dfba9ab015a8de">More...</a><br /></td></tr>
+<tr class="separator:a6b5827414b5f9b0b15dfba9ab015a8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a181152188ca8b13446934e6d84c64fe6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a181152188ca8b13446934e6d84c64fe6">grabStrength</a></td></tr>
+<tr class="memdesc:a181152188ca8b13446934e6d84c64fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deprecated.  <a href="#a181152188ca8b13446934e6d84c64fe6">More...</a><br /></td></tr>
+<tr class="separator:a181152188ca8b13446934e6d84c64fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2708c0bbb6f926149707c2c61fe43c3e"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a2708c0bbb6f926149707c2c61fe43c3e">id</a></td></tr>
+<tr class="memdesc:a2708c0bbb6f926149707c2c61fe43c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A unique ID assigned to this <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> object, whose value remains the same across consecutive frames while the tracked hand remains visible.  <a href="#a2708c0bbb6f926149707c2c61fe43c3e">More...</a><br /></td></tr>
+<tr class="separator:a2708c0bbb6f926149707c2c61fe43c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f42849d6067a3e4128641df3367a00a"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a2f42849d6067a3e4128641df3367a00a">isLeft</a></td></tr>
+<tr class="memdesc:a2f42849d6067a3e4128641df3367a00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies whether this Hand is a left hand.  <a href="#a2f42849d6067a3e4128641df3367a00a">More...</a><br /></td></tr>
+<tr class="separator:a2f42849d6067a3e4128641df3367a00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21a06f5c104bc9cf71c5297e1278ceca"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a21a06f5c104bc9cf71c5297e1278ceca">isRight</a></td></tr>
+<tr class="memdesc:a21a06f5c104bc9cf71c5297e1278ceca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies whether this Hand is a right hand.  <a href="#a21a06f5c104bc9cf71c5297e1278ceca">More...</a><br /></td></tr>
+<tr class="separator:a21a06f5c104bc9cf71c5297e1278ceca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f519457eca93f08fa8e441047f271f"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a91f519457eca93f08fa8e441047f271f">isValid</a></td></tr>
+<tr class="memdesc:a91f519457eca93f08fa8e441047f271f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this is a valid <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> object.  <a href="#a91f519457eca93f08fa8e441047f271f">More...</a><br /></td></tr>
+<tr class="separator:a91f519457eca93f08fa8e441047f271f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51afcd840306880d4fe3e7331aaa593c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_leap_vector.html">LeapVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a51afcd840306880d4fe3e7331aaa593c">palmNormal</a></td></tr>
+<tr class="memdesc:a51afcd840306880d4fe3e7331aaa593c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The normal vector to the palm.  <a href="#a51afcd840306880d4fe3e7331aaa593c">More...</a><br /></td></tr>
+<tr class="separator:a51afcd840306880d4fe3e7331aaa593c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f8d3eb96f4be1df030d60c30448b226"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_leap_vector.html">LeapVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a6f8d3eb96f4be1df030d60c30448b226">palmPosition</a></td></tr>
+<tr class="memdesc:a6f8d3eb96f4be1df030d60c30448b226"><td class="mdescLeft">&#160;</td><td class="mdescRight">The center position of the palm in millimeters from the Leap origin.  <a href="#a6f8d3eb96f4be1df030d60c30448b226">More...</a><br /></td></tr>
+<tr class="separator:a6f8d3eb96f4be1df030d60c30448b226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220d0e36465d1ba1dec16fa4888bc6fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_leap_vector.html">LeapVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a220d0e36465d1ba1dec16fa4888bc6fc">palmVelocity</a></td></tr>
+<tr class="memdesc:a220d0e36465d1ba1dec16fa4888bc6fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rate of change of the palm position in millimeters/second.  <a href="#a220d0e36465d1ba1dec16fa4888bc6fc">More...</a><br /></td></tr>
+<tr class="separator:a220d0e36465d1ba1dec16fa4888bc6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a786d769b016ea0f7710303aa6be760df"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a786d769b016ea0f7710303aa6be760df">palmWidth</a></td></tr>
+<tr class="memdesc:a786d769b016ea0f7710303aa6be760df"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated width of the palm when the hand is in a flat position.  <a href="#a786d769b016ea0f7710303aa6be760df">More...</a><br /></td></tr>
+<tr class="separator:a786d769b016ea0f7710303aa6be760df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d6a44b5276622c47ebc5db223281e0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#ae9d6a44b5276622c47ebc5db223281e0">pinchDistance</a></td></tr>
+<tr class="memdesc:ae9d6a44b5276622c47ebc5db223281e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance between the thumb and index finger of a pinch hand pose.  <a href="#ae9d6a44b5276622c47ebc5db223281e0">More...</a><br /></td></tr>
+<tr class="separator:ae9d6a44b5276622c47ebc5db223281e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb63f9d20093a40f5e453ca0ddaf05f4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#acb63f9d20093a40f5e453ca0ddaf05f4">pinchStrength</a></td></tr>
+<tr class="memdesc:acb63f9d20093a40f5e453ca0ddaf05f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deprecated.  <a href="#acb63f9d20093a40f5e453ca0ddaf05f4">More...</a><br /></td></tr>
+<tr class="separator:acb63f9d20093a40f5e453ca0ddaf05f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6447dea63acf3a9cf7da5dc4e9b5663f"><td class="memItemLeft" align="right" valign="top">NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a6447dea63acf3a9cf7da5dc4e9b5663f">pointables</a></td></tr>
+<tr class="memdesc:a6447dea63acf3a9cf7da5dc4e9b5663f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of <a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> objects (fingers) detected in this frame that are associated with this hand, given in arbitrary order.  <a href="#a6447dea63acf3a9cf7da5dc4e9b5663f">More...</a><br /></td></tr>
+<tr class="separator:a6447dea63acf3a9cf7da5dc4e9b5663f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96f15ded59e70de7fe4bce04ecea7944"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_leap_vector.html">LeapVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a96f15ded59e70de7fe4bce04ecea7944">sphereCenter</a></td></tr>
+<tr class="memdesc:a96f15ded59e70de7fe4bce04ecea7944"><td class="mdescLeft">&#160;</td><td class="mdescRight">The center of a sphere fit to the curvature of this hand.  <a href="#a96f15ded59e70de7fe4bce04ecea7944">More...</a><br /></td></tr>
+<tr class="separator:a96f15ded59e70de7fe4bce04ecea7944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1947453e88cf033172583d5ec81df98"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#aa1947453e88cf033172583d5ec81df98">sphereRadius</a></td></tr>
+<tr class="memdesc:aa1947453e88cf033172583d5ec81df98"><td class="mdescLeft">&#160;</td><td class="mdescRight">The radius of a sphere fit to the curvature of this hand.  <a href="#aa1947453e88cf033172583d5ec81df98">More...</a><br /></td></tr>
+<tr class="separator:aa1947453e88cf033172583d5ec81df98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e4fa26156fa24c6d7cb5e58bba2c3a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_leap_vector.html">LeapVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a1e4fa26156fa24c6d7cb5e58bba2c3a4">stabilizedPalmPosition</a></td></tr>
+<tr class="memdesc:a1e4fa26156fa24c6d7cb5e58bba2c3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stabilized tip position of this Pointable.  <a href="#a1e4fa26156fa24c6d7cb5e58bba2c3a4">More...</a><br /></td></tr>
+<tr class="separator:a1e4fa26156fa24c6d7cb5e58bba2c3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a433c4ee13e56f021bd956041a4b77c39"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_hand.html#a433c4ee13e56f021bd956041a4b77c39">timeVisible</a></td></tr>
+<tr class="memdesc:a433c4ee13e56f021bd956041a4b77c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">The duration of time this Hand has been visible to the Leap Motion Controller.  <a href="#a433c4ee13e56f021bd956041a4b77c39">More...</a><br /></td></tr>
+<tr class="separator:a433c4ee13e56f021bd956041a4b77c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> class reports the physical characteristics of a detected hand. </p>
+<p>Hand tracking data includes a palm position and velocity; vectors for the palm normal and direction to the fingers; properties of a sphere fit to the hand; and lists of the attached fingers.</p>
+<p>Note that <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> objects can be invalid, which means that they do not contain valid tracking data and do not correspond to a physical entity. Invalid <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> objects can be the result of asking for a Hand object using an ID from an earlier frame when no hand objects with that ID exist in the current frame. A hand object created from the <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> constructor is also invalid. Test for validity with the <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> isValid function. </p><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a91fb6a840465b46396bbbe332aa3baf1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_finger.html">LeapFinger</a> *) finger: </td>
+          <td></td>
+          <td class="paramtype">(int32_t)&#160;</td>
+          <td class="paramname"><em>fingerId</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> object with the specified ID attached to this hand. </p>
+<p>Use this [<a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> finger:] function to retrieve a <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> object attached to this hand using an ID value obtained from a previous frame. This function always returns a <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> object, but if no finger with the specified ID is present, an invalid <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> object is returned.</p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_finger.html">LeapFinger</a> *knownFinger = [hand finger:fingerID];</div>
+</div><!-- fragment --><p>Note that ID values persist across frames, but only until tracking of a particular object is lost. If tracking of a finger is lost and subsequently regained, the new <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> object representing that finger may have a different ID than that representing the finger in an earlier frame.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fingerId</td><td>The ID value of a <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> object from a previous frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> object with the matching ID if one exists for this hand in this frame; otherwise, an invalid <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> object is returned. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae885e542697ae6f9da9d527318ea6db5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_hand.html">LeapHand</a> *) invalid </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an invalid <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> object. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_hand.html">LeapHand</a> *badHand = <a class="code" href="interface_leap_hand.html">LeapHand</a>.<a class="code" href="interface_leap_hand.html#ae885e542697ae6f9da9d527318ea6db5">invalid</a>;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The invalid <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> instance. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1a8cb3ce02d19fe2207d2817c842ae84"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_pointable.html">LeapPointable</a> *) pointable: </td>
+          <td></td>
+          <td class="paramtype">(int32_t)&#160;</td>
+          <td class="paramname"><em>pointableId</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> object with the specified ID associated with this hand. </p>
+<p>Use this [<a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> pointable:] function to retrieve a <a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> object associated with this hand using an ID value obtained from a previous frame. This function always returns a <a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> object, but if no finger with the specified ID is present, an invalid <a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> object is returned.</p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_pointable.html">LeapPointable</a> *knownPointable = [hand pointable:pointableID];</div>
+</div><!-- fragment --><p>Note that ID values of fingers are based on the hand ID. Hand IDs persist across frames, but only until tracking of that hand is lost. If tracking of a hand is lost and subsequently regained, the new <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> object representing that hand will have a different ID than that representing the hand in an earlier frame. Thus the IDs for the fingers on the hand will also change.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pointableId</td><td>The ID value of a <a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> object from a previous frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> object with the matching ID if one exists for this hand in this frame; otherwise, an invalid <a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> object is returned. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac560c2ee6e018c5cbb142f140e484194"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) rotationAngle: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_frame.html">LeapFrame</a> *)&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The angle of rotation around the rotation axis derived from the change in orientation of this hand, and associated fingers, between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *lastFrame = [controller frame:1];</div>
+<div class="line"><span class="keywordtype">float</span> angleOfRotationSinceLastFrame =</div>
+<div class="line">    [hand rotationAngle:lastFrame];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> for computing the relative rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A positive value representing the heuristically determined rotational change of the hand between the current frame and that specified in the sinceFrame parameter. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2148131ea9d5268d940a31bf299184fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) <a class="el" href="interface_leap_hand.html#ac560c2ee6e018c5cbb142f140e484194">rotationAngle:</a> </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_frame.html">LeapFrame</a> *)&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">axis:</td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td>
+          <td class="paramname"><em>axis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The angle of rotation around the specified axis derived from the change in orientation of this hand, and associated fingers, between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *lastFrame = [controller frame:1];</div>
+<div class="line"><span class="keywordtype">float</span> angleOfRotationAroundYSinceLastFrame =</div>
+<div class="line">    [hand rotationAngle:lastFrame axis:<a class="code" href="interface_leap_vector.html">LeapVector</a>.<a class="code" href="interface_leap_vector.html#a5885d2029c91830c654b165629c81c36">yAxis</a>];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> for computing the relative rotation. </td></tr>
+    <tr><td class="paramname">axis</td><td>A <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> representing the axis to measure rotation around. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value representing the heuristically determined rotational change of the hand between the current frame and that specified in the sinceFrame parameter around the specified axis. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af30685de63d73da5a119082d7fdf3935"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) rotationAxis: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_frame.html">LeapFrame</a> *)&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The axis of rotation derived from the change in orientation of this hand, and associated fingers, between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *lastFrame = [controller frame:1];</div>
+<div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *axisOfRotationSinceLastFrame =</div>
+<div class="line">    [hand rotationAxis:lastFrame];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> for computing the relative rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> containing the normalized direction vector representing the heuristically determined axis of rotational change of the hand between the current frame and that specified in the sinceFrame parameter. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a934111feb0c869e20dc28c16ec2694a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_matrix.html">LeapMatrix</a> *) rotationMatrix: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_frame.html">LeapFrame</a> *)&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The transform matrix expressing the rotation derived from the change in orientation of this hand, and associated fingers, between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *lastFrame = [controller frame:1];</div>
+<div class="line"><a class="code" href="interface_leap_matrix.html">LeapMatrix</a> *rotationSinceLastFrame =</div>
+<div class="line">    [hand rotationMatrix:lastFrame];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> for computing the relative rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A transformation <a class="el" href="interface_leap_matrix.html" title="The LeapMatrix class represents a transformation matrix. ">LeapMatrix</a> representing the heuristically determined rotational change of the hand between the current frame and that specified in the sinceFrame parameter. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae432a55ee291fe54f08b9ee21b569718"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) rotationProbability: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_frame.html">LeapFrame</a> *)&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The estimated probability that the hand motion between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> is intended to be a rotating motion. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *lastFrame = [controller frame:1];</div>
+<div class="line"><span class="keywordtype">float</span> rotationIntent =</div>
+<div class="line">    [hand rotationProbability:lastFrame];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> for computing the relative rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value between 0 and 1 representing the estimated probability that the hand motion between the current frame and the specified frame is intended to be a rotating motion. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a951385673d102ac7a84f38bf0ebd6bc0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) scaleFactor: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_frame.html">LeapFrame</a> *)&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The scale factor derived from this hand's motion between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *lastFrame = [controller frame:1];</div>
+<div class="line"><span class="keywordtype">float</span> scaleChangeSinceLastFrame =</div>
+<div class="line">    [hand scaleFactor:lastFrame];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> for computing the relative scaling. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A positive value representing the heuristically determined scaling change ratio of the hand between the current frame and that specified in the sinceFrame parameter. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad661a74300008c4a10004f42e5f0ec82"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) scaleProbability: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_frame.html">LeapFrame</a> *)&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The estimated probability that the hand motion between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> is intended to be a scaling motion. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *lastFrame = [controller frame:1];</div>
+<div class="line"><span class="keywordtype">float</span> scaleIntent = [hand scaleProbability:lastFrame];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> for computing the relative scaling. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value between 0 and 1 representing the estimated probability that the hand motion between the current frame and the specified frame is intended to be a scaling motion. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a27e6452430efe67847090f8248540e5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) translation: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_frame.html">LeapFrame</a> *)&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The change of position of this hand between the current <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *lastFrame = [controller frame:1];</div>
+<div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *translationSinceLastFrame =</div>
+<div class="line">    [hand translation:lastFrame];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> for computing the translation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> representing the heuristically determined change in hand position between the current frame and that specified in the sinceFrame parameter. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a30f54f7d192a3bc91f8d721a0e1354ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) translationProbability: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_frame.html">LeapFrame</a> *)&#160;</td>
+          <td class="paramname"><em>sinceFrame</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The estimated probability that the hand motion between the current frame and the specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> is intended to be a translating motion. </p>
+<div class="fragment"></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinceFrame</td><td>The starting <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> for computing the translation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value between 0 and 1 representing the estimated probability that the hand motion between the current frame and the specified frame is intended to be a translating motion. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="af184266145b2473fa824f3a2bf594baf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_arm.html">LeapArm</a>*) arm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The arm to which this hand is attached. </p>
+<p>If the arm is not completely in view, Arm attributes are estimated based on the attributes of entities that are in view combined with typical human anatomy.</p>
+<div class="fragment"></div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The Arm object for this hand. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0.3 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a66c454981536f69f4f2a3012704ccd95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_matrix.html">LeapMatrix</a>*) basis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The orientation of the hand as a basis matrix. </p>
+<p>The basis is defined as follows:</p>
+<p><b>xAxis</b> Positive in the direction of the pinky</p>
+<p><b>yAxis</b> Positive above the hand</p>
+<p><b>zAxis</b> Positive in the direction of the wrist</p>
+<p>Note: Since the left hand is a mirror of the right hand, the basis matrix uses the left-hand rule for left hands.</p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *frame = [leap frame:0];</div>
+<div class="line"><span class="keywordflow">for</span> (<a class="code" href="interface_leap_hand.html">LeapHand</a> *hand in [frame hands]) {</div>
+<div class="line">    <a class="code" href="interface_leap_matrix.html">LeapMatrix</a> *handTransform = [[<a class="code" href="interface_leap_matrix.html">LeapMatrix</a> alloc] initWithXBasis:hand.basis.xBasis</div>
+<div class="line">                                                            yBasis:hand.basis.yBasis</div>
+<div class="line">                                                            zBasis:hand.basis.zBasis</div>
+<div class="line">                                                            origin:hand.basis.origin];</div>
+<div class="line">    handTransform = [handTransform rigidInverse];</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="interface_leap_interaction_box.html">LeapInteractionBox</a> *iBox = frame.<a class="code" href="interface_leap_frame.html#ab771aa7cfe188b2729ca6c08ba22acc1">interactionBox</a>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<a class="code" href="interface_leap_finger.html">LeapFinger</a> *finger in hand.fingers)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code" href="interface_leap_vector.html">LeapVector</a> *transformedPosition = [handTransform transformPoint:finger.<a class="code" href="interface_leap_pointable.html#a75bebb1bc3b0ee3a48d6165aa723fed9">tipPosition</a>];</div>
+<div class="line">        <a class="code" href="interface_leap_vector.html">LeapVector</a> *transformedDirection = [handTransform transformDirection:finger.<a class="code" href="interface_leap_pointable.html#a4a652fa364f40a7ecfc7a5bdbe489cc2">direction</a>];</div>
+<div class="line">    }</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The basis of the hand as a matrix. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a058b8558da894ebfbef73d1a9b57deaa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) confidence</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rates how well the internal hand model fits the observed data. </p>
+<p>The confidence level ranges between 0.0 and 1.0 inclusive, with 1.0 representing high confidence.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> modelToDataFitQuality = hand.confidence;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A confidence rating between 0 and 1. </dd></dl>
+<dl class="section user"><dt>Since 2.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4a652fa364f40a7ecfc7a5bdbe489cc2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a>*) direction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The direction from the palm position toward the fingers. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *direction = hand.direction;</div>
+</div><!-- fragment --><p>The direction is expressed as a unit vector pointing in the same direction as the directed line from the palm position to the fingers.</p>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> pointing from the palm position toward the fingers. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a070739131dde3afb2aee1cdc4701923c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray*) fingers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The list of <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> objects detected in this frame that are attached to this hand, given in arbitrary order. </p>
+<div class="fragment"><div class="line">NSArray *fingerList = hand.fingers;</div>
+</div><!-- fragment --><p>The list can be empty if no fingers attached to this hand are detected.</p>
+<dl class="section return"><dt>Returns</dt><dd>An NSArray containing all <a class="el" href="interface_leap_finger.html" title="The LeapFinger class represents a tracked finger. ">LeapFinger</a> objects attached to this hand. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a713a7fb019622a3a2628a6ff9f8ce6dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_frame.html">LeapFrame</a>*) frame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">weak</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> associated with this Hand. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *owningFrame = hand.frame;</div>
+</div><!-- fragment --><p>This property is a weak reference to the <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> object so it is only valid during the lifetime of the <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> object &ndash; while the <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> object is in the history buffer or while your application maintains its own reference.</p>
+<dl class="section return"><dt>Returns</dt><dd>The associated <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> object, if available; otherwise, an invalid <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> object is returned. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6b5827414b5f9b0b15dfba9ab015a8de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) grabAngle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The angle between the fingers and the hand of a grab hand pose. </p>
+<div class="fragment"></div><!-- fragment --><p>The angle is computed by looking at the angle between the direction of the 4 fingers and the direction of the hand. Thumb is not considered when computing the angle. The angle is 0 radian for an open hand, and reaches pi radians when the pose is a tight fist.</p>
+<dl class="section return"><dt>Returns</dt><dd>The angle of a grab hand pose between 0 and pi radians (0 and 180 degrees). </dd></dl>
+<dl class="section user"><dt>Since 3.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a181152188ca8b13446934e6d84c64fe6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) grabStrength</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deprecated. </p>
+<p>Use grabAngle() instead.</p>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2708c0bbb6f926149707c2c61fe43c3e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int32_t) id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A unique ID assigned to this <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> object, whose value remains the same across consecutive frames while the tracked hand remains visible. </p>
+<p>If tracking is lost (for example, when a hand is occluded by another hand or when it is withdrawn from or reaches the edge of the Leap field of view), the Leap may assign a new ID when it detects the hand in a future frame.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> handId = hand.id;</div>
+</div><!-- fragment --><p>Use the ID value with the [<a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> hand:] function to find this <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> object in future frames.</p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_hand.html">LeapHand</a> *knownHand = [frame hand:handID];</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The ID of this hand. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2f42849d6067a3e4128641df3367a00a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isLeft</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Identifies whether this Hand is a left hand. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(hand.isLeft)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">//Do left handed things...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True if the hand is a left hand. </dd></dl>
+<dl class="section user"><dt>Since 2.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a21a06f5c104bc9cf71c5297e1278ceca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isRight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Identifies whether this Hand is a right hand. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(hand.isRight)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">//Do right handed things...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True if the hand is a right hand. </dd></dl>
+<dl class="section user"><dt>Since 2.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a91f519457eca93f08fa8e441047f271f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isValid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether this is a valid <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> object. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(hand.isValid){</div>
+<div class="line">    <span class="comment">//Use the data...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>YES, if this <a class="el" href="interface_leap_hand.html" title="The LeapHand class reports the physical characteristics of a detected hand. ">LeapHand</a> object contains valid tracking data. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a51afcd840306880d4fe3e7331aaa593c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a>*) palmNormal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The normal vector to the palm. </p>
+<p>If your hand is flat, this vector will point downward, or "out" of the front surface of your palm.</p>
+<div class="image">
+<img src="../docs/images/Leap_Palm_Vectors.png" />
+</div>
+<p>The direction is expressed as a unit vector pointing in the same direction as the palm normal (that is, a vector orthogonal to the palm).</p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *normal = hand.palmNormal;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> normal to the plane formed by the palm. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6f8d3eb96f4be1df030d60c30448b226"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a>*) palmPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The center position of the palm in millimeters from the Leap origin. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *position = hand.palmPosition;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> representing the coordinates of the palm position. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a220d0e36465d1ba1dec16fa4888bc6fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a>*) palmVelocity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The rate of change of the palm position in millimeters/second. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *speed = hand.palmVelocity;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> representing the coordinates of the palm velocity. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a786d769b016ea0f7710303aa6be760df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) palmWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The estimated width of the palm when the hand is in a flat position. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> averageWidth = hand.palmWidth;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The width of the palm in millimeters </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae9d6a44b5276622c47ebc5db223281e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) pinchDistance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The distance between the thumb and index finger of a pinch hand pose. </p>
+<div class="fragment"></div><!-- fragment --><p>The distance is computed by looking at the shortest distance between the last 2 phalanges of the thumb and those of the index finger. This pinch measurement only takes thumb and index finger into account.</p>
+<dl class="section return"><dt>Returns</dt><dd>The distance between the thumb and index finger of a pinch hand pose in millimeters. </dd></dl>
+<dl class="section user"><dt>Since 3.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acb63f9d20093a40f5e453ca0ddaf05f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) pinchStrength</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deprecated. </p>
+<p>Use pinchDistance() instead.</p>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6447dea63acf3a9cf7da5dc4e9b5663f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray*) pointables</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The list of <a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> objects (fingers) detected in this frame that are associated with this hand, given in arbitrary order. </p>
+<div class="fragment"><div class="line">NSArray *pointableList = hand.pointables;</div>
+</div><!-- fragment --><p>The list will always contain 5 fingers even when some fingers are blocked from view and when the user is missing digits.</p>
+<dl class="section return"><dt>Returns</dt><dd>An NSArray containing all <a class="el" href="interface_leap_pointable.html" title="The LeapPointable class reports the physical characteristics of a detected finger or tool...">LeapPointable</a> objects associated with this hand. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a96f15ded59e70de7fe4bce04ecea7944"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a>*) sphereCenter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The center of a sphere fit to the curvature of this hand. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *spherePosition = hand.sphereCenter;</div>
+</div><!-- fragment --><p>This sphere is placed roughly as if the hand were holding a ball.</p>
+<div class="image">
+<img src="../docs/images/Leap_Hand_Ball.png" />
+</div>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> representing the center position of the sphere. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa1947453e88cf033172583d5ec81df98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) sphereRadius</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The radius of a sphere fit to the curvature of this hand. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> diameter = 2 * hand.sphereRadius;</div>
+</div><!-- fragment --><p>This sphere is placed roughly as if the hand were holding a ball. Thus the size of the sphere decreases as the fingers are curled into a fist. </p><dl class="section return"><dt>Returns</dt><dd>The radius of the sphere in millimeters. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1e4fa26156fa24c6d7cb5e58bba2c3a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a>*) stabilizedPalmPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The stabilized tip position of this Pointable. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *stabilizedPosition = hand.stabilizedPalmPosition;</div>
+</div><!-- fragment --><p>Smoothing and stabilization is performed in order to make this value more suitable for interaction with 2D content.</p>
+<dl class="section return"><dt>Returns</dt><dd>A modified tip position of this Pointable object with some additional smoothing and stabilization applied. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a433c4ee13e56f021bd956041a4b77c39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) timeVisible</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The duration of time this Hand has been visible to the Leap Motion Controller. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> handPersistence = hand.timeVisible;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The duration (in seconds) that this Hand has been tracked. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Objective-C Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_arm.html">LeapArm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_bone.html">LeapBone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_circle_gesture.html">LeapCircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_config.html">LeapConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_controller.html">LeapController</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol_leap_delegate-p.html">LeapDelegate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_device.html">LeapDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_failed_device.html">LeapFailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_finger.html">LeapFinger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_frame.html">LeapFrame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_gesture.html">LeapGesture</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">LeapHand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_image.html">LeapImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_interaction_box.html">LeapInteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_key_tap_gesture.html">LeapKeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol_leap_listener-p.html">LeapListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_matrix.html">LeapMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_leap_objective_c_8h.html">LeapObjectiveC.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_pointable.html">LeapPointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_screen_tap_gesture.html">LeapScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_swipe_gesture.html">LeapSwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_tool.html">LeapTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_vector.html">LeapVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category_n_s_array_07_leap_pointable_or_hand_list_08.html">NSArray(LeapPointableOrHandList)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>Objective-C</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

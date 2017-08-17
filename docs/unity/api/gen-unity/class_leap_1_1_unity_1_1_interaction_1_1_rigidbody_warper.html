@@ -1,0 +1,1278 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>RigidbodyWarper &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap::Unity::Interaction" href="namespace_leap_1_1_unity_1_1_interaction.html" />
+    <link rel="next" title="ShapeDescriptionPool" href="class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html" />
+    <link rel="prev" title="PhysicsUtility" href="class_leap_1_1_unity_1_1_interaction_1_1_physics_utility.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap_1_1_unity_1_1_interaction.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_interaction_1_1_physics_utility.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap_1_1_unity_1_1_interaction.html" accesskey="U">Leap::Unity::Interaction</a>&raquo;
+  RigidbodyWarper
+</span> -->
+        
+  <div class="section" id="rigidbodywarper">
+<h1>RigidbodyWarper<a class="headerlink" href="#rigidbodywarper" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.Unity.Interaction.RigidbodyWarper Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Inherits IDisposable.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a40e1eef5de235f718336fefddde2041e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a40e1eef5de235f718336fefddde2041e">RigidbodyWarper</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html">InteractionManager</a> manager, Transform transform, Rigidbody rigidbody, float returnTime)</td></tr>
+<tr class="separator:a40e1eef5de235f718336fefddde2041e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa020fd3dd504459194ce5853dac95451"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aa020fd3dd504459194ce5853dac95451">Dispose</a> ()</td></tr>
+<tr class="separator:aa020fd3dd504459194ce5853dac95451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e5b83988370ddd87c3a7126484ed88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a71e5b83988370ddd87c3a7126484ed88">SetGraphicalPosition</a> (Vector3 position, Quaternion rotation)</td></tr>
+<tr class="separator:a71e5b83988370ddd87c3a7126484ed88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de2c39cfd84aa79c08b1ff723022c15"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a5de2c39cfd84aa79c08b1ff723022c15">Teleport</a> (Vector3 position, Quaternion rotation)</td></tr>
+<tr class="separator:a5de2c39cfd84aa79c08b1ff723022c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:aa0768453f22591613702e969148f5253"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aa0768453f22591613702e969148f5253">CallbackState</a> { <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aa0768453f22591613702e969148f5253">Physical</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aa0768453f22591613702e969148f5253">PhysicalNeedsUpdate</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aa0768453f22591613702e969148f5253">Graphical</a>
+ }</td></tr>
+<tr class="separator:aa0768453f22591613702e969148f5253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a29bdd604844c45d3e63e6633d43fa7bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a29bdd604844c45d3e63e6633d43fa7bd">checkDisposed</a> ()</td></tr>
+<tr class="separator:a29bdd604844c45d3e63e6633d43fa7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc1b453ce001911a372b15a0dc637d4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aadc1b453ce001911a372b15a0dc637d4">onGraphicalUpdate</a> ()</td></tr>
+<tr class="separator:aadc1b453ce001911a372b15a0dc637d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a65f721eba43a3dea3f57226840e1d9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a7a65f721eba43a3dea3f57226840e1d9">onPostPhysicalUpdate</a> ()</td></tr>
+<tr class="separator:a7a65f721eba43a3dea3f57226840e1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f79e735ceb247821d28a67d29fc4ca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a39f79e735ceb247821d28a67d29fc4ca">onPrePhysicalUpdate</a> ()</td></tr>
+<tr class="separator:a39f79e735ceb247821d28a67d29fc4ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff8dada72234d7eebc986c8dcc809d68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aff8dada72234d7eebc986c8dcc809d68">subscribe</a> ()</td></tr>
+<tr class="separator:aff8dada72234d7eebc986c8dcc809d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fbeee849a09cfc8e911abd1710b5634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a3fbeee849a09cfc8e911abd1710b5634">unsubscribe</a> ()</td></tr>
+<tr class="separator:a3fbeee849a09cfc8e911abd1710b5634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5648924646bfbb8860a72ea2be3b4e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#ac5648924646bfbb8860a72ea2be3b4e5">updateRigidbodyValues</a> ()</td></tr>
+<tr class="separator:ac5648924646bfbb8860a72ea2be3b4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a66fa45800110521662a5781f9a5bb931"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a66fa45800110521662a5781f9a5bb931">_disposed</a> = false</td></tr>
+<tr class="separator:a66fa45800110521662a5781f9a5bb931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c751e82a0fccecd00226c6a116f12f4"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a6c751e82a0fccecd00226c6a116f12f4">_graphicalPosition</a></td></tr>
+<tr class="separator:a6c751e82a0fccecd00226c6a116f12f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb70476eee56eeae93c0d87ecf0ab4bc"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#acb70476eee56eeae93c0d87ecf0ab4bc">_graphicalRotation</a></td></tr>
+<tr class="separator:acb70476eee56eeae93c0d87ecf0ab4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b2cb85b14ca229290825beca0f4e3af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a6b2cb85b14ca229290825beca0f4e3af">_hasGraphicalTransform</a> = false</td></tr>
+<tr class="separator:a6b2cb85b14ca229290825beca0f4e3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae240239375fca710ca27d21352900afb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html">InteractionManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#ae240239375fca710ca27d21352900afb">_manager</a></td></tr>
+<tr class="separator:ae240239375fca710ca27d21352900afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1411d59d08c7f64e93eedecd9445a33d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aa0768453f22591613702e969148f5253">CallbackState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a1411d59d08c7f64e93eedecd9445a33d">_mostRecentCallback</a> = CallbackState.Physical</td></tr>
+<tr class="separator:a1411d59d08c7f64e93eedecd9445a33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b48f1a5b9343c20640b6241c6dd8e7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a44b48f1a5b9343c20640b6241c6dd8e7">_returnTime</a></td></tr>
+<tr class="separator:a44b48f1a5b9343c20640b6241c6dd8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cdefcb919807ede3650c7cdb1ba97cf"><td class="memItemLeft" align="right" valign="top">Rigidbody&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a9cdefcb919807ede3650c7cdb1ba97cf">_rigidbody</a></td></tr>
+<tr class="separator:a9cdefcb919807ede3650c7cdb1ba97cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57bccceb159d541e7fe33871fb8c3c3b"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a57bccceb159d541e7fe33871fb8c3c3b">_rigidbodyPosition</a></td></tr>
+<tr class="separator:a57bccceb159d541e7fe33871fb8c3c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987e4c04fe3cec47f4214cb2a37388b4"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a987e4c04fe3cec47f4214cb2a37388b4">_rigidbodyRotation</a></td></tr>
+<tr class="separator:a987e4c04fe3cec47f4214cb2a37388b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca314e0786f740fae50811ef47a21ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a2ca314e0786f740fae50811ef47a21ea">_subscribed</a> = false</td></tr>
+<tr class="separator:a2ca314e0786f740fae50811ef47a21ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a555f23b8e17c56eb7d88ff146ffe7e9b"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a555f23b8e17c56eb7d88ff146ffe7e9b">_transform</a></td></tr>
+<tr class="separator:a555f23b8e17c56eb7d88ff146ffe7e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40707d0943bed4979eaee7fffa2ca3f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#ae40707d0943bed4979eaee7fffa2ca3f">_warpPercent</a> = 0</td></tr>
+<tr class="separator:ae40707d0943bed4979eaee7fffa2ca3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:aa6873f286250254cfed219c3cb3d728c"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aa6873f286250254cfed219c3cb3d728c">RigidbodyPosition</a><code> [get]</code></td></tr>
+<tr class="separator:aa6873f286250254cfed219c3cb3d728c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb62169c1beea08b75a60bea3ff59ea"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#afcb62169c1beea08b75a60bea3ff59ea">RigidbodyRotation</a><code> [get]</code></td></tr>
+<tr class="separator:afcb62169c1beea08b75a60bea3ff59ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5bef1b28ed6bbb9158c0ac22879ee9"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a3f5bef1b28ed6bbb9158c0ac22879ee9">WarpPercent</a><code> [get, set]</code></td></tr>
+<tr class="separator:a3f5bef1b28ed6bbb9158c0ac22879ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a99465fb1276e413858092cce04f87b53"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a99465fb1276e413858092cce04f87b53">_graphicalPositionOffset</a></td></tr>
+<tr class="separator:a99465fb1276e413858092cce04f87b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb298fdcd4faae9c45b99fdfa31bdaf3"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#abb298fdcd4faae9c45b99fdfa31bdaf3">_graphicalRotationOffset</a></td></tr>
+<tr class="separator:abb298fdcd4faae9c45b99fdfa31bdaf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7047b41883a25a619877770b26f2a882"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a7047b41883a25a619877770b26f2a882">_prevRigidbodyPosition</a></td></tr>
+<tr class="separator:a7047b41883a25a619877770b26f2a882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1aef237dc472ae08dd1683c74f85c1d"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#ad1aef237dc472ae08dd1683c74f85c1d">_prevRigidbodyRotation</a></td></tr>
+<tr class="separator:ad1aef237dc472ae08dd1683c74f85c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a072a2962fe1fa9240f22be0a022a11c3"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#a072a2962fe1fa9240f22be0a022a11c3">_savedPosition</a></td></tr>
+<tr class="separator:a072a2962fe1fa9240f22be0a022a11c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee893425598697906faee5309242f9a8"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aee893425598697906faee5309242f9a8">_savedRotation</a></td></tr>
+<tr class="separator:aee893425598697906faee5309242f9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="aa0768453f22591613702e969148f5253"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aa0768453f22591613702e969148f5253">Leap.Unity.Interaction.RigidbodyWarper.CallbackState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="aa0768453f22591613702e969148f5253"></a>Physical</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aa0768453f22591613702e969148f5253"></a>PhysicalNeedsUpdate</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aa0768453f22591613702e969148f5253"></a>Graphical</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a40e1eef5de235f718336fefddde2041e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Leap.Unity.Interaction.RigidbodyWarper.RigidbodyWarper </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html">InteractionManager</a>&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Transform&#160;</td>
+          <td class="paramname"><em>transform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rigidbody&#160;</td>
+          <td class="paramname"><em>rigidbody</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>returnTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a29bdd604844c45d3e63e6633d43fa7bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.RigidbodyWarper.checkDisposed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa020fd3dd504459194ce5853dac95451"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.RigidbodyWarper.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aadc1b453ce001911a372b15a0dc637d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.RigidbodyWarper.onGraphicalUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7a65f721eba43a3dea3f57226840e1d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.RigidbodyWarper.onPostPhysicalUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a39f79e735ceb247821d28a67d29fc4ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.RigidbodyWarper.onPrePhysicalUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a71e5b83988370ddd87c3a7126484ed88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.RigidbodyWarper.SetGraphicalPosition </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Quaternion&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff8dada72234d7eebc986c8dcc809d68"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.RigidbodyWarper.subscribe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5de2c39cfd84aa79c08b1ff723022c15"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.RigidbodyWarper.Teleport </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Quaternion&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3fbeee849a09cfc8e911abd1710b5634"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.RigidbodyWarper.unsubscribe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac5648924646bfbb8860a72ea2be3b4e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.RigidbodyWarper.updateRigidbodyValues </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a66fa45800110521662a5781f9a5bb931"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.RigidbodyWarper._disposed = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6c751e82a0fccecd00226c6a116f12f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Leap.Unity.Interaction.RigidbodyWarper._graphicalPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a99465fb1276e413858092cce04f87b53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Leap.Unity.Interaction.RigidbodyWarper._graphicalPositionOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acb70476eee56eeae93c0d87ecf0ab4bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion Leap.Unity.Interaction.RigidbodyWarper._graphicalRotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abb298fdcd4faae9c45b99fdfa31bdaf3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion Leap.Unity.Interaction.RigidbodyWarper._graphicalRotationOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6b2cb85b14ca229290825beca0f4e3af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.RigidbodyWarper._hasGraphicalTransform = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae240239375fca710ca27d21352900afb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html">InteractionManager</a> Leap.Unity.Interaction.RigidbodyWarper._manager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1411d59d08c7f64e93eedecd9445a33d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html#aa0768453f22591613702e969148f5253">CallbackState</a> Leap.Unity.Interaction.RigidbodyWarper._mostRecentCallback = CallbackState.Physical</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7047b41883a25a619877770b26f2a882"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Leap.Unity.Interaction.RigidbodyWarper._prevRigidbodyPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad1aef237dc472ae08dd1683c74f85c1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion Leap.Unity.Interaction.RigidbodyWarper._prevRigidbodyRotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a44b48f1a5b9343c20640b6241c6dd8e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.RigidbodyWarper._returnTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9cdefcb919807ede3650c7cdb1ba97cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rigidbody Leap.Unity.Interaction.RigidbodyWarper._rigidbody</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a57bccceb159d541e7fe33871fb8c3c3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Leap.Unity.Interaction.RigidbodyWarper._rigidbodyPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a987e4c04fe3cec47f4214cb2a37388b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion Leap.Unity.Interaction.RigidbodyWarper._rigidbodyRotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a072a2962fe1fa9240f22be0a022a11c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Leap.Unity.Interaction.RigidbodyWarper._savedPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aee893425598697906faee5309242f9a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion Leap.Unity.Interaction.RigidbodyWarper._savedRotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2ca314e0786f740fae50811ef47a21ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.RigidbodyWarper._subscribed = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a555f23b8e17c56eb7d88ff146ffe7e9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform Leap.Unity.Interaction.RigidbodyWarper._transform</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae40707d0943bed4979eaee7fffa2ca3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.RigidbodyWarper._warpPercent = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="aa6873f286250254cfed219c3cb3d728c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Leap.Unity.Interaction.RigidbodyWarper.RigidbodyPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afcb62169c1beea08b75a60bea3ff59ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion Leap.Unity.Interaction.RigidbodyWarper.RigidbodyRotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3f5bef1b28ed6bbb9158c0ac22879ee9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float Leap.Unity.Interaction.RigidbodyWarper.WarpPercent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_manager.html">ActivityManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_monitor.html">ActivityMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_monitor_lite.html">ActivityMonitorLite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_base_call_guard.html">BaseCallGuard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_base_not_called_exception.html">BaseNotCalledException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_begin_not_called_exception.html">BeginNotCalledException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_controller_container.html">ControllerContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_hand_array_builder.html">HandArrayBuilder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_holding_pose_controller_kabsch.html">HoldingPoseControllerKabsch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_activity_monitor.html">IActivityMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_controller_base.html">IControllerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html">IHoldingPoseController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_layer_controller.html">ILayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_move_to_controller.html">IMoveToController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_suspension_controller.html">ISuspensionController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_throwing_controller.html">IThrowingController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">InteractionBehaviourBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html">InteractionBehaviourBaseEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_bone.html">InteractionBrushBone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_hand.html">InteractionBrushHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_grasp_detector.html">InteractionGraspDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_grasp_events.html">InteractionGraspEvents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_hand_events.html">InteractionHandEvents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html">InteractionManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_editor.html">InteractionManagerEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html">InteractionMaterial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material_editor.html">InteractionMaterialEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interactive_behavior_grasp_event.html">InteractiveBehaviorGraspEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_layer_controller_custom.html">LayerControllerCustom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_kinematic.html">MoveToControllerKinematic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_velocity.html">MoveToControllerVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_physic_material_replacer.html">PhysicMaterialReplacer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_interaction_1_1_physics_move_info.html">PhysicsMoveInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_physics_utility.html">PhysicsUtility</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">RigidbodyWarper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html">ShapeDescriptionPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_struct_allocator.html">StructAllocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_suspension_controller_default.html">SuspensionControllerDefault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_palm_velocity.html">ThrowingControllerPalmVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_sliding_window.html">ThrowingControllerSlidingWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_wrong_base_called_exception.html">WrongBaseCalledException</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

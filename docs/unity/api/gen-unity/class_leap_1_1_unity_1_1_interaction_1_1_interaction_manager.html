@@ -1,0 +1,2630 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>InteractionManager &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap::Unity::Interaction" href="namespace_leap_1_1_unity_1_1_interaction.html" />
+    <link rel="next" title="InteractionManagerEditor" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_editor.html" />
+    <link rel="prev" title="InteractionHandEvents" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_hand_events.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap_1_1_unity_1_1_interaction.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_interaction_1_1_interaction_hand_events.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_editor.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap_1_1_unity_1_1_interaction.html" accesskey="U">Leap::Unity::Interaction</a>&raquo;
+  InteractionManager
+</span> -->
+        
+  <div class="section" id="interactionmanager">
+<h1>InteractionManager<a class="headerlink" href="#interactionmanager" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.Unity.Interaction.InteractionManager Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html" title="InteractionManager is the core behaviour that manages the IInteractionBehaviours in the scene...">InteractionManager</a> is the core behaviour that manages the IInteractionBehaviours in the scene.  
+ <a href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#details">More...</a></p>
+
+<p>Inherits MonoBehaviour.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_1_1_interaction_hand.html">InteractionHand</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab805d04dcf0b057c3f05801d7d3dd682"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#ab805d04dcf0b057c3f05801d7d3dd682">EnsureActive</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> interactionBehaviour)</td></tr>
+<tr class="separator:ab805d04dcf0b057c3f05801d7d3dd682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3b6470c5222ac22df7e851474a3d40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#afc3b6470c5222ac22df7e851474a3d40">GraspWithHand</a> (<a class="el" href="class_leap_1_1_hand.html">Hand</a> hand, <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> interactionBehaviour)</td></tr>
+<tr class="memdesc:afc3b6470c5222ac22df7e851474a3d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces a hand to grasp the given interaction behaviour.  <a href="#afc3b6470c5222ac22df7e851474a3d40"></a><br/></td></tr>
+<tr class="separator:afc3b6470c5222ac22df7e851474a3d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa69ca4918726feaad49c3d1bac2f66c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#aa69ca4918726feaad49c3d1bac2f66c2">RegisterInteractionBehaviour</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> interactionBehaviour)</td></tr>
+<tr class="memdesc:aa69ca4918726feaad49c3d1bac2f66c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an InteractionObject with this manager, which automatically adds the objects representation into the internal interaction scene.  <a href="#aa69ca4918726feaad49c3d1bac2f66c2"></a><br/></td></tr>
+<tr class="separator:aa69ca4918726feaad49c3d1bac2f66c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cea60ab33b2df355e46880712d1b55a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a2cea60ab33b2df355e46880712d1b55a">ReleaseHand</a> (int handId)</td></tr>
+<tr class="memdesc:a2cea60ab33b2df355e46880712d1b55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces a hand with the given id to release an object if it is holding it.  <a href="#a2cea60ab33b2df355e46880712d1b55a"></a><br/></td></tr>
+<tr class="separator:a2cea60ab33b2df355e46880712d1b55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33cfbcd950fbf47f7228b76c1e5e6474"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a33cfbcd950fbf47f7228b76c1e5e6474">ReleaseObject</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> graspedObject)</td></tr>
+<tr class="memdesc:a33cfbcd950fbf47f7228b76c1e5e6474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces the given object to be released by any hands currently holding it.  <a href="#a33cfbcd950fbf47f7228b76c1e5e6474"></a><br/></td></tr>
+<tr class="separator:a33cfbcd950fbf47f7228b76c1e5e6474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc334451874b44d81879565182c6aac9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#adc334451874b44d81879565182c6aac9">TryGetGraspedObject</a> (int handId, out <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> graspedObject)</td></tr>
+<tr class="memdesc:adc334451874b44d81879565182c6aac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to find an InteractionObject that is currently being grasped by a <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand.">Hand</a> with the given ID.  <a href="#adc334451874b44d81879565182c6aac9"></a><br/></td></tr>
+<tr class="separator:adc334451874b44d81879565182c6aac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a896cf82afe9b72823d69ac559780b367"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a896cf82afe9b72823d69ac559780b367">UnregisterInteractionBehaviour</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> interactionBehaviour)</td></tr>
+<tr class="memdesc:a896cf82afe9b72823d69ac559780b367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters an InteractionObject from this manager.  <a href="#a896cf82afe9b72823d69ac559780b367"></a><br/></td></tr>
+<tr class="separator:a896cf82afe9b72823d69ac559780b367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a185c0a7b421b1aea1b1a1fd1a0ad9976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a185c0a7b421b1aea1b1a1fd1a0ad9976">UpdateSceneInfo</a> ()</td></tr>
+<tr class="memdesc:a185c0a7b421b1aea1b1a1fd1a0ad9976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force an update of the internal scene info.  <a href="#a185c0a7b421b1aea1b1a1fd1a0ad9976"></a><br/></td></tr>
+<tr class="separator:a185c0a7b421b1aea1b1a1fd1a0ad9976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76094b82e88b70c9d84ed9a5a025b0ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a76094b82e88b70c9d84ed9a5a025b0ef">Validate</a> ()</td></tr>
+<tr class="separator:a76094b82e88b70c9d84ed9a5a025b0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a8db1a9bcd11e194d99df929b8bddcdcc"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a8db1a9bcd11e194d99df929b8bddcdcc">OnGraphicalUpdate</a></td></tr>
+<tr class="separator:a8db1a9bcd11e194d99df929b8bddcdcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d1c4819b9762af4d1633e2c14ee7b1"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#ae1d1c4819b9762af4d1633e2c14ee7b1">OnPostPhysicalUpdate</a></td></tr>
+<tr class="separator:ae1d1c4819b9762af4d1633e2c14ee7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5ca2a8716263ba7c473cf120fd5dca2"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#ac5ca2a8716263ba7c473cf120fd5dca2">OnPrePhysicalUpdate</a></td></tr>
+<tr class="separator:ac5ca2a8716263ba7c473cf120fd5dca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a8b024464041dc3e95c5348269ea6efff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a8b024464041dc3e95c5348269ea6efff">applyDebugSettings</a> ()</td></tr>
+<tr class="separator:a8b024464041dc3e95c5348269ea6efff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c846b3d2eaf1bccd3f3d20c787e2707"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a4c846b3d2eaf1bccd3f3d20c787e2707">autoGenerateLayers</a> ()</td></tr>
+<tr class="separator:a4c846b3d2eaf1bccd3f3d20c787e2707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeffe19da8efb52ea319c998ccca31c55"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#aeffe19da8efb52ea319c998ccca31c55">Awake</a> ()</td></tr>
+<tr class="separator:aeffe19da8efb52ea319c998ccca31c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147b1960847d021d2be2c395d027d63a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a147b1960847d021d2be2c395d027d63a">createInteractionShape</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> interactionBehaviour)</td></tr>
+<tr class="separator:a147b1960847d021d2be2c395d027d63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ada8fc3cb3d9b5a458a62a26b1fa0a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a29ada8fc3cb3d9b5a458a62a26b1fa0a">createScene</a> ()</td></tr>
+<tr class="separator:a29ada8fc3cb3d9b5a458a62a26b1fa0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af78c7e1c937539de36eaec7aa23e890d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#af78c7e1c937539de36eaec7aa23e890d">destroyInteractionShape</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> interactionBehaviour)</td></tr>
+<tr class="separator:af78c7e1c937539de36eaec7aa23e890d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eed6a7d599452a7e7c645d5790eabed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a0eed6a7d599452a7e7c645d5790eabed">destroyScene</a> ()</td></tr>
+<tr class="separator:a0eed6a7d599452a7e7c645d5790eabed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87e60c7e4a82b0db1fdc08fb97fc873f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a87e60c7e4a82b0db1fdc08fb97fc873f">dispatchOnHandsHolding</a> (List&lt; <a class="el" href="class_leap_1_1_hand.html">Hand</a> &gt; hands, <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> interactionBehaviour, bool isPhysics)</td></tr>
+<tr class="separator:a87e60c7e4a82b0db1fdc08fb97fc873f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c640e50457cfe7adc54d931ee636be8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a4c640e50457cfe7adc54d931ee636be8">dispatchOnHandsHoldingAll</a> (<a class="el" href="class_leap_1_1_frame.html">Frame</a> frame, bool isPhysics)</td></tr>
+<tr class="separator:a4c640e50457cfe7adc54d931ee636be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609307df2a184e6c466e52d45e696c3c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a609307df2a184e6c466e52d45e696c3c">dispatchSimulationResults</a> ()</td></tr>
+<tr class="separator:a609307df2a184e6c466e52d45e696c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89fe29660377144434e81eedc98b05a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a89fe29660377144434e81eedc98b05a3">FixedUpdate</a> ()</td></tr>
+<tr class="separator:a89fe29660377144434e81eedc98b05a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200698e55d9a7d86d4153ed1ac5358d3"><td class="memItemLeft" align="right" valign="top">virtual INTERACTION_HAND_RESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a200698e55d9a7d86d4153ed1ac5358d3">getHandResults</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_1_1_interaction_hand.html">InteractionHand</a> hand)</td></tr>
+<tr class="separator:a200698e55d9a7d86d4153ed1ac5358d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53300517f9cddaa00c9104e858fd9468"><td class="memItemLeft" align="right" valign="top">virtual INTERACTION_SCENE_INFO&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a53300517f9cddaa00c9104e858fd9468">getSceneInfo</a> ()</td></tr>
+<tr class="separator:a53300517f9cddaa00c9104e858fd9468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eec179bdd5b76c7ffa947cfdd5a2567"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a5eec179bdd5b76c7ffa947cfdd5a2567">LateUpdate</a> ()</td></tr>
+<tr class="separator:a5eec179bdd5b76c7ffa947cfdd5a2567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa648d249db317bfee4fbd97a857738"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#aaaa648d249db317bfee4fbd97a857738">OnDisable</a> ()</td></tr>
+<tr class="separator:aaaa648d249db317bfee4fbd97a857738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d00df91f1d46454b7692a3c75f2dac7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a4d00df91f1d46454b7692a3c75f2dac7">OnEnable</a> ()</td></tr>
+<tr class="separator:a4d00df91f1d46454b7692a3c75f2dac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af56e25671fa64b7c8ae5350f3868a8e6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#af56e25671fa64b7c8ae5350f3868a8e6">OnGUI</a> ()</td></tr>
+<tr class="separator:af56e25671fa64b7c8ae5350f3868a8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8557bdaaa3b2232a9189a4570a13b5d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a8557bdaaa3b2232a9189a4570a13b5d7">OnValidate</a> ()</td></tr>
+<tr class="separator:a8557bdaaa3b2232a9189a4570a13b5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4114deb8f00b4535c8883691e01c284a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a4114deb8f00b4535c8883691e01c284a">Reset</a> ()</td></tr>
+<tr class="separator:a4114deb8f00b4535c8883691e01c284a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9dc2c330c4e5ba88737b4dc3a9be4c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#aff9dc2c330c4e5ba88737b4dc3a9be4c">simulateFrame</a> (<a class="el" href="class_leap_1_1_frame.html">Frame</a> frame)</td></tr>
+<tr class="separator:aff9dc2c330c4e5ba88737b4dc3a9be4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cf8459fbc05c1d88baf3a81f38e5f63"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a7cf8459fbc05c1d88baf3a81f38e5f63">simulateInteraction</a> ()</td></tr>
+<tr class="separator:a7cf8459fbc05c1d88baf3a81f38e5f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700dc03b35a0ee4f07b584a7bd3f853e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a700dc03b35a0ee4f07b584a7bd3f853e">updateInteractionRepresentations</a> ()</td></tr>
+<tr class="separator:a700dc03b35a0ee4f07b584a7bd3f853e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0351288ef277b4c24d43b8f2b76ed993"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a0351288ef277b4c24d43b8f2b76ed993">updateInteractionStateChanges</a> (<a class="el" href="class_leap_1_1_frame.html">Frame</a> frame)</td></tr>
+<tr class="separator:a0351288ef277b4c24d43b8f2b76ed993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bc97d4fb681d90db735f7f19271f0da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a0bc97d4fb681d90db735f7f19271f0da">updateTracking</a> (<a class="el" href="class_leap_1_1_frame.html">Frame</a> frame)</td></tr>
+<tr class="separator:a0bc97d4fb681d90db735f7f19271f0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a37806152b1cbe5c2ac24538476fffc84"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a37806152b1cbe5c2ac24538476fffc84">_activationRadius</a> = 0.15f</td></tr>
+<tr class="separator:a37806152b1cbe5c2ac24538476fffc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e150868fc67813c6e2386c418cd0e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_manager.html">ActivityManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#ad1e150868fc67813c6e2386c418cd0e9">_activityManager</a> = new <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_manager.html">ActivityManager</a>()</td></tr>
+<tr class="separator:ad1e150868fc67813c6e2386c418cd0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b3425669699e61b3649ed83f5b3283"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a67b3425669699e61b3649ed83f5b3283">_autoGenerateLayers</a> = false</td></tr>
+<tr class="separator:a67b3425669699e61b3649ed83f5b3283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5d3d97d65af4be7352d78fba1b3c0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a4c5d3d97d65af4be7352d78fba1b3c0e">_automaticValidation</a> = false</td></tr>
+<tr class="separator:a4c5d3d97d65af4be7352d78fba1b3c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9e8f59d3a3ac17a049fa0ddfd50c51"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#aff9e8f59d3a3ac17a049fa0ddfd50c51">_brushGroupName</a> = &quot;BrushHands&quot;</td></tr>
+<tr class="separator:aff9e8f59d3a3ac17a049fa0ddfd50c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6f4c2b84bf15aa89827168b4339ed6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_unity_1_1_single_layer.html">SingleLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a2f6f4c2b84bf15aa89827168b4339ed6">_brushLayer</a> = 0</td></tr>
+<tr class="separator:a2f6f4c2b84bf15aa89827168b4339ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a442e81db5e021e74085dcf68d04d44b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a442e81db5e021e74085dcf68d04d44b9">_contactEnabled</a> = true</td></tr>
+<tr class="separator:a442e81db5e021e74085dcf68d04d44b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7beb6ef67a2b4cfac30f980898195e77"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a7beb6ef67a2b4cfac30f980898195e77">_debugTextView</a></td></tr>
+<tr class="separator:a7beb6ef67a2b4cfac30f980898195e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc3a1e917e0e4e2de93aaca40193d5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html">InteractionMaterial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a4cc3a1e917e0e4e2de93aaca40193d5c">_defaultInteractionMaterial</a></td></tr>
+<tr class="separator:a4cc3a1e917e0e4e2de93aaca40193d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0226fa27973abca2d988d975af6db4e6"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a0226fa27973abca2d988d975af6db4e6">_graspedBehaviours</a> = new List&lt;<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&gt;()</td></tr>
+<tr class="separator:a0226fa27973abca2d988d975af6db4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47cb261c4fdebb77810f0aa1ea608c6f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a47cb261c4fdebb77810f0aa1ea608c6f">_graspingEnabled</a> = true</td></tr>
+<tr class="separator:a47cb261c4fdebb77810f0aa1ea608c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f88bed3270dd8c25b0c9c8249e85832"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_hand_pool.html">HandPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a6f88bed3270dd8c25b0c9c8249e85832">_handPool</a></td></tr>
+<tr class="separator:a6f88bed3270dd8c25b0c9c8249e85832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab134f389ee83aa05c15dcce151e9f9fe"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_1_1_interaction_hand.html">InteractionHand</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#ab134f389ee83aa05c15dcce151e9f9fe">_idToInteractionHand</a> = new Dictionary&lt;int, <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_1_1_interaction_hand.html">InteractionHand</a>&gt;()</td></tr>
+<tr class="separator:ab134f389ee83aa05c15dcce151e9f9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0206453474f9f35b5f8ecae62770e67a"><td class="memItemLeft" align="right" valign="top">Dictionary<br class="typebreak"/>
+&lt; INTERACTION_SHAPE_INSTANCE_HANDLE, <br class="typebreak"/>
+<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a0206453474f9f35b5f8ecae62770e67a">_instanceHandleToBehaviour</a> = new Dictionary&lt;INTERACTION_SHAPE_INSTANCE_HANDLE, <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&gt;()</td></tr>
+<tr class="separator:a0206453474f9f35b5f8ecae62770e67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a829ba8a9a24d75793ff6f05f39d70134"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_unity_1_1_single_layer.html">SingleLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a829ba8a9a24d75793ff6f05f39d70134">_interactionLayer</a> = 0</td></tr>
+<tr class="separator:a829ba8a9a24d75793ff6f05f39d70134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27bd2f62cc5fb8f636fc0db8c1644ab4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_unity_1_1_single_layer.html">SingleLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a27bd2f62cc5fb8f636fc0db8c1644ab4">_interactionNoClipLayer</a> = 0</td></tr>
+<tr class="separator:a27bd2f62cc5fb8f636fc0db8c1644ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b6034e1be569e9c1e56160d4dd9510b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a2b6034e1be569e9c1e56160d4dd9510b">_ldatPath</a> = &quot;InteractionEngine/IE.ldat&quot;</td></tr>
+<tr class="separator:a2b6034e1be569e9c1e56160d4dd9510b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db5d7176864dd92fbedc08d92242f40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html">LeapProvider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a6db5d7176864dd92fbedc08d92242f40">_leapProvider</a></td></tr>
+<tr class="separator:a6db5d7176864dd92fbedc08d92242f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fff21ad252c5af47f17ff4f5928f934"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a9fff21ad252c5af47f17ff4f5928f934">_maxActivationDepth</a> = 3</td></tr>
+<tr class="separator:a9fff21ad252c5af47f17ff4f5928f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25e969ec1ef236fcee85215e43f04aa"><td class="memItemLeft" align="right" valign="top">INTERACTION_SCENE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#ae25e969ec1ef236fcee85215e43f04aa">_scene</a></td></tr>
+<tr class="separator:ae25e969ec1ef236fcee85215e43f04aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad034313a5bc1810c7ec4de0be2479197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html">ShapeDescriptionPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#ad034313a5bc1810c7ec4de0be2479197">_shapeDescriptionPool</a></td></tr>
+<tr class="separator:ad034313a5bc1810c7ec4de0be2479197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8566be4d1267cd6fd274db5cd50d88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a5b8566be4d1267cd6fd274db5cd50d88">_showDebugLines</a> = false</td></tr>
+<tr class="separator:a5b8566be4d1267cd6fd274db5cd50d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4ba06daa6a1fe67fdeeba4b2219eb72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#ad4ba06daa6a1fe67fdeeba4b2219eb72">_showDebugOutput</a> = false</td></tr>
+<tr class="separator:ad4ba06daa6a1fe67fdeeba4b2219eb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b10e0cecd075456a90be0617c77b25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_unity_1_1_single_layer.html">SingleLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a17b10e0cecd075456a90be0617c77b25">_templateLayer</a> = 0</td></tr>
+<tr class="separator:a17b10e0cecd075456a90be0617c77b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a03f22f74036ed4996d16144e7260e598"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a03f22f74036ed4996d16144e7260e598">ContactEnabled</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a03f22f74036ed4996d16144e7260e598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets whether or not the <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Engine can modify object velocities when pushing.  <a href="#a03f22f74036ed4996d16144e7260e598"></a><br/></td></tr>
+<tr class="separator:a03f22f74036ed4996d16144e7260e598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e8025af47178ec0ff6f5b3fcc7a053"><td class="memItemLeft" align="right" valign="top">virtual DebugFlags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#ab2e8025af47178ec0ff6f5b3fcc7a053">DebugFlags</a><code> [get]</code></td></tr>
+<tr class="memdesc:ab2e8025af47178ec0ff6f5b3fcc7a053"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current set of debug flags for this manager.  <a href="#ab2e8025af47178ec0ff6f5b3fcc7a053"></a><br/></td></tr>
+<tr class="separator:ab2e8025af47178ec0ff6f5b3fcc7a053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a757b624bce6d051cf3a13f060d5ab27d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html">InteractionMaterial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a757b624bce6d051cf3a13f060d5ab27d">DefaultInteractionMaterial</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a757b624bce6d051cf3a13f060d5ab27d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the default <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html" title="An Interaction Engine material that controls several aspects of the interaction between BrushHands an...">InteractionMaterial</a> used when InteractionBehaviours are spawned without a material explicitly assigned.  <a href="#a757b624bce6d051cf3a13f060d5ab27d"></a><br/></td></tr>
+<tr class="separator:a757b624bce6d051cf3a13f060d5ab27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12bfe89bb7f91def3d22080ab43d8dd5"><td class="memItemLeft" align="right" valign="top">ReadonlyList<br class="typebreak"/>
+&lt; <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a12bfe89bb7f91def3d22080ab43d8dd5">GraspedObjects</a><code> [get]</code></td></tr>
+<tr class="memdesc:a12bfe89bb7f91def3d22080ab43d8dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a collection of InteractionBehaviours that are currently being grasped by at least one hand.  <a href="#a12bfe89bb7f91def3d22080ab43d8dd5"></a><br/></td></tr>
+<tr class="separator:a12bfe89bb7f91def3d22080ab43d8dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba1790714b044f01958f5d43da15e4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a2ba1790714b044f01958f5d43da15e4d">GraspingEnabled</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2ba1790714b044f01958f5d43da15e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets whether or not the <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Engine can modify object positions by grasping.  <a href="#a2ba1790714b044f01958f5d43da15e4d"></a><br/></td></tr>
+<tr class="separator:a2ba1790714b044f01958f5d43da15e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af15451e9a3d5c2d58f50a10f4cefbc57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#af15451e9a3d5c2d58f50a10f4cefbc57">InteractionBrushLayer</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af15451e9a3d5c2d58f50a10f4cefbc57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the layer that interaction brushes should be on normally.  <a href="#af15451e9a3d5c2d58f50a10f4cefbc57"></a><br/></td></tr>
+<tr class="separator:af15451e9a3d5c2d58f50a10f4cefbc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdca6434398b6449a228129a3fd24475"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#abdca6434398b6449a228129a3fd24475">InteractionLayer</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:abdca6434398b6449a228129a3fd24475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the layer that interaction objects should be on by default.  <a href="#abdca6434398b6449a228129a3fd24475"></a><br/></td></tr>
+<tr class="separator:abdca6434398b6449a228129a3fd24475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8535a1d3e3c8cd415752600fbff50ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#aa8535a1d3e3c8cd415752600fbff50ba">InteractionNoClipLayer</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aa8535a1d3e3c8cd415752600fbff50ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the layer that interaction objects should be on when they become grasped.  <a href="#aa8535a1d3e3c8cd415752600fbff50ba"></a><br/></td></tr>
+<tr class="separator:aa8535a1d3e3c8cd415752600fbff50ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c00d1e11c8d6bbf0fe1a6c7fff31fcd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a1c00d1e11c8d6bbf0fe1a6c7fff31fcd">IsAnyObjectGrasped</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1c00d1e11c8d6bbf0fe1a6c7fff31fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if any InteractionObject is currently being grasped by at least one <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand.">Hand</a>.  <a href="#a1c00d1e11c8d6bbf0fe1a6c7fff31fcd"></a><br/></td></tr>
+<tr class="separator:a1c00d1e11c8d6bbf0fe1a6c7fff31fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acef2c721903ff338e65e633c408ac25b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#acef2c721903ff338e65e633c408ac25b">MaxActivationDepth</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:acef2c721903ff338e65e633c408ac25b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the max activation depth.  <a href="#acef2c721903ff338e65e633c408ac25b"></a><br/></td></tr>
+<tr class="separator:acef2c721903ff338e65e633c408ac25b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b72a902fc5301a4bea5817aa5bb4304"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a9b72a902fc5301a4bea5817aa5bb4304">RecommendedContactOffsetMaximum</a><code> [get]</code></td></tr>
+<tr class="separator:a9b72a902fc5301a4bea5817aa5bb4304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa465dfce75ef1ca376e74bcc1cb89a5d"><td class="memItemLeft" align="right" valign="top">IEnumerable<br class="typebreak"/>
+&lt; <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#aa465dfce75ef1ca376e74bcc1cb89a5d">RegisteredObjects</a><code> [get]</code></td></tr>
+<tr class="memdesc:aa465dfce75ef1ca376e74bcc1cb89a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a collection of InteractionBehaviours that are currently registered with this manager.  <a href="#aa465dfce75ef1ca376e74bcc1cb89a5d"></a><br/></td></tr>
+<tr class="separator:aa465dfce75ef1ca376e74bcc1cb89a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29680095c2a498a9590c0ef7741a665f"><td class="memItemLeft" align="right" valign="top">INTERACTION_SCENE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a29680095c2a498a9590c0ef7741a665f">Scene</a><code> [get]</code></td></tr>
+<tr class="separator:a29680095c2a498a9590c0ef7741a665f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af09367e7a71e22b3d40cb327d9325d8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html">ShapeDescriptionPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#af09367e7a71e22b3d40cb327d9325d8e">ShapePool</a><code> [get]</code></td></tr>
+<tr class="memdesc:af09367e7a71e22b3d40cb327d9325d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html">ShapeDescriptionPool</a> that can be used to allocate shape descriptions for this manager.  <a href="#af09367e7a71e22b3d40cb327d9325d8e"></a><br/></td></tr>
+<tr class="separator:af09367e7a71e22b3d40cb327d9325d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb19014bf9c72af6387a8f694d3990e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#aeb19014bf9c72af6387a8f694d3990e0">ShowDebugLines</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aeb19014bf9c72af6387a8f694d3990e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the display of proximity information from the library.  <a href="#aeb19014bf9c72af6387a8f694d3990e0"></a><br/></td></tr>
+<tr class="separator:aeb19014bf9c72af6387a8f694d3990e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172c2821ebddb42bd5bf75603717e171"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a172c2821ebddb42bd5bf75603717e171">ShowDebugOutput</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a172c2821ebddb42bd5bf75603717e171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the display of debug text from the library.  <a href="#a172c2821ebddb42bd5bf75603717e171"></a><br/></td></tr>
+<tr class="separator:a172c2821ebddb42bd5bf75603717e171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a129650833ce143b39615e9f2906a3669"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a129650833ce143b39615e9f2906a3669">SimulationScale</a><code> [get]</code></td></tr>
+<tr class="separator:a129650833ce143b39615e9f2906a3669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1bfe87f14c8f93aedb527752f6e546b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a1bfe87f14c8f93aedb527752f6e546b5">assertIsRegisteredWithThisManager</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a> interactionObj)</td></tr>
+<tr class="separator:a1bfe87f14c8f93aedb527752f6e546b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1c84e90f52535262bd6b6d4f8c616d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a1f1c84e90f52535262bd6b6d4f8c616d">assertNonNullWhenActive</a> (object obj, string name)</td></tr>
+<tr class="separator:a1f1c84e90f52535262bd6b6d4f8c616d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9ad2a3ad8570b3a961b3b62718d561"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a2c9ad2a3ad8570b3a961b3b62718d561">autoSetupCollisionLayers</a> ()</td></tr>
+<tr class="separator:a2c9ad2a3ad8570b3a961b3b62718d561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a16a854cb42fc5cc7c5c5602a648ed9cc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a16a854cb42fc5cc7c5c5602a648ed9cc">_cachedSimulationScale</a> = -1</td></tr>
+<tr class="separator:a16a854cb42fc5cc7c5c5602a648ed9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4167264119a03db93c13ad3bf903fee6"><td class="memItemLeft" align="right" valign="top">List&lt; INTERACTION_DEBUG_LINE &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a4167264119a03db93c13ad3bf903fee6">_debugLines</a> = new List&lt;INTERACTION_DEBUG_LINE&gt;()</td></tr>
+<tr class="separator:a4167264119a03db93c13ad3bf903fee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a578b18d23f9c71cc07e8664b2509f8fb"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a578b18d23f9c71cc07e8664b2509f8fb">_debugOutput</a> = new List&lt;string&gt;()</td></tr>
+<tr class="separator:a578b18d23f9c71cc07e8664b2509f8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d10cb160ba845f7c7ca9738f4db29c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a07d10cb160ba845f7c7ca9738f4db29c">_enableGraspingLast</a> = false</td></tr>
+<tr class="separator:a07d10cb160ba845f7c7ca9738f4db29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08165c2f570a6dde391b565e5d564df3"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a08165c2f570a6dde391b565e5d564df3">_handIdsToRemove</a> = new List&lt;int&gt;()</td></tr>
+<tr class="separator:a08165c2f570a6dde391b565e5d564df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a674c0740178921bcf8ab58c166598"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a79a674c0740178921bcf8ab58c166598">_hasSceneBeenCreated</a> = false</td></tr>
+<tr class="separator:a79a674c0740178921bcf8ab58c166598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91166d350e85d1d390285e2233f5a0a8"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_leap_1_1_hand.html">Hand</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a91166d350e85d1d390285e2233f5a0a8">_holdingHands</a> = new List&lt;<a class="el" href="class_leap_1_1_hand.html">Hand</a>&gt;()</td></tr>
+<tr class="separator:a91166d350e85d1d390285e2233f5a0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa025fccdff465c243115727f53b0bc63"><td class="memItemLeft" align="right" valign="top">List<br class="typebreak"/>
+&lt; INTERACTION_SHAPE_INSTANCE_RESULTS &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#aa025fccdff465c243115727f53b0bc63">_resultList</a> = new List&lt;INTERACTION_SHAPE_INSTANCE_RESULTS&gt;()</td></tr>
+<tr class="separator:aa025fccdff465c243115727f53b0bc63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d542c67d6c34ce82f5a8f1fc26f4f5d"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html#a2d542c67d6c34ce82f5a8f1fc26f4f5d">UNSCALED_RECOMMENDED_CONTACT_OFFSET_MAXIMUM</a> = 0.001f</td></tr>
+<tr class="separator:a2d542c67d6c34ce82f5a8f1fc26f4f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html" title="InteractionManager is the core behaviour that manages the IInteractionBehaviours in the scene...">InteractionManager</a> is the core behaviour that manages the IInteractionBehaviours in the scene. </p>
+<p>This class allows IInteractionBehaviours to register with it and provides all of the callbacks needed for operation. This class also takes care of all bookkeeping to keep track of the objects, hands, and the internal state of the interaction plugin. </p>
+<p><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html" title="InteractionManager is the core behaviour that manages the IInteractionBehaviours in the scene...">InteractionManager</a> has the following features:</p>
+<ul>
+<li>Allows instances of <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html" title="IInteractionBehaviour is the interface used by InteractionManager to drive interaction objects...">IInteractionBehaviour</a> to register or unregister with it.</li>
+<li>Registered instances stay registered even if this behaviour is disabled.</li>
+<li>Dispatches events to the interaction plugin and uses the returned data to drive the registered behaviours. Takes care of all bookkeeping needed to maintain the internal state.</li>
+<li>Supports the concept of 'suspension', where an untracked hand is still allowed to be considered grasping an object. This is to allow an object to not fall when a hand becomes untracked for a small amount of time. This helps with actions such as throwing.</li>
+<li>Multiple instances of <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html" title="InteractionManager is the core behaviour that manages the IInteractionBehaviours in the scene...">InteractionManager</a> are ALLOWED! This allows you to have different simulation settings and control for different groups of objects.</li>
+</ul>
+<p><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html" title="InteractionManager is the core behaviour that manages the IInteractionBehaviours in the scene...">InteractionManager</a> has the following requirements:</p>
+<ul>
+<li>The DataSubfolder property must point to a valid subfolder in the StreamingAssets data folder. The subfolder must contain a valid ldat file names IE. </li>
+</ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8b024464041dc3e95c5348269ea6efff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.applyDebugSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1bfe87f14c8f93aedb527752f6e546b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.InteractionManager.assertIsRegisteredWithThisManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>interactionObj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1f1c84e90f52535262bd6b6d4f8c616d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.InteractionManager.assertNonNullWhenActive </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4c846b3d2eaf1bccd3f3d20c787e2707"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.InteractionManager.autoGenerateLayers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2c9ad2a3ad8570b3a961b3b62718d561"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.InteractionManager.autoSetupCollisionLayers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeffe19da8efb52ea319c998ccca31c55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a147b1960847d021d2be2c395d027d63a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.createInteractionShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>interactionBehaviour</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a29ada8fc3cb3d9b5a458a62a26b1fa0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.createScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af78c7e1c937539de36eaec7aa23e890d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.destroyInteractionShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>interactionBehaviour</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0eed6a7d599452a7e7c645d5790eabed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.destroyScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a87e60c7e4a82b0db1fdc08fb97fc873f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.dispatchOnHandsHolding </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="class_leap_1_1_hand.html">Hand</a> &gt;&#160;</td>
+          <td class="paramname"><em>hands</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>interactionBehaviour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isPhysics</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4c640e50457cfe7adc54d931ee636be8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.dispatchOnHandsHoldingAll </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_frame.html">Frame</a>&#160;</td>
+          <td class="paramname"><em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isPhysics</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a609307df2a184e6c466e52d45e696c3c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.dispatchSimulationResults </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab805d04dcf0b057c3f05801d7d3dd682"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.InteractionManager.EnsureActive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>interactionBehaviour</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a89fe29660377144434e81eedc98b05a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.FixedUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a200698e55d9a7d86d4153ed1ac5358d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual INTERACTION_HAND_RESULT Leap.Unity.Interaction.InteractionManager.getHandResults </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_1_1_interaction_hand.html">InteractionHand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a53300517f9cddaa00c9104e858fd9468"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual INTERACTION_SCENE_INFO Leap.Unity.Interaction.InteractionManager.getSceneInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afc3b6470c5222ac22df7e851474a3d40"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.InteractionManager.GraspWithHand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>interactionBehaviour</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Forces a hand to grasp the given interaction behaviour. </p>
+<p>The grasp will only be terminated when the hand either times out or the user calls ReleaseHand. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hand</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5eec179bdd5b76c7ffa947cfdd5a2567"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaaa648d249db317bfee4fbd97a857738"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.OnDisable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4d00df91f1d46454b7692a3c75f2dac7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.OnEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af56e25671fa64b7c8ae5350f3868a8e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.OnGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8557bdaaa3b2232a9189a4570a13b5d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.OnValidate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa69ca4918726feaad49c3d1bac2f66c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.InteractionManager.RegisterInteractionBehaviour </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>interactionBehaviour</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers an InteractionObject with this manager, which automatically adds the objects representation into the internal interaction scene. </p>
+<p>If the manager is disabled, the registration will still succeed and the object will be added to the internal scene when the manager is next enabled.</p>
+<p>Trying to register a behaviour that is already registered is safe and is a no-op. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2cea60ab33b2df355e46880712d1b55a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager.ReleaseHand </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Forces a hand with the given id to release an object if it is holding it. </p>
+<p>Will return true only if a hand with the given id releases an object it was holding. </p>
+
+</div>
+</div>
+<a class="anchor" id="a33cfbcd950fbf47f7228b76c1e5e6474"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager.ReleaseObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>graspedObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Forces the given object to be released by any hands currently holding it. </p>
+<p>Will return true only if there was at least one hand holding the object. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4114deb8f00b4535c8883691e01c284a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff9dc2c330c4e5ba88737b4dc3a9be4c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.simulateFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_frame.html">Frame</a>&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7cf8459fbc05c1d88baf3a81f38e5f63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.simulateInteraction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adc334451874b44d81879565182c6aac9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager.TryGetGraspedObject </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>graspedObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tries to find an InteractionObject that is currently being grasped by a <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand.">Hand</a> with the given ID. </p>
+
+</div>
+</div>
+<a class="anchor" id="a896cf82afe9b72823d69ac559780b367"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.InteractionManager.UnregisterInteractionBehaviour </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>interactionBehaviour</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unregisters an InteractionObject from this manager. </p>
+<p>This removes it from the internal scene and prevents any further interaction.</p>
+<p>Trying to unregister a behaviour that is not registered is safe and is a no-op. </p>
+
+</div>
+</div>
+<a class="anchor" id="a700dc03b35a0ee4f07b584a7bd3f853e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.updateInteractionRepresentations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0351288ef277b4c24d43b8f2b76ed993"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.updateInteractionStateChanges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_frame.html">Frame</a>&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a185c0a7b421b1aea1b1a1fd1a0ad9976"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.InteractionManager.UpdateSceneInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Force an update of the internal scene info. </p>
+<p>This should be called if gravity has changed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0bc97d4fb681d90db735f7f19271f0da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.Interaction.InteractionManager.updateTracking </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_frame.html">Frame</a>&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a76094b82e88b70c9d84ed9a5a025b0ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.Interaction.InteractionManager.Validate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a37806152b1cbe5c2ac24538476fffc84"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionManager._activationRadius = 0.15f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad1e150868fc67813c6e2386c418cd0e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_manager.html">ActivityManager</a> Leap.Unity.Interaction.InteractionManager._activityManager = new <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_manager.html">ActivityManager</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a67b3425669699e61b3649ed83f5b3283"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager._autoGenerateLayers = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4c5d3d97d65af4be7352d78fba1b3c0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager._automaticValidation = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff9e8f59d3a3ac17a049fa0ddfd50c51"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Leap.Unity.Interaction.InteractionManager._brushGroupName = &quot;BrushHands&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2f6f4c2b84bf15aa89827168b4339ed6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_unity_1_1_single_layer.html">SingleLayer</a> Leap.Unity.Interaction.InteractionManager._brushLayer = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a16a854cb42fc5cc7c5c5602a648ed9cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionManager._cachedSimulationScale = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a442e81db5e021e74085dcf68d04d44b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager._contactEnabled = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4167264119a03db93c13ad3bf903fee6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;INTERACTION_DEBUG_LINE&gt; Leap.Unity.Interaction.InteractionManager._debugLines = new List&lt;INTERACTION_DEBUG_LINE&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a578b18d23f9c71cc07e8664b2509f8fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;string&gt; Leap.Unity.Interaction.InteractionManager._debugOutput = new List&lt;string&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7beb6ef67a2b4cfac30f980898195e77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Text Leap.Unity.Interaction.InteractionManager._debugTextView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4cc3a1e917e0e4e2de93aaca40193d5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html">InteractionMaterial</a> Leap.Unity.Interaction.InteractionManager._defaultInteractionMaterial</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a07d10cb160ba845f7c7ca9738f4db29c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager._enableGraspingLast = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0226fa27973abca2d988d975af6db4e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&gt; Leap.Unity.Interaction.InteractionManager._graspedBehaviours = new List&lt;<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a47cb261c4fdebb77810f0aa1ea608c6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager._graspingEnabled = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a08165c2f570a6dde391b565e5d564df3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;int&gt; Leap.Unity.Interaction.InteractionManager._handIdsToRemove = new List&lt;int&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6f88bed3270dd8c25b0c9c8249e85832"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_hand_pool.html">HandPool</a> Leap.Unity.Interaction.InteractionManager._handPool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a79a674c0740178921bcf8ab58c166598"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager._hasSceneBeenCreated = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a91166d350e85d1d390285e2233f5a0a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_leap_1_1_hand.html">Hand</a>&gt; Leap.Unity.Interaction.InteractionManager._holdingHands = new List&lt;<a class="el" href="class_leap_1_1_hand.html">Hand</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab134f389ee83aa05c15dcce151e9f9fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;int, <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_1_1_interaction_hand.html">InteractionHand</a>&gt; Leap.Unity.Interaction.InteractionManager._idToInteractionHand = new Dictionary&lt;int, <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_1_1_interaction_hand.html">InteractionHand</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0206453474f9f35b5f8ecae62770e67a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;INTERACTION_SHAPE_INSTANCE_HANDLE, <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&gt; Leap.Unity.Interaction.InteractionManager._instanceHandleToBehaviour = new Dictionary&lt;INTERACTION_SHAPE_INSTANCE_HANDLE, <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a829ba8a9a24d75793ff6f05f39d70134"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_unity_1_1_single_layer.html">SingleLayer</a> Leap.Unity.Interaction.InteractionManager._interactionLayer = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a27bd2f62cc5fb8f636fc0db8c1644ab4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_unity_1_1_single_layer.html">SingleLayer</a> Leap.Unity.Interaction.InteractionManager._interactionNoClipLayer = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2b6034e1be569e9c1e56160d4dd9510b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Leap.Unity.Interaction.InteractionManager._ldatPath = &quot;InteractionEngine/IE.ldat&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6db5d7176864dd92fbedc08d92242f40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html">LeapProvider</a> Leap.Unity.Interaction.InteractionManager._leapProvider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9fff21ad252c5af47f17ff4f5928f934"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Leap.Unity.Interaction.InteractionManager._maxActivationDepth = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa025fccdff465c243115727f53b0bc63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;INTERACTION_SHAPE_INSTANCE_RESULTS&gt; Leap.Unity.Interaction.InteractionManager._resultList = new List&lt;INTERACTION_SHAPE_INSTANCE_RESULTS&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae25e969ec1ef236fcee85215e43f04aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTERACTION_SCENE Leap.Unity.Interaction.InteractionManager._scene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad034313a5bc1810c7ec4de0be2479197"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html">ShapeDescriptionPool</a> Leap.Unity.Interaction.InteractionManager._shapeDescriptionPool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5b8566be4d1267cd6fd274db5cd50d88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager._showDebugLines = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad4ba06daa6a1fe67fdeeba4b2219eb72"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager._showDebugOutput = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a17b10e0cecd075456a90be0617c77b25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_unity_1_1_single_layer.html">SingleLayer</a> Leap.Unity.Interaction.InteractionManager._templateLayer = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8db1a9bcd11e194d99df929b8bddcdcc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action Leap.Unity.Interaction.InteractionManager.OnGraphicalUpdate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae1d1c4819b9762af4d1633e2c14ee7b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action Leap.Unity.Interaction.InteractionManager.OnPostPhysicalUpdate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac5ca2a8716263ba7c473cf120fd5dca2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action Leap.Unity.Interaction.InteractionManager.OnPrePhysicalUpdate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2d542c67d6c34ce82f5a8f1fc26f4f5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Leap.Unity.Interaction.InteractionManager.UNSCALED_RECOMMENDED_CONTACT_OFFSET_MAXIMUM = 0.001f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a03f22f74036ed4996d16144e7260e598"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager.ContactEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets or sets whether or not the <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Engine can modify object velocities when pushing. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab2e8025af47178ec0ff6f5b3fcc7a053"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual DebugFlags Leap.Unity.Interaction.InteractionManager.DebugFlags</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current set of debug flags for this manager. </p>
+
+</div>
+</div>
+<a class="anchor" id="a757b624bce6d051cf3a13f060d5ab27d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html">InteractionMaterial</a> Leap.Unity.Interaction.InteractionManager.DefaultInteractionMaterial</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets or sets the default <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html" title="An Interaction Engine material that controls several aspects of the interaction between BrushHands an...">InteractionMaterial</a> used when InteractionBehaviours are spawned without a material explicitly assigned. </p>
+
+</div>
+</div>
+<a class="anchor" id="a12bfe89bb7f91def3d22080ab43d8dd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReadonlyList&lt;<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&gt; Leap.Unity.Interaction.InteractionManager.GraspedObjects</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a collection of InteractionBehaviours that are currently being grasped by at least one hand. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2ba1790714b044f01958f5d43da15e4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager.GraspingEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets or sets whether or not the <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Engine can modify object positions by grasping. </p>
+
+</div>
+</div>
+<a class="anchor" id="af15451e9a3d5c2d58f50a10f4cefbc57"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Leap.Unity.Interaction.InteractionManager.InteractionBrushLayer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the layer that interaction brushes should be on normally. </p>
+
+</div>
+</div>
+<a class="anchor" id="abdca6434398b6449a228129a3fd24475"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Leap.Unity.Interaction.InteractionManager.InteractionLayer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the layer that interaction objects should be on by default. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa8535a1d3e3c8cd415752600fbff50ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Leap.Unity.Interaction.InteractionManager.InteractionNoClipLayer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the layer that interaction objects should be on when they become grasped. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1c00d1e11c8d6bbf0fe1a6c7fff31fcd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager.IsAnyObjectGrasped</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if any InteractionObject is currently being grasped by at least one <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand.">Hand</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="acef2c721903ff338e65e633c408ac25b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Leap.Unity.Interaction.InteractionManager.MaxActivationDepth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets or sets the max activation depth. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9b72a902fc5301a4bea5817aa5bb4304"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionManager.RecommendedContactOffsetMaximum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa465dfce75ef1ca376e74bcc1cb89a5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a>&gt; Leap.Unity.Interaction.InteractionManager.RegisteredObjects</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a collection of InteractionBehaviours that are currently registered with this manager. </p>
+
+</div>
+</div>
+<a class="anchor" id="a29680095c2a498a9590c0ef7741a665f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">INTERACTION_SCENE Leap.Unity.Interaction.InteractionManager.Scene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af09367e7a71e22b3d40cb327d9325d8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html">ShapeDescriptionPool</a> Leap.Unity.Interaction.InteractionManager.ShapePool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html">ShapeDescriptionPool</a> that can be used to allocate shape descriptions for this manager. </p>
+<p>Using the pool can be more efficient since identical shapes can be automatically combined to save memory. Shape descriptions aquired from this pool will be destroyed when this manager is disabled. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeb19014bf9c72af6387a8f694d3990e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager.ShowDebugLines</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enables the display of proximity information from the library. </p>
+
+</div>
+</div>
+<a class="anchor" id="a172c2821ebddb42bd5bf75603717e171"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionManager.ShowDebugOutput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enables the display of debug text from the library. </p>
+
+</div>
+</div>
+<a class="anchor" id="a129650833ce143b39615e9f2906a3669"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionManager.SimulationScale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../unity/Unity_IE_Overview.html">Interaction Engine Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unity/Unity_IE_Setup.html">Setting up an Interaction Engine Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unity/Unity_IE_Materials.html">Interaction Materials and Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unity/Unity_IE_Layers.html">Interaction Engine Layers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../unity/Unity_IE_Classes.html">Interaction Engine Classes</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">InteractionManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html">InteractionMaterial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_bone.html">InteractionBrushBone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_hand.html">InteractionBrushHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_grasp_events.html">InteractionGraspEvents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_hand_events.html">InteractionHandEvents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_holding_pose_controller_kabsch.html">HoldingPoseControllerKabsch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_kinematic.html">MoveToControllerKinematic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_velocity.html">MoveToControllerVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_suspension_controller_default.html">SuspensionControllerDefault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_palm_velocity.html">ThrowingControllerPalmVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_sliding_window.html">ThrowingControllerSlidingWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_layer_controller_custom.html">LayerControllerCustom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">InteractionBehaviourBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_controller_base.html">IControllerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html">IHoldingPoseController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_move_to_controller.html">IMoveToController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_suspension_controller.html">ISuspensionController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_throwing_controller.html">IThrowingController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_layer_controller.html">ILayerController</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_manager.html">ActivityManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_monitor.html">ActivityMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_monitor_lite.html">ActivityMonitorLite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_base_call_guard.html">BaseCallGuard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_base_not_called_exception.html">BaseNotCalledException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_begin_not_called_exception.html">BeginNotCalledException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_controller_container.html">ControllerContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_hand_array_builder.html">HandArrayBuilder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_holding_pose_controller_kabsch.html">HoldingPoseControllerKabsch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_activity_monitor.html">IActivityMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_controller_base.html">IControllerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html">IHoldingPoseController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_layer_controller.html">ILayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_move_to_controller.html">IMoveToController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_suspension_controller.html">ISuspensionController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_throwing_controller.html">IThrowingController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">InteractionBehaviourBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html">InteractionBehaviourBaseEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_bone.html">InteractionBrushBone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_hand.html">InteractionBrushHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_grasp_detector.html">InteractionGraspDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_grasp_events.html">InteractionGraspEvents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_hand_events.html">InteractionHandEvents</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">InteractionManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_editor.html">InteractionManagerEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html">InteractionMaterial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material_editor.html">InteractionMaterialEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interactive_behavior_grasp_event.html">InteractiveBehaviorGraspEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_layer_controller_custom.html">LayerControllerCustom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_kinematic.html">MoveToControllerKinematic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_velocity.html">MoveToControllerVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_physic_material_replacer.html">PhysicMaterialReplacer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_interaction_1_1_physics_move_info.html">PhysicsMoveInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_physics_utility.html">PhysicsUtility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html">RigidbodyWarper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html">ShapeDescriptionPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_struct_allocator.html">StructAllocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_suspension_controller_default.html">SuspensionControllerDefault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_palm_velocity.html">ThrowingControllerPalmVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_sliding_window.html">ThrowingControllerSlidingWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_wrong_base_called_exception.html">WrongBaseCalledException</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

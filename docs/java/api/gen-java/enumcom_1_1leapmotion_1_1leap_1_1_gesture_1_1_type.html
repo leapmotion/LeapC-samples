@@ -1,0 +1,429 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gesture.Type &mdash; Leap Motion Java SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Java SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="GestureList" href="classcom_1_1leapmotion_1_1leap_1_1_gesture_list.html" />
+    <link rel="prev" title="Gesture.State" href="enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_state.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'java';
+    var hasAPI = {};
+    hasAPI.java = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'java/api/gen-java/enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-java/enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-java/enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-java/enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-java/enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-java/enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-java/enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-java/enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-java/enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'java/api/gen-java/enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_state.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("classcom_1_1leapmotion_1_1leap_1_1_gesture_list.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      Java
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  Gesture.Type
+</span> -->
+        
+  <div class="section" id="gesture-type">
+<h1>Gesture.Type<a class="headerlink" href="#gesture-type" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Gesture.Type Enum Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The supported types of gestures.  
+ <a href="enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a901f5883b79a36befbd7200ea646235d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_type.html#a901f5883b79a36befbd7200ea646235d">TYPE_INVALID</a> =(-1)</td></tr>
+<tr class="memdesc:a901f5883b79a36befbd7200ea646235d"><td class="mdescLeft">&#160;</td><td class="mdescRight">An invalid type.  <a href="#a901f5883b79a36befbd7200ea646235d">More...</a><br /></td></tr>
+<tr class="separator:a901f5883b79a36befbd7200ea646235d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The supported types of gestures. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000045">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a901f5883b79a36befbd7200ea646235d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TYPE_INVALID =(-1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An invalid type. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000047">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Java Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_bone_1_1_type.html">Bone.Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_circle_gesture.html">CircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_config_1_1_value_type.html">Config.ValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_controller_1_1_policy_flag.html">Controller.PolicyFlag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_device_1_1_type.html">Device.Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_failed_device_1_1_failure_type.html">FailedDevice.FailureType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_finger_1_1_joint.html">Finger.Joint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_finger_1_1_type.html">Finger.Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_finger_list.html">FingerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_gesture.html">Gesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_gesture_1_1_state.html">Gesture.State</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Gesture.Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_gesture_list.html">GestureList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_hand_list.html">HandList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_image_1_1_format_type.html">Image.FormatType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_image_list.html">ImageList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_key_tap_gesture.html">KeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_listener.html">Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_message_severity.html">MessageSeverity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_pointable.html">Pointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumcom_1_1leapmotion_1_1leap_1_1_pointable_1_1_zone.html">Pointable.Zone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_pointable_list.html">PointableList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_swipe_gesture.html">SwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_tool.html">Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_tool_list.html">ToolList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_tool_list_1_1_tool_list_iterator.html">ToolListIterator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classcom_1_1leapmotion_1_1leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>Java</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

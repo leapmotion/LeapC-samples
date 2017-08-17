@@ -1,0 +1,1172 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LeapController &mdash; Leap Motion Objective-C SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Objective-C SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="LeapDelegate" href="protocol_leap_delegate-p.html" />
+    <link rel="prev" title="LeapConfig" href="interface_leap_config.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'objc';
+    var hasAPI = {};
+    hasAPI.objc = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'objc/api/gen-objc/interface_leap_controller.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-objc/interface_leap_controller.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-objc/interface_leap_controller.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-objc/interface_leap_controller.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-objc/interface_leap_controller.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-objc/interface_leap_controller.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-objc/interface_leap_controller.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-objc/interface_leap_controller.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-objc/interface_leap_controller.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'objc/api/gen-objc/interface_leap_controller.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("interface_leap_config.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("protocol_leap_delegate-p.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      Objective-C
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  LeapController
+</span> -->
+        
+  <div class="section" id="leapcontroller">
+<h1>LeapController<a class="headerlink" href="#leapcontroller" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('interface_leap_controller.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Instance Methods</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+<div class="title">LeapController Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> class is your main interface to the Leap Motion Controller hardware.  
+ <a href="interface_leap_controller.html#details">More...</a></p>
+
+<p>Inherits NSObject.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Instance Methods</h2></td></tr>
+<tr class="memitem:acecca41f0931c4be1ea7b75a951c6eb9"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#acecca41f0931c4be1ea7b75a951c6eb9">addDelegate:</a></td></tr>
+<tr class="memdesc:acecca41f0931c4be1ea7b75a951c6eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a delegate to this <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a>.  <a href="#acecca41f0931c4be1ea7b75a951c6eb9">More...</a><br /></td></tr>
+<tr class="separator:acecca41f0931c4be1ea7b75a951c6eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ad46ad0540bef6dd58b06e0f8abcead"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#a6ad46ad0540bef6dd58b06e0f8abcead">addListener:</a></td></tr>
+<tr class="memdesc:a6ad46ad0540bef6dd58b06e0f8abcead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a listener to this <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a>.  <a href="#a6ad46ad0540bef6dd58b06e0f8abcead">More...</a><br /></td></tr>
+<tr class="separator:a6ad46ad0540bef6dd58b06e0f8abcead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2763add6b62d0c94e80672c21f41a9a7"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#a2763add6b62d0c94e80672c21f41a9a7">clearPolicy:</a></td></tr>
+<tr class="memdesc:a2763add6b62d0c94e80672c21f41a9a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests clearing a policy.  <a href="#a2763add6b62d0c94e80672c21f41a9a7">More...</a><br /></td></tr>
+<tr class="separator:a2763add6b62d0c94e80672c21f41a9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c8495b592ada44c8534b5f03574e49"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#a71c8495b592ada44c8534b5f03574e49">enableGesture:enable:</a></td></tr>
+<tr class="memdesc:a71c8495b592ada44c8534b5f03574e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables reporting of a specified gesture type.  <a href="#a71c8495b592ada44c8534b5f03574e49">More...</a><br /></td></tr>
+<tr class="separator:a71c8495b592ada44c8534b5f03574e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd8e931c8586e547a74a54106a592f7"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_frame.html">LeapFrame</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#adbd8e931c8586e547a74a54106a592f7">frame:</a></td></tr>
+<tr class="memdesc:adbd8e931c8586e547a74a54106a592f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> containing a frame of tracking data from the Leap.  <a href="#adbd8e931c8586e547a74a54106a592f7">More...</a><br /></td></tr>
+<tr class="separator:adbd8e931c8586e547a74a54106a592f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4213bb26f5207ee3f402fe463badc691"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#a4213bb26f5207ee3f402fe463badc691">init</a></td></tr>
+<tr class="memdesc:a4213bb26f5207ee3f402fe463badc691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> instance.  <a href="#a4213bb26f5207ee3f402fe463badc691">More...</a><br /></td></tr>
+<tr class="separator:a4213bb26f5207ee3f402fe463badc691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd69bae618bf0407989558914ce3c719"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#acd69bae618bf0407989558914ce3c719">initWithDelegate:</a></td></tr>
+<tr class="memdesc:acd69bae618bf0407989558914ce3c719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> instance and assigns a delegate.  <a href="#acd69bae618bf0407989558914ce3c719">More...</a><br /></td></tr>
+<tr class="separator:acd69bae618bf0407989558914ce3c719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86a7cd384e0bb3554fa203c4752c1cf4"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#a86a7cd384e0bb3554fa203c4752c1cf4">initWithListener:</a></td></tr>
+<tr class="memdesc:a86a7cd384e0bb3554fa203c4752c1cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> instance and assigns a listener.  <a href="#a86a7cd384e0bb3554fa203c4752c1cf4">More...</a><br /></td></tr>
+<tr class="separator:a86a7cd384e0bb3554fa203c4752c1cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af155c9106a0302a8a41c51f5bec47a8a"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#af155c9106a0302a8a41c51f5bec47a8a">isGestureEnabled:</a></td></tr>
+<tr class="memdesc:af155c9106a0302a8a41c51f5bec47a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether the specified gesture type is enabled.  <a href="#af155c9106a0302a8a41c51f5bec47a8a">More...</a><br /></td></tr>
+<tr class="separator:af155c9106a0302a8a41c51f5bec47a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4598d31afee42e415f2eb42be4761692"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#a4598d31afee42e415f2eb42be4761692">isPolicySet:</a></td></tr>
+<tr class="memdesc:a4598d31afee42e415f2eb42be4761692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the active setting for a specific policy.  <a href="#a4598d31afee42e415f2eb42be4761692">More...</a><br /></td></tr>
+<tr class="separator:a4598d31afee42e415f2eb42be4761692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1448194595299cd774e5eeca57ad9a"><td class="memItemLeft" align="right" valign="top">(int64_t)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#a2e1448194595299cd774e5eeca57ad9a">now</a></td></tr>
+<tr class="memdesc:a2e1448194595299cd774e5eeca57ad9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a timestamp value as close as possible to the current time.  <a href="#a2e1448194595299cd774e5eeca57ad9a">More...</a><br /></td></tr>
+<tr class="separator:a2e1448194595299cd774e5eeca57ad9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001d75cbe927baafadb4b0117342813a"><td class="memItemLeft" align="right" valign="top">(LeapPolicyFlag)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#a001d75cbe927baafadb4b0117342813a">policyFlags</a></td></tr>
+<tr class="memdesc:a001d75cbe927baafadb4b0117342813a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method has been deprecated.  <a href="#a001d75cbe927baafadb4b0117342813a">More...</a><br /></td></tr>
+<tr class="separator:a001d75cbe927baafadb4b0117342813a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea19ec438d660de56cb410e3339e6689"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#aea19ec438d660de56cb410e3339e6689">removeDelegate</a></td></tr>
+<tr class="memdesc:aea19ec438d660de56cb410e3339e6689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the delegate assigned to this <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a>.  <a href="#aea19ec438d660de56cb410e3339e6689">More...</a><br /></td></tr>
+<tr class="separator:aea19ec438d660de56cb410e3339e6689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1ad31987d812a01b7f5c495c73db53"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#a2a1ad31987d812a01b7f5c495c73db53">removeListener:</a></td></tr>
+<tr class="memdesc:a2a1ad31987d812a01b7f5c495c73db53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribes the listener object from receiving Leap NSNotifications.  <a href="#a2a1ad31987d812a01b7f5c495c73db53">More...</a><br /></td></tr>
+<tr class="separator:a2a1ad31987d812a01b7f5c495c73db53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae751690bb5c84720070a666134abb0a5"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#ae751690bb5c84720070a666134abb0a5">setPaused:</a></td></tr>
+<tr class="memdesc:ae751690bb5c84720070a666134abb0a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses or resumes the Leap Motion service.  <a href="#ae751690bb5c84720070a666134abb0a5">More...</a><br /></td></tr>
+<tr class="separator:ae751690bb5c84720070a666134abb0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cdf538ecdf3ea694d97caf487da2627"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#a3cdf538ecdf3ea694d97caf487da2627">setPolicy:</a></td></tr>
+<tr class="memdesc:a3cdf538ecdf3ea694d97caf487da2627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests setting a policy.  <a href="#a3cdf538ecdf3ea694d97caf487da2627">More...</a><br /></td></tr>
+<tr class="separator:a3cdf538ecdf3ea694d97caf487da2627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5352dce0ecf73061034101d3cf46a0b"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_controller.html#ac5352dce0ecf73061034101d3cf46a0b">setPolicyFlags:</a></td></tr>
+<tr class="memdesc:ac5352dce0ecf73061034101d3cf46a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method has been deprecated.  <a href="#ac5352dce0ecf73061034101d3cf46a0b">More...</a><br /></td></tr>
+<tr class="separator:ac5352dce0ecf73061034101d3cf46a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a5cc0d4390ec7c379b18d15e9160bb55c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_leap_config.html">LeapConfig</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_controller.html#a5cc0d4390ec7c379b18d15e9160bb55c">config</a></td></tr>
+<tr class="memdesc:a5cc0d4390ec7c379b18d15e9160bb55c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Config object, which you can use to query the Leap system for configuration information.  <a href="#a5cc0d4390ec7c379b18d15e9160bb55c">More...</a><br /></td></tr>
+<tr class="separator:a5cc0d4390ec7c379b18d15e9160bb55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09f4f94ab66220e8d50c2d1dfc29b770"><td class="memItemLeft" align="right" valign="top">NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_controller.html#a09f4f94ab66220e8d50c2d1dfc29b770">devices</a></td></tr>
+<tr class="memdesc:a09f4f94ab66220e8d50c2d1dfc29b770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of currently attached devices.  <a href="#a09f4f94ab66220e8d50c2d1dfc29b770">More...</a><br /></td></tr>
+<tr class="separator:a09f4f94ab66220e8d50c2d1dfc29b770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f4a679261ba6e824d4dfb1e58928b0a"><td class="memItemLeft" align="right" valign="top">NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_controller.html#a7f4a679261ba6e824d4dfb1e58928b0a">failedDevices</a></td></tr>
+<tr class="memdesc:a7f4a679261ba6e824d4dfb1e58928b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of any Leap Motion hardware devices that are physically connected to the client computer, but are not functioning correctly.  <a href="#a7f4a679261ba6e824d4dfb1e58928b0a">More...</a><br /></td></tr>
+<tr class="separator:a7f4a679261ba6e824d4dfb1e58928b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd5564531191ad0eb9c77501988ef12"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_controller.html#acbd5564531191ad0eb9c77501988ef12">hasFocus</a></td></tr>
+<tr class="memdesc:acbd5564531191ad0eb9c77501988ef12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this application is the focused, foreground application.  <a href="#acbd5564531191ad0eb9c77501988ef12">More...</a><br /></td></tr>
+<tr class="separator:acbd5564531191ad0eb9c77501988ef12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb512cefc78858ff20629976bed66e13"><td class="memItemLeft" align="right" valign="top">NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_controller.html#acb512cefc78858ff20629976bed66e13">images</a></td></tr>
+<tr class="memdesc:acb512cefc78858ff20629976bed66e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">The most recent set of images from the Leap Motion cameras.  <a href="#acb512cefc78858ff20629976bed66e13">More...</a><br /></td></tr>
+<tr class="separator:acb512cefc78858ff20629976bed66e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd64e9104b6a20e88adb69eae58ec54"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_controller.html#aacd64e9104b6a20e88adb69eae58ec54">isConnected</a></td></tr>
+<tr class="memdesc:aacd64e9104b6a20e88adb69eae58ec54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> is connected to the Leap device.  <a href="#aacd64e9104b6a20e88adb69eae58ec54">More...</a><br /></td></tr>
+<tr class="separator:aacd64e9104b6a20e88adb69eae58ec54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ca224bcac696f83266fa5f3b99fb64"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_controller.html#a59ca224bcac696f83266fa5f3b99fb64">isPaused</a></td></tr>
+<tr class="memdesc:a59ca224bcac696f83266fa5f3b99fb64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether the Leap Motion service is currently paused.  <a href="#a59ca224bcac696f83266fa5f3b99fb64">More...</a><br /></td></tr>
+<tr class="separator:a59ca224bcac696f83266fa5f3b99fb64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea67339c1f032b135628ea938458d36"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_controller.html#a8ea67339c1f032b135628ea938458d36">isServiceConnected</a></td></tr>
+<tr class="memdesc:a8ea67339c1f032b135628ea938458d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this LeapService is in communication with the client API.  <a href="#a8ea67339c1f032b135628ea938458d36">More...</a><br /></td></tr>
+<tr class="separator:a8ea67339c1f032b135628ea938458d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> class is your main interface to the Leap Motion Controller hardware. </p>
+<p>Create an instance of this <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> class to access frames of tracking data and configuration information. Frame data can be polled at any time using the [<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> frame:] function. Set the <code>frame:</code> parameter to 0 to get the most recent frame. Set the parameter to a positive integer to access previous frames. For example, <code>[controller frame:10]</code> returns the frame that occurred ten frames ago. A controller stores up to 60 frames in its frame history.</p>
+<p>Polling is an appropriate strategy for applications which already have an intrinsic update loop, such as a game. You can also add a listener object or delegate to the controller to handle events as they occur. The Leap dispatches events to the listener upon initialization and exiting, on connection changes, and when a new frame of tracking data is available. When these events occur, the controller object invokes the appropriate callback function.</p>
+<p><b>Polling</b></p>
+<p>Create an instance of the <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> class using the default initializer:</p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_controller.html">LeapController</a> *controller = [[<a class="code" href="interface_leap_controller.html">LeapController</a> alloc] <a class="code" href="interface_leap_controller.html#a4213bb26f5207ee3f402fe463badc691">init</a>];</div>
+</div><!-- fragment --><p>Access the frame data at regular intervals:</p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *frame = [controller frame:0];</div>
+</div><!-- fragment --><p>You can check [<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> isConnected] to determine if the controller is connected to the Leap software.</p>
+<p><b><a class="el" href="protocol_leap_listener-p.html" title="The LeapListener protocol defines a set of methods that you can implement to respond to NSNotificatio...">LeapListener</a> protocol</b></p>
+<p>Implement a class adopting the <a class="el" href="protocol_leap_listener-p.html" title="The LeapListener protocol defines a set of methods that you can implement to respond to NSNotificatio...">LeapListener</a> protocol.</p>
+<p>Create an instance of the <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> class and assign your <a class="el" href="protocol_leap_listener-p.html" title="The LeapListener protocol defines a set of methods that you can implement to respond to NSNotificatio...">LeapListener</a> object to it:</p>
+<div class="fragment"><div class="line">FrameListener *listener = [[FrameListener alloc] <a class="code" href="interface_leap_controller.html#a4213bb26f5207ee3f402fe463badc691">init</a>];</div>
+<div class="line"><a class="code" href="interface_leap_controller.html">LeapController</a> *controller = [[<a class="code" href="interface_leap_controller.html">LeapController</a> alloc] initWithListener:listener];</div>
+</div><!-- fragment --><p>The controller subscribes the <a class="el" href="protocol_leap_listener-p.html" title="The LeapListener protocol defines a set of methods that you can implement to respond to NSNotificatio...">LeapListener</a> instance to the appropriate NSNotifications for the Leap events. When a new frame of data is ready, the controller dispatches an NSNotification on the main application thread, which is handled by your [<a class="el" href="protocol_leap_listener-p.html" title="The LeapListener protocol defines a set of methods that you can implement to respond to NSNotificatio...">LeapListener</a> onFrame:] implementation.</p>
+<p><b><a class="el" href="protocol_leap_delegate-p.html" title="The LeapDelegate protocol defines a set of methods that you can implement in a delegate object for a ...">LeapDelegate</a> protocol</b></p>
+<p>Implement a class adopting the <a class="el" href="protocol_leap_delegate-p.html" title="The LeapDelegate protocol defines a set of methods that you can implement in a delegate object for a ...">LeapDelegate</a> protocol.</p>
+<p>Create an instance of the <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> class and assign your <a class="el" href="protocol_leap_listener-p.html" title="The LeapListener protocol defines a set of methods that you can implement to respond to NSNotificatio...">LeapListener</a> object to it:</p>
+<div class="fragment"><div class="line">LeapEventDelegate *delegate = [[LeapEventDelegate alloc] <a class="code" href="interface_leap_controller.html#a4213bb26f5207ee3f402fe463badc691">init</a>];</div>
+<div class="line"><a class="code" href="interface_leap_controller.html">LeapController</a> *controller = [[<a class="code" href="interface_leap_controller.html">LeapController</a> alloc] <a class="code" href="interface_leap_controller.html#a4213bb26f5207ee3f402fe463badc691">init</a>];</div>
+<div class="line">[controller addDelegate:delegate];</div>
+</div><!-- fragment --><p>When a new frame of data is ready, the controller calls the [<a class="el" href="protocol_leap_delegate-p.html" title="The LeapDelegate protocol defines a set of methods that you can implement in a delegate object for a ...">LeapDelegate</a> onFrame:] method. The Controller object is multithreaded and calls the <a class="el" href="protocol_leap_delegate-p.html" title="The LeapDelegate protocol defines a set of methods that you can implement in a delegate object for a ...">LeapDelegate</a> functions on its own thread, not on an application thread.</p>
+<p>You can handle the other Leap events, <code>onInit</code>, <code>onConnect</code>, <code>onDisconnect</code>, <code>onServiceConnect</code>, <code>onServiceDisconnect</code>, <code>onDeviceChange</code>, and <code>onExit</code> in the same manner.</p>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="acecca41f0931c4be1ea7b75a951c6eb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) addDelegate: </td>
+          <td></td>
+          <td class="paramtype">(id&lt; <a class="el" href="protocol_leap_delegate-p.html">LeapDelegate</a> &gt;)&#160;</td>
+          <td class="paramname"><em>delegate</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a delegate to this <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a>. </p>
+<div class="fragment"><div class="line">LeapEventDelegate *delegate = [[LeapEventDelegate alloc] <a class="code" href="interface_leap_controller.html#a4213bb26f5207ee3f402fe463badc691">init</a>];</div>
+<div class="line"><a class="code" href="interface_leap_controller.html">LeapController</a> *controller = [[<a class="code" href="interface_leap_controller.html">LeapController</a> alloc] <a class="code" href="interface_leap_controller.html#a4213bb26f5207ee3f402fe463badc691">init</a>];</div>
+<div class="line">[controller addDelegate:delegate];</div>
+</div><!-- fragment --><p><em>Note:</em> You cannot add a delegate when there is already a listener assigned.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delegate</td><td>An object adopting the <a class="el" href="protocol_leap_delegate-p.html" title="The LeapDelegate protocol defines a set of methods that you can implement in a delegate object for a ...">LeapDelegate</a> protocol. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOL Whether or not the delegate was successfully added. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6ad46ad0540bef6dd58b06e0f8abcead"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) addListener: </td>
+          <td></td>
+          <td class="paramtype">(id&lt; <a class="el" href="protocol_leap_listener-p.html">LeapListener</a> &gt;)&#160;</td>
+          <td class="paramname"><em>listener</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a listener to this <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a>. </p>
+<p>When you add an object adopting the <a class="el" href="protocol_leap_listener-p.html" title="The LeapListener protocol defines a set of methods that you can implement to respond to NSNotificatio...">LeapListener</a> protocol to a <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a>, the controller automatically subscribes the listener to NSNotifications dispatched for the Leap events.</p>
+<div class="fragment"><div class="line">[controller addListener:listener];</div>
+</div><!-- fragment --><p><em>Note:</em> You cannot add a listener when there is already a delegate assigned.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>An object adopting the <a class="el" href="protocol_leap_listener-p.html" title="The LeapListener protocol defines a set of methods that you can implement to respond to NSNotificatio...">LeapListener</a> protocol. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOL Whether or not the listener was successfully added to the list of listeners. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2763add6b62d0c94e80672c21f41a9a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) clearPolicy: </td>
+          <td></td>
+          <td class="paramtype">(LeapPolicyFlag)&#160;</td>
+          <td class="paramname"><em>policy</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requests clearing a policy. </p>
+<p>Policy changes are completed asynchronously and, because they are subject to user approval, may not complete successfully. Call [<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> isPolicySet:] after a suitable interval to test whether the change was accepted.</p>
+<div class="fragment"><div class="line">[controller clearPolicy:LEAP_POLICY_IMAGES];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>A PolicyFlag value indicating the policy to request. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Since 2.1.6</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a71c8495b592ada44c8534b5f03574e49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) enableGesture: </td>
+          <td></td>
+          <td class="paramtype">(LeapGestureType)&#160;</td>
+          <td class="paramname"><em>gestureType</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">enable:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>enable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables or disables reporting of a specified gesture type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>YES, to enable the specified gesture type; NO, to disable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>[<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> <a class="el" href="interface_leap_controller.html#af155c9106a0302a8a41c51f5bec47a8a" title="Reports whether the specified gesture type is enabled. ">- isGestureEnabled:</a>] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adbd8e931c8586e547a74a54106a592f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_frame.html">LeapFrame</a> *) frame: </td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>history</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> containing a frame of tracking data from the Leap. </p>
+<p>Use the optional history parameter to specify which frame to retrieve. Call <code>[controller frame:0]</code> to access the most recent frame; call <code>[controller frame:1]</code> to access the previous frame, and so on. If you use a history value greater than the number of stored frames, then the controller returns an invalid frame.</p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *frame = [controller frame:0];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">history</td><td>The age of the <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> to return, counting backwards from the most recent frame (0) into the past and up to the maximum age (59). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The specified <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a>; or, if no history parameter is specified, the newest frame. If a frame is not available at the specified history position, an invalid <a class="el" href="interface_leap_frame.html" title="The LeapFrame class represents a set of hand and finger tracking data detected in a single frame...">LeapFrame</a> is returned. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4213bb26f5207ee3f402fe463badc691"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) init </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> instance. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_controller.html">LeapController</a> *controller = [[<a class="code" href="interface_leap_controller.html">LeapController</a> alloc] <a class="code" href="interface_leap_controller.html#a4213bb26f5207ee3f402fe463badc691">init</a>];</div>
+</div><!-- fragment --><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acd69bae618bf0407989558914ce3c719"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithDelegate: </td>
+          <td></td>
+          <td class="paramtype">(id&lt; <a class="el" href="protocol_leap_delegate-p.html">LeapDelegate</a> &gt;)&#160;</td>
+          <td class="paramname"><em>delegate</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> instance and assigns a delegate. </p>
+<div class="fragment"><div class="line">LeapEventDelegate *delegate = [[LeapEventDelegate alloc] <a class="code" href="interface_leap_controller.html#a4213bb26f5207ee3f402fe463badc691">init</a>];</div>
+<div class="line"><a class="code" href="interface_leap_controller.html">LeapController</a> *controller = [[<a class="code" href="interface_leap_controller.html">LeapController</a> alloc] initWithDelegate:delegate];</div>
+</div><!-- fragment --><ul>
+<li><em>Note:</em> You can use either a delegate or a listener, but not both.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delegate</td><td>An object adopting the <a class="el" href="protocol_leap_delegate-p.html" title="The LeapDelegate protocol defines a set of methods that you can implement in a delegate object for a ...">LeapDelegate</a> protocol. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a86a7cd384e0bb3554fa203c4752c1cf4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithListener: </td>
+          <td></td>
+          <td class="paramtype">(id&lt; <a class="el" href="protocol_leap_listener-p.html">LeapListener</a> &gt;)&#160;</td>
+          <td class="paramname"><em>listener</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> instance and assigns a listener. </p>
+<div class="fragment"><div class="line">FrameListener *listener = [[FrameListener alloc] <a class="code" href="interface_leap_controller.html#a4213bb26f5207ee3f402fe463badc691">init</a>];</div>
+<div class="line"><a class="code" href="interface_leap_controller.html">LeapController</a> *controller = [[<a class="code" href="interface_leap_controller.html">LeapController</a> alloc] initWithListener:listener];</div>
+</div><!-- fragment --><ul>
+<li><em>Note:</em> You can use either a listener or a delegate, but not both.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>An object adopting the <a class="el" href="protocol_leap_listener-p.html" title="The LeapListener protocol defines a set of methods that you can implement to respond to NSNotificatio...">LeapListener</a> protocol. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af155c9106a0302a8a41c51f5bec47a8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isGestureEnabled: </td>
+          <td></td>
+          <td class="paramtype">(LeapGestureType)&#160;</td>
+          <td class="paramname"><em>gestureType</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports whether the specified gesture type is enabled. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (![controller isGestureEnabled:LEAP_GESTURE_TYPE_KEY_TAP]) {</div>
+<div class="line">    [controller enableGesture:LEAP_GESTURE_TYPE_KEY_TAP enable:<span class="keyword">true</span>];</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gestureType</td><td>The type of gesture to check. Must be a member of the LeapGestureType enumeration:</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>YES, if the specified type is enabled; NO, otherwise. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>[<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> <a class="el" href="interface_leap_controller.html#a71c8495b592ada44c8534b5f03574e49" title="Enables or disables reporting of a specified gesture type. ">- enableGesture:enable:</a>] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4598d31afee42e415f2eb42be4761692"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isPolicySet: </td>
+          <td></td>
+          <td class="paramtype">(LeapPolicyFlag)&#160;</td>
+          <td class="paramname"><em>policy</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the active setting for a specific policy. </p>
+<p>Use this function to determine the current policy state. Keep in mind that setting a policy flag is asynchronous, so changes are not effective immediately after calling [<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> setPolicy:]. In addition, a policy request can be declined by the user. You should always set the policy flags required by your application at startup and check that the policy change request was successful after an appropriate interval.</p>
+<p>If the controller object is not connected to the Leap, then the default policy state is returned.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> isImagePolicySet = [controller isPolicySet:LEAP_POLICY_IMAGES];</div>
+</div><!-- fragment --><p> This method has been deprecated. Use [<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> isPolicySet:] instead.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>A PolicyFlag value indicating the policy to query. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean indicating whether the specified policy has been set. </dd></dl>
+<dl class="section user"><dt>Since 2.1.6</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e1448194595299cd774e5eeca57ad9a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int64_t) now </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a timestamp value as close as possible to the current time. </p>
+<p>Values are in microseconds, as with all the other timestamp values.</p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_frame.html">LeapFrame</a> *frame = [controller frame:0];</div>
+<div class="line">int64_t frameAge = 0;</div>
+<div class="line"><span class="keywordflow">if</span>(frame.<a class="code" href="interface_leap_frame.html#a91f519457eca93f08fa8e441047f271f">isValid</a>){</div>
+<div class="line">    frameAge = [controller <a class="code" href="interface_leap_controller.html#a2e1448194595299cd774e5eeca57ad9a">now</a>] - frame.<a class="code" href="interface_leap_frame.html#a8a591d341723df9496cda98e225b25b4">timestamp</a>; <span class="comment">//microseconds</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a001d75cbe927baafadb4b0117342813a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (LeapPolicyFlag) policyFlags </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method has been deprecated. </p>
+<p>Use [<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> isPolicySet:] instead.</p>
+<dl class="section return"><dt>Returns</dt><dd>The current policy flags. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aea19ec438d660de56cb410e3339e6689"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) removeDelegate </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the delegate assigned to this <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a>. </p>
+<div class="fragment"><div class="line">[controller <a class="code" href="interface_leap_controller.html#aea19ec438d660de56cb410e3339e6689">removeDelegate</a>];</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>BOOL Whether or not the delegate was successfully removed. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2a1ad31987d812a01b7f5c495c73db53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) removeListener: </td>
+          <td></td>
+          <td class="paramtype">(id&lt; <a class="el" href="protocol_leap_listener-p.html">LeapListener</a> &gt;)&#160;</td>
+          <td class="paramname"><em>listener</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unsubscribes the listener object from receiving Leap NSNotifications. </p>
+<div class="fragment"><div class="line">[controller removeListener:listener];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The listener to unsubscribe. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOL Whether or not the listener was successfully removed. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae751690bb5c84720070a666134abb0a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setPaused: </td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>enable</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pauses or resumes the Leap Motion service. </p>
+<p>When the service is paused no applications receive tracking data and the service itself uses minimal CPU time.</p>
+<p>Before changing the state of the service, you must set the POLICY_ALLOW_PAUSE_RESUME using the [<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> setPolicy:] function. Policies must be set every time the application is run.</p>
+<div class="fragment"></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pause</td><td>Set true to pause the service; false to resume. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3cdf538ecdf3ea694d97caf487da2627"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setPolicy: </td>
+          <td></td>
+          <td class="paramtype">(LeapPolicyFlag)&#160;</td>
+          <td class="paramname"><em>policy</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requests setting a policy. </p>
+<p>A request to change a policy is subject to user approval and a policy can be changed by the user at any time (using the Leap settings window). The desired policy flags must be set every time an application runs.</p>
+<p>Policy changes are completed asynchronously and, because they are subject to user approval, may not complete successfully. Call [<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> isPolicySet:] after a suitable interval to test whether the change was accepted.</p>
+<p>The current policies are:</p>
+<p><b>LEAP_POLICY_BACKGROUND_FRAMES</b> &ndash; requests that your application receives frames when it is not the foreground application for user input.<br />
+ The background frames policy determines whether an application receives frames of tracking data while in the background. By default, the Leap Motion software only sends tracking data to the foreground application. Only applications that need this ability should request the background frames policy. The "Allow Background Apps" checkbox must be enabled in the Leap Motion Control Panel or this policy will be denied.</p>
+<p><b>LEAP_POLICY_IMAGES</b> &ndash; request that your application receives images from the device cameras. The "Allow Images" checkbox must be enabled in the Leap Motion Control Panel or this policy will be denied.<br />
+ The images policy determines whether an application receives image data from the Leap Motion sensors which each frame of data. By default, this data is not sent. Only applications that use the image data should request this policy.<br />
+ <b>LEAP_POLICY_OPTIMIZE_HMD</b> &ndash; request that the tracking be optimized for head-mounted tracking.<br />
+ The optimize HMD policy improves tracking in situations where the Leap Motion hardware is attached to a head-mounted display. This policy is not granted for devices that cannot be mounted to an HMD.</p>
+<div class="fragment"><div class="line">[controller setPolicy:LEAP_POLICY_BACKGROUND_FRAMES];</div>
+<div class="line">[controller setPolicy:LEAP_POLICY_IMAGES];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>A PolicyFlag value indicating the policy to request. Must be a member of the LeapPolicyFlags enumeration:</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>LEAP_POLICY_BACKGROUND_FRAMES</b></p>
+<p><b>LEAP_POLICY_IMAGES</b></p>
+<p><b>LEAP_POLICY_OPTIMIZE_HMD</b></p>
+<dl class="section user"><dt>Since 2.1.6</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac5352dce0ecf73061034101d3cf46a0b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setPolicyFlags: </td>
+          <td></td>
+          <td class="paramtype">(LeapPolicyFlag)&#160;</td>
+          <td class="paramname"><em>flags</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method has been deprecated. </p>
+<p>Use [<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> setPolicy:] and [<a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> clearPolicy:] instead.</p>
+<dl class="section return"><dt>Returns</dt><dd>The current policy flags. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a5cc0d4390ec7c379b18d15e9160bb55c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_config.html">LeapConfig</a>*) config</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a Config object, which you can use to query the Leap system for configuration information. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_config.html">LeapConfig</a> *config = controller.<a class="code" href="interface_leap_controller.html#a5cc0d4390ec7c379b18d15e9160bb55c">config</a>;</div>
+</div><!-- fragment --><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a09f4f94ab66220e8d50c2d1dfc29b770"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray*) devices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a list of currently attached devices. </p>
+<p>Devices can be queried for device-specific information such as field of view.</p>
+<p>Currently the Leap controller only recognizes a single device at a time.</p>
+<div class="fragment"><div class="line">NSArray *deviceList = controller.<a class="code" href="interface_leap_controller.html#a09f4f94ab66220e8d50c2d1dfc29b770">devices</a>;</div>
+</div><!-- fragment --><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7f4a679261ba6e824d4dfb1e58928b0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray*) failedDevices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A list of any Leap Motion hardware devices that are physically connected to the client computer, but are not functioning correctly. </p>
+<p>The list contains <a class="el" href="interface_leap_failed_device.html" title="The LeapFailedDevice class provides information about Leap Motion hardware that has been physically c...">LeapFailedDevice</a> objects containing the pnpID and the reason for failure. No other device information is available.</p>
+<div class="fragment"></div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acbd5564531191ad0eb9c77501988ef12"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) hasFocus</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether this application is the focused, foreground application. </p>
+<p>Only the foreground application receives tracking information from the Leap Motion Controller.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(!controller.<a class="code" href="interface_leap_controller.html#acbd5564531191ad0eb9c77501988ef12">hasFocus</a>){</div>
+<div class="line">    <span class="comment">//Pause app</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if application has focus; false otherwise. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acb512cefc78858ff20629976bed66e13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray*) images</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The most recent set of images from the Leap Motion cameras. </p>
+<p>Depending on timing and the current processing frame rate, the images obtained with this function can be newer than images obtained from the current frame of tracking data.</p>
+<div class="fragment"><div class="line">NSArray *<a class="code" href="interface_leap_controller.html#acb512cefc78858ff20629976bed66e13">images</a> = controller.<a class="code" href="interface_leap_controller.html#acb512cefc78858ff20629976bed66e13">images</a>;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">//image latency:</span></div>
+<div class="line"><a class="code" href="interface_leap_image.html">LeapImage</a> * image = [images objectAtIndex:0];</div>
+<div class="line">int64_t imageAge = [controller <a class="code" href="interface_leap_controller.html#a2e1448194595299cd774e5eeca57ad9a">now</a>] - image.<a class="code" href="interface_leap_image.html#a8a591d341723df9496cda98e225b25b4">timestamp</a>;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>An NSArray object containing the most recent camera images. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.2.1 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aacd64e9104b6a20e88adb69eae58ec54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isConnected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether this <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> is connected to the Leap device. </p>
+<p>When you first create a <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> object, isConnected returns false. After the controller finishes initializing and connects to the Leap, isConnected will return true.</p>
+<p>You can either handle the onConnect event using a <a class="el" href="protocol_leap_listener-p.html" title="The LeapListener protocol defines a set of methods that you can implement to respond to NSNotificatio...">LeapListener</a> or <a class="el" href="protocol_leap_delegate-p.html" title="The LeapDelegate protocol defines a set of methods that you can implement in a delegate object for a ...">LeapDelegate</a> instance or poll the isConnected function if you need to wait for your application to be connected to the Leap before performing some other operation.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(controller.<a class="code" href="interface_leap_controller.html#aacd64e9104b6a20e88adb69eae58ec54">isConnected</a>){</div>
+<div class="line">    <a class="code" href="interface_leap_frame.html">LeapFrame</a> *frame = [controller frame:0];</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if connected; false otherwise. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a59ca224bcac696f83266fa5f3b99fb64"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isPaused</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether the Leap Motion service is currently paused. </p>
+<div class="fragment"></div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if the service is paused; false, otherwise. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8ea67339c1f032b135628ea938458d36"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isServiceConnected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether this LeapService is in communication with the client API. </p>
+<p>When you first create a <a class="el" href="interface_leap_controller.html" title="The LeapController class is your main interface to the Leap Motion Controller hardware. ">LeapController</a> object, isServiceConnected returns false. After the controller finishes initializing and makes contact with the LeapService, isServiceConnected will return true.</p>
+<p>You can either handle the onServiceConnect event using a <a class="el" href="protocol_leap_listener-p.html" title="The LeapListener protocol defines a set of methods that you can implement to respond to NSNotificatio...">LeapListener</a> or <a class="el" href="protocol_leap_delegate-p.html" title="The LeapDelegate protocol defines a set of methods that you can implement in a delegate object for a ...">LeapDelegate</a> instance or poll the isServiceConnected function if you need to wait for your application to be connected to the Leap Service before performing some other operation.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(controller.<a class="code" href="interface_leap_controller.html#a8ea67339c1f032b135628ea938458d36">isServiceConnected</a>){</div>
+<div class="line">    <a class="code" href="interface_leap_frame.html">LeapFrame</a> *frame = [controller frame:0];</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if connected; false otherwise. </dd></dl>
+<dl class="section user"><dt>Since 1.2</dt><dd></dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Objective-C Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_arm.html">LeapArm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_bone.html">LeapBone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_circle_gesture.html">LeapCircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_config.html">LeapConfig</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">LeapController</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol_leap_delegate-p.html">LeapDelegate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_device.html">LeapDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_failed_device.html">LeapFailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_finger.html">LeapFinger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_frame.html">LeapFrame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_gesture.html">LeapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_hand.html">LeapHand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_image.html">LeapImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_interaction_box.html">LeapInteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_key_tap_gesture.html">LeapKeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol_leap_listener-p.html">LeapListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_matrix.html">LeapMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_leap_objective_c_8h.html">LeapObjectiveC.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_pointable.html">LeapPointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_screen_tap_gesture.html">LeapScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_swipe_gesture.html">LeapSwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_tool.html">LeapTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_vector.html">LeapVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category_n_s_array_07_leap_pointable_or_hand_list_08.html">NSArray(LeapPointableOrHandList)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>Objective-C</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

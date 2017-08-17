@@ -1,0 +1,1367 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Hands &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap::Unity" href="namespace_leap_1_1_unity.html" />
+    <link rel="next" title="ICanReportDuplicateInformation" href="interface_leap_1_1_unity_1_1_i_can_report_duplicate_information.html" />
+    <link rel="prev" title="HandTransitionBehavior" href="class_leap_1_1_unity_1_1_hand_transition_behavior.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_hands.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_hands.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_hands.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_hands.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_hands.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_hands.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_hands.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_hands.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_hands.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap_1_1_unity.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_hands.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_hand_transition_behavior.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("interface_leap_1_1_unity_1_1_i_can_report_duplicate_information.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap_1_1_unity.html" accesskey="U">Leap::Unity</a>&raquo;
+  Hands
+</span> -->
+        
+  <div class="section" id="hands">
+<h1>Hands<a class="headerlink" href="#hands" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_hands.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
+<a href="class_leap_1_1_unity_1_1_hands-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.Unity.Hands Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands_1_1_hand_event.html">HandEvent</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7c5afbbce7a574daae5a762c11cc8403"><td class="memItemLeft" align="right" valign="top">static Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a7c5afbbce7a574daae5a762c11cc8403">DistalAxis</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="memdesc:a7c5afbbce7a574daae5a762c11cc8403"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the direction towards the fingers that is perpendicular to the palmar and radial axes.  <a href="#a7c5afbbce7a574daae5a762c11cc8403"></a><br/></td></tr>
+<tr class="separator:a7c5afbbce7a574daae5a762c11cc8403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2eee0b75fbddc6048aa3da40b40f5b"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#ada2eee0b75fbddc6048aa3da40b40f5b">FistStrength</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="memdesc:ada2eee0b75fbddc6048aa3da40b40f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a confidence value from 0 to 1 indicating how strongly the <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand.">Hand</a> is making a fist.  <a href="#ada2eee0b75fbddc6048aa3da40b40f5b"></a><br/></td></tr>
+<tr class="separator:ada2eee0b75fbddc6048aa3da40b40f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82ee5367e573614e498400db4c84937"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#aa82ee5367e573614e498400db4c84937">Get</a> (<a class="el" href="namespace_leap_1_1_unity.html#a4d15adcf20ba121b2cd9c07f503b606f">Chirality</a> chirality)</td></tr>
+<tr class="separator:aa82ee5367e573614e498400db4c84937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b233c3c9df6aa8315b6b5bee518fb2b"><td class="memItemLeft" align="right" valign="top">static Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a7b233c3c9df6aa8315b6b5bee518fb2b">GetPinchPosition</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="memdesc:a7b233c3c9df6aa8315b6b5bee518fb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the average of the index finger and thumb tip positions.  <a href="#a7b233c3c9df6aa8315b6b5bee518fb2b"></a><br/></td></tr>
+<tr class="separator:a7b233c3c9df6aa8315b6b5bee518fb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a7c4750456b41b48373cffc6556d44"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_finger.html">Finger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a32a7c4750456b41b48373cffc6556d44">Index</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="separator:a32a7c4750456b41b48373cffc6556d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d9f85eedccfba18003f950ab6f88cd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a45d9f85eedccfba18003f950ab6f88cd">IsFacing</a> (this Vector3 facingVector, Vector3 fromWorldPosition, Vector3 towardsWorldPosition, float maxOffsetAngleAllowed)</td></tr>
+<tr class="memdesc:a45d9f85eedccfba18003f950ab6f88cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether this vector faces from a given world position towards another world position within a maximum angle of error.  <a href="#a45d9f85eedccfba18003f950ab6f88cd"></a><br/></td></tr>
+<tr class="separator:a45d9f85eedccfba18003f950ab6f88cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa924a170cbefeea9d5773fed6676f57c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#aa924a170cbefeea9d5773fed6676f57c">IsPinching</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="memdesc:aa924a170cbefeea9d5773fed6676f57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the pinch strength for the hand is greater than 0.8.  <a href="#aa924a170cbefeea9d5773fed6676f57c"></a><br/></td></tr>
+<tr class="separator:aa924a170cbefeea9d5773fed6676f57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4296f730bc27fad48b63f0689e12f7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_finger.html">Finger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#aaa4296f730bc27fad48b63f0689e12f7">Middle</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="separator:aaa4296f730bc27fad48b63f0689e12f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6920da2adeca7f352208a2d28bdbae"><td class="memItemLeft" align="right" valign="top">static Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a2d6920da2adeca7f352208a2d28bdbae">PalmarAxis</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="memdesc:a2d6920da2adeca7f352208a2d28bdbae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the direction the <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand.">Hand</a>'s palm is facing.  <a href="#a2d6920da2adeca7f352208a2d28bdbae"></a><br/></td></tr>
+<tr class="separator:a2d6920da2adeca7f352208a2d28bdbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad540733847afd7c96cfb15cf7a64eb47"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_finger.html">Finger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#ad540733847afd7c96cfb15cf7a64eb47">Pinky</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="separator:ad540733847afd7c96cfb15cf7a64eb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90142c62fd348b22aef7e5db270dfaf2"><td class="memItemLeft" align="right" valign="top">static Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a90142c62fd348b22aef7e5db270dfaf2">RadialAxis</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="memdesc:a90142c62fd348b22aef7e5db270dfaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the the direction towards the thumb that is perpendicular to the palmar and distal axes.  <a href="#a90142c62fd348b22aef7e5db270dfaf2"></a><br/></td></tr>
+<tr class="separator:a90142c62fd348b22aef7e5db270dfaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e147ba9ad20f157888701a501224c1e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_finger.html">Finger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a1e147ba9ad20f157888701a501224c1e">Ring</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="separator:a1e147ba9ad20f157888701a501224c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acacd92d176f858b092c702030972d2a6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#acacd92d176f858b092c702030972d2a6">SetTransform</a> (this <a class="el" href="class_leap_1_1_bone.html">Bone</a> bone, Vector3 position, Quaternion rotation)</td></tr>
+<tr class="memdesc:acacd92d176f858b092c702030972d2a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a bone to a position and rotation.  <a href="#acacd92d176f858b092c702030972d2a6"></a><br/></td></tr>
+<tr class="separator:acacd92d176f858b092c702030972d2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb04ed7ff0a714c693075854e26141b5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#aeb04ed7ff0a714c693075854e26141b5">SetTransform</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand, Vector3 position, Quaternion rotation)</td></tr>
+<tr class="memdesc:aeb04ed7ff0a714c693075854e26141b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a hand to a position and rotation.  <a href="#aeb04ed7ff0a714c693075854e26141b5"></a><br/></td></tr>
+<tr class="separator:aeb04ed7ff0a714c693075854e26141b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e2b58cf6b6cd97ca7a90ae07b95887"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_finger.html">Finger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#ac9e2b58cf6b6cd97ca7a90ae07b95887">Thumb</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="separator:ac9e2b58cf6b6cd97ca7a90ae07b95887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b20f13b62677f9af6e63a6ff7e42248"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a9b20f13b62677f9af6e63a6ff7e42248">Transform</a> (this <a class="el" href="class_leap_1_1_bone.html">Bone</a> bone, Vector3 position, Quaternion rotation)</td></tr>
+<tr class="memdesc:a9b20f13b62677f9af6e63a6ff7e42248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a bone by a position and rotation.  <a href="#a9b20f13b62677f9af6e63a6ff7e42248"></a><br/></td></tr>
+<tr class="separator:a9b20f13b62677f9af6e63a6ff7e42248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e5c26058a0976258bb8852307867c50"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a9e5c26058a0976258bb8852307867c50">Transform</a> (this <a class="el" href="class_leap_1_1_finger.html">Finger</a> finger, Vector3 position, Quaternion rotation)</td></tr>
+<tr class="memdesc:a9e5c26058a0976258bb8852307867c50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a finger by a position and rotation.  <a href="#a9e5c26058a0976258bb8852307867c50"></a><br/></td></tr>
+<tr class="separator:a9e5c26058a0976258bb8852307867c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f230990bfae6a956fb2ce02352c11ed"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a0f230990bfae6a956fb2ce02352c11ed">Transform</a> (this <a class="el" href="class_leap_1_1_hand.html">Hand</a> hand, Vector3 position, Quaternion rotation)</td></tr>
+<tr class="memdesc:a0f230990bfae6a956fb2ce02352c11ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a hand by a position and rotation.  <a href="#a0f230990bfae6a956fb2ce02352c11ed"></a><br/></td></tr>
+<tr class="separator:a0f230990bfae6a956fb2ce02352c11ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a440eec511dc6dca57db55c227021e80e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a440eec511dc6dca57db55c227021e80e">Transform</a> (this <a class="el" href="class_leap_1_1_frame.html">Frame</a> frame, Vector3 position, Quaternion rotation)</td></tr>
+<tr class="memdesc:a440eec511dc6dca57db55c227021e80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a frame by a position and rotation.  <a href="#a440eec511dc6dca57db55c227021e80e"></a><br/></td></tr>
+<tr class="separator:a440eec511dc6dca57db55c227021e80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a91db7808bba46eb6db385404d6147ce8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a91db7808bba46eb6db385404d6147ce8">Left</a><code> [get]</code></td></tr>
+<tr class="memdesc:a91db7808bba46eb6db385404d6147ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first left hand found by <a class="el" href="namespace_leap.html">Leap</a> in the current frame, otherwise returns null if no such hand is found.  <a href="#a91db7808bba46eb6db385404d6147ce8"></a><br/></td></tr>
+<tr class="separator:a91db7808bba46eb6db385404d6147ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acedc86190e84e526c2a82af0edae9a06"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">LeapServiceProvider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#acedc86190e84e526c2a82af0edae9a06">Provider</a><code> [get]</code></td></tr>
+<tr class="memdesc:acedc86190e84e526c2a82af0edae9a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static convenience accessor for the <a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html" title="LeapServiceProvider creates a Controller and supplies Leap Hands and images.">LeapServiceProvider</a>.  <a href="#acedc86190e84e526c2a82af0edae9a06"></a><br/></td></tr>
+<tr class="separator:acedc86190e84e526c2a82af0edae9a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fadf2551d39ced059cf2815bd9adaaa"><td class="memItemLeft" align="right" valign="top">static GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a1fadf2551d39ced059cf2815bd9adaaa">Rig</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1fadf2551d39ced059cf2815bd9adaaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static convenience accessor for the <a class="el" href="namespace_leap.html">Leap</a> camera rig.  <a href="#a1fadf2551d39ced059cf2815bd9adaaa"></a><br/></td></tr>
+<tr class="separator:a1fadf2551d39ced059cf2815bd9adaaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572e905f3bec7cb35356e3c769931fce"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a572e905f3bec7cb35356e3c769931fce">Right</a><code> [get]</code></td></tr>
+<tr class="memdesc:a572e905f3bec7cb35356e3c769931fce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first right hand found by <a class="el" href="namespace_leap.html">Leap</a> in the current frame, otherwise returns null if no such hand is found.  <a href="#a572e905f3bec7cb35356e3c769931fce"></a><br/></td></tr>
+<tr class="separator:a572e905f3bec7cb35356e3c769931fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a96f94a0e7f1c7551e535533455a9e841"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a96f94a0e7f1c7551e535533455a9e841">Hands</a> ()</td></tr>
+<tr class="separator:a96f94a0e7f1c7551e535533455a9e841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5063222b528aad9a20feefc1980c8d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a0b5063222b528aad9a20feefc1980c8d">InitStatic</a> ()</td></tr>
+<tr class="separator:a0b5063222b528aad9a20feefc1980c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c77c11e5acae3c165296d062ae8e9e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a75c77c11e5acae3c165296d062ae8e9e">InitStaticOnNewScene</a> (Scene unused, Scene unused2)</td></tr>
+<tr class="separator:a75c77c11e5acae3c165296d062ae8e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:adfce4acd700c2303fa39284f1b390add"><td class="memItemLeft" align="right" valign="top">static GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#adfce4acd700c2303fa39284f1b390add">s_leapRig</a></td></tr>
+<tr class="separator:adfce4acd700c2303fa39284f1b390add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b253eb3410617e378efb2e83a8f7816"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">LeapServiceProvider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_hands.html#a0b253eb3410617e378efb2e83a8f7816">s_provider</a></td></tr>
+<tr class="separator:a0b253eb3410617e378efb2e83a8f7816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a96f94a0e7f1c7551e535533455a9e841"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Leap.Unity.Hands.Hands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a7c5afbbce7a574daae5a762c11cc8403"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Vector3 Leap.Unity.Hands.DistalAxis </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the direction towards the fingers that is perpendicular to the palmar and radial axes. </p>
+<p>The direction towards the wrist would be called the proximal axis. </p>
+
+</div>
+</div>
+<a class="anchor" id="ada2eee0b75fbddc6048aa3da40b40f5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float Leap.Unity.Hands.FistStrength </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a confidence value from 0 to 1 indicating how strongly the <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand.">Hand</a> is making a fist. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa82ee5367e573614e498400db4c84937"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_leap_1_1_hand.html">Hand</a> Leap.Unity.Hands.Get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_leap_1_1_unity.html#a4d15adcf20ba121b2cd9c07f503b606f">Chirality</a>&#160;</td>
+          <td class="paramname"><em>chirality</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7b233c3c9df6aa8315b6b5bee518fb2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Vector3 Leap.Unity.Hands.GetPinchPosition </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the average of the index finger and thumb tip positions. </p>
+
+</div>
+</div>
+<a class="anchor" id="a32a7c4750456b41b48373cffc6556d44"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_leap_1_1_finger.html">Finger</a> Leap.Unity.Hands.Index </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0b5063222b528aad9a20feefc1980c8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Leap.Unity.Hands.InitStatic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a75c77c11e5acae3c165296d062ae8e9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Leap.Unity.Hands.InitStaticOnNewScene </td>
+          <td>(</td>
+          <td class="paramtype">Scene&#160;</td>
+          <td class="paramname"><em>unused</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Scene&#160;</td>
+          <td class="paramname"><em>unused2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a45d9f85eedccfba18003f950ab6f88cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Leap.Unity.Hands.IsFacing </td>
+          <td>(</td>
+          <td class="paramtype">this Vector3&#160;</td>
+          <td class="paramname"><em>facingVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>fromWorldPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>towardsWorldPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>maxOffsetAngleAllowed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether this vector faces from a given world position towards another world position within a maximum angle of error. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa924a170cbefeea9d5773fed6676f57c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Leap.Unity.Hands.IsPinching </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the pinch strength for the hand is greater than 0.8. </p>
+<p>For more reliable pinch behavior, consider applying hysteresis to the <a class="el" href="class_leap_1_1_hand.html#a1f615f0a7a58a53c3ff5db6d6b440d6a" title="The holding strength of a pinch hand pose.">Hand.PinchStrength</a> property. </p>
+
+</div>
+</div>
+<a class="anchor" id="aaa4296f730bc27fad48b63f0689e12f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_leap_1_1_finger.html">Finger</a> Leap.Unity.Hands.Middle </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2d6920da2adeca7f352208a2d28bdbae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Vector3 Leap.Unity.Hands.PalmarAxis </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the direction the <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand.">Hand</a>'s palm is facing. </p>
+<p>For the other two palm-basis directions, see RadialAxis and DistalAxis. The direction out of the back of the hand would be called the dorsal axis. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad540733847afd7c96cfb15cf7a64eb47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_leap_1_1_finger.html">Finger</a> Leap.Unity.Hands.Pinky </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a90142c62fd348b22aef7e5db270dfaf2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Vector3 Leap.Unity.Hands.RadialAxis </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the the direction towards the thumb that is perpendicular to the palmar and distal axes. </p>
+<p>Left and right hands will return opposing directions. The direction away from the thumb would be called the ulnar axis. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1e147ba9ad20f157888701a501224c1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_leap_1_1_finger.html">Finger</a> Leap.Unity.Hands.Ring </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acacd92d176f858b092c702030972d2a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Leap.Unity.Hands.SetTransform </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_bone.html">Bone</a>&#160;</td>
+          <td class="paramname"><em>bone</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Quaternion&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a bone to a position and rotation. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeb04ed7ff0a714c693075854e26141b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Leap.Unity.Hands.SetTransform </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Quaternion&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a hand to a position and rotation. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac9e2b58cf6b6cd97ca7a90ae07b95887"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_leap_1_1_finger.html">Finger</a> Leap.Unity.Hands.Thumb </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9b20f13b62677f9af6e63a6ff7e42248"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Leap.Unity.Hands.Transform </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_bone.html">Bone</a>&#160;</td>
+          <td class="paramname"><em>bone</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Quaternion&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a bone by a position and rotation. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9e5c26058a0976258bb8852307867c50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Leap.Unity.Hands.Transform </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_finger.html">Finger</a>&#160;</td>
+          <td class="paramname"><em>finger</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Quaternion&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a finger by a position and rotation. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0f230990bfae6a956fb2ce02352c11ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Leap.Unity.Hands.Transform </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td>
+          <td class="paramname"><em>hand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Quaternion&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a hand by a position and rotation. </p>
+
+</div>
+</div>
+<a class="anchor" id="a440eec511dc6dca57db55c227021e80e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Leap.Unity.Hands.Transform </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_leap_1_1_frame.html">Frame</a>&#160;</td>
+          <td class="paramname"><em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Quaternion&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a frame by a position and rotation. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="adfce4acd700c2303fa39284f1b390add"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject Leap.Unity.Hands.s_leapRig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0b253eb3410617e378efb2e83a8f7816"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">LeapServiceProvider</a> Leap.Unity.Hands.s_provider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a91db7808bba46eb6db385404d6147ce8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_hand.html">Hand</a> Leap.Unity.Hands.Left</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the first left hand found by <a class="el" href="namespace_leap.html">Leap</a> in the current frame, otherwise returns null if no such hand is found. </p>
+
+</div>
+</div>
+<a class="anchor" id="acedc86190e84e526c2a82af0edae9a06"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">LeapServiceProvider</a> Leap.Unity.Hands.Provider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Static convenience accessor for the <a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html" title="LeapServiceProvider creates a Controller and supplies Leap Hands and images.">LeapServiceProvider</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1fadf2551d39ced059cf2815bd9adaaa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject Leap.Unity.Hands.Rig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Static convenience accessor for the <a class="el" href="namespace_leap.html">Leap</a> camera rig. </p>
+<p>This is the parent of the Camera that contains a <a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html" title="LeapServiceProvider creates a Controller and supplies Leap Hands and images.">LeapServiceProvider</a> in one of its children, or null if there is no such GameObject. </p>
+
+</div>
+</div>
+<a class="anchor" id="a572e905f3bec7cb35356e3c769931fce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_hand.html">Hand</a> Leap.Unity.Hands.Right</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the first right hand found by <a class="el" href="namespace_leap.html">Leap</a> in the current frame, otherwise returns null if no such hand is found. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_abstract_hold_detector.html">AbstractHoldDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_capsule_hand.html">CapsuleHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_connection_monitor.html">ConnectionMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_custom_editor_base.html">CustomEditorBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4.html">CustomEditorBase&lt; T &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_debug_hand.html">DebugHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_detector.html">Detector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_detector_logic_gate.html">DetectorLogicGate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_disconnection_notice.html">DisconnectionNotice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_enable_depth_buffer.html">EnableDepthBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_execute_after_attribute.html">ExecuteAfterAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_execute_after_default.html">ExecuteAfterDefault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_execute_before_attribute.html">ExecuteBeforeAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_execute_before_default.html">ExecuteBeforeDefault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_extended_finger_detector.html">ExtendedFingerDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_eye_type.html">EyeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_eye_type_editor.html">EyeTypeEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_finger_direction_detector.html">FingerDirectionDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_finger_model.html">FingerModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_fit_height_to_screen.html">FitHeightToScreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_frame_rate_controls.html">FrameRateControls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_drop.html">HandDrop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_enable_disable.html">HandEnableDisable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_fader.html">HandFader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_model.html">HandModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_pool.html">HandPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_representation.html">HandRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_transition_behavior.html">HandTransitionBehavior</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Hands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface_leap_1_1_unity_1_1_i_can_report_duplicate_information.html">ICanReportDuplicateInformation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_i_hand_model.html">IHandModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface_leap_1_1_unity_1_1_i_min_heap_node.html">IMinHeapNode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_key_enable_behaviors.html">KeyEnableBehaviors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_key_enable_game_objects.html">KeyEnableGameObjects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_leap_device_info.html">LeapDeviceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_hand_controller.html">LeapHandController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_hand_controller_editor.html">LeapHandControllerEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_hands_auto_rig.html">LeapHandsAutoRig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_image_retriever.html">LeapImageRetriever</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_image_retriever_editor.html">LeapImageRetrieverEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_provider.html">LeapProvider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_service_provider.html">LeapServiceProvider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_service_provider_editor.html">LeapServiceProviderEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_temporal_warping_editor.html">LeapTemporalWarpingEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_v_r_camera_control.html">LeapVRCameraControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_v_r_temporal_warping.html">LeapVRTemporalWarping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_min_heap_3_01_t_01_4.html">MinHeap&lt; T &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_minimal_hand.html">MinimalHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_mobile_rigged_finger.html">MobileRiggedFinger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_mobile_rigged_hand.html">MobileRiggedHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_object_builder_editor.html">ObjectBuilderEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_palm_direction_detector.html">PalmDirectionDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_pinch_detector.html">PinchDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_poly_finger.html">PolyFinger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_poly_hand.html">PolyHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_produce_consume_buffer_3_01_t_01_4.html">ProduceConsumeBuffer&lt; T &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_profiler_sample.html">ProfilerSample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_proximity_detector.html">ProximityDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_proximity_event.html">ProximityEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_readonly_list_3_01_t_01_4.html">ReadonlyList&lt; T &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_rigged_finger.html">RiggedFinger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_rigged_hand.html">RiggedHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_rigid_finger.html">RigidFinger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_rigid_hand.html">RigidHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_s_dictionary_attribute.html">SDictionaryAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_scene_settings.html">SceneSettings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_serializable_dictionary_3_01_t_key_00_01_t_value_01_4.html">SerializableDictionary&lt; TKey, TValue &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_serializable_dictionary_editor.html">SerializableDictionaryEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_single_layer.html">SingleLayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_single_layer_editor.html">SingleLayerEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_skeletal_finger.html">SkeletalFinger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_skeletal_hand.html">SkeletalHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_smoothed_float.html">SmoothedFloat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_smoothed_quaternion.html">SmoothedQuaternion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_smoothed_vector3.html">SmoothedVector3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_stretch_to_screen.html">StretchToScreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_temporal_warping_status.html">TemporalWarpingStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_unity_matrix_extension.html">UnityMatrixExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_unity_quaternion_extension.html">UnityQuaternionExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_unity_vector_extension.html">UnityVectorExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_utils.html">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_value_mapping_extensions.html">ValueMappingExtensions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

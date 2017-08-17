@@ -1,0 +1,1139 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LeapTransform &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap" href="namespace_leap.html" />
+    <link rel="next" title="LogEventArgs" href="class_leap_1_1_log_event_args.html" />
+    <link rel="prev" title="LeapQuaternion" href="struct_leap_1_1_leap_quaternion.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/struct_leap_1_1_leap_transform.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/struct_leap_1_1_leap_transform.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/struct_leap_1_1_leap_transform.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/struct_leap_1_1_leap_transform.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/struct_leap_1_1_leap_transform.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/struct_leap_1_1_leap_transform.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/struct_leap_1_1_leap_transform.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/struct_leap_1_1_leap_transform.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/struct_leap_1_1_leap_transform.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/struct_leap_1_1_leap_transform.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("struct_leap_1_1_leap_quaternion.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_log_event_args.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap.html" accesskey="U">Leap</a>&raquo;
+  LeapTransform
+</span> -->
+        
+  <div class="section" id="leaptransform">
+<h1>LeapTransform<a class="headerlink" href="#leaptransform" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('struct_leap_1_1_leap_transform.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="struct_leap_1_1_leap_transform-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.LeapTransform Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="struct_leap_1_1_leap_transform.html" title="The LeapTransform class represents a transform in three dimensional space.">LeapTransform</a> class represents a transform in three dimensional space.  
+ <a href="struct_leap_1_1_leap_transform.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a202169e88920074c2ca30144a4de20df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a202169e88920074c2ca30144a4de20df">LeapTransform</a> (<a class="el" href="struct_leap_1_1_vector.html">Vector</a> <a class="el" href="struct_leap_1_1_leap_transform.html#ac7de7c75b3f77718715055990131f08b">translation</a>, <a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a> <a class="el" href="struct_leap_1_1_leap_transform.html#a69917840386ec2421d3886be4ec7833a">rotation</a>)</td></tr>
+<tr class="memdesc:a202169e88920074c2ca30144a4de20df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new transform from the specified translation and rotation.  <a href="#a202169e88920074c2ca30144a4de20df"></a><br/></td></tr>
+<tr class="separator:a202169e88920074c2ca30144a4de20df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cb17381736fafcf776c1f5e8b154009"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a9cb17381736fafcf776c1f5e8b154009">LeapTransform</a> (<a class="el" href="struct_leap_1_1_vector.html">Vector</a> <a class="el" href="struct_leap_1_1_leap_transform.html#ac7de7c75b3f77718715055990131f08b">translation</a>, <a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a> <a class="el" href="struct_leap_1_1_leap_transform.html#a69917840386ec2421d3886be4ec7833a">rotation</a>, <a class="el" href="struct_leap_1_1_vector.html">Vector</a> <a class="el" href="struct_leap_1_1_leap_transform.html#ac8b265b9dfa089183c263bbe7ff0e42d">scale</a>)</td></tr>
+<tr class="memdesc:a9cb17381736fafcf776c1f5e8b154009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new transform from the specified translation, rotation and scale.  <a href="#a9cb17381736fafcf776c1f5e8b154009"></a><br/></td></tr>
+<tr class="separator:a9cb17381736fafcf776c1f5e8b154009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1184d7a37a603a07ed15373bb08c8901"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a1184d7a37a603a07ed15373bb08c8901">MirrorX</a> ()</td></tr>
+<tr class="memdesc:a1184d7a37a603a07ed15373bb08c8901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors this transform's rotation and scale across the x-axis.  <a href="#a1184d7a37a603a07ed15373bb08c8901"></a><br/></td></tr>
+<tr class="separator:a1184d7a37a603a07ed15373bb08c8901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699bd459e338da85f1ee7c2de9e466de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a699bd459e338da85f1ee7c2de9e466de">MirrorZ</a> ()</td></tr>
+<tr class="memdesc:a699bd459e338da85f1ee7c2de9e466de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors this transform's rotation and scale across the z-axis.  <a href="#a699bd459e338da85f1ee7c2de9e466de"></a><br/></td></tr>
+<tr class="separator:a699bd459e338da85f1ee7c2de9e466de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c90f4a484f3b55e415c0e203f78870"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a05c90f4a484f3b55e415c0e203f78870">TransformDirection</a> (<a class="el" href="struct_leap_1_1_vector.html">Vector</a> direction)</td></tr>
+<tr class="memdesc:a05c90f4a484f3b55e415c0e203f78870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the specified direction vector, applying rotation only.  <a href="#a05c90f4a484f3b55e415c0e203f78870"></a><br/></td></tr>
+<tr class="separator:a05c90f4a484f3b55e415c0e203f78870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a069ce8e414f0def9697b7816dcc4a799"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a069ce8e414f0def9697b7816dcc4a799">TransformPoint</a> (<a class="el" href="struct_leap_1_1_vector.html">Vector</a> point)</td></tr>
+<tr class="memdesc:a069ce8e414f0def9697b7816dcc4a799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the specified position vector, applying translation, rotation and scale.  <a href="#a069ce8e414f0def9697b7816dcc4a799"></a><br/></td></tr>
+<tr class="separator:a069ce8e414f0def9697b7816dcc4a799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9658850a91beef88214dcaac6f6e6af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#ad9658850a91beef88214dcaac6f6e6af">TransformQuaternion</a> (<a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a> rhs)</td></tr>
+<tr class="memdesc:ad9658850a91beef88214dcaac6f6e6af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the specified quaternion.  <a href="#ad9658850a91beef88214dcaac6f6e6af"></a><br/></td></tr>
+<tr class="separator:ad9658850a91beef88214dcaac6f6e6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a415819fca9f811c44dc5d855b2099f61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a415819fca9f811c44dc5d855b2099f61">TransformVelocity</a> (<a class="el" href="struct_leap_1_1_vector.html">Vector</a> velocity)</td></tr>
+<tr class="memdesc:a415819fca9f811c44dc5d855b2099f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the specified velocity vector, applying rotation and scale.  <a href="#a415819fca9f811c44dc5d855b2099f61"></a><br/></td></tr>
+<tr class="separator:a415819fca9f811c44dc5d855b2099f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a10de68df5cf1afa89c273a33d0629f16"><td class="memItemLeft" align="right" valign="top">static readonly <a class="el" href="struct_leap_1_1_leap_transform.html">LeapTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a10de68df5cf1afa89c273a33d0629f16">Identity</a> = new <a class="el" href="struct_leap_1_1_leap_transform.html">LeapTransform</a>(<a class="el" href="struct_leap_1_1_vector.html#a007c4ee68aa890118b7a2d24aa4d9a6b">Vector.Zero</a>, LeapQuaternion.Identity, <a class="el" href="struct_leap_1_1_vector.html#a0eb4303bb2650290ac5ca18f1e59563d">Vector.Ones</a>)</td></tr>
+<tr class="memdesc:a10de68df5cf1afa89c273a33d0629f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">The identity transform.  <a href="#a10de68df5cf1afa89c273a33d0629f16"></a><br/></td></tr>
+<tr class="separator:a10de68df5cf1afa89c273a33d0629f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a69917840386ec2421d3886be4ec7833a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a69917840386ec2421d3886be4ec7833a">rotation</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a69917840386ec2421d3886be4ec7833a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rotational component of the transform.  <a href="#a69917840386ec2421d3886be4ec7833a"></a><br/></td></tr>
+<tr class="separator:a69917840386ec2421d3886be4ec7833a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8b265b9dfa089183c263bbe7ff0e42d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#ac8b265b9dfa089183c263bbe7ff0e42d">scale</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac8b265b9dfa089183c263bbe7ff0e42d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scale factors of the transform.  <a href="#ac8b265b9dfa089183c263bbe7ff0e42d"></a><br/></td></tr>
+<tr class="separator:ac8b265b9dfa089183c263bbe7ff0e42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7de7c75b3f77718715055990131f08b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#ac7de7c75b3f77718715055990131f08b">translation</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac7de7c75b3f77718715055990131f08b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The translation component of the transform.  <a href="#ac7de7c75b3f77718715055990131f08b"></a><br/></td></tr>
+<tr class="separator:ac7de7c75b3f77718715055990131f08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a67b81b7344f05e136048e2159ab663"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a8a67b81b7344f05e136048e2159ab663">xBasis</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8a67b81b7344f05e136048e2159ab663"><td class="mdescLeft">&#160;</td><td class="mdescRight">The x-basis of the transform.  <a href="#a8a67b81b7344f05e136048e2159ab663"></a><br/></td></tr>
+<tr class="separator:a8a67b81b7344f05e136048e2159ab663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac46874ef78036f1bc2d2bf76dd9a62a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#ac46874ef78036f1bc2d2bf76dd9a62a2">yBasis</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac46874ef78036f1bc2d2bf76dd9a62a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The y-basis of the transform.  <a href="#ac46874ef78036f1bc2d2bf76dd9a62a2"></a><br/></td></tr>
+<tr class="separator:ac46874ef78036f1bc2d2bf76dd9a62a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e5ecf307c5938bf9e04902b8395f8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a59e5ecf307c5938bf9e04902b8395f8a">zBasis</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a59e5ecf307c5938bf9e04902b8395f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The z-basis of the transform.  <a href="#a59e5ecf307c5938bf9e04902b8395f8a"></a><br/></td></tr>
+<tr class="separator:a59e5ecf307c5938bf9e04902b8395f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9c54b0b46feb030e7d229a14843ed7e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a9c54b0b46feb030e7d229a14843ed7e1">_flip</a></td></tr>
+<tr class="separator:a9c54b0b46feb030e7d229a14843ed7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e771a4fa57453bd4d5079509bcbdee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a52e771a4fa57453bd4d5079509bcbdee">_flipAxes</a></td></tr>
+<tr class="separator:a52e771a4fa57453bd4d5079509bcbdee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac68b2fe49b930cc440b27eb004201ef4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#ac68b2fe49b930cc440b27eb004201ef4">_quaternion</a></td></tr>
+<tr class="separator:ac68b2fe49b930cc440b27eb004201ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6928b0710730241862e7d2220e4857a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#af6928b0710730241862e7d2220e4857a">_quaternionDirty</a></td></tr>
+<tr class="separator:af6928b0710730241862e7d2220e4857a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7346f275d0f867835d02bde60fe5f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a4c7346f275d0f867835d02bde60fe5f4">_scale</a></td></tr>
+<tr class="separator:a4c7346f275d0f867835d02bde60fe5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa24f736cd27d3c9ba66bdec74221cac1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#aa24f736cd27d3c9ba66bdec74221cac1">_translation</a></td></tr>
+<tr class="separator:aa24f736cd27d3c9ba66bdec74221cac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58365f62f8de014690e5b7c74c02227"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#ac58365f62f8de014690e5b7c74c02227">_xBasis</a></td></tr>
+<tr class="separator:ac58365f62f8de014690e5b7c74c02227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e2033a21d3376c3eb6ebb933ed40eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a54e2033a21d3376c3eb6ebb933ed40eb">_xBasisScaled</a></td></tr>
+<tr class="separator:a54e2033a21d3376c3eb6ebb933ed40eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3758d950bc27c5e59fe7f4d79b158762"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a3758d950bc27c5e59fe7f4d79b158762">_yBasis</a></td></tr>
+<tr class="separator:a3758d950bc27c5e59fe7f4d79b158762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e6f7edebb73722b236d55a717526c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#ab9e6f7edebb73722b236d55a717526c2">_yBasisScaled</a></td></tr>
+<tr class="separator:ab9e6f7edebb73722b236d55a717526c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cea3511722be298d1ad5846d18bfe7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#a2cea3511722be298d1ad5846d18bfe7b">_zBasis</a></td></tr>
+<tr class="separator:a2cea3511722be298d1ad5846d18bfe7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4bda0c29c5b9bc8796bcf553753327f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_leap_transform.html#ab4bda0c29c5b9bc8796bcf553753327f">_zBasisScaled</a></td></tr>
+<tr class="separator:ab4bda0c29c5b9bc8796bcf553753327f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="struct_leap_1_1_leap_transform.html" title="The LeapTransform class represents a transform in three dimensional space.">LeapTransform</a> class represents a transform in three dimensional space. </p>
+<p>Note that the <a class="el" href="struct_leap_1_1_leap_transform.html" title="The LeapTransform class represents a transform in three dimensional space.">LeapTransform</a> class replaces the <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix.">Leap.Matrix</a> class. </p>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a202169e88920074c2ca30144a4de20df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Leap.LeapTransform.LeapTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>translation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a>&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a new transform from the specified translation and rotation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">translation</td><td>the translation vector. </td></tr>
+    <tr><td class="paramname">rotation</td><td>the rotation quaternion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9cb17381736fafcf776c1f5e8b154009"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Leap.LeapTransform.LeapTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>translation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a>&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a new transform from the specified translation, rotation and scale. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">translation</td><td>the translation vector. </td></tr>
+    <tr><td class="paramname">rotation</td><td>the rotation quaternion. </td></tr>
+    <tr><td class="paramname">scale</td><td>the scale vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1184d7a37a603a07ed15373bb08c8901"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.LeapTransform.MirrorX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mirrors this transform's rotation and scale across the x-axis. </p>
+<p>Translation is not affected. </p>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a699bd459e338da85f1ee7c2de9e466de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.LeapTransform.MirrorZ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mirrors this transform's rotation and scale across the z-axis. </p>
+<p>Translation is not affected. </p>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a05c90f4a484f3b55e415c0e203f78870"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform.TransformDirection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transforms the specified direction vector, applying rotation only. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>the direction vector to transform. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the new direction vector. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a069ce8e414f0def9697b7816dcc4a799"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform.TransformPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transforms the specified position vector, applying translation, rotation and scale. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>the position vector to transform. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the new position vector. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad9658850a91beef88214dcaac6f6e6af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a> Leap.LeapTransform.TransformQuaternion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a>&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transforms the specified quaternion. </p>
+<p>Multiplies the quaternion representing the rotational part of this transform by the specified quaternion.</p>
+<p><b>Important:</b> Modifying the basis vectors of this transform directly leaves the underlying quaternion in an indeterminate state. Neither this function nor the <a class="el" href="struct_leap_1_1_leap_transform.html#a69917840386ec2421d3886be4ec7833a" title="The rotational component of the transform.">LeapTransform.rotation</a> quaternion can be used after the basis vectors are set.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>the quaternion to transform. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the new quaternion. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a415819fca9f811c44dc5d855b2099f61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform.TransformVelocity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>velocity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transforms the specified velocity vector, applying rotation and scale. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>the velocity vector to transform. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the new velocity vector. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a9c54b0b46feb030e7d229a14843ed7e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.LeapTransform._flip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a52e771a4fa57453bd4d5079509bcbdee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform._flipAxes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac68b2fe49b930cc440b27eb004201ef4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a> Leap.LeapTransform._quaternion</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af6928b0710730241862e7d2220e4857a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.LeapTransform._quaternionDirty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4c7346f275d0f867835d02bde60fe5f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform._scale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa24f736cd27d3c9ba66bdec74221cac1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform._translation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac58365f62f8de014690e5b7c74c02227"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform._xBasis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a54e2033a21d3376c3eb6ebb933ed40eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform._xBasisScaled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3758d950bc27c5e59fe7f4d79b158762"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform._yBasis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab9e6f7edebb73722b236d55a717526c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform._yBasisScaled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2cea3511722be298d1ad5846d18bfe7b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform._zBasis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab4bda0c29c5b9bc8796bcf553753327f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform._zBasisScaled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a10de68df5cf1afa89c273a33d0629f16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="struct_leap_1_1_leap_transform.html">LeapTransform</a> Leap.LeapTransform.Identity = new <a class="el" href="struct_leap_1_1_leap_transform.html">LeapTransform</a>(<a class="el" href="struct_leap_1_1_vector.html#a007c4ee68aa890118b7a2d24aa4d9a6b">Vector.Zero</a>, LeapQuaternion.Identity, <a class="el" href="struct_leap_1_1_vector.html#a0eb4303bb2650290ac5ca18f1e59563d">Vector.Ones</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The identity transform. </p>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a69917840386ec2421d3886be4ec7833a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a> Leap.LeapTransform.rotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The rotational component of the transform. </p>
+<p><b>Important:</b> Modifying the basis vectors of this transform directly leaves the underlying quaternion in an indeterminate state. This rotation quaternion cannot be accessed after the basis vectors are modified directly.</p>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac8b265b9dfa089183c263bbe7ff0e42d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform.scale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The scale factors of the transform. </p>
+<p>Scale is kept separate from translation. </p>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac7de7c75b3f77718715055990131f08b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform.translation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The translation component of the transform. </p>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8a67b81b7344f05e136048e2159ab663"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform.xBasis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The x-basis of the transform. </p>
+<p><b>Important:</b> Modifying the basis vectors of this transform directly leaves the underlying quaternion in an indeterminate state. Neither the <a class="el" href="struct_leap_1_1_leap_transform.html#ad9658850a91beef88214dcaac6f6e6af" title="Transforms the specified quaternion.">TransformQuaternion()</a> function nor the <a class="el" href="struct_leap_1_1_leap_transform.html#a69917840386ec2421d3886be4ec7833a" title="The rotational component of the transform.">LeapTransform.rotation</a> quaternion can be used after the basis vectors are set.</p>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac46874ef78036f1bc2d2bf76dd9a62a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform.yBasis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The y-basis of the transform. </p>
+<p><b>Important:</b> Modifying the basis vectors of this transform directly leaves the underlying quaternion in an indeterminate state. Neither the <a class="el" href="struct_leap_1_1_leap_transform.html#ad9658850a91beef88214dcaac6f6e6af" title="Transforms the specified quaternion.">TransformQuaternion()</a> function nor the <a class="el" href="struct_leap_1_1_leap_transform.html#a69917840386ec2421d3886be4ec7833a" title="The rotational component of the transform.">LeapTransform.rotation</a> quaternion can be used after the basis vectors are set.</p>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a59e5ecf307c5938bf9e04902b8395f8a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.LeapTransform.zBasis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The z-basis of the transform. </p>
+<p><b>Important:</b> Modifying the basis vectors of this transform directly leaves the underlying quaternion in an indeterminate state. Neither the <a class="el" href="struct_leap_1_1_leap_transform.html#ad9658850a91beef88214dcaac6f6e6af" title="Transforms the specified quaternion.">TransformQuaternion()</a> function nor the <a class="el" href="struct_leap_1_1_leap_transform.html#a69917840386ec2421d3886be4ec7833a" title="The rotational component of the transform.">LeapTransform.rotation</a> quaternion can be used after the basis vectors are set.</p>
+<dl class="section since"><dt>Since</dt><dd>3.1.2 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap.html">Leap</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_c_sharp_extensions.html">CSharpExtensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_clock_correlator.html">ClockCorrelator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_config.html">Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_config_change_event_args.html">ConfigChangeEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_connection_event_args.html">ConnectionEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_connection_lost_event_args.html">ConnectionLostEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_constants.html">Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_copy_from_other_extensions.html">CopyFromOtherExtensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device_event_args.html">DeviceEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device_failure_event_args.html">DeviceFailureEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_distortion_data.html">DistortionData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_distortion_event_args.html">DistortionEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_dropped_frame_event_args.html">DroppedFrameEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_frame_event_args.html">FrameEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface_leap_1_1_i_controller.html">IController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_image.html">Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_image_event_args.html">ImageEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_image_request_failed_event_args.html">ImageRequestFailedEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_internal_frame_event_args.html">InternalFrameEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_leap_event_args.html">LeapEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">LeapTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_log_event_args.html">LogEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_policy_event_args.html">PolicyEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_set_config_response_event_args.html">SetConfigResponseEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_test_hand_factory.html">TestHandFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_time_bracket.html">TimeBracket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_transform_extensions.html">TransformExtensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

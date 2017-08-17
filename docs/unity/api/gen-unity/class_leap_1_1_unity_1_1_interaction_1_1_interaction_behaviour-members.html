@@ -1,0 +1,470 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>All InteractionBehaviour members &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour-members.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour-members.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour-members.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour-members.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour-members.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour-members.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour-members.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour-members.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour-members.html";
+            } else {
+
+                    if( requestedAPI == 'cpp'){
+                        redirectedLocation = relPath + "cpp/index.html?proglang=cpp";
+                    }
+                    else if( requestedAPI == 'csharp'){
+                        redirectedLocation = relPath + "csharp/index.html?proglang=csharp";
+                    }
+                    else if( requestedAPI == 'unity'){
+                        redirectedLocation = relPath + "unity/index.html?proglang=unity";
+                    }
+                    else if( requestedAPI == 'objc'){
+                        redirectedLocation = relPath + "objc/index.html?proglang=objc";
+                    }
+                    else if( requestedAPI == 'java') {
+                        redirectedLocation = relPath + "java/index.html?proglang=java";
+                    }
+                    else if( requestedAPI == 'javascript'){
+                        redirectedLocation = relPath + "javascript/index.html?proglang=javascript";
+                    }
+                    else if( requestedAPI == 'python'){
+                        redirectedLocation = relPath + "python/index.html?proglang=python";
+                    }
+                    else if( requestedAPI == 'unreal') {
+                        redirectedLocation = relPath + "unreal/index.html?proglang=unreal";
+                    } else {
+                        redirectedLocation = relPath + "index.html";
+                    }
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour-members.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){    }
+    else if( character == "K" & e.altKey){
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../../javascript/index.html?proglang=javascript" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../../csharp/index.html?proglang=csharp" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../../cpp/index.html?proglang=cpp" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../../java/index.html?proglang=java" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../../python/index.html?proglang=python" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../../objc/index.html?proglang=objc" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../../unreal/index.html?proglang=unreal" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+  All InteractionBehaviour members
+</span> -->
+        
+  <div class="section" id="all-interactionbehaviour-members">
+<h1>All InteractionBehaviour members<a class="headerlink" href="#all-interactionbehaviour-members" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Leap.Unity.Interaction.InteractionBehaviour Member List</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is the complete list of members for <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a059f47f37ca9a4080ca61210f7bdaf70">_accumulatedAngularAcceleration</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a8c88531b538cda8bdcb2b877b48b5c53">_accumulatedLinearAcceleration</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a99640a8f33e7511820fdfc4b5193e74f">_angularDrag</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a51a62d64954a7c0684603051ec08d813">_baseCallGuard</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a9b2880036b750657d940e010617e21b5">_childrenArray</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a1b6896e53cdb93545a132a27c5b9402b">_contactMode</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a2b762ff9c756833a74f2139ee2d3914a">_controllers</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a81d46e349c05370a398c7538e3fdb085">_dislocatedBrushCounter</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a8fc1b8b1076ae24b3eedbcf4f6755dbb">_drag</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#abdb532f0a534feeaf8d8aa9d3262ffc8">_isKinematic</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#aaee86136ae31df095e2cb085b77c6b85">_manager</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#aa8bc0d1cf60caef1ab1be41de53c2b78">_material</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a2cf62478174a3a43d1c2e2a031601ddd">_materialReplacer</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a1699a54027109dd3e548fc3cc51e8223">_minHandDistance</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a7e2f0fc27e8b439c9ec3f1ca167b4a86">_notifiedOfTeleport</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#ae89f9fafc83619a5e3b71e2834cca888">_recievedVelocityUpdate</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a14ad11efede64a17a5c59e71855be945">_rigidbody</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a8b3063e51ee8780485b2dda2905beac2">_solvedPosition</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#aa4088cdb8822562ff6a8659f21ba5455">_solvedRotation</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a535774a9ad84f94efbc923a13f12f397">_useGravity</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a6b9438c9ae8a36757f5dca097841a5d7">_warper</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a74c47fa3fd3836d15da9d8689377023a">AddAngularAcceleration</a>(Vector3 acceleration)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#ad7c8cdc8d52f0de4d0036a76855b8926">AddLinearAcceleration</a>(Vector3 acceleration)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a58007ad3f97e56b0de22e27b139795f7">Awake</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a1997c6e5580ddad1ca6a6eef797f2adc">CheckMaterial</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#afe1dbc134d9476f0be796f6f0a70269e">ContactMode</a> enum name</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#ad6eb51002233c1237799c983f41c3d5b">controllers</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a1f828eb97e0e020183ac69a0cd87aa8c">DISLOCATED_BRUSH_COOLDOWN</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#ac5e4b94094d4ac42d5490b95af42c3d2">GenerateShapeDescriptionHandle</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#ac7fa48db60352a4ab72fb45c1bbd3e5b">GetInteractionShapeCreationInfo</a>(out INTERACTION_CREATE_SHAPE_INFO createInfo, out INTERACTION_TRANSFORM createTransform)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#ab26b0e0f61e81ec6268ecafe744dad20">GetInteractionShapeUpdateInfo</a>(out INTERACTION_UPDATE_SHAPE_INFO updateInfo, out INTERACTION_TRANSFORM interactionTransform)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a8683983eb9032cb086bba5ebba3b545b">getRigidbodyTransform</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a74f42327cd63d8794aa208580472e002">GraspingHandCount</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#ae837b8b00afccc27be9851adced464c8">GraspingHands</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a261b3ba3e9722fc1eefe9e502d2d88c0">HasShapeInstance</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a7ac145078d1c81544333a65cc90d38ea">IsAbleToBeDeactivated</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a707434c8960283016713d38e189836b4">IsBeingGrasped</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a2f479f7f318370cf68f97eefb7bff94b">IsBeingGraspedByHand</a>(int handId)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a9ff91c7282e2450c91b7d6eb281b9d75">isKinematic</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a87d20d21b5b95e1b404011f530a1197a">IsRegisteredWithManager</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a878e1ce3820e99f7876af64bd40729be">Manager</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a4231a87511e75b4571f5c0bf09991cc0">material</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#acb99b3b4f68bc0681bbb60b304422f93">NotifyBrushDislocated</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a0ab660e203ea3cb2ca6af09381d8be36">NotifyHandGrasped</a>(Hand hand)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#ae9afec1b4e63129690ddec591598f1bb">NotifyHandLostTracking</a>(Hand oldHand, out float maxSuspensionTime)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#afb4f27d21aaaaa50181a98d4e868f88d">NotifyHandRegainedTracking</a>(Hand newHand, int oldId)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#ae5c932ef0e00254b29d401673be1bddd">NotifyHandReleased</a>(Hand hand)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a9b6b9678d096d8b652c16673bce4ca3c">NotifyHandsHoldGraphics</a>(ReadonlyList&lt; Hand &gt; hands)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a556894d8fffab71988cf0f5d1f06c051">NotifyHandsHoldPhysics</a>(ReadonlyList&lt; Hand &gt; hands)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a44d4d1a3c9990bdfb6574cf2fdddc5f3">NotifyHandTimeout</a>(Hand oldHand)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a36eaccddfde4e713564c74b64e74e870">NotifyInteractionShapeCreated</a>(INTERACTION_SHAPE_INSTANCE_HANDLE instanceHandle)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a8dd2d9419ea2e909c73f2b1d6ccb3503">NotifyInteractionShapeDestroyed</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a25cf6084e10a2067a1791cf148e12ac6">NotifyPostSolve</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a04d096abe6c4418ee7110c5e0ba3eecf">NotifyPreSolve</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a97827cf9e9da9a9e6b6ff0b85c512c52">NotifyRecievedSimulationResults</a>(INTERACTION_SHAPE_INSTANCE_RESULTS results)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a368cba4964d14ae469fd5c558fafe09f">NotifyRegistered</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#abecaa37dfb3876424bef6493b99b8f1a">NotifyTeleported</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#aa671cc869224740e8d4b3cf3ec265fa6">NotifyUnregistered</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a8f1f8e5f557d6a044be02e39361484dd">OnDisable</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#aab9d81428495da5d9d4b68fd055a1c33">OnEnable</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a5a8d9dc783d67b92b2052322feaa5091">OnGraspBegin</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a3f4acb7774fd33c1c975a19285feb633">OnGraspBeginEvent</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a6aa2b73175a6a8f59e10e6bd1aee5588">OnGraspEnd</a>(Hand lastHand)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#ae9f16cf9ab853f2667a136f68eb3e9bd">OnGraspEndEvent</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#ae2ae78a172d2fd713336962ea7ed1f72">OnHandGrasped</a>(Hand hand)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a740f97fd35cf51dd60498a8bac4b4fbb">OnHandGraspedEvent</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#aa9e4ba3f81ad68e07d36c220a50ff79d">OnHandLostTracking</a>(Hand oldHand, out float maxSuspensionTime)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#aa02ca84f4ca55f45929b40b5fe24e110">OnHandRegainedTracking</a>(Hand newHand, int oldId)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a49e2574a0c843a7ce5b4550d5de399f9">OnHandReleased</a>(Hand hand)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a7175ea15d8abacadd10fabf98937f9e8">OnHandReleasedEvent</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#ac3619e2c2075b3aa2fb5430f83cbfdcb">OnHandsHoldGraphics</a>(ReadonlyList&lt; Hand &gt; hands)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a7b4dc86f865131e99c39721b50e31b64">OnHandsHoldPhysics</a>(ReadonlyList&lt; Hand &gt; hands)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#ae355f636c30868687363972997874301">OnHandTimeout</a>(Hand oldHand)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a36b9e8608c650adf186be316b64a14e0">OnInteractionShapeCreated</a>(INTERACTION_SHAPE_INSTANCE_HANDLE instanceHandle)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a9389d6eb0f6bc1cedec64cf4cb860df5">OnInteractionShapeDestroyed</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a9c9af5220d36e39d0c2b1ca8d63bcd35">OnPostSolve</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#ac00323a00f52fb72e1d0ad793f3fb4f9">OnPreSolve</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a9b973af2b08fe4be492edfc24903553e">OnRecievedSimulationResults</a>(INTERACTION_SHAPE_INSTANCE_RESULTS results)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a915556514c41d2e0e25b9d7b5c061111">OnRegistered</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a19e1c30870aba0eda9c6f75ed2e304b2">OnUnregistered</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a7e9f50764aa1fd988e4a7b768a5f737d">Reset</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a8215ef227afa634e53588210151ff732">revertRigidbodyState</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a4f54f1794944882d8cf51bd641a5341c">rigidbody</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a9fb6a36da35c8ae7355163ae9db6daed">ShapeDescriptionHandle</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a3ee11a7774ab1223f64f32f4db041456">ShapeInstanceHandle</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#ab4150dee6d26fd23f8c8d4eb63ec962d">TrackedGraspingHands</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#a2d2ce497a5b51a9eade163c2fc20b33c">UntrackedGraspingHands</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html#aee6b6b0adee3f2cecb43da9ea60a29d9">UntrackedHandCount</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">Leap.Unity.Interaction.InteractionBehaviourBase</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#ac1e1c5c7a591f89a48e1cbe1699c947c">updateContactMode</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a01b5820ab173e36b31661220797ebd32">updateLayer</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a426f5499147620b651c70e853ea27c28">useGravity</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a632fab5e06e0b0bd526b8e6bfecbb14f">Validate</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#addf3e0e2ec1f69bb11147df8824ee581">warper</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html#a5dd3cf55173c28e132f98c2098938675">WasTeleported</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">Leap.Unity.Interaction.InteractionBehaviour</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

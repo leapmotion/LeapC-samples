@@ -1,0 +1,2294 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LeapInputModule &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap::Unity::InputModule" href="namespace_leap_1_1_unity_1_1_input_module.html" />
+    <link rel="next" title="PhysicsUI" href="class_leap_1_1_unity_1_1_input_module_1_1_physics_u_i.html" />
+    <link rel="prev" title="ILeapWidget" href="interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap_1_1_unity_1_1_input_module.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_input_module_1_1_physics_u_i.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_input_module.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap_1_1_unity_1_1_input_module.html" accesskey="U">Leap::Unity::InputModule</a>&raquo;
+  LeapInputModule
+</span> -->
+        
+  <div class="section" id="leapinputmodule">
+<h1>LeapInputModule<a class="headerlink" href="#leapinputmodule" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.Unity.InputModule.LeapInputModule Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>An <a class="el" href="namespace_leap_1_1_unity_1_1_input_module.html">InputModule</a> that supports the use of <a class="el" href="namespace_leap.html">Leap</a> Motion tracking data for manipulating <a class="el" href="namespace_leap_1_1_unity.html" title="IHandModel defines abstract methods as a template for building Leap hand models.">Unity</a> UI controls.  
+ <a href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#details">More...</a></p>
+
+<p>Inherits BaseInputModule.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module_1_1_position_event.html">PositionEvent</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ade2b926e8491acc864531d10cc4b3e1c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ade2b926e8491acc864531d10cc4b3e1c">InteractionCapability</a> : int { <a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ade2b926e8491acc864531d10cc4b3e1c">Hybrid</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ade2b926e8491acc864531d10cc4b3e1c">Tactile</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ade2b926e8491acc864531d10cc4b3e1c">Projective</a>
+ }</td></tr>
+<tr class="memdesc:ade2b926e8491acc864531d10cc4b3e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the interaction modes :  <a href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ade2b926e8491acc864531d10cc4b3e1c">More...</a><br/></td></tr>
+<tr class="separator:ade2b926e8491acc864531d10cc4b3e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a73e6f9f36fba14dc973153a46fa815f1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a73e6f9f36fba14dc973153a46fa815f1">distanceOfTipToElement</a> (Transform UIElement, int whichHand, int whichFinger)</td></tr>
+<tr class="memdesc:a73e6f9f36fba14dc973153a46fa815f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The z position of the index finger tip to the specified transform.  <a href="#a73e6f9f36fba14dc973153a46fa815f1"></a><br/></td></tr>
+<tr class="separator:a73e6f9f36fba14dc973153a46fa815f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11123295e0aad3f03f0d34a624ae3db4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a11123295e0aad3f03f0d34a624ae3db4">distanceOfTipToPointer</a> (int whichPointer, int whichHand, int whichFinger)</td></tr>
+<tr class="memdesc:a11123295e0aad3f03f0d34a624ae3db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The z position of the index finger tip to the Pointer.  <a href="#a11123295e0aad3f03f0d34a624ae3db4"></a><br/></td></tr>
+<tr class="separator:a11123295e0aad3f03f0d34a624ae3db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a7e40d0581bfa470dfdb01983cc2de3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a3a7e40d0581bfa470dfdb01983cc2de3">getTouchingMode</a> ()</td></tr>
+<tr class="memdesc:a3a7e40d0581bfa470dfdb01983cc2de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if any active pointer is in the "touching" interaction mode, i.e, whether it is touching or nearly touching a canvas or control.  <a href="#a3a7e40d0581bfa470dfdb01983cc2de3"></a><br/></td></tr>
+<tr class="separator:a3a7e40d0581bfa470dfdb01983cc2de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92922a67ee51f0b004453a2b8f70dc61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a92922a67ee51f0b004453a2b8f70dc61">getTouchingMode</a> (int whichPointer)</td></tr>
+<tr class="memdesc:a92922a67ee51f0b004453a2b8f70dc61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the specified pointer is in the "touching" interaction mode, i.e, whether it is touching or nearly touching a canvas or control.  <a href="#a92922a67ee51f0b004453a2b8f70dc61"></a><br/></td></tr>
+<tr class="separator:a92922a67ee51f0b004453a2b8f70dc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb6ee9b39d981abce5fb36b59052dca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a0bb6ee9b39d981abce5fb36b59052dca">isTriggeringInteraction</a> (int whichPointer, int whichHand, int whichFinger)</td></tr>
+<tr class="memdesc:a0bb6ee9b39d981abce5fb36b59052dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">A boolean function that returns true if a "click" is being triggered during the current frame.  <a href="#a0bb6ee9b39d981abce5fb36b59052dca"></a><br/></td></tr>
+<tr class="separator:a0bb6ee9b39d981abce5fb36b59052dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a787587aea827b0473d8edf2e3da3b76b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a787587aea827b0473d8edf2e3da3b76b">lerpPointerColor</a> (int whichPointer, Color color, float lerpalpha)</td></tr>
+<tr class="memdesc:a787587aea827b0473d8edf2e3da3b76b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearly interpolates the color of a cursor toward the specified color.  <a href="#a787587aea827b0473d8edf2e3da3b76b"></a><br/></td></tr>
+<tr class="separator:a787587aea827b0473d8edf2e3da3b76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb35a45ceb80fb4278a7f55ce47dab84"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#abb35a45ceb80fb4278a7f55ce47dab84">Process</a> ()</td></tr>
+<tr class="separator:abb35a45ceb80fb4278a7f55ce47dab84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2fce1bb68785fdb4dac4141e4235f35"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ad2fce1bb68785fdb4dac4141e4235f35">ShouldActivateModule</a> ()</td></tr>
+<tr class="memdesc:ad2fce1bb68785fdb4dac4141e4235f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only activate the <a class="el" href="namespace_leap_1_1_unity_1_1_input_module.html">InputModule</a> when there are hands in the scene.  <a href="#ad2fce1bb68785fdb4dac4141e4235f35"></a><br/></td></tr>
+<tr class="separator:ad2fce1bb68785fdb4dac4141e4235f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a80ccb7ececec59abc4e73009a29eedec"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a80ccb7ececec59abc4e73009a29eedec">BeginHoverSound</a></td></tr>
+<tr class="memdesc:a80ccb7ececec59abc4e73009a29eedec"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sound that is played when the pointer transitions from canvas to element.  <a href="#a80ccb7ececec59abc4e73009a29eedec"></a><br/></td></tr>
+<tr class="separator:a80ccb7ececec59abc4e73009a29eedec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca19a1c1d3f4297e1591c74d7bb556c"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aaca19a1c1d3f4297e1591c74d7bb556c">BeginMissedSound</a></td></tr>
+<tr class="memdesc:aaca19a1c1d3f4297e1591c74d7bb556c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sound that is played when the pointer triggers blank canvas.  <a href="#aaca19a1c1d3f4297e1591c74d7bb556c"></a><br/></td></tr>
+<tr class="separator:aaca19a1c1d3f4297e1591c74d7bb556c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac16c89bda7c47db44039fccb2867c32e"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ac16c89bda7c47db44039fccb2867c32e">BeginTriggerSound</a></td></tr>
+<tr class="memdesc:ac16c89bda7c47db44039fccb2867c32e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sound that is played when the pointer triggers a UI element.  <a href="#ac16c89bda7c47db44039fccb2867c32e"></a><br/></td></tr>
+<tr class="separator:ac16c89bda7c47db44039fccb2867c32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966ac42eb269be96cc1d245048dc58f4"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a966ac42eb269be96cc1d245048dc58f4">DragLoopSound</a></td></tr>
+<tr class="memdesc:a966ac42eb269be96cc1d245048dc58f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sound that is played while the pointer is dragging an object.  <a href="#a966ac42eb269be96cc1d245048dc58f4"></a><br/></td></tr>
+<tr class="separator:a966ac42eb269be96cc1d245048dc58f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaef64b660684da08094cb7db534a0e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#abaef64b660684da08094cb7db534a0e8">DrawDebug</a> = false</td></tr>
+<tr class="memdesc:abaef64b660684da08094cb7db534a0e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the raycast for projective interaction.  <a href="#abaef64b660684da08094cb7db534a0e8"></a><br/></td></tr>
+<tr class="separator:abaef64b660684da08094cb7db534a0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fcba60112a1c39462a5e317d17445b9"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a2fcba60112a1c39462a5e317d17445b9">EndHoverSound</a></td></tr>
+<tr class="memdesc:a2fcba60112a1c39462a5e317d17445b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sound that is played when the pointer transitions from canvas to element.  <a href="#a2fcba60112a1c39462a5e317d17445b9"></a><br/></td></tr>
+<tr class="separator:a2fcba60112a1c39462a5e317d17445b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34e127e11941faf52ce54a51114a0420"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a34e127e11941faf52ce54a51114a0420">EndMissedSound</a></td></tr>
+<tr class="memdesc:a34e127e11941faf52ce54a51114a0420"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sound that is played when the pointer triggers blank canvas.  <a href="#a34e127e11941faf52ce54a51114a0420"></a><br/></td></tr>
+<tr class="separator:a34e127e11941faf52ce54a51114a0420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5824e1e12dfa0a83dad6ad425593351"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ac5824e1e12dfa0a83dad6ad425593351">EndTriggerSound</a></td></tr>
+<tr class="memdesc:ac5824e1e12dfa0a83dad6ad425593351"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sound that is played when the pointer triggers a UI element.  <a href="#ac5824e1e12dfa0a83dad6ad425593351"></a><br/></td></tr>
+<tr class="separator:ac5824e1e12dfa0a83dad6ad425593351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f1607433a7c56a35ad21c45d2ec5d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module_1_1_position_event.html">PositionEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ab2f1607433a7c56a35ad21c45d2ec5d7">environmentPinch</a></td></tr>
+<tr class="memdesc:ab2f1607433a7c56a35ad21c45d2ec5d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event that is triggered while pinching to a point in the environment.  <a href="#ab2f1607433a7c56a35ad21c45d2ec5d7"></a><br/></td></tr>
+<tr class="separator:ab2f1607433a7c56a35ad21c45d2ec5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59825979fec53a796dcd994a6b2640ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a59825979fec53a796dcd994a6b2640ec">EnvironmentPointer</a> = false</td></tr>
+<tr class="memdesc:a59825979fec53a796dcd994a6b2640ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the pointer onto the enviroment.  <a href="#a59825979fec53a796dcd994a6b2640ec"></a><br/></td></tr>
+<tr class="separator:a59825979fec53a796dcd994a6b2640ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861e69e1a89559f7556e04b2624fcc47"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a861e69e1a89559f7556e04b2624fcc47">HoveringColor</a> = Color.green</td></tr>
+<tr class="memdesc:a861e69e1a89559f7556e04b2624fcc47"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color for the cursor when it is hovering over a control.  <a href="#a861e69e1a89559f7556e04b2624fcc47"></a><br/></td></tr>
+<tr class="separator:a861e69e1a89559f7556e04b2624fcc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e60568b4e88f27bf4617a76a7a890d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ac9e60568b4e88f27bf4617a76a7a890d">InnerPointer</a> = true</td></tr>
+<tr class="memdesc:ac9e60568b4e88f27bf4617a76a7a890d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render a smaller pointer inside of the main pointer.  <a href="#ac9e60568b4e88f27bf4617a76a7a890d"></a><br/></td></tr>
+<tr class="separator:ac9e60568b4e88f27bf4617a76a7a890d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf77cccd3b81255a352930225e96e105"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aaf77cccd3b81255a352930225e96e105">InnerPointerOpacityScalar</a> = 0.77f</td></tr>
+<tr class="memdesc:aaf77cccd3b81255a352930225e96e105"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Opacity of the Inner Pointer relative to the Primary Pointer.  <a href="#aaf77cccd3b81255a352930225e96e105"></a><br/></td></tr>
+<tr class="separator:aaf77cccd3b81255a352930225e96e105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ebe56a58cfad89183b65e00203210c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ade2b926e8491acc864531d10cc4b3e1c">InteractionCapability</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a10ebe56a58cfad89183b65e00203210c">InteractionMode</a> = InteractionCapability.Tactile</td></tr>
+<tr class="memdesc:a10ebe56a58cfad89183b65e00203210c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mode to use for interaction.  <a href="#a10ebe56a58cfad89183b65e00203210c"></a><br/></td></tr>
+<tr class="separator:a10ebe56a58cfad89183b65e00203210c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403375d0866618c339b1968e5696c00d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html">LeapProvider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a403375d0866618c339b1968e5696c00d">LeapDataProvider</a></td></tr>
+<tr class="memdesc:a403375d0866618c339b1968e5696c00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html" title="LeapProvider&#39;s supply images and Leap Hands.">LeapProvider</a> providing tracking data to the scene.  <a href="#a403375d0866618c339b1968e5696c00d"></a><br/></td></tr>
+<tr class="separator:a403375d0866618c339b1968e5696c00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a70feafa2085a94af5cdc334dabf94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_pinch_detector.html">Leap.Unity.PinchDetector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a68a70feafa2085a94af5cdc334dabf94">LeftHandDetector</a></td></tr>
+<tr class="memdesc:a68a70feafa2085a94af5cdc334dabf94"><td class="mdescLeft">&#160;</td><td class="mdescRight">An optional component that will be used to detect pinch motions if set.  <a href="#a68a70feafa2085a94af5cdc334dabf94"></a><br/></td></tr>
+<tr class="separator:a68a70feafa2085a94af5cdc334dabf94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8129eb472d1fcc0749bc2f32535e27e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a8129eb472d1fcc0749bc2f32535e27e3">MovingReferenceFrame</a> = false</td></tr>
+<tr class="memdesc:a8129eb472d1fcc0749bc2f32535e27e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retransform the <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Pointer to allow the Module to work in a non-stationary reference frame.  <a href="#a8129eb472d1fcc0749bc2f32535e27e3"></a><br/></td></tr>
+<tr class="separator:a8129eb472d1fcc0749bc2f32535e27e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333be0dc88b80af2ee110be22dd7a61a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module_1_1_position_event.html">PositionEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a333be0dc88b80af2ee110be22dd7a61a">onClickDown</a></td></tr>
+<tr class="memdesc:a333be0dc88b80af2ee110be22dd7a61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event that is triggered upon clicking on a non-canvas UI element.  <a href="#a333be0dc88b80af2ee110be22dd7a61a"></a><br/></td></tr>
+<tr class="separator:a333be0dc88b80af2ee110be22dd7a61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2a5239705a8ced913583604559307b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module_1_1_position_event.html">PositionEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ac2a5239705a8ced913583604559307b1">onClickUp</a></td></tr>
+<tr class="memdesc:ac2a5239705a8ced913583604559307b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event that is triggered upon lifting up from a non-canvas UI element (Not 1:1 with onClickDown!)  <a href="#ac2a5239705a8ced913583604559307b1"></a><br/></td></tr>
+<tr class="separator:ac2a5239705a8ced913583604559307b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a030e67ee75cc6deda2dbf2950c7c5202"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module_1_1_position_event.html">PositionEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a030e67ee75cc6deda2dbf2950c7c5202">onHover</a></td></tr>
+<tr class="memdesc:a030e67ee75cc6deda2dbf2950c7c5202"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event that is triggered upon hovering over a non-canvas UI element.  <a href="#a030e67ee75cc6deda2dbf2950c7c5202"></a><br/></td></tr>
+<tr class="separator:a030e67ee75cc6deda2dbf2950c7c5202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6535059f01c9d0df8813360ab6a5ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#acf6535059f01c9d0df8813360ab6a5ca">OverrideScrollViewClicks</a> = false</td></tr>
+<tr class="memdesc:acf6535059f01c9d0df8813360ab6a5ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the ScrollView still doesn't work even after disabling RaycastTarget on the intermediate layers.  <a href="#acf6535059f01c9d0df8813360ab6a5ca"></a><br/></td></tr>
+<tr class="separator:acf6535059f01c9d0df8813360ab6a5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1787c7ed0d1ffc4ec14caaefbdff430"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ae1787c7ed0d1ffc4ec14caaefbdff430">perFingerPointer</a> = false</td></tr>
+<tr class="memdesc:ae1787c7ed0d1ffc4ec14caaefbdff430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a pointer for each finger.  <a href="#ae1787c7ed0d1ffc4ec14caaefbdff430"></a><br/></td></tr>
+<tr class="separator:ae1787c7ed0d1ffc4ec14caaefbdff430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c7e543ea8f586474a6517755bf9825"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a51c7e543ea8f586474a6517755bf9825">PinchingThreshold</a> = 30f</td></tr>
+<tr class="memdesc:a51c7e543ea8f586474a6517755bf9825"><td class="mdescLeft">&#160;</td><td class="mdescRight">When not using a <a class="el" href="class_leap_1_1_unity_1_1_pinch_detector.html" title="A basic utility class to aid in creating pinch based actions.">PinchDetector</a>, the distance in mm that the tip of the thumb and forefinger should be to activate selection during projective interaction.  <a href="#a51c7e543ea8f586474a6517755bf9825"></a><br/></td></tr>
+<tr class="separator:a51c7e543ea8f586474a6517755bf9825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904b27bf12f32d2d96843b141ab0057f"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a904b27bf12f32d2d96843b141ab0057f">PointerDistanceScale</a> = AnimationCurve.Linear(0f, 0.1f, 6f, 1f)</td></tr>
+<tr class="memdesc:a904b27bf12f32d2d96843b141ab0057f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the pointer in world coordinates with respect to the distance between the cursor and the camera.  <a href="#a904b27bf12f32d2d96843b141ab0057f"></a><br/></td></tr>
+<tr class="separator:a904b27bf12f32d2d96843b141ab0057f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cca17eef221572d6d6d360e96581801"><td class="memItemLeft" align="right" valign="top">Material&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a2cca17eef221572d6d6d360e96581801">PointerMaterial</a></td></tr>
+<tr class="memdesc:a2cca17eef221572d6d6d360e96581801"><td class="mdescLeft">&#160;</td><td class="mdescRight">The cursor material.  <a href="#a2cca17eef221572d6d6d360e96581801"></a><br/></td></tr>
+<tr class="separator:a2cca17eef221572d6d6d360e96581801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46cda97d7a4615fca79923ab770d35c6"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a46cda97d7a4615fca79923ab770d35c6">PointerPinchScale</a> = AnimationCurve.Linear(30f, 0.6f, 70f, 1.1f)</td></tr>
+<tr class="memdesc:a46cda97d7a4615fca79923ab770d35c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the pointer in world coordinates with respect to the distance between the thumb and forefinger.  <a href="#a46cda97d7a4615fca79923ab770d35c6"></a><br/></td></tr>
+<tr class="separator:a46cda97d7a4615fca79923ab770d35c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00f1409b1c8eb905fbdcb41e58a5f6f3"><td class="memItemLeft" align="right" valign="top">Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a00f1409b1c8eb905fbdcb41e58a5f6f3">PointerSprite</a></td></tr>
+<tr class="memdesc:a00f1409b1c8eb905fbdcb41e58a5f6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sprite for the cursor.  <a href="#a00f1409b1c8eb905fbdcb41e58a5f6f3"></a><br/></td></tr>
+<tr class="separator:a00f1409b1c8eb905fbdcb41e58a5f6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c16cbaac6167f3f6bc8db234ce0997e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a5c16cbaac6167f3f6bc8db234ce0997e">ProjectiveToTactileTransitionDistance</a> = 0.4f</td></tr>
+<tr class="memdesc:a5c16cbaac6167f3f6bc8db234ce0997e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance from the canvas at which to switch to projective mode.  <a href="#a5c16cbaac6167f3f6bc8db234ce0997e"></a><br/></td></tr>
+<tr class="separator:a5c16cbaac6167f3f6bc8db234ce0997e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada38b980e9d0837e0829ee08dcef12eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ada38b980e9d0837e0829ee08dcef12eb">RetractUI</a> = false</td></tr>
+<tr class="memdesc:ada38b980e9d0837e0829ee08dcef12eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retract compressible widgets when not using Tactile <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a>.  <a href="#ada38b980e9d0837e0829ee08dcef12eb"></a><br/></td></tr>
+<tr class="separator:ada38b980e9d0837e0829ee08dcef12eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a338511a635553eb185373a1237e9697b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_pinch_detector.html">Leap.Unity.PinchDetector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a338511a635553eb185373a1237e9697b">RightHandDetector</a></td></tr>
+<tr class="memdesc:a338511a635553eb185373a1237e9697b"><td class="mdescLeft">&#160;</td><td class="mdescRight">An optional component that will be used to detect pinch motions if set.  <a href="#a338511a635553eb185373a1237e9697b"></a><br/></td></tr>
+<tr class="separator:a338511a635553eb185373a1237e9697b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98d4c79dd1849475681dd4573640895"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#af98d4c79dd1849475681dd4573640895">ShowAdvancedOptions</a> = false</td></tr>
+<tr class="separator:af98d4c79dd1849475681dd4573640895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af05216ab8cadb7ce46961d800d0c6952"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#af05216ab8cadb7ce46961d800d0c6952">ShowExperimentalOptions</a> = false</td></tr>
+<tr class="separator:af05216ab8cadb7ce46961d800d0c6952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec7c7970917082af137fdf07006cb04"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a0ec7c7970917082af137fdf07006cb04">StandardColor</a> = Color.white</td></tr>
+<tr class="memdesc:a0ec7c7970917082af137fdf07006cb04"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color for the cursor when it is not in a special state.  <a href="#a0ec7c7970917082af137fdf07006cb04"></a><br/></td></tr>
+<tr class="separator:a0ec7c7970917082af137fdf07006cb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa802b2d1eed4e609b2584856a680db93"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aa802b2d1eed4e609b2584856a680db93">TactilePadding</a> = 0.005f</td></tr>
+<tr class="memdesc:aa802b2d1eed4e609b2584856a680db93"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance from the base of a UI element that tactile interaction is triggered.  <a href="#aa802b2d1eed4e609b2584856a680db93"></a><br/></td></tr>
+<tr class="separator:aa802b2d1eed4e609b2584856a680db93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11c0ff84b99df36482d07049c887896"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aa11c0ff84b99df36482d07049c887896">TriggerHoverOnElementSwitch</a> = false</td></tr>
+<tr class="memdesc:aa11c0ff84b99df36482d07049c887896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger a Hover Event when switching between UI elements.  <a href="#aa11c0ff84b99df36482d07049c887896"></a><br/></td></tr>
+<tr class="separator:aa11c0ff84b99df36482d07049c887896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115d8a4a8baa97591ca5dec2d82163ee"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a115d8a4a8baa97591ca5dec2d82163ee">TriggeringColor</a> = Color.gray</td></tr>
+<tr class="memdesc:a115d8a4a8baa97591ca5dec2d82163ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color for the cursor when it is actively interacting with a control.  <a href="#a115d8a4a8baa97591ca5dec2d82163ee"></a><br/></td></tr>
+<tr class="separator:a115d8a4a8baa97591ca5dec2d82163ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad8911842c78eff052f03d4305421bb"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a5ad8911842c78eff052f03d4305421bb">TriggerMissedColor</a> = Color.gray</td></tr>
+<tr class="memdesc:a5ad8911842c78eff052f03d4305421bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color for the cursor when it is touching or triggering a non-active part of the UI (such as the canvas).  <a href="#a5ad8911842c78eff052f03d4305421bb"></a><br/></td></tr>
+<tr class="separator:a5ad8911842c78eff052f03d4305421bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7304ac60165f9986656abc6622b24e86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module_1_1_position_event.html">PositionEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a7304ac60165f9986656abc6622b24e86">whileClickHeld</a></td></tr>
+<tr class="memdesc:a7304ac60165f9986656abc6622b24e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event that is triggered while holding down a non-canvas UI element.  <a href="#a7304ac60165f9986656abc6622b24e86"></a><br/></td></tr>
+<tr class="separator:a7304ac60165f9986656abc6622b24e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a0da536e019c8788b62483ec1004a993a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a0da536e019c8788b62483ec1004a993a">Start</a> ()</td></tr>
+<tr class="separator:a0da536e019c8788b62483ec1004a993a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a310e7bf2af1790dee9f025a6a4c4bb80"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">pointerStates</a> : int { <br/>
+&#160;&#160;<a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">OnCanvas</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">OnElement</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">PinchingToCanvas</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">PinchingToElement</a>, 
+<br/>
+&#160;&#160;<a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">NearCanvas</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">TouchingCanvas</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">TouchingElement</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">OffCanvas</a>
+<br/>
+ }</td></tr>
+<tr class="separator:a310e7bf2af1790dee9f025a6a4c4bb80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae71241d3066bf14575ae68e18e2ed5a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ae71241d3066bf14575ae68e18e2ed5a8">evaluatePointerSize</a> (int whichPointer)</td></tr>
+<tr class="separator:ae71241d3066bf14575ae68e18e2ed5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca53943fa0d042c4ea9fb90f35541081"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aca53943fa0d042c4ea9fb90f35541081">GetLookPointerEventData</a> (int whichPointer, int whichHand, int whichFinger, Vector3 Origin, Vector3 Direction, bool forceTipRaycast)</td></tr>
+<tr class="separator:aca53943fa0d042c4ea9fb90f35541081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710ad9624eba6f4699c7fe2884460564"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a710ad9624eba6f4699c7fe2884460564">OnDrawGizmos</a> ()</td></tr>
+<tr class="separator:a710ad9624eba6f4699c7fe2884460564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1574c1442dc40f9cbaeb3450bed6344e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a1574c1442dc40f9cbaeb3450bed6344e">ProcessState</a> (int whichPointer, int whichHand, int whichFinger, bool forceTipRaycast)</td></tr>
+<tr class="separator:a1574c1442dc40f9cbaeb3450bed6344e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f7a877c856c6adb5445daf300fdd91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aa9f7a877c856c6adb5445daf300fdd91">ProcessStateEvents</a> (int whichPointer)</td></tr>
+<tr class="separator:aa9f7a877c856c6adb5445daf300fdd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa65395acd2713faf30b54b06c1afde0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aa65395acd2713faf30b54b06c1afde0c">SendUpdateEventToSelectedObject</a> ()</td></tr>
+<tr class="separator:aa65395acd2713faf30b54b06c1afde0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aff69cd061588cecaa83eeddcd1f042"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a1aff69cd061588cecaa83eeddcd1f042">Update</a> ()</td></tr>
+<tr class="separator:a1aff69cd061588cecaa83eeddcd1f042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9166dc63f6ba74e7aa417bd29ba889b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a9166dc63f6ba74e7aa417bd29ba889b4">UpdatePointer</a> (int whichPointer, PointerEventData pointData, GameObject UIComponent)</td></tr>
+<tr class="separator:a9166dc63f6ba74e7aa417bd29ba889b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab52c02e13ed48944b7e32304fb6c69b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#aab52c02e13ed48944b7e32304fb6c69b">updatePointerColor</a> (int whichPointer, int whichHand, int whichFinger)</td></tr>
+<tr class="separator:aab52c02e13ed48944b7e32304fb6c69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a92f6fa38b66700501c38dbfce1d8db90"><td class="memItemLeft" align="right" valign="top">Canvas[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a92f6fa38b66700501c38dbfce1d8db90">canvases</a></td></tr>
+<tr class="separator:a92f6fa38b66700501c38dbfce1d8db90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc614fb8e9a445e452e9a56aebc807e9"><td class="memItemLeft" align="right" valign="top">GameObject[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#adc614fb8e9a445e452e9a56aebc807e9">currentGo</a></td></tr>
+<tr class="separator:adc614fb8e9a445e452e9a56aebc807e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b0f9635432cf84689360060388c21f"><td class="memItemLeft" align="right" valign="top">GameObject[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a53b0f9635432cf84689360060388c21f">currentGoing</a></td></tr>
+<tr class="separator:a53b0f9635432cf84689360060388c21f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b9568077ff368d08342ad245688fb70"><td class="memItemLeft" align="right" valign="top">GameObject[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a1b9568077ff368d08342ad245688fb70">currentOverGo</a></td></tr>
+<tr class="separator:a1b9568077ff368d08342ad245688fb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55dd57864ddaece48dda8cbff31f6e2"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ad55dd57864ddaece48dda8cbff31f6e2">CurrentRotation</a></td></tr>
+<tr class="separator:ad55dd57864ddaece48dda8cbff31f6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78de1c136e1687f7187e87ac5732b1f6"><td class="memItemLeft" align="right" valign="top">Queue&lt; Vector3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a78de1c136e1687f7187e87ac5732b1f6">DebugSphereQueue</a></td></tr>
+<tr class="separator:a78de1c136e1687f7187e87ac5732b1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140c992820fa00caf02cca6a7ca25945"><td class="memItemLeft" align="right" valign="top">Vector2[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a140c992820fa00caf02cca6a7ca25945">DragBeginPosition</a></td></tr>
+<tr class="separator:a140c992820fa00caf02cca6a7ca25945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4156decdc82734e9115d5cd4cb51dbcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a4156decdc82734e9115d5cd4cb51dbcb">forceProjective</a> = false</td></tr>
+<tr class="separator:a4156decdc82734e9115d5cd4cb51dbcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdabae61d7d3b5636db6797b95bfcde"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a9fdabae61d7d3b5636db6797b95bfcde">forceTactile</a> = false</td></tr>
+<tr class="separator:a9fdabae61d7d3b5636db6797b95bfcde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be8c37a4993221df2994701568a49e4"><td class="memItemLeft" align="right" valign="top">Transform[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a5be8c37a4993221df2994701568a49e4">InnerPointers</a></td></tr>
+<tr class="separator:a5be8c37a4993221df2994701568a49e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb60c0b71a886df1b37212de34f7d988"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#acb60c0b71a886df1b37212de34f7d988">NumberOfPointers</a> = 2</td></tr>
+<tr class="memdesc:acb60c0b71a886df1b37212de34f7d988"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of pointers to create.  <a href="#acb60c0b71a886df1b37212de34f7d988"></a><br/></td></tr>
+<tr class="separator:acb60c0b71a886df1b37212de34f7d988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad865ef8c45ce02b99c9d651d7e96fe1b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ad865ef8c45ce02b99c9d651d7e96fe1b">OldCameraFoV</a></td></tr>
+<tr class="separator:ad865ef8c45ce02b99c9d651d7e96fe1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c8c32a508f091c6505e03773b8e5656"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a9c8c32a508f091c6505e03773b8e5656">OldCameraPos</a> = Vector3.zero</td></tr>
+<tr class="separator:a9c8c32a508f091c6505e03773b8e5656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4adcf2cd3ae81b1d8fd161d7586de813"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a4adcf2cd3ae81b1d8fd161d7586de813">OldCameraRot</a> = Quaternion.identity</td></tr>
+<tr class="separator:a4adcf2cd3ae81b1d8fd161d7586de813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaebe433ddb0b9e8d92314044f77e871"><td class="memItemLeft" align="right" valign="top">LineRenderer[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#acaebe433ddb0b9e8d92314044f77e871">PointerLines</a></td></tr>
+<tr class="separator:acaebe433ddb0b9e8d92314044f77e871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ffa925e434e21899eae131bd2a10f7b"><td class="memItemLeft" align="right" valign="top">Transform[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a7ffa925e434e21899eae131bd2a10f7b">Pointers</a></td></tr>
+<tr class="separator:a7ffa925e434e21899eae131bd2a10f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ed798885627c3f341397a748f45d703"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">pointerStates</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a8ed798885627c3f341397a748f45d703">pointerState</a></td></tr>
+<tr class="separator:a8ed798885627c3f341397a748f45d703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a984192d29703e5c5175c83c72aaaaf77"><td class="memItemLeft" align="right" valign="top">PointerEventData[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a984192d29703e5c5175c83c72aaaaf77">PointEvents</a></td></tr>
+<tr class="separator:a984192d29703e5c5175c83c72aaaaf77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3378d50743ff29e307b79aebc09fdc95"><td class="memItemLeft" align="right" valign="top">GameObject[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a3378d50743ff29e307b79aebc09fdc95">prevOverGo</a></td></tr>
+<tr class="separator:a3378d50743ff29e307b79aebc09fdc95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbcb3ef40b3da63692248c45bb3c1da5"><td class="memItemLeft" align="right" valign="top">Vector2[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#acbcb3ef40b3da63692248c45bb3c1da5">PrevScreenPosition</a></td></tr>
+<tr class="separator:acbcb3ef40b3da63692248c45bb3c1da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab48911a9d2edb46987b8d6e88e9423"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">pointerStates</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#abab48911a9d2edb46987b8d6e88e9423">PrevState</a></td></tr>
+<tr class="separator:abab48911a9d2edb46987b8d6e88e9423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cce80397ee9fb0a52fc933daf928e46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a9cce80397ee9fb0a52fc933daf928e46">PrevTouchingMode</a></td></tr>
+<tr class="separator:a9cce80397ee9fb0a52fc933daf928e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f4591c9adb34013e104c11a34c14597"><td class="memItemLeft" align="right" valign="top">bool[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a5f4591c9adb34013e104c11a34c14597">PrevTriggeringInteraction</a></td></tr>
+<tr class="separator:a5f4591c9adb34013e104c11a34c14597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15b59ce587e4304fd8210828898454c5"><td class="memItemLeft" align="right" valign="top">AudioSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a15b59ce587e4304fd8210828898454c5">SoundPlayer</a></td></tr>
+<tr class="separator:a15b59ce587e4304fd8210828898454c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf2378bd19042a620748e5cd22ee4f00"><td class="memItemLeft" align="right" valign="top">float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#abf2378bd19042a620748e5cd22ee4f00">timeEnteredCanvas</a></td></tr>
+<tr class="separator:abf2378bd19042a620748e5cd22ee4f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An <a class="el" href="namespace_leap_1_1_unity_1_1_input_module.html">InputModule</a> that supports the use of <a class="el" href="namespace_leap.html">Leap</a> Motion tracking data for manipulating <a class="el" href="namespace_leap_1_1_unity.html" title="IHandModel defines abstract methods as a template for building Leap hand models.">Unity</a> UI controls. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="ade2b926e8491acc864531d10cc4b3e1c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ade2b926e8491acc864531d10cc4b3e1c">Leap.Unity.InputModule.LeapInputModule.InteractionCapability</a> : int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines the interaction modes : </p>
+<ul>
+<li>Hybrid: Both tactile and projective interaction. The active mode depends on the ProjectiveToTactileTransitionDistance value.</li>
+</ul>
+<ul>
+<li>Tactile: The user must physically touch the controls.</li>
+</ul>
+<ul>
+<li>Projective: A cursor is projected from the user's knuckle. </li>
+</ul>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ade2b926e8491acc864531d10cc4b3e1c"></a>Hybrid</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ade2b926e8491acc864531d10cc4b3e1c"></a>Tactile</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ade2b926e8491acc864531d10cc4b3e1c"></a>Projective</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a310e7bf2af1790dee9f025a6a4c4bb80"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">Leap.Unity.InputModule.LeapInputModule.pointerStates</a> : int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a310e7bf2af1790dee9f025a6a4c4bb80"></a>OnCanvas</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a310e7bf2af1790dee9f025a6a4c4bb80"></a>OnElement</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a310e7bf2af1790dee9f025a6a4c4bb80"></a>PinchingToCanvas</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a310e7bf2af1790dee9f025a6a4c4bb80"></a>PinchingToElement</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a310e7bf2af1790dee9f025a6a4c4bb80"></a>NearCanvas</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a310e7bf2af1790dee9f025a6a4c4bb80"></a>TouchingCanvas</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a310e7bf2af1790dee9f025a6a4c4bb80"></a>TouchingElement</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a310e7bf2af1790dee9f025a6a4c4bb80"></a>OffCanvas</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a73e6f9f36fba14dc973153a46fa815f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.LeapInputModule.distanceOfTipToElement </td>
+          <td>(</td>
+          <td class="paramtype">Transform&#160;</td>
+          <td class="paramname"><em>UIElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichHand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichFinger</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The z position of the index finger tip to the specified transform. </p>
+
+</div>
+</div>
+<a class="anchor" id="a11123295e0aad3f03f0d34a624ae3db4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.LeapInputModule.distanceOfTipToPointer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichHand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichFinger</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The z position of the index finger tip to the Pointer. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae71241d3066bf14575ae68e18e2ed5a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.LeapInputModule.evaluatePointerSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichPointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aca53943fa0d042c4ea9fb90f35541081"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.GetLookPointerEventData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichHand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichFinger</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>Origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>Direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>forceTipRaycast</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3a7e40d0581bfa470dfdb01983cc2de3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.getTouchingMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if any active pointer is in the "touching" interaction mode, i.e, whether it is touching or nearly touching a canvas or control. </p>
+
+</div>
+</div>
+<a class="anchor" id="a92922a67ee51f0b004453a2b8f70dc61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.getTouchingMode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichPointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the specified pointer is in the "touching" interaction mode, i.e, whether it is touching or nearly touching a canvas or control. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0bb6ee9b39d981abce5fb36b59052dca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.isTriggeringInteraction </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichHand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichFinger</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A boolean function that returns true if a "click" is being triggered during the current frame. </p>
+
+</div>
+</div>
+<a class="anchor" id="a787587aea827b0473d8edf2e3da3b76b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.LeapInputModule.lerpPointerColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lerpalpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Linearly interpolates the color of a cursor toward the specified color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">whichPointer</td><td>The identifier of the pointer to change. </td></tr>
+    <tr><td class="paramname">color</td><td>The target color. </td></tr>
+    <tr><td class="paramname">lerpalpha</td><td>The amount to interpolate by. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a710ad9624eba6f4699c7fe2884460564"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.LeapInputModule.OnDrawGizmos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abb35a45ceb80fb4278a7f55ce47dab84"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Leap.Unity.InputModule.LeapInputModule.Process </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1574c1442dc40f9cbaeb3450bed6344e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.LeapInputModule.ProcessState </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichHand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichFinger</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>forceTipRaycast</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa9f7a877c856c6adb5445daf300fdd91"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.LeapInputModule.ProcessStateEvents </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichPointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa65395acd2713faf30b54b06c1afde0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.SendUpdateEventToSelectedObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad2fce1bb68785fdb4dac4141e4235f35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool Leap.Unity.InputModule.LeapInputModule.ShouldActivateModule </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Only activate the <a class="el" href="namespace_leap_1_1_unity_1_1_input_module.html">InputModule</a> when there are hands in the scene. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0da536e019c8788b62483ec1004a993a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Leap.Unity.InputModule.LeapInputModule.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1aff69cd061588cecaa83eeddcd1f042"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.LeapInputModule.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9166dc63f6ba74e7aa417bd29ba889b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.LeapInputModule.UpdatePointer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PointerEventData&#160;</td>
+          <td class="paramname"><em>pointData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>UIComponent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aab52c02e13ed48944b7e32304fb6c69b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.InputModule.LeapInputModule.updatePointerColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichHand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whichFinger</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a80ccb7ececec59abc4e73009a29eedec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip Leap.Unity.InputModule.LeapInputModule.BeginHoverSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The sound that is played when the pointer transitions from canvas to element. </p>
+
+</div>
+</div>
+<a class="anchor" id="aaca19a1c1d3f4297e1591c74d7bb556c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip Leap.Unity.InputModule.LeapInputModule.BeginMissedSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The sound that is played when the pointer triggers blank canvas. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac16c89bda7c47db44039fccb2867c32e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip Leap.Unity.InputModule.LeapInputModule.BeginTriggerSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The sound that is played when the pointer triggers a UI element. </p>
+
+</div>
+</div>
+<a class="anchor" id="a92f6fa38b66700501c38dbfce1d8db90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Canvas [] Leap.Unity.InputModule.LeapInputModule.canvases</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adc614fb8e9a445e452e9a56aebc807e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject [] Leap.Unity.InputModule.LeapInputModule.currentGo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a53b0f9635432cf84689360060388c21f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject [] Leap.Unity.InputModule.LeapInputModule.currentGoing</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1b9568077ff368d08342ad245688fb70"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject [] Leap.Unity.InputModule.LeapInputModule.currentOverGo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad55dd57864ddaece48dda8cbff31f6e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion Leap.Unity.InputModule.LeapInputModule.CurrentRotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a78de1c136e1687f7187e87ac5732b1f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Queue&lt;Vector3&gt; Leap.Unity.InputModule.LeapInputModule.DebugSphereQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a140c992820fa00caf02cca6a7ca25945"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 [] Leap.Unity.InputModule.LeapInputModule.DragBeginPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a966ac42eb269be96cc1d245048dc58f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip Leap.Unity.InputModule.LeapInputModule.DragLoopSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The sound that is played while the pointer is dragging an object. </p>
+
+</div>
+</div>
+<a class="anchor" id="abaef64b660684da08094cb7db534a0e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.DrawDebug = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw the raycast for projective interaction. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2fcba60112a1c39462a5e317d17445b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip Leap.Unity.InputModule.LeapInputModule.EndHoverSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The sound that is played when the pointer transitions from canvas to element. </p>
+
+</div>
+</div>
+<a class="anchor" id="a34e127e11941faf52ce54a51114a0420"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip Leap.Unity.InputModule.LeapInputModule.EndMissedSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The sound that is played when the pointer triggers blank canvas. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac5824e1e12dfa0a83dad6ad425593351"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip Leap.Unity.InputModule.LeapInputModule.EndTriggerSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The sound that is played when the pointer triggers a UI element. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab2f1607433a7c56a35ad21c45d2ec5d7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module_1_1_position_event.html">PositionEvent</a> Leap.Unity.InputModule.LeapInputModule.environmentPinch</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The event that is triggered while pinching to a point in the environment. </p>
+
+</div>
+</div>
+<a class="anchor" id="a59825979fec53a796dcd994a6b2640ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.EnvironmentPointer = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Render the pointer onto the enviroment. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4156decdc82734e9115d5cd4cb51dbcb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.forceProjective = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9fdabae61d7d3b5636db6797b95bfcde"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.forceTactile = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a861e69e1a89559f7556e04b2624fcc47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color Leap.Unity.InputModule.LeapInputModule.HoveringColor = Color.green</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The color for the cursor when it is hovering over a control. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac9e60568b4e88f27bf4617a76a7a890d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.InnerPointer = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Render a smaller pointer inside of the main pointer. </p>
+
+</div>
+</div>
+<a class="anchor" id="aaf77cccd3b81255a352930225e96e105"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.LeapInputModule.InnerPointerOpacityScalar = 0.77f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Opacity of the Inner Pointer relative to the Primary Pointer. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5be8c37a4993221df2994701568a49e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform [] Leap.Unity.InputModule.LeapInputModule.InnerPointers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a10ebe56a58cfad89183b65e00203210c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#ade2b926e8491acc864531d10cc4b3e1c">InteractionCapability</a> Leap.Unity.InputModule.LeapInputModule.InteractionMode = InteractionCapability.Tactile</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The mode to use for interaction. </p>
+<p>The default mode is tactile. The projective mode is considered experimental. </p>
+
+</div>
+</div>
+<a class="anchor" id="a403375d0866618c339b1968e5696c00d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html">LeapProvider</a> Leap.Unity.InputModule.LeapInputModule.LeapDataProvider</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html" title="LeapProvider&#39;s supply images and Leap Hands.">LeapProvider</a> providing tracking data to the scene. </p>
+
+</div>
+</div>
+<a class="anchor" id="a68a70feafa2085a94af5cdc334dabf94"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_pinch_detector.html">Leap.Unity.PinchDetector</a> Leap.Unity.InputModule.LeapInputModule.LeftHandDetector</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An optional component that will be used to detect pinch motions if set. </p>
+<p>Primarily used for projective or hybrid interaction modes (under experimental features). </p>
+
+</div>
+</div>
+<a class="anchor" id="a8129eb472d1fcc0749bc2f32535e27e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.MovingReferenceFrame = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retransform the <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Pointer to allow the Module to work in a non-stationary reference frame. </p>
+
+</div>
+</div>
+<a class="anchor" id="acb60c0b71a886df1b37212de34f7d988"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Leap.Unity.InputModule.LeapInputModule.NumberOfPointers = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of pointers to create. </p>
+<p>By default, one pointer is created for each hand. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad865ef8c45ce02b99c9d651d7e96fe1b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.LeapInputModule.OldCameraFoV</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9c8c32a508f091c6505e03773b8e5656"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Leap.Unity.InputModule.LeapInputModule.OldCameraPos = Vector3.zero</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4adcf2cd3ae81b1d8fd161d7586de813"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion Leap.Unity.InputModule.LeapInputModule.OldCameraRot = Quaternion.identity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a333be0dc88b80af2ee110be22dd7a61a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module_1_1_position_event.html">PositionEvent</a> Leap.Unity.InputModule.LeapInputModule.onClickDown</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The event that is triggered upon clicking on a non-canvas UI element. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac2a5239705a8ced913583604559307b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module_1_1_position_event.html">PositionEvent</a> Leap.Unity.InputModule.LeapInputModule.onClickUp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The event that is triggered upon lifting up from a non-canvas UI element (Not 1:1 with onClickDown!) </p>
+
+</div>
+</div>
+<a class="anchor" id="a030e67ee75cc6deda2dbf2950c7c5202"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module_1_1_position_event.html">PositionEvent</a> Leap.Unity.InputModule.LeapInputModule.onHover</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The event that is triggered upon hovering over a non-canvas UI element. </p>
+
+</div>
+</div>
+<a class="anchor" id="acf6535059f01c9d0df8813360ab6a5ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.OverrideScrollViewClicks = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If the ScrollView still doesn't work even after disabling RaycastTarget on the intermediate layers. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae1787c7ed0d1ffc4ec14caaefbdff430"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.perFingerPointer = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a pointer for each finger. </p>
+
+</div>
+</div>
+<a class="anchor" id="a51c7e543ea8f586474a6517755bf9825"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.LeapInputModule.PinchingThreshold = 30f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When not using a <a class="el" href="class_leap_1_1_unity_1_1_pinch_detector.html" title="A basic utility class to aid in creating pinch based actions.">PinchDetector</a>, the distance in mm that the tip of the thumb and forefinger should be to activate selection during projective interaction. </p>
+
+</div>
+</div>
+<a class="anchor" id="a904b27bf12f32d2d96843b141ab0057f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationCurve Leap.Unity.InputModule.LeapInputModule.PointerDistanceScale = AnimationCurve.Linear(0f, 0.1f, 6f, 1f)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The size of the pointer in world coordinates with respect to the distance between the cursor and the camera. </p>
+
+</div>
+</div>
+<a class="anchor" id="acaebe433ddb0b9e8d92314044f77e871"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LineRenderer [] Leap.Unity.InputModule.LeapInputModule.PointerLines</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2cca17eef221572d6d6d360e96581801"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Material Leap.Unity.InputModule.LeapInputModule.PointerMaterial</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The cursor material. </p>
+
+</div>
+</div>
+<a class="anchor" id="a46cda97d7a4615fca79923ab770d35c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationCurve Leap.Unity.InputModule.LeapInputModule.PointerPinchScale = AnimationCurve.Linear(30f, 0.6f, 70f, 1.1f)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The size of the pointer in world coordinates with respect to the distance between the thumb and forefinger. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7ffa925e434e21899eae131bd2a10f7b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform [] Leap.Unity.InputModule.LeapInputModule.Pointers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a00f1409b1c8eb905fbdcb41e58a5f6f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sprite Leap.Unity.InputModule.LeapInputModule.PointerSprite</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The sprite for the cursor. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8ed798885627c3f341397a748f45d703"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">pointerStates</a> [] Leap.Unity.InputModule.LeapInputModule.pointerState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a984192d29703e5c5175c83c72aaaaf77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PointerEventData [] Leap.Unity.InputModule.LeapInputModule.PointEvents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3378d50743ff29e307b79aebc09fdc95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject [] Leap.Unity.InputModule.LeapInputModule.prevOverGo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acbcb3ef40b3da63692248c45bb3c1da5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 [] Leap.Unity.InputModule.LeapInputModule.PrevScreenPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abab48911a9d2edb46987b8d6e88e9423"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module.html#a310e7bf2af1790dee9f025a6a4c4bb80">pointerStates</a> [] Leap.Unity.InputModule.LeapInputModule.PrevState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9cce80397ee9fb0a52fc933daf928e46"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.PrevTouchingMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5f4591c9adb34013e104c11a34c14597"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool [] Leap.Unity.InputModule.LeapInputModule.PrevTriggeringInteraction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5c16cbaac6167f3f6bc8db234ce0997e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.LeapInputModule.ProjectiveToTactileTransitionDistance = 0.4f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The distance from the canvas at which to switch to projective mode. </p>
+
+</div>
+</div>
+<a class="anchor" id="ada38b980e9d0837e0829ee08dcef12eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.RetractUI = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retract compressible widgets when not using Tactile <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a338511a635553eb185373a1237e9697b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_pinch_detector.html">Leap.Unity.PinchDetector</a> Leap.Unity.InputModule.LeapInputModule.RightHandDetector</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An optional component that will be used to detect pinch motions if set. </p>
+<p>Primarily used for projective or hybrid interaction modes (under experimental features). </p>
+
+</div>
+</div>
+<a class="anchor" id="af98d4c79dd1849475681dd4573640895"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.ShowAdvancedOptions = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af05216ab8cadb7ce46961d800d0c6952"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.ShowExperimentalOptions = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a15b59ce587e4304fd8210828898454c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioSource Leap.Unity.InputModule.LeapInputModule.SoundPlayer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0ec7c7970917082af137fdf07006cb04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color Leap.Unity.InputModule.LeapInputModule.StandardColor = Color.white</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The color for the cursor when it is not in a special state. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa802b2d1eed4e609b2584856a680db93"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.InputModule.LeapInputModule.TactilePadding = 0.005f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The distance from the base of a UI element that tactile interaction is triggered. </p>
+
+</div>
+</div>
+<a class="anchor" id="abf2378bd19042a620748e5cd22ee4f00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] Leap.Unity.InputModule.LeapInputModule.timeEnteredCanvas</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa11c0ff84b99df36482d07049c887896"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.InputModule.LeapInputModule.TriggerHoverOnElementSwitch = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trigger a Hover Event when switching between UI elements. </p>
+
+</div>
+</div>
+<a class="anchor" id="a115d8a4a8baa97591ca5dec2d82163ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color Leap.Unity.InputModule.LeapInputModule.TriggeringColor = Color.gray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The color for the cursor when it is actively interacting with a control. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5ad8911842c78eff052f03d4305421bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color Leap.Unity.InputModule.LeapInputModule.TriggerMissedColor = Color.gray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The color for the cursor when it is touching or triggering a non-active part of the UI (such as the canvas). </p>
+
+</div>
+</div>
+<a class="anchor" id="a7304ac60165f9986656abc6622b24e86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_input_module_1_1_leap_input_module_1_1_position_event.html">PositionEvent</a> Leap.Unity.InputModule.LeapInputModule.whileClickHeld</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The event that is triggered while holding down a non-canvas UI element. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_compressible_u_i.html">CompressibleUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_cursor3_d.html">Cursor3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_extension_methods.html">ExtensionMethods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface_leap_1_1_unity_1_1_input_module_1_1_i_leap_widget.html">ILeapWidget</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">LeapInputModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_physics_u_i.html">PhysicsUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_scroll_rect_volume.html">ScrollRectVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_slider_shadow.html">SliderShadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_slider_volume.html">SliderVolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_input_module_1_1_toggle_toggler.html">ToggleToggler</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

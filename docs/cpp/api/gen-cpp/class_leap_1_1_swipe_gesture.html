@@ -1,0 +1,1160 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SwipeGesture &mdash; Leap Motion C++ SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion C++ SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="Tool" href="class_leap_1_1_tool.html" />
+    <link rel="prev" title="ScreenTapGesture" href="class_leap_1_1_screen_tap_gesture.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'cpp';
+    var hasAPI = {};
+    hasAPI.cpp = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'cpp/api/gen-cpp/class_leap_1_1_swipe_gesture.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-cpp/class_leap_1_1_swipe_gesture.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-cpp/class_leap_1_1_swipe_gesture.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-cpp/class_leap_1_1_swipe_gesture.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-cpp/class_leap_1_1_swipe_gesture.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-cpp/class_leap_1_1_swipe_gesture.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-cpp/class_leap_1_1_swipe_gesture.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-cpp/class_leap_1_1_swipe_gesture.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-cpp/class_leap_1_1_swipe_gesture.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'cpp/api/gen-cpp/class_leap_1_1_swipe_gesture.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_screen_tap_gesture.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_tool.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      C++
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  SwipeGesture
+</span> -->
+        
+  <div class="section" id="swipegesture">
+<h1>SwipeGesture<a class="headerlink" href="#swipegesture" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_swipe_gesture.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="class_leap_1_1_swipe_gesture-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">SwipeGesture Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="class_leap_1_1_swipe_gesture.html" title="The SwipeGesture class represents a swiping motion a finger or tool. ">SwipeGesture</a> class represents a swiping motion a finger or tool.  
+ <a href="class_leap_1_1_swipe_gesture.html#details">More...</a></p>
+
+<p>Inherits <a class="el" href="class_leap_1_1_gesture.html">Gesture</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> <tr class="memdesc:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The possible gesture states.  <a href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8">More...</a><br /></td></tr>
+<tr class="separator:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:a1d1cfd8ffb84e947f82999c682b666a7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <tr class="memdesc:a1d1cfd8ffb84e947f82999c682b666a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The supported types of gestures.  <a href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">More...</a><br /></td></tr>
+<tr class="separator:a1d1cfd8ffb84e947f82999c682b666a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8cf9153b5f55c95ea44d0e0a3bdc8a75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_swipe_gesture.html#a8cf9153b5f55c95ea44d0e0a3bdc8a75">direction</a> () const </td></tr>
+<tr class="memdesc:a8cf9153b5f55c95ea44d0e0a3bdc8a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit direction vector parallel to the swipe motion.  <a href="#a8cf9153b5f55c95ea44d0e0a3bdc8a75">More...</a><br /></td></tr>
+<tr class="separator:a8cf9153b5f55c95ea44d0e0a3bdc8a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43aeae80706c4089acf73e4095891fa5"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#a43aeae80706c4089acf73e4095891fa5">duration</a> () const </td></tr>
+<tr class="memdesc:a43aeae80706c4089acf73e4095891fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The elapsed duration of the recognized movement up to the frame containing this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object, in microseconds.  <a href="#a43aeae80706c4089acf73e4095891fa5">More...</a><br /></td></tr>
+<tr class="separator:a43aeae80706c4089acf73e4095891fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac9920e8988b2743222ce1729ac6601"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#abac9920e8988b2743222ce1729ac6601">durationSeconds</a> () const </td></tr>
+<tr class="memdesc:abac9920e8988b2743222ce1729ac6601"><td class="mdescLeft">&#160;</td><td class="mdescRight">The elapsed duration in seconds.  <a href="#abac9920e8988b2743222ce1729ac6601">More...</a><br /></td></tr>
+<tr class="separator:abac9920e8988b2743222ce1729ac6601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43fd476e22d0607d5caae64402b2cffa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_frame.html">Frame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#a43fd476e22d0607d5caae64402b2cffa">frame</a> () const </td></tr>
+<tr class="memdesc:a43fd476e22d0607d5caae64402b2cffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> containing this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> instance.  <a href="#a43fd476e22d0607d5caae64402b2cffa">More...</a><br /></td></tr>
+<tr class="separator:a43fd476e22d0607d5caae64402b2cffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788e21d8ff5d1f54209e75f14a27110b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_hand_list.html">HandList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#a788e21d8ff5d1f54209e75f14a27110b">hands</a> () const </td></tr>
+<tr class="memdesc:a788e21d8ff5d1f54209e75f14a27110b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of hands associated with this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a>, if any.  <a href="#a788e21d8ff5d1f54209e75f14a27110b">More...</a><br /></td></tr>
+<tr class="separator:a788e21d8ff5d1f54209e75f14a27110b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87daef5bdd8501be1f113684cfc61074"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#a87daef5bdd8501be1f113684cfc61074">id</a> () const </td></tr>
+<tr class="memdesc:a87daef5bdd8501be1f113684cfc61074"><td class="mdescLeft">&#160;</td><td class="mdescRight">The gesture ID.  <a href="#a87daef5bdd8501be1f113684cfc61074">More...</a><br /></td></tr>
+<tr class="separator:a87daef5bdd8501be1f113684cfc61074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a> () const </td></tr>
+<tr class="memdesc:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> instance represents a valid <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a>.  <a href="#aac1b70a2ed67ead038c4d3f5ac4d8a81">More...</a><br /></td></tr>
+<tr class="separator:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d26edde0f247f1556ebcc6d15053515"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#a7d26edde0f247f1556ebcc6d15053515">operator!=</a> (const <a class="el" href="class_leap_1_1_gesture.html">Gesture</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a7d26edde0f247f1556ebcc6d15053515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object inequality.  <a href="#a7d26edde0f247f1556ebcc6d15053515">More...</a><br /></td></tr>
+<tr class="separator:a7d26edde0f247f1556ebcc6d15053515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae811cd825aca7239e86c5e7314bb7448"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#ae811cd825aca7239e86c5e7314bb7448">operator==</a> (const <a class="el" href="class_leap_1_1_gesture.html">Gesture</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:ae811cd825aca7239e86c5e7314bb7448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object equality.  <a href="#ae811cd825aca7239e86c5e7314bb7448">More...</a><br /></td></tr>
+<tr class="separator:ae811cd825aca7239e86c5e7314bb7448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249c63ba650070ad9bbfec7fc497443a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_pointable.html">Pointable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_swipe_gesture.html#a249c63ba650070ad9bbfec7fc497443a">pointable</a> () const </td></tr>
+<tr class="memdesc:a249c63ba650070ad9bbfec7fc497443a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The finger performing the swipe gesture.  <a href="#a249c63ba650070ad9bbfec7fc497443a">More...</a><br /></td></tr>
+<tr class="separator:a249c63ba650070ad9bbfec7fc497443a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b73aa8053337ed8d142fc912703e43e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_pointable_list.html">PointableList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#a9b73aa8053337ed8d142fc912703e43e">pointables</a> () const </td></tr>
+<tr class="memdesc:a9b73aa8053337ed8d142fc912703e43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of fingers and tools associated with this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a>, if any.  <a href="#a9b73aa8053337ed8d142fc912703e43e">More...</a><br /></td></tr>
+<tr class="separator:a9b73aa8053337ed8d142fc912703e43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ff807561faf278bb5dd46b0ea17ce7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_swipe_gesture.html#a02ff807561faf278bb5dd46b0ea17ce7">position</a> () const </td></tr>
+<tr class="memdesc:a02ff807561faf278bb5dd46b0ea17ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current position of the swipe.  <a href="#a02ff807561faf278bb5dd46b0ea17ce7">More...</a><br /></td></tr>
+<tr class="separator:a02ff807561faf278bb5dd46b0ea17ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a055e9dc8167598af360254f4775a27c9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_swipe_gesture.html#a055e9dc8167598af360254f4775a27c9">speed</a> () const </td></tr>
+<tr class="memdesc:a055e9dc8167598af360254f4775a27c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The swipe speed in mm/second.  <a href="#a055e9dc8167598af360254f4775a27c9">More...</a><br /></td></tr>
+<tr class="separator:a055e9dc8167598af360254f4775a27c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b44d026f2c2828300acc9efcd1f29b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_swipe_gesture.html#a2b44d026f2c2828300acc9efcd1f29b0">startPosition</a> () const </td></tr>
+<tr class="memdesc:a2b44d026f2c2828300acc9efcd1f29b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position where the swipe began.  <a href="#a2b44d026f2c2828300acc9efcd1f29b0">More...</a><br /></td></tr>
+<tr class="separator:a2b44d026f2c2828300acc9efcd1f29b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3804c9648e6d1325751536cca350f2bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#a3804c9648e6d1325751536cca350f2bf">state</a> () const </td></tr>
+<tr class="memdesc:a3804c9648e6d1325751536cca350f2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The gesture state.  <a href="#a3804c9648e6d1325751536cca350f2bf">More...</a><br /></td></tr>
+<tr class="separator:a3804c9648e6d1325751536cca350f2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a20a63981f8568ae880e9dc1da25ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_swipe_gesture.html#a91a20a63981f8568ae880e9dc1da25ce">SwipeGesture</a> ()</td></tr>
+<tr class="separator:a91a20a63981f8568ae880e9dc1da25ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60917252be21bb4a0969fb05b4b14dc5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_swipe_gesture.html#a60917252be21bb4a0969fb05b4b14dc5">SwipeGesture</a> (const <a class="el" href="class_leap_1_1_gesture.html">Gesture</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a60917252be21bb4a0969fb05b4b14dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_leap_1_1_swipe_gesture.html" title="The SwipeGesture class represents a swiping motion a finger or tool. ">SwipeGesture</a> object from an instance of the <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> class.  <a href="#a60917252be21bb4a0969fb05b4b14dc5">More...</a><br /></td></tr>
+<tr class="separator:a60917252be21bb4a0969fb05b4b14dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a> () const </td></tr>
+<tr class="memdesc:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string containing a brief, human-readable description of this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a>.  <a href="#a3f23c97b6c9f2a88e1121d1c633ccafa">More...</a><br /></td></tr>
+<tr class="separator:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd0fa31db28593e9669c3c56711c0a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#afbd0fa31db28593e9669c3c56711c0a7">type</a> () const </td></tr>
+<tr class="memdesc:afbd0fa31db28593e9669c3c56711c0a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The gesture type.  <a href="#afbd0fa31db28593e9669c3c56711c0a7">More...</a><br /></td></tr>
+<tr class="separator:afbd0fa31db28593e9669c3c56711c0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ab6525d8b3efe0b1ddbf99cd8d4cc1dce"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_swipe_gesture.html#ab6525d8b3efe0b1ddbf99cd8d4cc1dce">classType</a> ()</td></tr>
+<tr class="memdesc:ab6525d8b3efe0b1ddbf99cd8d4cc1dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">The swipe gesture type.  <a href="#ab6525d8b3efe0b1ddbf99cd8d4cc1dce">More...</a><br /></td></tr>
+<tr class="separator:ab6525d8b3efe0b1ddbf99cd8d4cc1dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4788a29ee0630494dbd62bdbcabc8a2c"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_leap_1_1_gesture.html">Gesture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_gesture.html#a4788a29ee0630494dbd62bdbcabc8a2c">invalid</a> ()</td></tr>
+<tr class="memdesc:a4788a29ee0630494dbd62bdbcabc8a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an invalid <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object.  <a href="#a4788a29ee0630494dbd62bdbcabc8a2c">More...</a><br /></td></tr>
+<tr class="separator:a4788a29ee0630494dbd62bdbcabc8a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_leap_1_1_swipe_gesture.html" title="The SwipeGesture class represents a swiping motion a finger or tool. ">SwipeGesture</a> class represents a swiping motion a finger or tool. </p>
+<div class="fragment"><div class="line">controller.enableGesture(<a class="code" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7ae07a8a5039bd5a0dffa7737c484566e5">Leap::Gesture::TYPE_SWIPE</a>);</div>
+</div><!-- fragment --><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a5d74787dedbc4e11c1ab15bf487e61f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The possible gesture states. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a5d74787dedbc4e11c1ab15bf487e61f8a56285fc9e39dbb4dd2f0a34e561a79fd"></a>STATE_INVALID&#160;</td><td class="fielddoc">
+<p>An invalid state. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000047">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5d74787dedbc4e11c1ab15bf487e61f8a1844f314039d713261df43a309145446"></a>STATE_START&#160;</td><td class="fielddoc">
+<p>The gesture is starting. </p>
+<p>Just enough has happened to recognize it. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000048">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5d74787dedbc4e11c1ab15bf487e61f8ad7ed6145fc50e38bed3750b71718bb01"></a>STATE_UPDATE&#160;</td><td class="fielddoc">
+<p>The gesture is in progress. </p>
+<p>(Note: not all gestures have updates). </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000049">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5d74787dedbc4e11c1ab15bf487e61f8aacbe6cbcad841c9cfd0cbf67bd0784d2"></a>STATE_STOP&#160;</td><td class="fielddoc">
+<p>The gesture has completed or stopped. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000050">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The supported types of gestures. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7afeec3d92b10ebeaa68bbb56e4d08691c"></a>TYPE_INVALID&#160;</td><td class="fielddoc">
+<p>An invalid type. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000042">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7ae07a8a5039bd5a0dffa7737c484566e5"></a>TYPE_SWIPE&#160;</td><td class="fielddoc">
+<p>A straight line movement by the hand with fingers extended. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000043">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7ab2eb90403a01de900f57a32876c8bb27"></a>TYPE_CIRCLE&#160;</td><td class="fielddoc">
+<p>A circular movement by a finger. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000044">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7adfee59f075c8ae10f2fb0671c7af2c42"></a>TYPE_SCREEN_TAP&#160;</td><td class="fielddoc">
+<p>A forward tapping movement by a finger. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000045">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7a15be4430e17eed803e3da0ac5ad3a4e2"></a>TYPE_KEY_TAP&#160;</td><td class="fielddoc">
+<p>A downward tapping movement by a finger. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000046">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a91a20a63981f8568ae880e9dc1da25ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a60917252be21bb4a0969fb05b4b14dc5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_gesture.html">Gesture</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_leap_1_1_swipe_gesture.html" title="The SwipeGesture class represents a swiping motion a finger or tool. ">SwipeGesture</a> object from an instance of the <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> class. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_swipe_gesture.html">Leap::SwipeGesture</a> swipeGesture = <a class="code" href="class_leap_1_1_gesture.html#a4788a29ee0630494dbd62bdbcabc8a2c">Leap::Gesture::invalid</a>();</div>
+<div class="line"><span class="keywordflow">if</span>(gesture.type() == <a class="code" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7ae07a8a5039bd5a0dffa7737c484566e5">Leap::Gesture::TYPE_SWIPE</a>)</div>
+<div class="line">    swipeGesture = <a class="code" href="class_leap_1_1_swipe_gesture.html">Leap::SwipeGesture</a>(gesture);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> instance to specialize. This <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> instance must be a <a class="el" href="class_leap_1_1_swipe_gesture.html" title="The SwipeGesture class represents a swiping motion a finger or tool. ">SwipeGesture</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000052">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ab6525d8b3efe0b1ddbf99cd8d4cc1dce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> classType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The swipe gesture type. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_swipe_gesture.html">Leap::SwipeGesture</a> swipeGesture = <a class="code" href="class_leap_1_1_gesture.html#a4788a29ee0630494dbd62bdbcabc8a2c">Leap::Gesture::invalid</a>();</div>
+<div class="line"><span class="keywordflow">if</span>(gesture.type() == <a class="code" href="class_leap_1_1_swipe_gesture.html#ab6525d8b3efe0b1ddbf99cd8d4cc1dce">Leap::SwipeGesture::classType</a>())</div>
+<div class="line">    swipeGesture = <a class="code" href="class_leap_1_1_swipe_gesture.html">Leap::SwipeGesture</a>(gesture);</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>Type The type value designating a swipe gesture. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000051">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8cf9153b5f55c95ea44d0e0a3bdc8a75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> direction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The unit direction vector parallel to the swipe motion. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> swipeDirection = swipe.direction();</div>
+</div><!-- fragment --><p>You can compare the components of the vector to classify the swipe as appropriate for your application. For example, if you are using swipes for two dimensional scrolling, you can compare the x and y values to determine if the swipe is primarily horizontal or vertical.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> The unit direction vector representing the swipe motion. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000055">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a43aeae80706c4089acf73e4095891fa5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t duration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The elapsed duration of the recognized movement up to the frame containing this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object, in microseconds. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> microseconds = gesture.duration();</div>
+</div><!-- fragment --><p>The duration reported for the first <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> in the sequence (with the STATE_START state) will typically be a small positive number since the movement must progress far enough for the <a class="el" href="namespace_leap.html">Leap</a> Motion software to recognize it as an intentional gesture.</p>
+<dl class="section return"><dt>Returns</dt><dd>int64_t the elapsed duration in microseconds. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000032">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abac9920e8988b2743222ce1729ac6601"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float durationSeconds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The elapsed duration in seconds. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> seconds = gesture.durationSeconds();</div>
+</div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_leap_1_1_gesture.html#a43aeae80706c4089acf73e4095891fa5" title="The elapsed duration of the recognized movement up to the frame containing this Gesture object...">duration()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>float the elapsed duration in seconds. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a43fd476e22d0607d5caae64402b2cffa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_frame.html">Frame</a> frame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> containing this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> instance. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> frameOfGesture = gesture.frame();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> The parent <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000034">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a788e21d8ff5d1f54209e75f14a27110b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_hand_list.html">HandList</a> hands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The list of hands associated with this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a>, if any. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_hand_list.html">Leap::HandList</a> handsForGesture = gesture.hands();</div>
+</div><!-- fragment --><p>If no hands are related to this gesture, the list is empty.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_leap_1_1_hand_list.html" title="The HandList class represents a list of Hand objects. ">HandList</a> the list of related <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> objects. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a87daef5bdd8501be1f113684cfc61074"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The gesture ID. </p>
+<p>All <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> objects belonging to the same recognized movement share the same ID value. Use the ID value with the <a class="el" href="class_leap_1_1_frame.html#a138683bff90b364b998c1b508469c308" title="The Gesture object with the specified ID in this frame. ">Frame::gesture()</a> method to find updates related to this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object in subsequent frames.</p>
+<div class="fragment"><div class="line">int32_t gestureOfInterest = gesture.id();</div>
+<div class="line"><a class="code" href="class_leap_1_1_gesture_list.html">Leap::GestureList</a> manyGestures = frame.<a class="code" href="class_leap_1_1_frame.html#aff7d79842325405f41784cddf0c979db">gestures</a>(olderFrame);</div>
+<div class="line"><span class="keywordflow">for</span>(<a class="code" href="class_leap_1_1_gesture_list.html#a39ad19b879ba9c81c59feddfba2eca03">Leap::GestureList::const_iterator</a> gl = manyGestures.<a class="code" href="class_leap_1_1_gesture_list.html#aa4b02d4f1a8500fb07a551069060709f">begin</a>(); gl != manyGestures.<a class="code" href="class_leap_1_1_gesture_list.html#a350132543d80a1c1e5be844e6d2878ea">end</a>(); gl++)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> ((*gl).id() == gestureOfInterest) {</div>
+<div class="line">        <span class="comment">//Process it...</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>int32_t the ID of this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4788a29ee0630494dbd62bdbcabc8a2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_leap_1_1_gesture.html">Gesture</a>&amp; invalid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an invalid <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_gesture.html">Leap::Gesture</a> trackedGesture = frame.<a class="code" href="class_leap_1_1_frame.html#a138683bff90b364b998c1b508469c308">gesture</a>(gestureID);</div>
+<div class="line"><span class="keywordflow">if</span> (trackedGesture != <a class="code" href="class_leap_1_1_gesture.html#a4788a29ee0630494dbd62bdbcabc8a2c">Leap::Gesture::invalid</a>()) {</div>
+<div class="line">    <span class="comment">//Process it...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The invalid <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> instance. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000041">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac1b70a2ed67ead038c4d3f5ac4d8a81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> instance represents a valid <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a>. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (gesture.isValid()) {</div>
+<div class="line">    <span class="comment">// Process it...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>bool True, if this is a valid <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> instance; false, otherwise. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000037">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7d26edde0f247f1556ebcc6d15053515"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_gesture.html">Gesture</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object inequality. </p>
+<div class="fragment"><div class="line">thisGesture != thatGesture;</div>
+</div><!-- fragment --><p>Two Gestures are equal only if they represent the same snapshot of the same recognized movement. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000039">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae811cd825aca7239e86c5e7314bb7448"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_gesture.html">Gesture</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object equality. </p>
+<div class="fragment"><div class="line">thisGesture == thatGesture;</div>
+</div><!-- fragment --><p>Two Gestures are equal if they represent the same snapshot of the same recognized movement. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000038">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a249c63ba650070ad9bbfec7fc497443a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_pointable.html">Pointable</a> pointable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The finger performing the swipe gesture. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_pointable.html">Leap::Pointable</a> swiper = swipe.pointable();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> A <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object representing the swiping finger. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000057">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9b73aa8053337ed8d142fc912703e43e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_pointable_list.html">PointableList</a> pointables </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The list of fingers and tools associated with this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a>, if any. </p>
+<p>If no <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects are related to this gesture, the list is empty.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_pointable_list.html">Leap::PointableList</a> pointablesForGesture = gesture.pointables();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_leap_1_1_pointable_list.html" title="The PointableList class represents a list of Pointable objects. ">PointableList</a> the list of related <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000036">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a02ff807561faf278bb5dd46b0ea17ce7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current position of the swipe. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> currentSwipePosition = swipe.position();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> The current swipe position within the <a class="el" href="namespace_leap.html">Leap</a> Motion frame of reference, in mm. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000054">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a055e9dc8167598af360254f4775a27c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float speed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The swipe speed in mm/second. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> currentSwipeSpeed = swipe.speed();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>float The speed of the finger performing the swipe gesture in millimeters per second. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000056">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2b44d026f2c2828300acc9efcd1f29b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> startPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The position where the swipe began. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> swipeStart = swipe.startPosition();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> The starting position within the <a class="el" href="namespace_leap.html">Leap</a> Motion frame of reference, in mm. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000053">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3804c9648e6d1325751536cca350f2bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> state </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The gesture state. </p>
+<p>Recognized movements occur over time and have a beginning, a middle, and an end. The '<a class="el" href="class_leap_1_1_gesture.html#a3804c9648e6d1325751536cca350f2bf" title="The gesture state. ">state()</a>' attribute reports where in that sequence this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a> object falls.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_gesture_list.html">Leap::GestureList</a> gestures = frame.<a class="code" href="class_leap_1_1_frame.html#aff7d79842325405f41784cddf0c979db">gestures</a>();</div>
+<div class="line"><span class="keywordflow">for</span>(<a class="code" href="class_leap_1_1_gesture_list.html#a39ad19b879ba9c81c59feddfba2eca03">Leap::GestureList::const_iterator</a> gl = gestures.<a class="code" href="class_leap_1_1_gesture_list.html#aa4b02d4f1a8500fb07a551069060709f">begin</a>(); gl != gestures.<a class="code" href="class_leap_1_1_gesture_list.html#a350132543d80a1c1e5be844e6d2878ea">end</a>(); gl++)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">switch</span> ((*gl).state()) {</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8a1844f314039d713261df43a309145446">Leap::Gesture::STATE_START</a>:</div>
+<div class="line">            <span class="comment">//Handle starting gestures</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8ad7ed6145fc50e38bed3750b71718bb01">Leap::Gesture::STATE_UPDATE</a>:</div>
+<div class="line">            <span class="comment">//Handle continuing gestures</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8aacbe6cbcad841c9cfd0cbf67bd0784d2">Leap::Gesture::STATE_STOP</a>:</div>
+<div class="line">            <span class="comment">//Handle ending gestures</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">default</span>:</div>
+<div class="line">            <span class="comment">//Handle unrecognized states</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8" title="The possible gesture states. ">Gesture::State</a> A value from the <a class="el" href="class_leap_1_1_gesture.html#a5d74787dedbc4e11c1ab15bf487e61f8" title="The possible gesture states. ">Gesture::State</a> enumeration. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f23c97b6c9f2a88e1121d1c633ccafa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A string containing a brief, human-readable description of this <a class="el" href="class_leap_1_1_gesture.html" title="The Gesture class represents a recognized movement by the user. ">Gesture</a>. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_gesture_list.html">Leap::GestureList</a> gestures = frame.<a class="code" href="class_leap_1_1_frame.html#aff7d79842325405f41784cddf0c979db">gestures</a>();</div>
+<div class="line"><span class="keywordflow">for</span>(<a class="code" href="class_leap_1_1_gesture_list.html#a39ad19b879ba9c81c59feddfba2eca03">Leap::GestureList::const_iterator</a> gl = gestures.<a class="code" href="class_leap_1_1_gesture_list.html#aa4b02d4f1a8500fb07a551069060709f">begin</a>(); gl != gestures.<a class="code" href="class_leap_1_1_gesture_list.html#a350132543d80a1c1e5be844e6d2878ea">end</a>(); gl++)</div>
+<div class="line">    std::cout &lt;&lt; (*gl).toString() &lt;&lt; std::endl;</div>
+</div><!-- fragment --><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000040">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afbd0fa31db28593e9669c3c56711c0a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The gesture type. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_gesture_list.html">Leap::GestureList</a> gestures = frame.<a class="code" href="class_leap_1_1_frame.html#aff7d79842325405f41784cddf0c979db">gestures</a>();</div>
+<div class="line"><span class="keywordflow">for</span>(<a class="code" href="class_leap_1_1_gesture_list.html#a39ad19b879ba9c81c59feddfba2eca03">Leap::GestureList::const_iterator</a> gl = gestures.<a class="code" href="class_leap_1_1_gesture_list.html#aa4b02d4f1a8500fb07a551069060709f">begin</a>(); gl != frame.<a class="code" href="class_leap_1_1_frame.html#aff7d79842325405f41784cddf0c979db">gestures</a>().<a class="code" href="class_leap_1_1_gesture_list.html#a350132543d80a1c1e5be844e6d2878ea">end</a>(); gl++)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">switch</span> ((*gl).type()) {</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7ab2eb90403a01de900f57a32876c8bb27">Leap::Gesture::TYPE_CIRCLE</a>:</div>
+<div class="line">            <span class="comment">//Handle circle gestures</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7a15be4430e17eed803e3da0ac5ad3a4e2">Leap::Gesture::TYPE_KEY_TAP</a>:</div>
+<div class="line">            <span class="comment">//Handle key tap gestures</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7adfee59f075c8ae10f2fb0671c7af2c42">Leap::Gesture::TYPE_SCREEN_TAP</a>:</div>
+<div class="line">            <span class="comment">//Handle screen tap gestures</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7ae07a8a5039bd5a0dffa7737c484566e5">Leap::Gesture::TYPE_SWIPE</a>:</div>
+<div class="line">            <span class="comment">//Handle swipe gestures</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">default</span>:</div>
+<div class="line">            <span class="comment">//Handle unrecognized gestures</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7" title="The supported types of gestures. ">Gesture::Type</a> A value from the <a class="el" href="class_leap_1_1_gesture.html#a1d1cfd8ffb84e947f82999c682b666a7" title="The supported types of gestures. ">Gesture::Type</a> enumeration. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">C++ Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_circle_gesture.html">CircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger_list.html">FingerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_float_array.html">FloatArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture.html">Gesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture_list.html">GestureList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand_list.html">HandList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image_list.html">ImageList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_key_tap_gesture.html">KeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_listener.html">Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable.html">Pointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable_list.html">PointableList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">SwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool.html">Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool_list.html">ToolList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>C++</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

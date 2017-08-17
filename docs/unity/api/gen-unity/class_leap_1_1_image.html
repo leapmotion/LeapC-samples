@@ -1,0 +1,1460 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Image &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap" href="namespace_leap.html" />
+    <link rel="next" title="ImageEventArgs" href="class_leap_1_1_image_event_args.html" />
+    <link rel="prev" title="IController" href="interface_leap_1_1_i_controller.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_image.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_image.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_image.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_image.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_image.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_image.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_image.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_image.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_image.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_image.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("interface_leap_1_1_i_controller.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_image_event_args.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap.html" accesskey="U">Leap</a>&raquo;
+  Image
+</span> -->
+        
+  <div class="section" id="image">
+<h1>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_image.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="class_leap_1_1_image-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.Image Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> class represents a single image from one of the <a class="el" href="namespace_leap.html">Leap</a> Motion cameras.  
+ <a href="class_leap_1_1_image.html#details">More...</a></p>
+
+<p>Inherits IDisposable.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:acefbe5d3803afc9f433a6e3856d242d1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#acefbe5d3803afc9f433a6e3856d242d1">FormatType</a> { <a class="el" href="class_leap_1_1_image.html#acefbe5d3803afc9f433a6e3856d242d1">INFRARED</a> = 0, 
+<a class="el" href="class_leap_1_1_image.html#acefbe5d3803afc9f433a6e3856d242d1">IBRG</a> = 1
+ }</td></tr>
+<tr class="memdesc:acefbe5d3803afc9f433a6e3856d242d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the possible image formats.  <a href="class_leap_1_1_image.html#acefbe5d3803afc9f433a6e3856d242d1">More...</a><br/></td></tr>
+<tr class="separator:acefbe5d3803afc9f433a6e3856d242d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876a507d46b2dfce38d703a05cc4377f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a876a507d46b2dfce38d703a05cc4377f">ImageType</a> { <a class="el" href="class_leap_1_1_image.html#a876a507d46b2dfce38d703a05cc4377f">DEFAULT</a>, 
+<a class="el" href="class_leap_1_1_image.html#a876a507d46b2dfce38d703a05cc4377f">RAW</a>
+ }</td></tr>
+<tr class="separator:a876a507d46b2dfce38d703a05cc4377f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab269c4ede5c6e2f0680575b1b57c8bb6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#ab269c4ede5c6e2f0680575b1b57c8bb6">PerspectiveType</a> { <a class="el" href="class_leap_1_1_image.html#ab269c4ede5c6e2f0680575b1b57c8bb6">INVALID</a> = 0, 
+<a class="el" href="class_leap_1_1_image.html#ab269c4ede5c6e2f0680575b1b57c8bb6">STEREO_LEFT</a> = 1, 
+<a class="el" href="class_leap_1_1_image.html#ab269c4ede5c6e2f0680575b1b57c8bb6">STEREO_RIGHT</a> = 2, 
+<a class="el" href="class_leap_1_1_image.html#ab269c4ede5c6e2f0680575b1b57c8bb6">MONO</a> = 3
+ }</td></tr>
+<tr class="memdesc:ab269c4ede5c6e2f0680575b1b57c8bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the image perspectives.  <a href="class_leap_1_1_image.html#ab269c4ede5c6e2f0680575b1b57c8bb6">More...</a><br/></td></tr>
+<tr class="separator:ab269c4ede5c6e2f0680575b1b57c8bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5767ffdd4ce2ee54586358ea02652f0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#ad5767ffdd4ce2ee54586358ea02652f0">RequestFailureReason</a> { <a class="el" href="class_leap_1_1_image.html#ad5767ffdd4ce2ee54586358ea02652f0">Image_Unavailable</a>, 
+<a class="el" href="class_leap_1_1_image.html#ad5767ffdd4ce2ee54586358ea02652f0">Images_Disabled</a>, 
+<a class="el" href="class_leap_1_1_image.html#ad5767ffdd4ce2ee54586358ea02652f0">Insufficient_Buffer</a>, 
+<a class="el" href="class_leap_1_1_image.html#ad5767ffdd4ce2ee54586358ea02652f0">Unknown_Error</a>
+ }</td></tr>
+<tr class="separator:ad5767ffdd4ce2ee54586358ea02652f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a5041fc995d869a743ce1d1f9e5a3d075"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a5041fc995d869a743ce1d1f9e5a3d075">Image</a> (ImageData data)</td></tr>
+<tr class="separator:a5041fc995d869a743ce1d1f9e5a3d075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894b4cf430f26df8991f98d9146d5f97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a894b4cf430f26df8991f98d9146d5f97">Image</a> ()</td></tr>
+<tr class="memdesc:a894b4cf430f26df8991f98d9146d5f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> object.  <a href="#a894b4cf430f26df8991f98d9146d5f97"></a><br/></td></tr>
+<tr class="separator:a894b4cf430f26df8991f98d9146d5f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f436ea9b536c16c7a6e10923f0e431"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#af2f436ea9b536c16c7a6e10923f0e431">DataWithArg</a> (byte[] dst)</td></tr>
+<tr class="separator:af2f436ea9b536c16c7a6e10923f0e431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b6d5c4129ce2b7235aee8be84d96b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a05b6d5c4129ce2b7235aee8be84d96b5">Dispose</a> ()</td></tr>
+<tr class="separator:a05b6d5c4129ce2b7235aee8be84d96b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3b06b6f2e8132ecc355811fe36e5167"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#ab3b06b6f2e8132ecc355811fe36e5167">DistortionWithArg</a> (float[] dst)</td></tr>
+<tr class="separator:ab3b06b6f2e8132ecc355811fe36e5167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f9ff65ecf4c3902ba9496fb57d2f81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#aa0f9ff65ecf4c3902ba9496fb57d2f81">Equals</a> (<a class="el" href="class_leap_1_1_image.html">Image</a> other)</td></tr>
+<tr class="memdesc:aa0f9ff65ecf4c3902ba9496fb57d2f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> object equality.  <a href="#aa0f9ff65ecf4c3902ba9496fb57d2f81"></a><br/></td></tr>
+<tr class="separator:aa0f9ff65ecf4c3902ba9496fb57d2f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba250c17bbd28286442985620222086c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#aba250c17bbd28286442985620222086c">PixelToRectilinear</a> (<a class="el" href="class_leap_1_1_image.html#ab269c4ede5c6e2f0680575b1b57c8bb6">PerspectiveType</a> camera, <a class="el" href="struct_leap_1_1_vector.html">Vector</a> pixel)</td></tr>
+<tr class="memdesc:aba250c17bbd28286442985620222086c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the corrected camera ray intercepting the specified point on the image.  <a href="#aba250c17bbd28286442985620222086c"></a><br/></td></tr>
+<tr class="separator:aba250c17bbd28286442985620222086c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26037a5742a06aeb7485cce57217e1e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a26037a5742a06aeb7485cce57217e1e9">RectilinearToPixel</a> (<a class="el" href="class_leap_1_1_image.html#ab269c4ede5c6e2f0680575b1b57c8bb6">PerspectiveType</a> camera, <a class="el" href="struct_leap_1_1_vector.html">Vector</a> ray)</td></tr>
+<tr class="memdesc:a26037a5742a06aeb7485cce57217e1e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the point in the image corresponding to a ray projecting from the camera.  <a href="#a26037a5742a06aeb7485cce57217e1e9"></a><br/></td></tr>
+<tr class="separator:a26037a5742a06aeb7485cce57217e1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f052fc6d7936be1b055f5283756cc38"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a0f052fc6d7936be1b055f5283756cc38">ToString</a> ()</td></tr>
+<tr class="memdesc:a0f052fc6d7936be1b055f5283756cc38"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string containing a brief, human readable description of the <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> object.  <a href="#a0f052fc6d7936be1b055f5283756cc38"></a><br/></td></tr>
+<tr class="separator:a0f052fc6d7936be1b055f5283756cc38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a23ab063a61640dc476b1aee4d1ac5fce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a23ab063a61640dc476b1aee4d1ac5fce">Dispose</a> (bool disposing)</td></tr>
+<tr class="separator:a23ab063a61640dc476b1aee4d1ac5fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:ae1866274238f8727fddcb387a6dc0ab0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#ae1866274238f8727fddcb387a6dc0ab0">BytesPerPixel</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae1866274238f8727fddcb387a6dc0ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of bytes per pixel.  <a href="#ae1866274238f8727fddcb387a6dc0ab0"></a><br/></td></tr>
+<tr class="separator:ae1866274238f8727fddcb387a6dc0ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a937e16d28e9a44f812c814866d24d93e"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a937e16d28e9a44f812c814866d24d93e">Data</a><code> [get]</code></td></tr>
+<tr class="memdesc:a937e16d28e9a44f812c814866d24d93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The image data.  <a href="#a937e16d28e9a44f812c814866d24d93e"></a><br/></td></tr>
+<tr class="separator:a937e16d28e9a44f812c814866d24d93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d0003ad7103a4b20a82fc2809f66c2b"><td class="memItemLeft" align="right" valign="top">float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a1d0003ad7103a4b20a82fc2809f66c2b">Distortion</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1d0003ad7103a4b20a82fc2809f66c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distortion calibration map for this image.  <a href="#a1d0003ad7103a4b20a82fc2809f66c2b"></a><br/></td></tr>
+<tr class="separator:a1d0003ad7103a4b20a82fc2809f66c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7221f670387ea10e1047a71b251000ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a7221f670387ea10e1047a71b251000ea">DistortionHeight</a><code> [get]</code></td></tr>
+<tr class="memdesc:a7221f670387ea10e1047a71b251000ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distortion map height.  <a href="#a7221f670387ea10e1047a71b251000ea"></a><br/></td></tr>
+<tr class="separator:a7221f670387ea10e1047a71b251000ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a543d13baf55f8184ee5df4d8be7574fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a543d13baf55f8184ee5df4d8be7574fe">DistortionWidth</a><code> [get]</code></td></tr>
+<tr class="memdesc:a543d13baf55f8184ee5df4d8be7574fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stride of the distortion map.  <a href="#a543d13baf55f8184ee5df4d8be7574fe"></a><br/></td></tr>
+<tr class="separator:a543d13baf55f8184ee5df4d8be7574fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11bbd1025c17cabae497cd840022f53a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_image.html#acefbe5d3803afc9f433a6e3856d242d1">Image.FormatType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a11bbd1025c17cabae497cd840022f53a">Format</a><code> [get]</code></td></tr>
+<tr class="memdesc:a11bbd1025c17cabae497cd840022f53a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The image format.  <a href="#a11bbd1025c17cabae497cd840022f53a"></a><br/></td></tr>
+<tr class="separator:a11bbd1025c17cabae497cd840022f53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00971100533a392e69ed78069340954b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a00971100533a392e69ed78069340954b">Height</a><code> [get]</code></td></tr>
+<tr class="memdesc:a00971100533a392e69ed78069340954b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The image height.  <a href="#a00971100533a392e69ed78069340954b"></a><br/></td></tr>
+<tr class="separator:a00971100533a392e69ed78069340954b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94f4f002bee3ae2731a59b74cc57991b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a94f4f002bee3ae2731a59b74cc57991b">Invalid</a><code> [get]</code></td></tr>
+<tr class="memdesc:a94f4f002bee3ae2731a59b74cc57991b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an invalid <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> object.  <a href="#a94f4f002bee3ae2731a59b74cc57991b"></a><br/></td></tr>
+<tr class="separator:a94f4f002bee3ae2731a59b74cc57991b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051a9c20b53c6ab2fc3eddf265046b69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a051a9c20b53c6ab2fc3eddf265046b69">IsComplete</a><code> [get]</code></td></tr>
+<tr class="separator:a051a9c20b53c6ab2fc3eddf265046b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1ed77cf84e86417b944a48f070a69f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#adf1ed77cf84e86417b944a48f070a69f">IsValid</a><code> [get]</code></td></tr>
+<tr class="memdesc:adf1ed77cf84e86417b944a48f070a69f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> instance contains valid data.  <a href="#adf1ed77cf84e86417b944a48f070a69f"></a><br/></td></tr>
+<tr class="separator:adf1ed77cf84e86417b944a48f070a69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c5b7144f3692de3cb3d016211ef158b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a1c5b7144f3692de3cb3d016211ef158b">RayOffsetX</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1c5b7144f3692de3cb3d016211ef158b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The horizontal ray offset.  <a href="#a1c5b7144f3692de3cb3d016211ef158b"></a><br/></td></tr>
+<tr class="separator:a1c5b7144f3692de3cb3d016211ef158b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d92b3ac58c338590ccaa642c4c10e39"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a7d92b3ac58c338590ccaa642c4c10e39">RayOffsetY</a><code> [get]</code></td></tr>
+<tr class="memdesc:a7d92b3ac58c338590ccaa642c4c10e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">The vertical ray offset.  <a href="#a7d92b3ac58c338590ccaa642c4c10e39"></a><br/></td></tr>
+<tr class="separator:a7d92b3ac58c338590ccaa642c4c10e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a560ff65b2522dd9b106243585299d564"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a560ff65b2522dd9b106243585299d564">RayScaleX</a><code> [get]</code></td></tr>
+<tr class="memdesc:a560ff65b2522dd9b106243585299d564"><td class="mdescLeft">&#160;</td><td class="mdescRight">The horizontal ray scale factor.  <a href="#a560ff65b2522dd9b106243585299d564"></a><br/></td></tr>
+<tr class="separator:a560ff65b2522dd9b106243585299d564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d824886a60fc37dbd969ec6719bb9f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a42d824886a60fc37dbd969ec6719bb9f">RayScaleY</a><code> [get]</code></td></tr>
+<tr class="memdesc:a42d824886a60fc37dbd969ec6719bb9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The vertical ray scale factor.  <a href="#a42d824886a60fc37dbd969ec6719bb9f"></a><br/></td></tr>
+<tr class="separator:a42d824886a60fc37dbd969ec6719bb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed280fe28b22cae9b37532e4f3b92f8"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a7ed280fe28b22cae9b37532e4f3b92f8">SequenceId</a><code> [get]</code></td></tr>
+<tr class="memdesc:a7ed280fe28b22cae9b37532e4f3b92f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The image sequence ID.  <a href="#a7ed280fe28b22cae9b37532e4f3b92f8"></a><br/></td></tr>
+<tr class="separator:a7ed280fe28b22cae9b37532e4f3b92f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f21e51d0f789db3ce6e3bee0a9aa2a"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a63f21e51d0f789db3ce6e3bee0a9aa2a">Timestamp</a><code> [get]</code></td></tr>
+<tr class="memdesc:a63f21e51d0f789db3ce6e3bee0a9aa2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a timestamp indicating when this frame began being captured on the device.  <a href="#a63f21e51d0f789db3ce6e3bee0a9aa2a"></a><br/></td></tr>
+<tr class="separator:a63f21e51d0f789db3ce6e3bee0a9aa2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22e5a8a8240eb396adb817017bcfc7d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_image.html#a876a507d46b2dfce38d703a05cc4377f">Image.ImageType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a22e5a8a8240eb396adb817017bcfc7d3">Type</a><code> [get]</code></td></tr>
+<tr class="separator:a22e5a8a8240eb396adb817017bcfc7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66b413ab158bf69102be0a58056a34b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a66b413ab158bf69102be0a58056a34b6">Width</a><code> [get]</code></td></tr>
+<tr class="memdesc:a66b413ab158bf69102be0a58056a34b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The image width.  <a href="#a66b413ab158bf69102be0a58056a34b6"></a><br/></td></tr>
+<tr class="separator:a66b413ab158bf69102be0a58056a34b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a44bd8a6695c50a53ef39c44d20c24857"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a44bd8a6695c50a53ef39c44d20c24857">~Image</a> ()</td></tr>
+<tr class="separator:a44bd8a6695c50a53ef39c44d20c24857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7be429a388674644bae971bdd01b26d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a7be429a388674644bae971bdd01b26d8">_disposed</a> = false</td></tr>
+<tr class="separator:a7be429a388674644bae971bdd01b26d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74552701af9152a62196c1424d900e1"><td class="memItemLeft" align="right" valign="top">ImageData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#af74552701af9152a62196c1424d900e1">imageData</a></td></tr>
+<tr class="separator:af74552701af9152a62196c1424d900e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4767f4824012f48463660fb3cb20a1"><td class="memItemLeft" align="right" valign="top">UInt64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_image.html#a4f4767f4824012f48463660fb3cb20a1">referenceIndex</a> = 0</td></tr>
+<tr class="separator:a4f4767f4824012f48463660fb3cb20a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> class represents a single image from one of the <a class="el" href="namespace_leap.html">Leap</a> Motion cameras. </p>
+<p>In addition to image data, the <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> object provides a distortion map for correcting lens distortion.</p>
+<div class="fragment"><div class="line">Leap.Image image = <span class="keyword">new</span> Leap.Image ();</div>
+<div class="line">Bitmap bitmap = <span class="keyword">new</span> Bitmap (image.Width, image.Height, System.Drawing.Imaging.PixelFormat.Format8bppIndexed);</div>
+<div class="line"><span class="comment">//set palette</span></div>
+<div class="line">ColorPalette grayscale = bitmap.Palette;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 256; i++) {</div>
+<div class="line">    grayscale.Entries [i] = Color.FromArgb ((<span class="keywordtype">int</span>)255, i, i, i);</div>
+<div class="line">}</div>
+<div class="line">bitmap.Palette = grayscale;</div>
+<div class="line">Rectangle lockArea = <span class="keyword">new</span> Rectangle (0, 0, bitmap.Width, bitmap.Height);</div>
+<div class="line">BitmapData bitmapData = bitmap.LockBits (lockArea, ImageLockMode.WriteOnly, PixelFormat.Format8bppIndexed);</div>
+<div class="line">byte[] rawImageData = image.Data;</div>
+<div class="line">System.Runtime.InteropServices.Marshal.Copy (rawImageData, 0, bitmapData.Scan0, image.Width * image.Height);</div>
+<div class="line">bitmap.UnlockBits (bitmapData);</div>
+</div><!-- fragment --><p>Note that <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> objects can be invalid, which means that they do not contain valid image data. Get valid <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> objects from Frame::frames(). Test for validity with the Image::isValid() function. </p>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="acefbe5d3803afc9f433a6e3856d242d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_image.html#acefbe5d3803afc9f433a6e3856d242d1">Leap.Image.FormatType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates the possible image formats. </p>
+<p>The Image::format() function returns an item from the FormatType enumeration. </p>
+<dl class="section since"><dt>Since</dt><dd>2.2.0 </dd></dl>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="acefbe5d3803afc9f433a6e3856d242d1"></a>INFRARED</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="acefbe5d3803afc9f433a6e3856d242d1"></a>IBRG</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a876a507d46b2dfce38d703a05cc4377f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_image.html#a876a507d46b2dfce38d703a05cc4377f">Leap.Image.ImageType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a876a507d46b2dfce38d703a05cc4377f"></a>DEFAULT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a876a507d46b2dfce38d703a05cc4377f"></a>RAW</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab269c4ede5c6e2f0680575b1b57c8bb6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_image.html#ab269c4ede5c6e2f0680575b1b57c8bb6">Leap.Image.PerspectiveType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates the image perspectives. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ab269c4ede5c6e2f0680575b1b57c8bb6"></a>INVALID</em>&nbsp;</td><td>
+<p>Invalid or unknown image perspective. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ab269c4ede5c6e2f0680575b1b57c8bb6"></a>STEREO_LEFT</em>&nbsp;</td><td>
+<p>Left side of a stereo pair. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ab269c4ede5c6e2f0680575b1b57c8bb6"></a>STEREO_RIGHT</em>&nbsp;</td><td>
+<p>Right side of a stereo pair. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ab269c4ede5c6e2f0680575b1b57c8bb6"></a>MONO</em>&nbsp;</td><td>
+<p>Reserved for future use. </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad5767ffdd4ce2ee54586358ea02652f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_image.html#ad5767ffdd4ce2ee54586358ea02652f0">Leap.Image.RequestFailureReason</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ad5767ffdd4ce2ee54586358ea02652f0"></a>Image_Unavailable</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad5767ffdd4ce2ee54586358ea02652f0"></a>Images_Disabled</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad5767ffdd4ce2ee54586358ea02652f0"></a>Insufficient_Buffer</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad5767ffdd4ce2ee54586358ea02652f0"></a>Unknown_Error</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a5041fc995d869a743ce1d1f9e5a3d075"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Leap.Image.Image </td>
+          <td>(</td>
+          <td class="paramtype">ImageData&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a44bd8a6695c50a53ef39c44d20c24857"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Leap.Image.~Image </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a894b4cf430f26df8991f98d9146d5f97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Leap.Image.Image </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> object. </p>
+<p>An uninitialized image is considered invalid. Get valid <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> objects from a ImageList object obtained from the Frame::images() method.</p>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af2f436ea9b536c16c7a6e10923f0e431"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Image.DataWithArg </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>dst</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a05b6d5c4129ce2b7235aee8be84d96b5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Image.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a23ab063a61640dc476b1aee4d1ac5fce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Image.Dispose </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disposing</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab3b06b6f2e8132ecc355811fe36e5167"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Image.DistortionWithArg </td>
+          <td>(</td>
+          <td class="paramtype">float[]&#160;</td>
+          <td class="paramname"><em>dst</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa0f9ff65ecf4c3902ba9496fb57d2f81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Image.Equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_image.html">Image</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> object equality. </p>
+<p>Two <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> objects are equal if and only if both <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> objects represent the exact same <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> and both Images are valid. </p>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aba250c17bbd28286442985620222086c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.Image.PixelToRectilinear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_image.html#ab269c4ede5c6e2f0680575b1b57c8bb6">PerspectiveType</a>&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>pixel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides the corrected camera ray intercepting the specified point on the image. </p>
+<p>Given a point on the image, <code><a class="el" href="class_leap_1_1_image.html#aba250c17bbd28286442985620222086c" title="Provides the corrected camera ray intercepting the specified point on the image.">PixelToRectilinear()</a></code> corrects for camera distortion and returns the true direction from the camera to the source of that image point within the <a class="el" href="namespace_leap.html">Leap</a> Motion field of view.</p>
+<p>This direction vector has an x and y component [x, y, 1], with the third element always one. Note that this vector uses the 2D camera coordinate system where the x-axis parallels the longer (typically horizontal) dimension and the y-axis parallels the shorter (vertical) dimension. The camera coordinate system does not correlate to the 3D <a class="el" href="namespace_leap.html">Leap</a> Motion coordinate system.</p>
+<div class="fragment"><div class="line">Vector feature = <span class="keyword">new</span> Vector (127, 68, 0);</div>
+<div class="line">Vector slopes = image.PixelToRectilinear (Leap.Image.PerspectiveType.STEREO_LEFT, </div>
+<div class="line">                                          feature);</div>
+</div><!-- fragment --><p><b>Note:</b> This function should be called immediately after an image is obtained. Incorrect results will be returned if the image orientation has changed or a different device is plugged in between the time the image was received and the time this function is called.</p>
+<p>Note, this function was formerly named Rectify().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>whether the pixel parameter is a pixel in the left or the right stereo image. </td></tr>
+    <tr><td class="paramname">pixel</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> containing the position of a pixel in the image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> containing the ray direction (the z-component of the vector is always one). </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a26037a5742a06aeb7485cce57217e1e9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> Leap.Image.RectilinearToPixel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_image.html#ab269c4ede5c6e2f0680575b1b57c8bb6">PerspectiveType</a>&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>ray</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides the point in the image corresponding to a ray projecting from the camera. </p>
+<p>Given a ray projected from the camera in the specified direction, <code><a class="el" href="class_leap_1_1_image.html#a26037a5742a06aeb7485cce57217e1e9" title="Provides the point in the image corresponding to a ray projecting from the camera.">RectilinearToPixel()</a></code> corrects for camera distortion and returns the corresponding pixel coordinates in the image.</p>
+<p>The ray direction is specified in relationship to the camera. The first vector element corresponds to the "horizontal" view angle; the second corresponds to the "vertical" view angle.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> horizontal_slope = (float)Math.Tan (65 * 180 / Math.PI);</div>
+<div class="line"><span class="keywordtype">float</span> vertical_slope = (float)Math.Tan (15 * 180 / Math.PI);</div>
+<div class="line">Vector pixel = image.RectilinearToPixel (Leap.Image.PerspectiveType.STEREO_LEFT, </div>
+<div class="line">                                         <span class="keyword">new</span> Vector (horizontal_slope, vertical_slope, 0));</div>
+<div class="line"><span class="keywordflow">if</span>(pixel.x &gt;= 0 &amp;&amp; pixel.y &gt;= 0 &amp;&amp; pixel.x &lt;= image.Width &amp;&amp; pixel.y &lt;= image.Height){</div>
+<div class="line">    <span class="keywordtype">int</span> data_index = (int)(Math.Floor (pixel.y) * image.Width + Math.Floor (pixel.x));</div>
+<div class="line">    Console.WriteLine (data_index);</div>
+<div class="line">    byte brightness = image.Data [data_index];</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The <code><a class="el" href="class_leap_1_1_image.html#a26037a5742a06aeb7485cce57217e1e9" title="Provides the point in the image corresponding to a ray projecting from the camera.">RectilinearToPixel()</a></code> function returns pixel coordinates outside of the image bounds if you project a ray toward a point for which there is no recorded data.</p>
+<p><code><a class="el" href="class_leap_1_1_image.html#a26037a5742a06aeb7485cce57217e1e9" title="Provides the point in the image corresponding to a ray projecting from the camera.">RectilinearToPixel()</a></code> is typically not fast enough for realtime distortion correction. For better performance, use a shader program exectued on a GPU.</p>
+<p><b>Note:</b> This function should be called immediately after an image is obtained. Incorrect results will be returned if the image orientation has changed or a different device is plugged in between the time the image was received and the time this function is called.</p>
+<p>Note, this function was formerly named Warp().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>whether the ray parameter intercepts the left or the right stereo image. </td></tr>
+    <tr><td class="paramname">ray</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> containing the ray direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> containing the pixel coordinates [x, y, 1] (with z always one). </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0f052fc6d7936be1b055f5283756cc38"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string Leap.Image.ToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A string containing a brief, human readable description of the <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>A description of the <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> as a string. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a7be429a388674644bae971bdd01b26d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Image._disposed = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af74552701af9152a62196c1424d900e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ImageData Leap.Image.imageData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4f4767f4824012f48463660fb3cb20a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UInt64 Leap.Image.referenceIndex = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="ae1866274238f8727fddcb387a6dc0ab0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Leap.Image.BytesPerPixel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of bytes per pixel. </p>
+<p>Use this value along with <code>Image::width()</code> and <code><a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a>:::height()</code> to calculate the size of the data buffer.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> bufferSize = image.BytesPerPixel * image.Width * image.Height;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a937e16d28e9a44f812c814866d24d93e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] Leap.Image.Data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The image data. </p>
+<p>The image data is a set of 8-bit intensity values. The buffer is <code>image.Width * image.Height * image.BytesPerPixel</code> bytes long.</p>
+<div class="fragment"><div class="line">byte[] image_buffer = image.Data;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1d0003ad7103a4b20a82fc2809f66c2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] Leap.Image.Distortion</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The distortion calibration map for this image. </p>
+<p>The calibration map is a 64x64 grid of points. Each point is defined by a pair of 32-bit floating point values. Each point in the map represents a ray projected into the camera. The value of a grid point defines the pixel in the image data containing the brightness value produced by the light entering along the corresponding ray. By interpolating between grid data points, you can find the brightness value for any projected ray. Grid values that fall outside the range [0..1] do not correspond to a value in the image data and those points should be ignored.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span>[] distortion_buffer = image.Distortion;</div>
+</div><!-- fragment --><p>The calibration map can be used to render an undistorted image as well as to find the true angle from the camera to a feature in the raw image. The distortion map itself is designed to be used with GLSL shader programs. In other contexts, it may be more convenient to use the <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> Rectify() and Warp() functions.</p>
+<p>Distortion is caused by the lens geometry as well as imperfections in the lens and sensor window. The calibration map is created by the calibration process run for each device at the factory (and which can be rerun by the user).</p>
+<p>Note, in a future release, there will be two distortion maps per image; one containing the horizontal values and the other containing the vertical values.</p>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7221f670387ea10e1047a71b251000ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Leap.Image.DistortionHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The distortion map height. </p>
+<p>Currently fixed at 64.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> correctionGridHeight = image.DistortionHeight;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a543d13baf55f8184ee5df4d8be7574fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Leap.Image.DistortionWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The stride of the distortion map. </p>
+<p>Since each point on the 64x64 element distortion map has two values in the buffer, the stride is 2 times the size of the grid. (Stride is currently fixed at 2 * 64 = 128).</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> correctionGridWidth = image.DistortionWidth;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a11bbd1025c17cabae497cd840022f53a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_image.html#acefbe5d3803afc9f433a6e3856d242d1">Image.FormatType</a> Leap.Image.Format</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The image format. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (image.Format == Leap.Image.FormatType.INFRARED) {</div>
+<div class="line">    Bitmap bitmap = <span class="keyword">new</span> Bitmap (image.Width, image.Height, System.Drawing.Imaging.PixelFormat.Format8bppIndexed);</div>
+<div class="line">    <span class="comment">//set palette</span></div>
+<div class="line">    ColorPalette grayscale = bitmap.Palette;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 256; i++) {</div>
+<div class="line">        grayscale.Entries [i] = Color.FromArgb ((<span class="keywordtype">int</span>)255, i, i, i);</div>
+<div class="line">    }</div>
+<div class="line">    bitmap.Palette = grayscale;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a00971100533a392e69ed78069340954b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Leap.Image.Height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The image height. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> height = image.Height;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a94f4f002bee3ae2731a59b74cc57991b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_image.html">Image</a> Leap.Image.Invalid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an invalid <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> object. </p>
+<p>You can use the instance returned by this function in comparisons testing whether a given <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> instance is valid or invalid. (You can also use the Image::isValid() function.)</p>
+<dl class="section return"><dt>Returns</dt><dd>The invalid <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> instance. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a051a9c20b53c6ab2fc3eddf265046b69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Image.IsComplete</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adf1ed77cf84e86417b944a48f070a69f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Image.IsValid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether this <a class="el" href="class_leap_1_1_image.html" title="The Image class represents a single image from one of the Leap Motion cameras.">Image</a> instance contains valid data. </p>
+<dl class="section return"><dt>Returns</dt><dd>true, if and only if the image is valid. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c5b7144f3692de3cb3d016211ef158b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Image.RayOffsetX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The horizontal ray offset. </p>
+<p>Used to convert between normalized coordinates in the range [0..1] and the ray slope range [-4..4].</p>
+<div class="fragment"><div class="line">Vector raySlopes = <span class="keyword">new</span> Vector (-3.25f, 1.75f, 0.0f);</div>
+<div class="line">Vector normRay =</div>
+<div class="line">    <span class="keyword">new</span> Vector (raySlopes.x * image.RayScaleX + image.RayOffsetX,</div>
+<div class="line">        raySlopes.y * image.RayScaleY + image.RayOffsetY, 0);</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7d92b3ac58c338590ccaa642c4c10e39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Image.RayOffsetY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The vertical ray offset. </p>
+<p>Used to convert between normalized coordinates in the range [0..1] and the ray slope range [-4..4].</p>
+<div class="fragment"><div class="line">Vector normSlopes = <span class="keyword">new</span> Vector (.25f, .98f, 0.0f); <span class="comment">//An arbitrary slope vector</span></div>
+<div class="line">Vector slope = <span class="keyword">new</span> Vector ((normSlopes.x - image.RayOffsetX) / image.RayScaleX,</div>
+<div class="line">               (normSlopes.y - image.RayOffsetY) / image.RayScaleY, 0);</div>
+<div class="line"></div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a560ff65b2522dd9b106243585299d564"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Image.RayScaleX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The horizontal ray scale factor. </p>
+<p>Used to convert between normalized coordinates in the range [0..1] and the ray slope range [-4..4].</p>
+<div class="fragment"><div class="line">Vector raySlopes = <span class="keyword">new</span> Vector (-3.25f, 1.75f, 0.0f);</div>
+<div class="line">Vector normRay =</div>
+<div class="line">    <span class="keyword">new</span> Vector (raySlopes.x * image.RayScaleX + image.RayOffsetX,</div>
+<div class="line">        raySlopes.y * image.RayScaleY + image.RayOffsetY, 0);</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a42d824886a60fc37dbd969ec6719bb9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Image.RayScaleY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The vertical ray scale factor. </p>
+<p>Used to convert between normalized coordinates in the range [0..1] and the ray slope range [-4..4].</p>
+<div class="fragment"><div class="line">Vector normSlopes = <span class="keyword">new</span> Vector (.25f, .98f, 0.0f); <span class="comment">//An arbitrary slope vector</span></div>
+<div class="line">Vector slope = <span class="keyword">new</span> Vector ((normSlopes.x - image.RayOffsetX) / image.RayScaleX,</div>
+<div class="line">               (normSlopes.y - image.RayOffsetY) / image.RayScaleY, 0);</div>
+<div class="line"></div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7ed280fe28b22cae9b37532e4f3b92f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Leap.Image.SequenceId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The image sequence ID. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> lastImage = 0;</div>
+<div class="line"><span class="keywordflow">while</span> (!done) {</div>
+<div class="line">    <a class="code" href="class_leap_1_1_image.html#a894b4cf430f26df8991f98d9146d5f97" title="Constructs a Image object.">Image</a> left_image = controller.Images[0];</div>
+<div class="line">    <span class="keywordflow">if</span> (left_image.SequenceId != lastImage) {</div>
+<div class="line">        image right_image = controller.Images [1];</div>
+<div class="line">        lastImage = left_image.SequenceId;</div>
+<div class="line">        <span class="comment">// Use images...</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.2.1 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a63f21e51d0f789db3ce6e3bee0a9aa2a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Leap.Image.Timestamp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a timestamp indicating when this frame began being captured on the device. </p>
+<dl class="section since"><dt>Since</dt><dd>2.2.7 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a22e5a8a8240eb396adb817017bcfc7d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_image.html#a876a507d46b2dfce38d703a05cc4377f">Image.ImageType</a> Leap.Image.Type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a66b413ab158bf69102be0a58056a34b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Leap.Image.Width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The image width. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> width = image.Width;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.1.0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap.html">Leap</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_c_sharp_extensions.html">CSharpExtensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_clock_correlator.html">ClockCorrelator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_config.html">Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_config_change_event_args.html">ConfigChangeEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_connection_event_args.html">ConnectionEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_connection_lost_event_args.html">ConnectionLostEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_constants.html">Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_copy_from_other_extensions.html">CopyFromOtherExtensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device_event_args.html">DeviceEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device_failure_event_args.html">DeviceFailureEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_distortion_data.html">DistortionData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_distortion_event_args.html">DistortionEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_dropped_frame_event_args.html">DroppedFrameEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_frame_event_args.html">FrameEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface_leap_1_1_i_controller.html">IController</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_image_event_args.html">ImageEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_image_request_failed_event_args.html">ImageRequestFailedEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_internal_frame_event_args.html">InternalFrameEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_leap_event_args.html">LeapEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_leap_transform.html">LeapTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_log_event_args.html">LogEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_policy_event_args.html">PolicyEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_set_config_response_event_args.html">SetConfigResponseEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_test_hand_factory.html">TestHandFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_time_bracket.html">TimeBracket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_transform_extensions.html">TransformExtensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,1336 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Finger &mdash; Leap Motion C++ SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion C++ SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="FingerList" href="class_leap_1_1_finger_list.html" />
+    <link rel="prev" title="FailedDeviceList" href="class_leap_1_1_failed_device_list.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'cpp';
+    var hasAPI = {};
+    hasAPI.cpp = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'cpp/api/gen-cpp/class_leap_1_1_finger.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-cpp/class_leap_1_1_finger.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-cpp/class_leap_1_1_finger.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-cpp/class_leap_1_1_finger.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-cpp/class_leap_1_1_finger.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-cpp/class_leap_1_1_finger.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-cpp/class_leap_1_1_finger.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-cpp/class_leap_1_1_finger.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-cpp/class_leap_1_1_finger.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'cpp/api/gen-cpp/class_leap_1_1_finger.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_failed_device_list.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_finger_list.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      C++
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  Finger
+</span> -->
+        
+  <div class="section" id="finger">
+<h1>Finger<a class="headerlink" href="#finger" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_finger.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="class_leap_1_1_finger-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Finger Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> class represents a tracked finger.  
+ <a href="class_leap_1_1_finger.html#details">More...</a></p>
+
+<p>Inherits <a class="el" href="class_leap_1_1_pointable.html">Pointable</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ac59007d612b1e2624efd27182f4362f5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger.html#ac59007d612b1e2624efd27182f4362f5">Joint</a> <tr class="memdesc:ac59007d612b1e2624efd27182f4362f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deprecated as of version 2.0.  <a href="class_leap_1_1_finger.html#ac59007d612b1e2624efd27182f4362f5">More...</a><br /></td></tr>
+<tr class="separator:ac59007d612b1e2624efd27182f4362f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:a1d1cfd8ffb84e947f82999c682b666a7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <tr class="memdesc:a1d1cfd8ffb84e947f82999c682b666a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the names of the fingers.  <a href="class_leap_1_1_finger.html#a1d1cfd8ffb84e947f82999c682b666a7">More...</a><br /></td></tr>
+<tr class="separator:a1d1cfd8ffb84e947f82999c682b666a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:a4e3ed68e1678c0e62d62a69b903720c8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a4e3ed68e1678c0e62d62a69b903720c8">Zone</a> <tr class="memdesc:a4e3ed68e1678c0e62d62a69b903720c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the values for reporting the state of a <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object in relation to an adaptive touch plane.  <a href="class_leap_1_1_pointable.html#a4e3ed68e1678c0e62d62a69b903720c8">More...</a><br /></td></tr>
+<tr class="separator:a4e3ed68e1678c0e62d62a69b903720c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1c96d488ec00ab0c488c8e9153ead9c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_bone.html">Bone</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger.html#a1c96d488ec00ab0c488c8e9153ead9c7">bone</a> (<a class="el" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">Bone::Type</a> boneIx) const </td></tr>
+<tr class="memdesc:a1c96d488ec00ab0c488c8e9153ead9c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bone at a given bone index on this finger.  <a href="#a1c96d488ec00ab0c488c8e9153ead9c7">More...</a><br /></td></tr>
+<tr class="separator:a1c96d488ec00ab0c488c8e9153ead9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf9153b5f55c95ea44d0e0a3bdc8a75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a8cf9153b5f55c95ea44d0e0a3bdc8a75">direction</a> () const </td></tr>
+<tr class="memdesc:a8cf9153b5f55c95ea44d0e0a3bdc8a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">The direction in which this finger is pointing.  <a href="#a8cf9153b5f55c95ea44d0e0a3bdc8a75">More...</a><br /></td></tr>
+<tr class="separator:a8cf9153b5f55c95ea44d0e0a3bdc8a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c1e85597dec766efa9d02604efd7c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger.html#a61c1e85597dec766efa9d02604efd7c6">Finger</a> (FingerImplementation *)</td></tr>
+<tr class="separator:a61c1e85597dec766efa9d02604efd7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e4212ca6d56bbc5c01a59e6f458e24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger.html#aa6e4212ca6d56bbc5c01a59e6f458e24">Finger</a> ()</td></tr>
+<tr class="memdesc:aa6e4212ca6d56bbc5c01a59e6f458e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object.  <a href="#aa6e4212ca6d56bbc5c01a59e6f458e24">More...</a><br /></td></tr>
+<tr class="separator:aa6e4212ca6d56bbc5c01a59e6f458e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96d96f0e1a0313dcdfb9be6e5fdb47f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger.html#ae96d96f0e1a0313dcdfb9be6e5fdb47f">Finger</a> (const <a class="el" href="class_leap_1_1_pointable.html">Pointable</a> &amp;)</td></tr>
+<tr class="memdesc:ae96d96f0e1a0313dcdfb9be6e5fdb47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the specified <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object represents a finger, creates a copy of it as a <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object; otherwise, creates an invalid <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object.  <a href="#ae96d96f0e1a0313dcdfb9be6e5fdb47f">More...</a><br /></td></tr>
+<tr class="separator:ae96d96f0e1a0313dcdfb9be6e5fdb47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43fd476e22d0607d5caae64402b2cffa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_frame.html">Frame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a43fd476e22d0607d5caae64402b2cffa">frame</a> () const </td></tr>
+<tr class="memdesc:a43fd476e22d0607d5caae64402b2cffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> associated with this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object.  <a href="#a43fd476e22d0607d5caae64402b2cffa">More...</a><br /></td></tr>
+<tr class="separator:a43fd476e22d0607d5caae64402b2cffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6736e994b5c12c0394547eba1147478"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#aa6736e994b5c12c0394547eba1147478">hand</a> () const </td></tr>
+<tr class="memdesc:aa6736e994b5c12c0394547eba1147478"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> associated with a finger.  <a href="#aa6736e994b5c12c0394547eba1147478">More...</a><br /></td></tr>
+<tr class="separator:aa6736e994b5c12c0394547eba1147478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87daef5bdd8501be1f113684cfc61074"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a87daef5bdd8501be1f113684cfc61074">id</a> () const </td></tr>
+<tr class="memdesc:a87daef5bdd8501be1f113684cfc61074"><td class="mdescLeft">&#160;</td><td class="mdescRight">A unique ID assigned to this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object, whose value remains the same across consecutive frames while the tracked finger remains visible.  <a href="#a87daef5bdd8501be1f113684cfc61074">More...</a><br /></td></tr>
+<tr class="separator:a87daef5bdd8501be1f113684cfc61074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28538a21a1788ca33c2c11102b5c027b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a28538a21a1788ca33c2c11102b5c027b">isExtended</a> () const </td></tr>
+<tr class="memdesc:a28538a21a1788ca33c2c11102b5c027b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is in an extended posture.  <a href="#a28538a21a1788ca33c2c11102b5c027b">More...</a><br /></td></tr>
+<tr class="separator:a28538a21a1788ca33c2c11102b5c027b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216198547ba0bc21376818472aa1fd8b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a216198547ba0bc21376818472aa1fd8b">isFinger</a> () const </td></tr>
+<tr class="memdesc:a216198547ba0bc21376818472aa1fd8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is classified as a finger.  <a href="#a216198547ba0bc21376818472aa1fd8b">More...</a><br /></td></tr>
+<tr class="separator:a216198547ba0bc21376818472aa1fd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4edd5b99b7cea5c821a544973a8f48f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#ae4edd5b99b7cea5c821a544973a8f48f">isTool</a> () const </td></tr>
+<tr class="memdesc:ae4edd5b99b7cea5c821a544973a8f48f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is classified as a tool.  <a href="#ae4edd5b99b7cea5c821a544973a8f48f">More...</a><br /></td></tr>
+<tr class="separator:ae4edd5b99b7cea5c821a544973a8f48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a> () const </td></tr>
+<tr class="memdesc:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this is a valid <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object.  <a href="#aac1b70a2ed67ead038c4d3f5ac4d8a81">More...</a><br /></td></tr>
+<tr class="separator:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a2e26e0e75e53b096b9d93513ff5007"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger.html#a9a2e26e0e75e53b096b9d93513ff5007">jointPosition</a> (<a class="el" href="class_leap_1_1_finger.html#ac59007d612b1e2624efd27182f4362f5">Joint</a> jointIx) const </td></tr>
+<tr class="memdesc:a9a2e26e0e75e53b096b9d93513ff5007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deprecated as of version 2.0 Use 'bone' method instead.  <a href="#a9a2e26e0e75e53b096b9d93513ff5007">More...</a><br /></td></tr>
+<tr class="separator:a9a2e26e0e75e53b096b9d93513ff5007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c7f525adfb7ab1af7df4b0b6b34d4eb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a7c7f525adfb7ab1af7df4b0b6b34d4eb">length</a> () const </td></tr>
+<tr class="memdesc:a7c7f525adfb7ab1af7df4b0b6b34d4eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated length of the finger in millimeters.  <a href="#a7c7f525adfb7ab1af7df4b0b6b34d4eb">More...</a><br /></td></tr>
+<tr class="separator:a7c7f525adfb7ab1af7df4b0b6b34d4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f30e62fd522806db3f6d1b48d3d2685"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a1f30e62fd522806db3f6d1b48d3d2685">operator!=</a> (const <a class="el" href="class_leap_1_1_pointable.html">Pointable</a> &amp;) const </td></tr>
+<tr class="memdesc:a1f30e62fd522806db3f6d1b48d3d2685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object inequality.  <a href="#a1f30e62fd522806db3f6d1b48d3d2685">More...</a><br /></td></tr>
+<tr class="separator:a1f30e62fd522806db3f6d1b48d3d2685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cec59cd6a5a6883fb83b84bcd6ebf90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a7cec59cd6a5a6883fb83b84bcd6ebf90">operator==</a> (const <a class="el" href="class_leap_1_1_pointable.html">Pointable</a> &amp;) const </td></tr>
+<tr class="memdesc:a7cec59cd6a5a6883fb83b84bcd6ebf90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object equality.  <a href="#a7cec59cd6a5a6883fb83b84bcd6ebf90">More...</a><br /></td></tr>
+<tr class="separator:a7cec59cd6a5a6883fb83b84bcd6ebf90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb08fd21d3c4ccb1f9a0f566f122532"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a0eb08fd21d3c4ccb1f9a0f566f122532">stabilizedTipPosition</a> () const </td></tr>
+<tr class="memdesc:a0eb08fd21d3c4ccb1f9a0f566f122532"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stabilized tip position of this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a>.  <a href="#a0eb08fd21d3c4ccb1f9a0f566f122532">More...</a><br /></td></tr>
+<tr class="separator:a0eb08fd21d3c4ccb1f9a0f566f122532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8c627e2f2709b42b2ff60d898345c5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a2e8c627e2f2709b42b2ff60d898345c5">timeVisible</a> () const </td></tr>
+<tr class="memdesc:a2e8c627e2f2709b42b2ff60d898345c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The duration of time this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> has been visible to the <a class="el" href="namespace_leap.html">Leap</a> Motion <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>.  <a href="#a2e8c627e2f2709b42b2ff60d898345c5">More...</a><br /></td></tr>
+<tr class="separator:a2e8c627e2f2709b42b2ff60d898345c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a495779027d8771a7980b3ca08335f017"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a495779027d8771a7980b3ca08335f017">tipPosition</a> () const </td></tr>
+<tr class="memdesc:a495779027d8771a7980b3ca08335f017"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tip position in millimeters from the <a class="el" href="namespace_leap.html">Leap</a> Motion origin.  <a href="#a495779027d8771a7980b3ca08335f017">More...</a><br /></td></tr>
+<tr class="separator:a495779027d8771a7980b3ca08335f017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2cee5b1aa59eaeedbdd8485ba763bdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#ac2cee5b1aa59eaeedbdd8485ba763bdd">tipVelocity</a> () const </td></tr>
+<tr class="memdesc:ac2cee5b1aa59eaeedbdd8485ba763bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rate of change of the tip position in millimeters/second.  <a href="#ac2cee5b1aa59eaeedbdd8485ba763bdd">More...</a><br /></td></tr>
+<tr class="separator:ac2cee5b1aa59eaeedbdd8485ba763bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a> () const </td></tr>
+<tr class="memdesc:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string containing a brief, human readable description of the <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object.  <a href="#a3f23c97b6c9f2a88e1121d1c633ccafa">More...</a><br /></td></tr>
+<tr class="separator:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc22c57be56d3de9b8f1344b382c4f33"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#adc22c57be56d3de9b8f1344b382c4f33">touchDistance</a> () const </td></tr>
+<tr class="memdesc:adc22c57be56d3de9b8f1344b382c4f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">A value proportional to the distance between this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object and the adaptive touch plane.  <a href="#adc22c57be56d3de9b8f1344b382c4f33">More...</a><br /></td></tr>
+<tr class="separator:adc22c57be56d3de9b8f1344b382c4f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8381b545ad04f3c7b6ef9a15c6da526"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_pointable.html#a4e3ed68e1678c0e62d62a69b903720c8">Zone</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#ae8381b545ad04f3c7b6ef9a15c6da526">touchZone</a> () const </td></tr>
+<tr class="memdesc:ae8381b545ad04f3c7b6ef9a15c6da526"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current touch zone of this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object.  <a href="#ae8381b545ad04f3c7b6ef9a15c6da526">More...</a><br /></td></tr>
+<tr class="separator:ae8381b545ad04f3c7b6ef9a15c6da526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd0fa31db28593e9669c3c56711c0a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_finger.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger.html#afbd0fa31db28593e9669c3c56711c0a7">type</a> () const </td></tr>
+<tr class="memdesc:afbd0fa31db28593e9669c3c56711c0a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of this finger.  <a href="#afbd0fa31db28593e9669c3c56711c0a7">More...</a><br /></td></tr>
+<tr class="separator:afbd0fa31db28593e9669c3c56711c0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49775584c76a5ecbefa51065cadbc304"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_pointable.html#a49775584c76a5ecbefa51065cadbc304">width</a> () const </td></tr>
+<tr class="memdesc:a49775584c76a5ecbefa51065cadbc304"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated width of the finger in millimeters.  <a href="#a49775584c76a5ecbefa51065cadbc304">More...</a><br /></td></tr>
+<tr class="separator:a49775584c76a5ecbefa51065cadbc304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:adfb20279e1364c3ab729b37c23a768e7"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_leap_1_1_finger.html">Finger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_finger.html#adfb20279e1364c3ab729b37c23a768e7">invalid</a> ()</td></tr>
+<tr class="memdesc:adfb20279e1364c3ab729b37c23a768e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an invalid <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object.  <a href="#adfb20279e1364c3ab729b37c23a768e7">More...</a><br /></td></tr>
+<tr class="separator:adfb20279e1364c3ab729b37c23a768e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> class represents a tracked finger. </p>
+<p>Fingers are <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects that the <a class="el" href="namespace_leap.html">Leap</a> Motion software has classified as a finger. Get valid <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> objects from a <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> or a <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object.</p>
+<p>Fingers may be permanently associated to a hand. In this case the angular order of the finger IDs will be invariant. As fingers move in and out of view it is possible for the guessed ID of a finger to be incorrect. Consequently, it may be necessary for finger IDs to be exchanged. All tracked properties, such as velocity, will remain continuous in the API. However, quantities that are derived from the API output (such as a history of positions) will be discontinuous unless they have a corresponding ID exchange.</p>
+<p>Note that <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> objects can be invalid, which means that they do not contain valid tracking data and do not correspond to a physical finger. Invalid <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> objects can be the result of asking for a <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object using an ID from an earlier frame when no <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> objects with that ID exist in the current frame. A <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object created from the <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> constructor is also invalid. Test for validity with the <a class="el" href="class_leap_1_1_pointable.html#aac1b70a2ed67ead038c4d3f5ac4d8a81" title="Reports whether this is a valid Pointable object. ">Finger::isValid()</a> function. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="ac59007d612b1e2624efd27182f4362f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_finger.html#ac59007d612b1e2624efd27182f4362f5">Joint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deprecated as of version 2.0. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ac59007d612b1e2624efd27182f4362f5adcb292275b6e51fea8367abfd12fe861"></a>JOINT_MCP&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac59007d612b1e2624efd27182f4362f5aba011cd8f8393d774ae28194bc75da54"></a>JOINT_PIP&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac59007d612b1e2624efd27182f4362f5a1fa485ba163022629a7650e406830466"></a>JOINT_DIP&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac59007d612b1e2624efd27182f4362f5a2b3897b840c3752c2da53b564dff6fe6"></a>JOINT_TIP&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_finger.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates the names of the fingers. </p>
+<p>Members of this enumeration are returned by <a class="el" href="class_leap_1_1_finger.html#afbd0fa31db28593e9669c3c56711c0a7" title="The name of this finger. ">Finger::type()</a> to identify a <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object. </p><dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7aee50065a972c25ba4be9e46663b250b3"></a>TYPE_THUMB&#160;</td><td class="fielddoc">
+<p>The thumb. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7acc7d99352e3f544b238ceb6d96c10cdb"></a>TYPE_INDEX&#160;</td><td class="fielddoc">
+<p>The index or fore-finger. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7ab2a599c23328704470b6aac13042846d"></a>TYPE_MIDDLE&#160;</td><td class="fielddoc">
+<p>The middle finger. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7afe3e3697e6e9f7880cb90d40e1d4d708"></a>TYPE_RING&#160;</td><td class="fielddoc">
+<p>The ring finger. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7a3fe66f22879c1a4d5aeb6a163ae145e1"></a>TYPE_PINKY&#160;</td><td class="fielddoc">
+<p>The pinky or little finger. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a4e3ed68e1678c0e62d62a69b903720c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_pointable.html#a4e3ed68e1678c0e62d62a69b903720c8">Zone</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Defines the values for reporting the state of a <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object in relation to an adaptive touch plane. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a4e3ed68e1678c0e62d62a69b903720c8a5427ec8a83ec8f39bbd2f3276d2fc001"></a>ZONE_NONE&#160;</td><td class="fielddoc">
+<p>The <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object is too far from the plane to be considered hovering or touching. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4e3ed68e1678c0e62d62a69b903720c8abdf4dbad6ebd71559218f81a1d3d8868"></a>ZONE_HOVERING&#160;</td><td class="fielddoc">
+<p>The <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object is close to, but not touching the plane. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4e3ed68e1678c0e62d62a69b903720c8ab620524724b584982d65d725381b4889"></a>ZONE_TOUCHING&#160;</td><td class="fielddoc">
+<p>The <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> has penetrated the plane. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a61c1e85597dec766efa9d02604efd7c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_finger.html">Finger</a> </td>
+          <td>(</td>
+          <td class="paramtype">FingerImplementation *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa6e4212ca6d56bbc5c01a59e6f458e24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_finger.html">Finger</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object. </p>
+<p>An uninitialized finger is considered invalid. Get valid <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> objects from a <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> or a <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae96d96f0e1a0313dcdfb9be6e5fdb47f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_finger.html">Finger</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_pointable.html">Pointable</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If the specified <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object represents a finger, creates a copy of it as a <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object; otherwise, creates an invalid <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a> finger = <a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a>(pointable);</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1c96d488ec00ab0c488c8e9153ead9c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_bone.html">Bone</a> bone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">Bone::Type</a>&#160;</td>
+          <td class="paramname"><em>boneIx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The bone at a given bone index on this finger. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_finger_list.html">Leap::FingerList</a> fingers = frame.<a class="code" href="class_leap_1_1_frame.html#a788e21d8ff5d1f54209e75f14a27110b">hands</a>()[0].fingers();</div>
+<div class="line"><span class="keywordflow">for</span>(<a class="code" href="class_leap_1_1_finger_list.html#a97db28c9a35b564655712df999d32d27">Leap::FingerList::const_iterator</a> fl = fingers.<a class="code" href="class_leap_1_1_finger_list.html#aa4b02d4f1a8500fb07a551069060709f">begin</a>(); fl != fingers.<a class="code" href="class_leap_1_1_finger_list.html#a350132543d80a1c1e5be844e6d2878ea">end</a>(); fl++){</div>
+<div class="line">    <a class="code" href="class_leap_1_1_bone.html">Leap::Bone</a> <a class="code" href="class_leap_1_1_finger.html#a1c96d488ec00ab0c488c8e9153ead9c7">bone</a>;</div>
+<div class="line">    <a class="code" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">Leap::Bone::Type</a> boneType;</div>
+<div class="line">    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> b = 0; b &lt; 4; b++)</div>
+<div class="line">    {</div>
+<div class="line">        boneType = <span class="keyword">static_cast&lt;</span><a class="code" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">Leap::Bone::Type</a><span class="keyword">&gt;</span>(b);</div>
+<div class="line">        bone = (*fl).bone(boneType);</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Finger index: &quot;</span> &lt;&lt; (*fl).<a class="code" href="class_leap_1_1_bone.html#afbd0fa31db28593e9669c3c56711c0a7">type</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; bone &lt;&lt; std::endl;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">boneIx</td><td>An index value from the <a class="el" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7" title="Enumerates the names of the bones. ">Bone::Type</a> enumeration identifying the bone of interest. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> that has the specified bone type. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8cf9153b5f55c95ea44d0e0a3bdc8a75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> direction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The direction in which this finger is pointing. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> pointingToward = pointable.direction();</div>
+</div><!-- fragment --><p>The direction is expressed as a unit vector pointing in the same direction as the tip.</p>
+<div class="image">
+<img src="Leap_Finger_Model.png" alt="Leap_Finger_Model.png"/>
+</div>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> pointing in the same direction as the tip of this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a43fd476e22d0607d5caae64402b2cffa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_frame.html">Frame</a> frame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> associated with this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_frame.html">Leap::Frame</a> frameOfThisPointableObject = pointable.frame();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The associated <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object, if available; otherwise, an invalid <a class="el" href="class_leap_1_1_frame.html" title="The Frame class represents a set of hand and finger tracking data detected in a single frame...">Frame</a> object is returned. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa6736e994b5c12c0394547eba1147478"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_hand.html">Hand</a> hand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> associated with a finger. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_hand.html">Leap::Hand</a> attachedHand = pointable.hand();</div>
+</div><!-- fragment --><p>This function always returns an invalid <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object.</p>
+<dl class="section return"><dt>Returns</dt><dd>The associated <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object, if available; otherwise, an invalid <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand. ">Hand</a> object is returned. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a87daef5bdd8501be1f113684cfc61074"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A unique ID assigned to this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object, whose value remains the same across consecutive frames while the tracked finger remains visible. </p>
+<p>If tracking is lost (for example, when a finger is occluded by another finger or when it is withdrawn from the <a class="el" href="namespace_leap.html">Leap</a> Motion <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a> field of view), the <a class="el" href="namespace_leap.html">Leap</a> Motion software may assign a new ID when it detects the entity in a future frame.</p>
+<div class="fragment"><div class="line">int32_t theID = pointable.id();</div>
+</div><!-- fragment --><p>Use the ID value with the <a class="el" href="class_leap_1_1_frame.html#a47b471f61ee1b7514d37747bd7b95e73" title="The Pointable object with the specified ID in this frame. ">Frame::pointable()</a> function to find this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object in future frames.</p>
+<p>IDs should be from 1 to 100 (inclusive). If more than 100 objects are tracked an IDs of -1 will be used until an ID in the defined range is available.</p>
+<dl class="section return"><dt>Returns</dt><dd>The ID assigned to this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adfb20279e1364c3ab729b37c23a768e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_leap_1_1_finger.html">Finger</a>&amp; invalid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an invalid <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object. </p>
+<p>You can use the instance returned by this function in comparisons testing whether a given <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> instance is valid or invalid. (You can also use the <a class="el" href="class_leap_1_1_pointable.html#aac1b70a2ed67ead038c4d3f5ac4d8a81" title="Reports whether this is a valid Pointable object. ">Finger::isValid()</a> function.)</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a> invalidFinger = <a class="code" href="class_leap_1_1_finger.html#adfb20279e1364c3ab729b37c23a768e7">Leap::Finger::invalid</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The invalid <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> instance. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a28538a21a1788ca33c2c11102b5c027b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isExtended </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether or not this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is in an extended posture. </p>
+<p>A finger is considered extended if it is extended straight from the hand as if pointing. A finger is not extended when it is bent down and curled towards the palm.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> extendedFingers = 0;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; hand.<a class="code" href="class_leap_1_1_hand.html#a9f871d62c006a2426fc2164f91584ec4">fingers</a>().<a class="code" href="class_leap_1_1_finger_list.html#a0745638c9967e2ed90bc96c012288c55">count</a>(); f++)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a> finger = hand.<a class="code" href="class_leap_1_1_hand.html#a9f871d62c006a2426fc2164f91584ec4">fingers</a>()[f];</div>
+<div class="line">    <span class="keywordflow">if</span>(finger.<a class="code" href="class_leap_1_1_pointable.html#a28538a21a1788ca33c2c11102b5c027b">isExtended</a>()) extendedFingers++;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if the pointable is extended. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a216198547ba0bc21376818472aa1fd8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isFinger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether or not this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is classified as a finger. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (pointable.isTool()) {</div>
+<div class="line">    <a class="code" href="class_leap_1_1_tool.html">Leap::Tool</a> tool = <a class="code" href="class_leap_1_1_tool.html">Leap::Tool</a>(pointable);</div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a> finger = <a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a>(pointable);</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is classified as a finger. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae4edd5b99b7cea5c821a544973a8f48f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isTool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether or not this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> is classified as a tool. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (pointable.isTool()) {</div>
+<div class="line">    <a class="code" href="class_leap_1_1_tool.html">Leap::Tool</a> tool = <a class="code" href="class_leap_1_1_tool.html">Leap::Tool</a>(pointable);</div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a> finger = <a class="code" href="class_leap_1_1_finger.html">Leap::Finger</a>(pointable);</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>false </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac1b70a2ed67ead038c4d3f5ac4d8a81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether this is a valid <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>( pointable.isValid()) {</div>
+<div class="line">    <span class="comment">//Use it...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object contains valid tracking data. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9a2e26e0e75e53b096b9d93513ff5007"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> jointPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_finger.html#ac59007d612b1e2624efd27182f4362f5">Joint</a>&#160;</td>
+          <td class="paramname"><em>jointIx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deprecated as of version 2.0 Use 'bone' method instead. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7c7f525adfb7ab1af7df4b0b6b34d4eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The estimated length of the finger in millimeters. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> apparentlength = pointable.length();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The estimated length of this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1f30e62fd522806db3f6d1b48d3d2685"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_pointable.html">Pointable</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object inequality. </p>
+<div class="fragment"><div class="line">thisPointable != thatPointable;</div>
+</div><!-- fragment --><p>Two <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects are equal if and only if both <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects represent the exact same physical entities in the same frame and both <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects are valid. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7cec59cd6a5a6883fb83b84bcd6ebf90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_pointable.html">Pointable</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object equality. </p>
+<div class="fragment"><div class="line">thisPointable == thatPointable;</div>
+</div><!-- fragment --><p>Two <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects are equal if and only if both <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects represent the exact same physical entities in the same frame and both <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> objects are valid. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0eb08fd21d3c4ccb1f9a0f566f122532"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> stabilizedTipPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The stabilized tip position of this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a>. </p>
+<p>Smoothing and stabilization is performed in order to make this value more suitable for interaction with 2D content. The stabilized position lags behind the tip position by a variable amount, depending primarily on the speed of movement.</p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> stabilizedPosition = pointable.stabilizedTipPosition();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A modified tip position of this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object with some additional smoothing and stabilization applied. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e8c627e2f2709b42b2ff60d898345c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float timeVisible </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The duration of time this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> has been visible to the <a class="el" href="namespace_leap.html">Leap</a> Motion <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller. ">Controller</a>. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> lifetime = pointable.timeVisible();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The duration (in seconds) that this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> has been tracked. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a495779027d8771a7980b3ca08335f017"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> tipPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The tip position in millimeters from the <a class="el" href="namespace_leap.html">Leap</a> Motion origin. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> currentPosition = pointable.tipPosition();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> containing the coordinates of the tip position. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac2cee5b1aa59eaeedbdd8485ba763bdd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> tipVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The rate of change of the tip position in millimeters/second. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> currentSpeed = pointable.tipVelocity();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> containing the coordinates of the tip velocity. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f23c97b6c9f2a88e1121d1c633ccafa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A string containing a brief, human readable description of the <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object. </p>
+<div class="fragment"><div class="line">std::string description = finger.<a class="code" href="class_leap_1_1_finger.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A description of the <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object as a string. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adc22c57be56d3de9b8f1344b382c4f33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float touchDistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A value proportional to the distance between this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object and the adaptive touch plane. </p>
+<div class="image">
+<img src="Leap_Touch_Plane.png" alt="Leap_Touch_Plane.png"/>
+</div>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> distance = pointable.touchDistance();</div>
+<div class="line"><span class="keywordflow">if</span> (distance &gt; 0) {</div>
+<div class="line">    <span class="comment">//Handle hovering ...</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">//Handle touching ...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The normalized touch distance of this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae8381b545ad04f3c7b6ef9a15c6da526"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_pointable.html#a4e3ed68e1678c0e62d62a69b903720c8">Zone</a> touchZone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The current touch zone of this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">switch</span> (pointable.touchZone()) {</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="class_leap_1_1_pointable.html#a4e3ed68e1678c0e62d62a69b903720c8a5427ec8a83ec8f39bbd2f3276d2fc001">Leap::Pointable::ZONE_NONE</a>:</div>
+<div class="line">        <span class="comment">//Handle distant pointable</span></div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="class_leap_1_1_pointable.html#a4e3ed68e1678c0e62d62a69b903720c8abdf4dbad6ebd71559218f81a1d3d8868">Leap::Pointable::ZONE_HOVERING</a>:</div>
+<div class="line">        <span class="comment">//Handle pointable near touch plane</span></div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="class_leap_1_1_pointable.html#a4e3ed68e1678c0e62d62a69b903720c8ab620524724b584982d65d725381b4889">Leap::Pointable::ZONE_TOUCHING</a>:</div>
+<div class="line">        <span class="comment">//Handle pointable penetrating touch plane</span></div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    <span class="keywordflow">default</span>:</div>
+<div class="line">        <span class="comment">//Handle error cases...</span></div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The touch zone of this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afbd0fa31db28593e9669c3c56711c0a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_finger.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The name of this finger. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_finger.html#a1d1cfd8ffb84e947f82999c682b666a7">Leap::Finger::Type</a> fingerType = finger.<a class="code" href="class_leap_1_1_finger.html#afbd0fa31db28593e9669c3c56711c0a7">type</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The anatomical type of this finger as a member of the <a class="el" href="class_leap_1_1_finger.html#a1d1cfd8ffb84e947f82999c682b666a7" title="Enumerates the names of the fingers. ">Finger::Type</a> enumeration. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a49775584c76a5ecbefa51065cadbc304"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The estimated width of the finger in millimeters. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> averageThickness = pointable.width();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The estimated width of this <a class="el" href="class_leap_1_1_pointable.html" title="The Pointable class reports the physical characteristics of a detected finger or tool. ">Pointable</a> object. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">C++ Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_circle_gesture.html">CircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Finger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger_list.html">FingerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_float_array.html">FloatArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture.html">Gesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture_list.html">GestureList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand_list.html">HandList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image_list.html">ImageList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_key_tap_gesture.html">KeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_listener.html">Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable.html">Pointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable_list.html">PointableList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool.html">Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool_list.html">ToolList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>C++</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

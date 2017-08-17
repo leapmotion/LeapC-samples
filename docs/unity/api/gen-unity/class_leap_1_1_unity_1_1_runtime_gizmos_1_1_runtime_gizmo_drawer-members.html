@@ -1,0 +1,422 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>All RuntimeGizmoDrawer members &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer-members.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer-members.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer-members.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer-members.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer-members.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer-members.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer-members.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer-members.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer-members.html";
+            } else {
+
+                    if( requestedAPI == 'cpp'){
+                        redirectedLocation = relPath + "cpp/index.html?proglang=cpp";
+                    }
+                    else if( requestedAPI == 'csharp'){
+                        redirectedLocation = relPath + "csharp/index.html?proglang=csharp";
+                    }
+                    else if( requestedAPI == 'unity'){
+                        redirectedLocation = relPath + "unity/index.html?proglang=unity";
+                    }
+                    else if( requestedAPI == 'objc'){
+                        redirectedLocation = relPath + "objc/index.html?proglang=objc";
+                    }
+                    else if( requestedAPI == 'java') {
+                        redirectedLocation = relPath + "java/index.html?proglang=java";
+                    }
+                    else if( requestedAPI == 'javascript'){
+                        redirectedLocation = relPath + "javascript/index.html?proglang=javascript";
+                    }
+                    else if( requestedAPI == 'python'){
+                        redirectedLocation = relPath + "python/index.html?proglang=python";
+                    }
+                    else if( requestedAPI == 'unreal') {
+                        redirectedLocation = relPath + "unreal/index.html?proglang=unreal";
+                    } else {
+                        redirectedLocation = relPath + "index.html";
+                    }
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer-members.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){    }
+    else if( character == "K" & e.altKey){
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../../javascript/index.html?proglang=javascript" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../../csharp/index.html?proglang=csharp" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../../cpp/index.html?proglang=cpp" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../../java/index.html?proglang=java" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../../python/index.html?proglang=python" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../../objc/index.html?proglang=objc" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../../unreal/index.html?proglang=unreal" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+  All RuntimeGizmoDrawer members
+</span> -->
+        
+  <div class="section" id="all-runtimegizmodrawer-members">
+<h1>All RuntimeGizmoDrawer members<a class="headerlink" href="#all-runtimegizmodrawer-members" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer Member List</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is the complete list of members for <a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#afe773ef6e1130795c14ebb0356a65476">_colliderList</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#aeca8fcf33c93c316425234829083003e">_colors</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a4cefcad82ac8b9ac688b1e5badfaee98">_currColor</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a23d612400305ae00dce85ba967fb37e2">_currMatrix</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a99ea84fce44bd4d6b17f56b1b20c5ea8">_gizmoMaterial</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a523cc7a3d1d5477f2feeedade684cf2c">_isInWireMode</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a1ceecad549b6b655821b0c7a2f409e43">_lines</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#aa1678a7ef15d6bc0d656c111b2868564">_matrices</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#aa2034c1d2adab55b49d546f71fff576f">_matrixStack</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a17bdec0ce5ebfa2df5689648c663903c">_meshes</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#aa29da0162fb7c81205394789a57d61c2">_operationCountOnGuard</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a199c9f387f9635121a1ec8acba5c5aa8">_operations</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#aabd29ab232c427c79545ceaa2b35a609">BeginGuard</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a3997e67f725121479b6d305b02defe79">ClearAllGizmos</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#abc3204be6b869c39d35876457ce8c9f0">color</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a88620e1b82672b2a25157d2ebf542aaf">cubeMesh</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#ae75ab0c30034af8cbc2aaf967c2136c3">DrawAllGizmosToScreen</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a9ef65b3d265600f0f7052bdff4adc859">DrawColliders</a>(GameObject gameObject, bool useWireframe=true, bool traverseHierarchy=true)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a82095c769cf2c976da1174211b71e9ae">DrawCube</a>(Vector3 position, Vector3 size)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a7e1e78b8cec3277c218cf05af7b43aae">DrawLine</a>(Vector3 a, Vector3 b)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#abf1d16a9f0fdf0bc3d28c4d2d0084f81">DrawMesh</a>(Mesh mesh, Matrix4x4 matrix)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#adf5c5b247aef1a68afdcdabdd3254f1c">DrawMesh</a>(Mesh mesh, Vector3 position, Quaternion rotation, Vector3 scale)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#abfbdd188664377ba6fee7e733d346bcc">drawMeshInternal</a>(Mesh mesh, Matrix4x4 matrix)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#acdd890c95db06e3d95bbafd740ed11ef">DrawSphere</a>(Vector3 center, float radius)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a730053723e40fc04a9e619a9fa452b49">DrawWireCirlce</a>(Vector3 center, Vector3 direction, float radius)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a21e5f710bde78731cd5061a45b3869c6">DrawWireCube</a>(Vector3 position, Vector3 size)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#af700d140db83b67ab51956c436a76e82">DrawWireMesh</a>(Mesh mesh, Matrix4x4 matrix)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a38092dc098f2c70e15b14e671e3213a4">DrawWireMesh</a>(Mesh mesh, Vector3 position, Quaternion rotation, Vector3 scale)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a17fcd0dd7b838d393281641dc65a48a9">DrawWireSphere</a>(Vector3 center, float radius)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#af48e1fd2f99c0ae9f58d0441ce35028b">EndGuard</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a664625e49da1d01e3e4520cccc31247d">gizmoShader</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a816acf5a1da53536a8d86d050ca213b6">matrix</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#aee0ea0c98cd8ef06eed808886495a0e1">OperationType</a> enum name</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a6a0c428dd1c24aa043eabc5f4869d48e">PopMatrix</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a38f0b9ad5162a609201eff87a19e205e">PushMatrix</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a4b64f55ea3bb3996b33e12cfaa8e04bd">RelativeTo</a>(Transform transform)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a92de6abecce2909ecf3acdc5e4e93e37">ResetMatrixAndColorState</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a62605032aff9bb870910cbc3c4df5afc">setPass</a>(ref int currPass, bool isUnlit)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a6e0ce3d43b9460483b997432ec5aea6a">setWireMode</a>(bool wireMode)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a2dfec095c4320e0e304acf49be0c8ae3">SHADED_SOLID_PASS</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a63404963de208ae8f163224716852a2d">SHADED_TRANSPARENT_PASS</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a50f4251f404263871f548612d66b7b69">sphereMesh</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#ac17adbc2827a23b0ab6220fff79c6d0f">UNLIT_SOLID_PASS</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#aacc946cead4467dc85fedd17d79be28b">UNLIT_TRANSPARENT_PASS</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#a91aa8b0ad1864b242b89ab526f4fd482">wireCubeMesh</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html#aa53d0c0cca1c683f962e1033c6107be2">wireSphereMesh</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">Leap.Unity.RuntimeGizmos.RuntimeGizmoDrawer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+</table></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,800 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LeapDevice &mdash; Leap Motion Objective-C SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Objective-C SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="LeapFailedDevice" href="interface_leap_failed_device.html" />
+    <link rel="prev" title="LeapDelegate" href="protocol_leap_delegate-p.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'objc';
+    var hasAPI = {};
+    hasAPI.objc = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'objc/api/gen-objc/interface_leap_device.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-objc/interface_leap_device.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-objc/interface_leap_device.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-objc/interface_leap_device.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-objc/interface_leap_device.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-objc/interface_leap_device.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-objc/interface_leap_device.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-objc/interface_leap_device.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-objc/interface_leap_device.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'objc/api/gen-objc/interface_leap_device.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("protocol_leap_delegate-p.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("interface_leap_failed_device.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      Objective-C
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  LeapDevice
+</span> -->
+        
+  <div class="section" id="leapdevice">
+<h1>LeapDevice<a class="headerlink" href="#leapdevice" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('interface_leap_device.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Instance Methods</a> &#124;
+<a href="#pub-static-methods">Class Methods</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+<div class="title">LeapDevice Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> class represents a physically connected device.  
+ <a href="interface_leap_device.html#details">More...</a></p>
+
+<p>Inherits NSObject.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Instance Methods</h2></td></tr>
+<tr class="memitem:ade2569069b96f20c5672a743b9ca81ba"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_device.html#ade2569069b96f20c5672a743b9ca81ba">distanceToBoundary:</a></td></tr>
+<tr class="memdesc:ade2569069b96f20c5672a743b9ca81ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance to the nearest edge of the Leap Motion controller's view volume.  <a href="#ade2569069b96f20c5672a743b9ca81ba">More...</a><br /></td></tr>
+<tr class="separator:ade2569069b96f20c5672a743b9ca81ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05fff85d14c8f6b75f25b29a9f3534e8"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_device.html#a05fff85d14c8f6b75f25b29a9f3534e8">equals:</a></td></tr>
+<tr class="memdesc:a05fff85d14c8f6b75f25b29a9f3534e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> object inequality.  <a href="#a05fff85d14c8f6b75f25b29a9f3534e8">More...</a><br /></td></tr>
+<tr class="separator:a05fff85d14c8f6b75f25b29a9f3534e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Class Methods</h2></td></tr>
+<tr class="memitem:af849d3ef3107df7ff48b0018803a794a"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_device.html">LeapDevice</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_device.html#af849d3ef3107df7ff48b0018803a794a">invalid</a></td></tr>
+<tr class="memdesc:af849d3ef3107df7ff48b0018803a794a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an invalid <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> object.  <a href="#af849d3ef3107df7ff48b0018803a794a">More...</a><br /></td></tr>
+<tr class="separator:af849d3ef3107df7ff48b0018803a794a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a81d9f165b1e496d7ee3acfc4dffe61f5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_device.html#a81d9f165b1e496d7ee3acfc4dffe61f5">baseline</a></td></tr>
+<tr class="memdesc:a81d9f165b1e496d7ee3acfc4dffe61f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The device baseline refers to the separation distance between stereo sensors on the device.  <a href="#a81d9f165b1e496d7ee3acfc4dffe61f5">More...</a><br /></td></tr>
+<tr class="separator:a81d9f165b1e496d7ee3acfc4dffe61f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95aaf5229e05fc4bd3b20d6ce0b28ab1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_device.html#a95aaf5229e05fc4bd3b20d6ce0b28ab1">horizontalViewAngle</a></td></tr>
+<tr class="memdesc:a95aaf5229e05fc4bd3b20d6ce0b28ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The angle of view along the x axis of this device, in radians.  <a href="#a95aaf5229e05fc4bd3b20d6ce0b28ab1">More...</a><br /></td></tr>
+<tr class="separator:a95aaf5229e05fc4bd3b20d6ce0b28ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24154e4e460d461a05eb9b7a6b6c2908"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_device.html#a24154e4e460d461a05eb9b7a6b6c2908">isEmbedded</a></td></tr>
+<tr class="separator:a24154e4e460d461a05eb9b7a6b6c2908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b5b30ef84315ceced4830cacbc9f14"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_device.html#a42b5b30ef84315ceced4830cacbc9f14">isLightingBad</a></td></tr>
+<tr class="memdesc:a42b5b30ef84315ceced4830cacbc9f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">The software has detected excessive IR illumination, which may interfere with tracking.  <a href="#a42b5b30ef84315ceced4830cacbc9f14">More...</a><br /></td></tr>
+<tr class="separator:a42b5b30ef84315ceced4830cacbc9f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61a182b9aef54f47a75e2ab1eed6aa25"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_device.html#a61a182b9aef54f47a75e2ab1eed6aa25">isSmudged</a></td></tr>
+<tr class="memdesc:a61a182b9aef54f47a75e2ab1eed6aa25"><td class="mdescLeft">&#160;</td><td class="mdescRight">The software has detected a possible smudge on the translucent cover over the Leap Motion cameras.  <a href="#a61a182b9aef54f47a75e2ab1eed6aa25">More...</a><br /></td></tr>
+<tr class="separator:a61a182b9aef54f47a75e2ab1eed6aa25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7078032768bebcb69bff96c0dbdd32b"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_device.html#ab7078032768bebcb69bff96c0dbdd32b">isStreaming</a></td></tr>
+<tr class="memdesc:ab7078032768bebcb69bff96c0dbdd32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this device is streaming data to your application.  <a href="#ab7078032768bebcb69bff96c0dbdd32b">More...</a><br /></td></tr>
+<tr class="separator:ab7078032768bebcb69bff96c0dbdd32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f519457eca93f08fa8e441047f271f"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_device.html#a91f519457eca93f08fa8e441047f271f">isValid</a></td></tr>
+<tr class="memdesc:a91f519457eca93f08fa8e441047f271f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this is a valid <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> object.  <a href="#a91f519457eca93f08fa8e441047f271f">More...</a><br /></td></tr>
+<tr class="separator:a91f519457eca93f08fa8e441047f271f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3930d1e8af0848833f4de0e0e9517dca"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_device.html#a3930d1e8af0848833f4de0e0e9517dca">range</a></td></tr>
+<tr class="memdesc:a3930d1e8af0848833f4de0e0e9517dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum reliable tracking range, in millimeters.  <a href="#a3930d1e8af0848833f4de0e0e9517dca">More...</a><br /></td></tr>
+<tr class="separator:a3930d1e8af0848833f4de0e0e9517dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db7c2d61197b23f4d76ac15e5da1f2e"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_device.html#a0db7c2d61197b23f4d76ac15e5da1f2e">serialNumber</a></td></tr>
+<tr class="memdesc:a0db7c2d61197b23f4d76ac15e5da1f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">An alphanumeric serial number unique to each device.  <a href="#a0db7c2d61197b23f4d76ac15e5da1f2e">More...</a><br /></td></tr>
+<tr class="separator:a0db7c2d61197b23f4d76ac15e5da1f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7ac87caf3d59726eb701664e127d861"><td class="memItemLeft" align="right" valign="top">LeapDeviceType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_device.html#af7ac87caf3d59726eb701664e127d861">type</a></td></tr>
+<tr class="memdesc:af7ac87caf3d59726eb701664e127d861"><td class="mdescLeft">&#160;</td><td class="mdescRight">The device type.  <a href="#af7ac87caf3d59726eb701664e127d861">More...</a><br /></td></tr>
+<tr class="separator:af7ac87caf3d59726eb701664e127d861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c76ba7983a29cee8c57e6359b98c44a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_device.html#a4c76ba7983a29cee8c57e6359b98c44a">verticalViewAngle</a></td></tr>
+<tr class="memdesc:a4c76ba7983a29cee8c57e6359b98c44a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The angle of view along the z axis of this device, in radians.  <a href="#a4c76ba7983a29cee8c57e6359b98c44a">More...</a><br /></td></tr>
+<tr class="separator:a4c76ba7983a29cee8c57e6359b98c44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> class represents a physically connected device. </p>
+<p>The <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> class contains information related to a particular connected device such as field of view, device id, and calibrated positions.</p>
+<div class="fragment"><div class="line">NSArray *devices = controller.<a class="code" href="interface_leap_controller.html#a09f4f94ab66220e8d50c2d1dfc29b770">devices</a>;</div>
+<div class="line"><a class="code" href="interface_leap_device.html">LeapDevice</a> *activeDevice = <a class="code" href="interface_leap_device.html">LeapDevice</a>.<a class="code" href="interface_leap_device.html#af849d3ef3107df7ff48b0018803a794a">invalid</a>;</div>
+<div class="line"><span class="keywordflow">for</span> (<a class="code" href="interface_leap_device.html">LeapDevice</a> *device in devices) {</div>
+<div class="line">  <span class="keywordflow">if</span> (device.isStreaming) {</div>
+<div class="line">    activeDevice = device;</div>
+<div class="line">    <span class="keywordflow">break</span>; <span class="comment">//Only one device can be active at a time</span></div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Note that Device objects can be invalid, which means that they do not contain valid device information and do not correspond to a physical device. Test for validity with the [<a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> isValid] function. </p><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="ade2569069b96f20c5672a743b9ca81ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) distanceToBoundary: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td>
+          <td class="paramname"><em>position</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The distance to the nearest edge of the Leap Motion controller's view volume. </p>
+<p>The view volume is an axis-aligned, inverted pyramid centered on the device origin and extending upward to the range limit. The walls of the pyramid are described by the horizontalViewAngle and verticalViewAngle properties and the roof by the range. This function estimates the distance between the specified input position and the nearest wall or roof of the view volume.</p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_finger.html">LeapFinger</a> *front = frame.<a class="code" href="interface_leap_frame.html#a070739131dde3afb2aee1cdc4701923c">fingers</a>.frontmost;</div>
+<div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *frontTipPosition = front.<a class="code" href="interface_leap_pointable.html#a75bebb1bc3b0ee3a48d6165aa723fed9">tipPosition</a>;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">float</span> distanceToEdge = [device distanceToBoundary:frontTipPosition];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The point to use for the distance calculation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The distance in millimeters from the input position to the nearest boundary. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a05fff85d14c8f6b75f25b29a9f3534e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) equals: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_device.html">LeapDevice</a> *)&#160;</td>
+          <td class="paramname"><em>other</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> object inequality. </p>
+<p>Two <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> objects are equal if and only if both <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> objects represent the exact same <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> and both Devices are valid.</p>
+<div class="fragment"><div class="line">[thisDevice equals:thatDevice];</div>
+</div><!-- fragment --><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af849d3ef3107df7ff48b0018803a794a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_device.html">LeapDevice</a> *) invalid </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an invalid <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> object. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_device.html">LeapDevice</a> *invalidDevice = <a class="code" href="interface_leap_device.html">LeapDevice</a>.<a class="code" href="interface_leap_device.html#af849d3ef3107df7ff48b0018803a794a">invalid</a>;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The invalid <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> instance. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a81d9f165b1e496d7ee3acfc4dffe61f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) baseline</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The device baseline refers to the separation distance between stereo sensors on the device. </p>
+<p>The baseline value, together with the maximum resolution, influence the maximum range.</p>
+<div class="fragment"></div><!-- fragment --><dl class="section user"><dt>Since 2.2.5</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a95aaf5229e05fc4bd3b20d6ce0b28ab1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) horizontalViewAngle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The angle of view along the x axis of this device, in radians. </p>
+<div class="image">
+<img src="../docs/images/Leap_horizontalViewAngle.png" />
+</div>
+<p>The Leap Motion controller scans a volume in the shape of an inverted pyramid centered at the device's center and extending upwards. The horizontalViewAngle reports the view angle along the long dimension of the device.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> angleAlongX = device.horizontalViewAngle;</div>
+</div><!-- fragment --><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a24154e4e460d461a05eb9b7a6b6c2908"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isEmbedded</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a42b5b30ef84315ceced4830cacbc9f14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isLightingBad</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The software has detected excessive IR illumination, which may interfere with tracking. </p>
+<p>If robust mode is enabled, the system will enter robust mode when isLightingBad is true.</p>
+<div class="fragment"></div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a61a182b9aef54f47a75e2ab1eed6aa25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isSmudged</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The software has detected a possible smudge on the translucent cover over the Leap Motion cameras. </p>
+<div class="fragment"></div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab7078032768bebcb69bff96c0dbdd32b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isStreaming</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether this device is streaming data to your application. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (device.isStreaming) {</div>
+<div class="line">    activeDevice = device;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Currently only one controller can provide data at a time. </p><dl class="section since"><dt>Since</dt><dd>1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a91f519457eca93f08fa8e441047f271f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isValid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether this is a valid <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> object. </p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(device.isValid)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">//Use the data...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if this <a class="el" href="interface_leap_device.html" title="The LeapDevice class represents a physically connected device. ">LeapDevice</a> object contains valid data. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3930d1e8af0848833f4de0e0e9517dca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) range</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The maximum reliable tracking range, in millimeters. </p>
+<p>The range reports the maximum recommended distance from the device center for which tracking is expected to be reliable. This distance is not a hard limit. Tracking may be still be functional above this distance or begin to degrade slightly before this distance depending on calibration and extreme environmental conditions.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> maxRange = device.range;</div>
+</div><!-- fragment --><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0db7c2d61197b23f4d76ac15e5da1f2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString*) serialNumber</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>An alphanumeric serial number unique to each device. </p>
+<p>Consumer device serial numbers consist of 2 letters followed by 11 digits.</p>
+<p>When using multiple devices, the serial number provides an unambiguous identifier for each device. </p><dl class="section since"><dt>Since</dt><dd>2.2.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af7ac87caf3d59726eb701664e127d861"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (LeapDeviceType) type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The device type. </p>
+<p>Use the device type value in the (rare) circumstances that you have an application feature which relies on a particular type of device.</p>
+<div class="fragment"><div class="line">LeapDeviceType type = device.type;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The physical device type as a member of the DeviceType enumeration. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.2 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c76ba7983a29cee8c57e6359b98c44a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) verticalViewAngle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The angle of view along the z axis of this device, in radians. </p>
+<div class="image">
+<img src="../docs/images/Leap_verticalViewAngle.png" />
+</div>
+<p>The Leap Motion controller scans a region in the shape of an inverted pyramid centered at the device's center and extending upwards. The verticalViewAngle reports the view angle along the short dimension of the device.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> angleAlongZ = device.verticalViewAngle;</div>
+</div><!-- fragment --><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Objective-C Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_arm.html">LeapArm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_bone.html">LeapBone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_circle_gesture.html">LeapCircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_config.html">LeapConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_controller.html">LeapController</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol_leap_delegate-p.html">LeapDelegate</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">LeapDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_failed_device.html">LeapFailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_finger.html">LeapFinger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_frame.html">LeapFrame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_gesture.html">LeapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_hand.html">LeapHand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_image.html">LeapImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_interaction_box.html">LeapInteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_key_tap_gesture.html">LeapKeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol_leap_listener-p.html">LeapListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_matrix.html">LeapMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_leap_objective_c_8h.html">LeapObjectiveC.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_pointable.html">LeapPointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_screen_tap_gesture.html">LeapScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_swipe_gesture.html">LeapSwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_tool.html">LeapTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_vector.html">LeapVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category_n_s_array_07_leap_pointable_or_hand_list_08.html">NSArray(LeapPointableOrHandList)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>Objective-C</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

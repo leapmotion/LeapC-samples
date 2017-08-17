@@ -1,0 +1,606 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>RigidFinger &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap::Unity" href="namespace_leap_1_1_unity.html" />
+    <link rel="next" title="RigidHand" href="class_leap_1_1_unity_1_1_rigid_hand.html" />
+    <link rel="prev" title="RiggedHand" href="class_leap_1_1_unity_1_1_rigged_hand.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_rigid_finger.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_rigid_finger.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_rigid_finger.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_rigid_finger.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_rigid_finger.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_rigid_finger.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_rigid_finger.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_rigid_finger.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_rigid_finger.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap_1_1_unity.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_rigid_finger.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_rigged_hand.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_rigid_hand.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap_1_1_unity.html" accesskey="U">Leap::Unity</a>&raquo;
+  RigidFinger
+</span> -->
+        
+  <div class="section" id="rigidfinger">
+<h1>RigidFinger<a class="headerlink" href="#rigidfinger" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_rigid_finger.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="class_leap_1_1_unity_1_1_rigid_finger-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.Unity.RigidFinger Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A physics finger model for our rigid hand made out of various cube <a class="el" href="namespace_leap_1_1_unity.html" title="IHandModel defines abstract methods as a template for building Leap hand models.">Unity</a> Colliders.  
+ <a href="class_leap_1_1_unity_1_1_rigid_finger.html#details">More...</a></p>
+
+<p>Inherits <a class="el" href="class_leap_1_1_unity_1_1_skeletal_finger.html">Leap.Unity.SkeletalFinger</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a92ed755907bd1cc5213b6277d7e2227d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_rigid_finger.html#a92ed755907bd1cc5213b6277d7e2227d">UpdateFinger</a> ()</td></tr>
+<tr class="memdesc:a92ed755907bd1cc5213b6277d7e2227d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this function to update this finger once per game loop.  <a href="#a92ed755907bd1cc5213b6277d7e2227d"></a><br/></td></tr>
+<tr class="separator:a92ed755907bd1cc5213b6277d7e2227d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_leap_1_1_unity_1_1_skeletal_finger"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_leap_1_1_unity_1_1_skeletal_finger')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_leap_1_1_unity_1_1_skeletal_finger.html">Leap.Unity.SkeletalFinger</a></td></tr>
+<tr class="memitem:a1d595125b2ac26548297c23e4937ca03 inherit pub_methods_class_leap_1_1_unity_1_1_skeletal_finger"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_skeletal_finger.html#a1d595125b2ac26548297c23e4937ca03">InitFinger</a> ()</td></tr>
+<tr class="memdesc:a1d595125b2ac26548297c23e4937ca03 inherit pub_methods_class_leap_1_1_unity_1_1_skeletal_finger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the finger bones and joints by setting their positions and rotations.  <a href="#a1d595125b2ac26548297c23e4937ca03"></a><br/></td></tr>
+<tr class="separator:a1d595125b2ac26548297c23e4937ca03 inherit pub_methods_class_leap_1_1_unity_1_1_skeletal_finger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b622787258cd44d6cd4e20e8cb2a6a7 inherit pub_methods_class_leap_1_1_unity_1_1_skeletal_finger"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_skeletal_finger.html#a8b622787258cd44d6cd4e20e8cb2a6a7">UpdateFinger</a> ()</td></tr>
+<tr class="memdesc:a8b622787258cd44d6cd4e20e8cb2a6a7 inherit pub_methods_class_leap_1_1_unity_1_1_skeletal_finger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the finger bones and joints by setting their positions and rotations.  <a href="#a8b622787258cd44d6cd4e20e8cb2a6a7"></a><br/></td></tr>
+<tr class="separator:a8b622787258cd44d6cd4e20e8cb2a6a7 inherit pub_methods_class_leap_1_1_unity_1_1_skeletal_finger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_leap_1_1_unity_1_1_finger_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_leap_1_1_unity_1_1_finger_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_leap_1_1_unity_1_1_finger_model.html">Leap.Unity.FingerModel</a></td></tr>
+<tr class="memitem:a660b8448f1f9f6ea0b5ffe773b110925 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a660b8448f1f9f6ea0b5ffe773b110925">GetBoneCenter</a> (int bone_type)</td></tr>
+<tr class="memdesc:a660b8448f1f9f6ea0b5ffe773b110925 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the center of the given bone on the finger.  <a href="#a660b8448f1f9f6ea0b5ffe773b110925"></a><br/></td></tr>
+<tr class="separator:a660b8448f1f9f6ea0b5ffe773b110925 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f77c83bb90b02c1b46692d5f824ae3 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a66f77c83bb90b02c1b46692d5f824ae3">GetBoneDirection</a> (int bone_type)</td></tr>
+<tr class="memdesc:a66f77c83bb90b02c1b46692d5f824ae3 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the direction the given bone is facing on the finger.  <a href="#a66f77c83bb90b02c1b46692d5f824ae3"></a><br/></td></tr>
+<tr class="separator:a66f77c83bb90b02c1b46692d5f824ae3 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd58685c52b4bf4dc85e19597dc4de56 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#acd58685c52b4bf4dc85e19597dc4de56">GetBoneLength</a> (int bone_type)</td></tr>
+<tr class="memdesc:acd58685c52b4bf4dc85e19597dc4de56 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of the finger bone.  <a href="#acd58685c52b4bf4dc85e19597dc4de56"></a><br/></td></tr>
+<tr class="separator:acd58685c52b4bf4dc85e19597dc4de56 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d84c11cb9e8a1096225718bcd759ceb inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a1d84c11cb9e8a1096225718bcd759ceb">GetBoneRotation</a> (int bone_type)</td></tr>
+<tr class="memdesc:a1d84c11cb9e8a1096225718bcd759ceb inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rotation quaternion of the given bone.  <a href="#a1d84c11cb9e8a1096225718bcd759ceb"></a><br/></td></tr>
+<tr class="separator:a1d84c11cb9e8a1096225718bcd759ceb inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f5843758fb9c6e1f08affba6b4be72 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#ae6f5843758fb9c6e1f08affba6b4be72">GetBoneWidth</a> (int bone_type)</td></tr>
+<tr class="memdesc:ae6f5843758fb9c6e1f08affba6b4be72 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the finger bone.  <a href="#ae6f5843758fb9c6e1f08affba6b4be72"></a><br/></td></tr>
+<tr class="separator:ae6f5843758fb9c6e1f08affba6b4be72 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6abf370a3ddeb4675801eeec6378a375 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a6abf370a3ddeb4675801eeec6378a375">GetFingerJointSpreadMecanim</a> ()</td></tr>
+<tr class="memdesc:a6abf370a3ddeb4675801eeec6378a375 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns Mecanim spread angle, which only applies to joint_type = 0 NOTE: Positive spread is towards thumb for index and middle, but is in the opposite direction for the ring and pinky.  <a href="#a6abf370a3ddeb4675801eeec6378a375"></a><br/></td></tr>
+<tr class="separator:a6abf370a3ddeb4675801eeec6378a375 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a054cf50d19d911d50ddae0b0dcc40026 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a054cf50d19d911d50ddae0b0dcc40026">GetFingerJointStretchMecanim</a> (int joint_type)</td></tr>
+<tr class="memdesc:a054cf50d19d911d50ddae0b0dcc40026 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns Mecanim stretch angle in the range (-180, +180] NOTE: Positive stretch opens the hand.  <a href="#a054cf50d19d911d50ddae0b0dcc40026"></a><br/></td></tr>
+<tr class="separator:a054cf50d19d911d50ddae0b0dcc40026 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc14a2149a5a1c8d7277f64db41af544 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#acc14a2149a5a1c8d7277f64db41af544">GetJointPosition</a> (int joint)</td></tr>
+<tr class="memdesc:acc14a2149a5a1c8d7277f64db41af544 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the location of the given joint on the finger.  <a href="#acc14a2149a5a1c8d7277f64db41af544"></a><br/></td></tr>
+<tr class="separator:acc14a2149a5a1c8d7277f64db41af544 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053d0477db4bbb6c3353350b769089b3 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_finger.html">Finger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a053d0477db4bbb6c3353350b769089b3">GetLeapFinger</a> ()</td></tr>
+<tr class="memdesc:a053d0477db4bbb6c3353350b769089b3 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="namespace_leap.html">Leap</a> <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger.">Finger</a> object.  <a href="#a053d0477db4bbb6c3353350b769089b3"></a><br/></td></tr>
+<tr class="separator:a053d0477db4bbb6c3353350b769089b3 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4247dfc727b2b1d05c16a81c440ed22d inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a4247dfc727b2b1d05c16a81c440ed22d">GetLeapHand</a> ()</td></tr>
+<tr class="memdesc:a4247dfc727b2b1d05c16a81c440ed22d inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="namespace_leap.html">Leap</a> <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand.">Hand</a> object.  <a href="#a4247dfc727b2b1d05c16a81c440ed22d"></a><br/></td></tr>
+<tr class="separator:a4247dfc727b2b1d05c16a81c440ed22d inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e07c014c2ac4cfa7403760bc1d2dd7 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top">Ray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a88e07c014c2ac4cfa7403760bc1d2dd7">GetRay</a> ()</td></tr>
+<tr class="memdesc:a88e07c014c2ac4cfa7403760bc1d2dd7 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ray from the tip of the finger in the direction it is pointing.  <a href="#a88e07c014c2ac4cfa7403760bc1d2dd7"></a><br/></td></tr>
+<tr class="separator:a88e07c014c2ac4cfa7403760bc1d2dd7 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b8b56d0d1d8f2876fede7df4914143 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a16b8b56d0d1d8f2876fede7df4914143">GetTipPosition</a> ()</td></tr>
+<tr class="memdesc:a16b8b56d0d1d8f2876fede7df4914143 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the location of the tip of the finger.  <a href="#a16b8b56d0d1d8f2876fede7df4914143"></a><br/></td></tr>
+<tr class="separator:a16b8b56d0d1d8f2876fede7df4914143 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f8a0bc34c12092d53249cbdb2e19b75 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a5f8a0bc34c12092d53249cbdb2e19b75">SetLeapHand</a> (<a class="el" href="class_leap_1_1_hand.html">Hand</a> hand)</td></tr>
+<tr class="memdesc:a5f8a0bc34c12092d53249cbdb2e19b75 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="namespace_leap.html">Leap</a> <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand.">Hand</a> and <a class="el" href="namespace_leap.html">Leap</a> <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger.">Finger</a> for this finger.  <a href="#a5f8a0bc34c12092d53249cbdb2e19b75"></a><br/></td></tr>
+<tr class="separator:a5f8a0bc34c12092d53249cbdb2e19b75 inherit pub_methods_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a865ffa7886e7a6802ecf73210db91db4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_rigid_finger.html#a865ffa7886e7a6802ecf73210db91db4">filtering</a> = 0.5f</td></tr>
+<tr class="separator:a865ffa7886e7a6802ecf73210db91db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af283e9da6ec305025774df6c87102a6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_rigid_finger.html#af283e9da6ec305025774df6c87102a6e">Start</a> ()</td></tr>
+<tr class="separator:af283e9da6ec305025774df6c87102a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_class_leap_1_1_unity_1_1_skeletal_finger"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_leap_1_1_unity_1_1_skeletal_finger')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_leap_1_1_unity_1_1_skeletal_finger.html">Leap.Unity.SkeletalFinger</a></td></tr>
+<tr class="memitem:a41c13da1e39f9c79c45bfe6c4cfeeca1 inherit pro_methods_class_leap_1_1_unity_1_1_skeletal_finger"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_skeletal_finger.html#a41c13da1e39f9c79c45bfe6c4cfeeca1">SetPositions</a> ()</td></tr>
+<tr class="separator:a41c13da1e39f9c79c45bfe6c4cfeeca1 inherit pro_methods_class_leap_1_1_unity_1_1_skeletal_finger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_leap_1_1_unity_1_1_finger_model"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_leap_1_1_unity_1_1_finger_model')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_leap_1_1_unity_1_1_finger_model.html">Leap.Unity.FingerModel</a></td></tr>
+<tr class="memitem:a8b4b5c124b754ee09e0b032618f7e666 inherit pro_attribs_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_finger.html">Finger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a8b4b5c124b754ee09e0b032618f7e666">finger_</a></td></tr>
+<tr class="memdesc:a8b4b5c124b754ee09e0b032618f7e666 inherit pro_attribs_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="namespace_leap.html">Leap</a> <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger.">Finger</a> object.  <a href="#a8b4b5c124b754ee09e0b032618f7e666"></a><br/></td></tr>
+<tr class="separator:a8b4b5c124b754ee09e0b032618f7e666 inherit pro_attribs_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2157942a6279b6457c632ce5024e8f27 inherit pro_attribs_class_leap_1_1_unity_1_1_finger_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_hand.html">Hand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a2157942a6279b6457c632ce5024e8f27">hand_</a></td></tr>
+<tr class="memdesc:a2157942a6279b6457c632ce5024e8f27 inherit pro_attribs_class_leap_1_1_unity_1_1_finger_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="namespace_leap.html">Leap</a> <a class="el" href="class_leap_1_1_hand.html" title="The Hand class reports the physical characteristics of a detected hand.">Hand</a> object.  <a href="#a2157942a6279b6457c632ce5024e8f27"></a><br/></td></tr>
+<tr class="separator:a2157942a6279b6457c632ce5024e8f27 inherit pro_attribs_class_leap_1_1_unity_1_1_finger_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A physics finger model for our rigid hand made out of various cube <a class="el" href="namespace_leap_1_1_unity.html" title="IHandModel defines abstract methods as a template for building Leap hand models.">Unity</a> Colliders. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af283e9da6ec305025774df6c87102a6e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.RigidFinger.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a92ed755907bd1cc5213b6277d7e2227d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Leap.Unity.RigidFinger.UpdateFinger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implement this function to update this finger once per game loop. </p>
+<p>Typically, this function is called by the parent <a class="el" href="class_leap_1_1_unity_1_1_hand_model.html" title="The base class for all hand models, both graphics and physics.">HandModel</a> object's UpdateHand() function, which is called in the <a class="el" href="namespace_leap_1_1_unity.html" title="IHandModel defines abstract methods as a template for building Leap hand models.">Unity</a> Update() phase for graphics hand models and in the FixedUpdate() phase for physics hand models. </p>
+
+<p>Implements <a class="el" href="class_leap_1_1_unity_1_1_finger_model.html#a9103f063172a8f99a9aa083407ada2a2">Leap.Unity.FingerModel</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a865ffa7886e7a6802ecf73210db91db4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.RigidFinger.filtering = 0.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_abstract_hold_detector.html">AbstractHoldDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_capsule_hand.html">CapsuleHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_connection_monitor.html">ConnectionMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_custom_editor_base.html">CustomEditorBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_custom_editor_base_3_01_t_01_4.html">CustomEditorBase&lt; T &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_debug_hand.html">DebugHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_detector.html">Detector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_detector_logic_gate.html">DetectorLogicGate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_disconnection_notice.html">DisconnectionNotice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_enable_depth_buffer.html">EnableDepthBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_execute_after_attribute.html">ExecuteAfterAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_execute_after_default.html">ExecuteAfterDefault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_execute_before_attribute.html">ExecuteBeforeAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_execute_before_default.html">ExecuteBeforeDefault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_extended_finger_detector.html">ExtendedFingerDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_eye_type.html">EyeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_eye_type_editor.html">EyeTypeEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_finger_direction_detector.html">FingerDirectionDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_finger_model.html">FingerModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_fit_height_to_screen.html">FitHeightToScreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_frame_rate_controls.html">FrameRateControls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_drop.html">HandDrop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_enable_disable.html">HandEnableDisable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_fader.html">HandFader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_model.html">HandModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_pool.html">HandPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_representation.html">HandRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hand_transition_behavior.html">HandTransitionBehavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_hands.html">Hands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface_leap_1_1_unity_1_1_i_can_report_duplicate_information.html">ICanReportDuplicateInformation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_i_hand_model.html">IHandModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface_leap_1_1_unity_1_1_i_min_heap_node.html">IMinHeapNode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_key_enable_behaviors.html">KeyEnableBehaviors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_key_enable_game_objects.html">KeyEnableGameObjects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_leap_device_info.html">LeapDeviceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_hand_controller.html">LeapHandController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_hand_controller_editor.html">LeapHandControllerEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_hands_auto_rig.html">LeapHandsAutoRig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_image_retriever.html">LeapImageRetriever</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_image_retriever_editor.html">LeapImageRetrieverEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_provider.html">LeapProvider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_service_provider.html">LeapServiceProvider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_service_provider_editor.html">LeapServiceProviderEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_temporal_warping_editor.html">LeapTemporalWarpingEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_v_r_camera_control.html">LeapVRCameraControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_leap_v_r_temporal_warping.html">LeapVRTemporalWarping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_min_heap_3_01_t_01_4.html">MinHeap&lt; T &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_minimal_hand.html">MinimalHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_mobile_rigged_finger.html">MobileRiggedFinger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_mobile_rigged_hand.html">MobileRiggedHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_object_builder_editor.html">ObjectBuilderEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_palm_direction_detector.html">PalmDirectionDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_pinch_detector.html">PinchDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_poly_finger.html">PolyFinger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_poly_hand.html">PolyHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_produce_consume_buffer_3_01_t_01_4.html">ProduceConsumeBuffer&lt; T &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_profiler_sample.html">ProfilerSample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_proximity_detector.html">ProximityDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_proximity_event.html">ProximityEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_readonly_list_3_01_t_01_4.html">ReadonlyList&lt; T &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_rigged_finger.html">RiggedFinger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_rigged_hand.html">RiggedHand</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">RigidFinger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_rigid_hand.html">RigidHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_s_dictionary_attribute.html">SDictionaryAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_scene_settings.html">SceneSettings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_serializable_dictionary_3_01_t_key_00_01_t_value_01_4.html">SerializableDictionary&lt; TKey, TValue &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_serializable_dictionary_editor.html">SerializableDictionaryEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_single_layer.html">SingleLayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_single_layer_editor.html">SingleLayerEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_skeletal_finger.html">SkeletalFinger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_skeletal_hand.html">SkeletalHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_smoothed_float.html">SmoothedFloat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_smoothed_quaternion.html">SmoothedQuaternion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_smoothed_vector3.html">SmoothedVector3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_stretch_to_screen.html">StretchToScreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_temporal_warping_status.html">TemporalWarpingStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_unity_matrix_extension.html">UnityMatrixExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_unity_quaternion_extension.html">UnityQuaternionExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_unity_vector_extension.html">UnityVectorExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_utils.html">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_value_mapping_extensions.html">ValueMappingExtensions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

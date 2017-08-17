@@ -1,0 +1,874 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Bone &mdash; Leap Motion C++ SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion C++ SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="CircleGesture" href="class_leap_1_1_circle_gesture.html" />
+    <link rel="prev" title="Arm" href="class_leap_1_1_arm.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'cpp';
+    var hasAPI = {};
+    hasAPI.cpp = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'cpp/api/gen-cpp/class_leap_1_1_bone.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-cpp/class_leap_1_1_bone.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-cpp/class_leap_1_1_bone.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-cpp/class_leap_1_1_bone.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-cpp/class_leap_1_1_bone.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-cpp/class_leap_1_1_bone.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-cpp/class_leap_1_1_bone.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-cpp/class_leap_1_1_bone.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-cpp/class_leap_1_1_bone.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'cpp/api/gen-cpp/class_leap_1_1_bone.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_arm.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_circle_gesture.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      C++
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  Bone
+</span> -->
+        
+  <div class="section" id="bone">
+<h1>Bone<a class="headerlink" href="#bone" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_bone.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="class_leap_1_1_bone-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Bone Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> class represents a tracked bone.  
+ <a href="class_leap_1_1_bone.html#details">More...</a></p>
+
+<p>Inherits Interface.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1d1cfd8ffb84e947f82999c682b666a7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <tr class="memdesc:a1d1cfd8ffb84e947f82999c682b666a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the names of the bones.  <a href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">More...</a><br /></td></tr>
+<tr class="separator:a1d1cfd8ffb84e947f82999c682b666a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4ff50b291a30106f8306ba26d55ada76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#a4ff50b291a30106f8306ba26d55ada76">basis</a> () const </td></tr>
+<tr class="memdesc:a4ff50b291a30106f8306ba26d55ada76"><td class="mdescLeft">&#160;</td><td class="mdescRight">The orthonormal basis vectors for this <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> as a <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a>.  <a href="#a4ff50b291a30106f8306ba26d55ada76">More...</a><br /></td></tr>
+<tr class="separator:a4ff50b291a30106f8306ba26d55ada76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf9eadb44009a37cd5b00c8094465e77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#acf9eadb44009a37cd5b00c8094465e77">Bone</a> (BoneImplementation *)</td></tr>
+<tr class="separator:acf9eadb44009a37cd5b00c8094465e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff891d4ef49cda0171377875375ec7bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#aff891d4ef49cda0171377875375ec7bf">Bone</a> ()</td></tr>
+<tr class="memdesc:aff891d4ef49cda0171377875375ec7bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an invalid <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object.  <a href="#aff891d4ef49cda0171377875375ec7bf">More...</a><br /></td></tr>
+<tr class="separator:aff891d4ef49cda0171377875375ec7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87635814523480d214fb932e00b622ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#a87635814523480d214fb932e00b622ee">center</a> () const </td></tr>
+<tr class="memdesc:a87635814523480d214fb932e00b622ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The midpoint of the bone.  <a href="#a87635814523480d214fb932e00b622ee">More...</a><br /></td></tr>
+<tr class="separator:a87635814523480d214fb932e00b622ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf9153b5f55c95ea44d0e0a3bdc8a75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#a8cf9153b5f55c95ea44d0e0a3bdc8a75">direction</a> () const </td></tr>
+<tr class="memdesc:a8cf9153b5f55c95ea44d0e0a3bdc8a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">The normalized direction of the bone from base to tip.  <a href="#a8cf9153b5f55c95ea44d0e0a3bdc8a75">More...</a><br /></td></tr>
+<tr class="separator:a8cf9153b5f55c95ea44d0e0a3bdc8a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a> () const </td></tr>
+<tr class="memdesc:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether this is a valid <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object.  <a href="#aac1b70a2ed67ead038c4d3f5ac4d8a81">More...</a><br /></td></tr>
+<tr class="separator:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c7f525adfb7ab1af7df4b0b6b34d4eb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#a7c7f525adfb7ab1af7df4b0b6b34d4eb">length</a> () const </td></tr>
+<tr class="memdesc:a7c7f525adfb7ab1af7df4b0b6b34d4eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The estimated length of the bone in millimeters.  <a href="#a7c7f525adfb7ab1af7df4b0b6b34d4eb">More...</a><br /></td></tr>
+<tr class="separator:a7c7f525adfb7ab1af7df4b0b6b34d4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad33308349f4bd68e844803a70168c1ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#ad33308349f4bd68e844803a70168c1ed">nextJoint</a> () const </td></tr>
+<tr class="memdesc:ad33308349f4bd68e844803a70168c1ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">The end of the bone, closest to the finger tip.  <a href="#ad33308349f4bd68e844803a70168c1ed">More...</a><br /></td></tr>
+<tr class="separator:ad33308349f4bd68e844803a70168c1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae54110b913a171d0a1467cb33791196c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#ae54110b913a171d0a1467cb33791196c">operator!=</a> (const <a class="el" href="class_leap_1_1_bone.html">Bone</a> &amp;) const </td></tr>
+<tr class="memdesc:ae54110b913a171d0a1467cb33791196c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object inequality.  <a href="#ae54110b913a171d0a1467cb33791196c">More...</a><br /></td></tr>
+<tr class="separator:ae54110b913a171d0a1467cb33791196c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81fe0d11f007f967082718f198b5a11d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#a81fe0d11f007f967082718f198b5a11d">operator==</a> (const <a class="el" href="class_leap_1_1_bone.html">Bone</a> &amp;) const </td></tr>
+<tr class="memdesc:a81fe0d11f007f967082718f198b5a11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object equality.  <a href="#a81fe0d11f007f967082718f198b5a11d">More...</a><br /></td></tr>
+<tr class="separator:a81fe0d11f007f967082718f198b5a11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea100c811f82f66d7b366509f1e3d52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#a1ea100c811f82f66d7b366509f1e3d52">prevJoint</a> () const </td></tr>
+<tr class="memdesc:a1ea100c811f82f66d7b366509f1e3d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base of the bone, closest to the wrist.  <a href="#a1ea100c811f82f66d7b366509f1e3d52">More...</a><br /></td></tr>
+<tr class="separator:a1ea100c811f82f66d7b366509f1e3d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a> () const </td></tr>
+<tr class="memdesc:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string containing a brief, human readable description of the <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object.  <a href="#a3f23c97b6c9f2a88e1121d1c633ccafa">More...</a><br /></td></tr>
+<tr class="separator:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd0fa31db28593e9669c3c56711c0a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#afbd0fa31db28593e9669c3c56711c0a7">type</a> () const </td></tr>
+<tr class="memdesc:afbd0fa31db28593e9669c3c56711c0a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of this bone.  <a href="#afbd0fa31db28593e9669c3c56711c0a7">More...</a><br /></td></tr>
+<tr class="separator:afbd0fa31db28593e9669c3c56711c0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49775584c76a5ecbefa51065cadbc304"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#a49775584c76a5ecbefa51065cadbc304">width</a> () const </td></tr>
+<tr class="memdesc:a49775584c76a5ecbefa51065cadbc304"><td class="mdescLeft">&#160;</td><td class="mdescRight">The average width of the flesh around the bone in millimeters.  <a href="#a49775584c76a5ecbefa51065cadbc304">More...</a><br /></td></tr>
+<tr class="separator:a49775584c76a5ecbefa51065cadbc304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a79c24cbb1d3165cd10cd1e1fd1824ee7"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_leap_1_1_bone.html">Bone</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#a79c24cbb1d3165cd10cd1e1fd1824ee7">invalid</a> ()</td></tr>
+<tr class="memdesc:a79c24cbb1d3165cd10cd1e1fd1824ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an invalid <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object.  <a href="#a79c24cbb1d3165cd10cd1e1fd1824ee7">More...</a><br /></td></tr>
+<tr class="separator:a79c24cbb1d3165cd10cd1e1fd1824ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:adc0863cdedabbce67b8aacfcaf3cd90c"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_bone.html#adc0863cdedabbce67b8aacfcaf3cd90c">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="class_leap_1_1_bone.html">Bone</a> &amp;)</td></tr>
+<tr class="memdesc:adc0863cdedabbce67b8aacfcaf3cd90c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a brief, human readable description of the <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object to an output stream.  <a href="#adc0863cdedabbce67b8aacfcaf3cd90c">More...</a><br /></td></tr>
+<tr class="separator:adc0863cdedabbce67b8aacfcaf3cd90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> class represents a tracked bone. </p>
+<p>All fingers contain 4 bones that make up the anatomy of the finger. Get valid <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> objects from a <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object.</p>
+<p>Bones are ordered from base to tip, indexed from 0 to 3. Additionally, the bone's Type enum may be used to index a specific bone anatomically.</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_finger_list.html">Leap::FingerList</a> fingers = frame.hands()[0].fingers();</div>
+<div class="line"><span class="keywordflow">for</span>(<a class="code" href="class_leap_1_1_finger_list.html#a97db28c9a35b564655712df999d32d27">Leap::FingerList::const_iterator</a> fl = fingers.<a class="code" href="class_leap_1_1_finger_list.html#aa4b02d4f1a8500fb07a551069060709f">begin</a>(); fl != fingers.<a class="code" href="class_leap_1_1_finger_list.html#a350132543d80a1c1e5be844e6d2878ea">end</a>(); fl++){</div>
+<div class="line">    <a class="code" href="class_leap_1_1_bone.html">Leap::Bone</a> bone;</div>
+<div class="line">    <a class="code" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">Leap::Bone::Type</a> boneType;</div>
+<div class="line">    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> b = 0; b &lt; 4; b++)</div>
+<div class="line">    {</div>
+<div class="line">        boneType = <span class="keyword">static_cast&lt;</span><a class="code" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">Leap::Bone::Type</a><span class="keyword">&gt;</span>(b);</div>
+<div class="line">        bone = (*fl).bone(boneType);</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Finger index: &quot;</span> &lt;&lt; (*fl).<a class="code" href="class_leap_1_1_bone.html#afbd0fa31db28593e9669c3c56711c0a7">type</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; bone &lt;&lt; std::endl;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The thumb does not have a base metacarpal bone and therefore contains a valid, zero length bone at that location.</p>
+<p>Note that <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> objects can be invalid, which means that they do not contain valid tracking data and do not correspond to a physical bone. Invalid <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> objects can be the result of asking for a <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object from an invalid finger, indexing a bone out of range, or constructing a new bone. Test for validity with the <a class="el" href="class_leap_1_1_bone.html#aac1b70a2ed67ead038c4d3f5ac4d8a81" title="Reports whether this is a valid Bone object. ">Bone::isValid()</a> function. </p><dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates the names of the bones. </p>
+<p>Members of this enumeration are returned by <a class="el" href="class_leap_1_1_bone.html#afbd0fa31db28593e9669c3c56711c0a7" title="The name of this bone. ">Bone::type()</a> to identify a <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object. </p><dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7ab57b4b61b3ae15fda100b7f0e77b93f0"></a>TYPE_METACARPAL&#160;</td><td class="fielddoc">
+<p><a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> connected to the wrist inside the palm. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7a5cbcf441ba1fcb197ad70a73337feb61"></a>TYPE_PROXIMAL&#160;</td><td class="fielddoc">
+<p><a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> connecting to the palm. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7a08bd42f25d25b8da625644c3a02c6da0"></a>TYPE_INTERMEDIATE&#160;</td><td class="fielddoc">
+<p><a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> between the tip and the base. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d1cfd8ffb84e947f82999c682b666a7a297fcffc2325e4db9a6c8181178c7086"></a>TYPE_DISTAL&#160;</td><td class="fielddoc">
+<p><a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> at the tip of the finger. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="acf9eadb44009a37cd5b00c8094465e77"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_bone.html">Bone</a> </td>
+          <td>(</td>
+          <td class="paramtype">BoneImplementation *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff891d4ef49cda0171377875375ec7bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_bone.html">Bone</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an invalid <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_bone.html">Leap::Bone</a> bone = <a class="code" href="class_leap_1_1_bone.html#a79c24cbb1d3165cd10cd1e1fd1824ee7">Leap::Bone::invalid</a>();</div>
+</div><!-- fragment --><p>Get valid <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> objects from a <a class="el" href="class_leap_1_1_finger.html" title="The Finger class represents a tracked finger. ">Finger</a> object.</p>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a4ff50b291a30106f8306ba26d55ada76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> basis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The orthonormal basis vectors for this <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> as a <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a>. </p>
+<p>Basis vectors specify the orientation of a bone.</p>
+<p><b>xBasis</b> Perpendicular to the longitudinal axis of the bone; exits the sides of the finger.</p>
+<p><b>yBasis or up vector</b> Perpendicular to the longitudinal axis of the bone; exits the top and bottom of the finger. More positive in the upward direction.</p>
+<p><b>zBasis</b> Aligned with the longitudinal axis of the bone. More positive toward the base of the finger.</p>
+<p>The bases provided for the right hand use the right-hand rule; those for the left hand use the left-hand rule. Thus, the positive direction of the x-basis is to the right for the right hand and to the left for the left hand. You can change from right-hand to left-hand rule by multiplying the z basis vector by -1.</p>
+<p>You can use the basis vectors for such purposes as measuring complex finger poses and skeletal animation.</p>
+<p>Note that converting the basis vectors directly into a quaternion representation is not mathematically valid. If you use quaternions, create them from the derived rotation matrix not directly from the bases.</p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_matrix.html">Leap::Matrix</a> basis = bone.<a class="code" href="class_leap_1_1_bone.html#a4ff50b291a30106f8306ba26d55ada76">basis</a>();</div>
+<div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> xBasis = basis.<a class="code" href="struct_leap_1_1_matrix.html#a521fe0389397e15dcf84417d616b27f5">xBasis</a>;</div>
+<div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> yBasis = basis.<a class="code" href="struct_leap_1_1_matrix.html#a060e37e3e8908f190a117ded7be96b26">yBasis</a>;</div>
+<div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> zBasis = basis.<a class="code" href="struct_leap_1_1_matrix.html#a9974130b93e5f0980b363ff22fae6b03">zBasis</a>;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The basis of the bone as a matrix. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a87635814523480d214fb932e00b622ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> center </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The midpoint of the bone. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> middle = bone.<a class="code" href="class_leap_1_1_bone.html#a87635814523480d214fb932e00b622ee">center</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The midpoint in the center of the bone. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8cf9153b5f55c95ea44d0e0a3bdc8a75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> direction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The normalized direction of the bone from base to tip. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_bone.html">Leap::Bone</a> bone = finger.bone(<a class="code" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7a297fcffc2325e4db9a6c8181178c7086">Leap::Bone::TYPE_DISTAL</a>);</div>
+<div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> distalDirection = bone.<a class="code" href="class_leap_1_1_bone.html#a4ff50b291a30106f8306ba26d55ada76">basis</a>().<a class="code" href="struct_leap_1_1_matrix.html#a060e37e3e8908f190a117ded7be96b26">yBasis</a>;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The normalized direction of the bone from base to tip. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a79c24cbb1d3165cd10cd1e1fd1824ee7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_leap_1_1_bone.html">Bone</a>&amp; invalid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an invalid <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object. </p>
+<p>You can use the instance returned by this function in comparisons testing whether a given <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> instance is valid or invalid. (You can also use the <a class="el" href="class_leap_1_1_bone.html#aac1b70a2ed67ead038c4d3f5ac4d8a81" title="Reports whether this is a valid Bone object. ">Bone::isValid()</a> function.)</p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_bone.html">Leap::Bone</a> bone = <a class="code" href="class_leap_1_1_bone.html#a79c24cbb1d3165cd10cd1e1fd1824ee7">Leap::Bone::invalid</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The invalid <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> instance. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac1b70a2ed67ead038c4d3f5ac4d8a81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports whether this is a valid <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_bone.html">Leap::Bone</a> bone = finger.bone(<a class="code" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7a5cbcf441ba1fcb197ad70a73337feb61">Leap::Bone::TYPE_PROXIMAL</a>);</div>
+<div class="line"><span class="keywordflow">if</span>(bone.<a class="code" href="class_leap_1_1_bone.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a>())</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// ... Use the bone data</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True, if this <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object contains valid tracking data. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7c7f525adfb7ab1af7df4b0b6b34d4eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The estimated length of the bone in millimeters. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> <a class="code" href="class_leap_1_1_bone.html#a7c7f525adfb7ab1af7df4b0b6b34d4eb">length</a> = bone.<a class="code" href="class_leap_1_1_bone.html#a7c7f525adfb7ab1af7df4b0b6b34d4eb">length</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The length of the bone in millimeters. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad33308349f4bd68e844803a70168c1ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> nextJoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The end of the bone, closest to the finger tip. </p>
+<p>In anatomical terms, this is the distal end of the bone.</p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> boneEnd = bone.<a class="code" href="class_leap_1_1_bone.html#ad33308349f4bd68e844803a70168c1ed">nextJoint</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> containing the coordinates of the next joint position. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae54110b913a171d0a1467cb33791196c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_bone.html">Bone</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object inequality. </p>
+<p>Two <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> objects are equal if and only if both <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> objects represent the exact same physical bone in the same frame and both <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> objects are valid. </p><dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a81fe0d11f007f967082718f198b5a11d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_bone.html">Bone</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object equality. </p>
+<p>Two <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> objects are equal if and only if both <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> objects represent the exact same physical bone in the same frame and both <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> objects are valid. </p><dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1ea100c811f82f66d7b366509f1e3d52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> prevJoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The base of the bone, closest to the wrist. </p>
+<p>In anatomical terms, this is the proximal end of the bone.</p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_vector.html">Leap::Vector</a> boneStart = bone.<a class="code" href="class_leap_1_1_bone.html#a1ea100c811f82f66d7b366509f1e3d52">prevJoint</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> containing the coordinates of the previous joint position. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f23c97b6c9f2a88e1121d1c633ccafa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A string containing a brief, human readable description of the <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object. </p>
+<div class="fragment"><div class="line">std::string description = bone.<a class="code" href="class_leap_1_1_bone.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A description of the <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object as a string. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afbd0fa31db28593e9669c3c56711c0a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The name of this bone. </p>
+<div class="fragment"><div class="line"><a class="code" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7">Leap::Bone::Type</a> <a class="code" href="class_leap_1_1_bone.html#afbd0fa31db28593e9669c3c56711c0a7">type</a> = bone.<a class="code" href="class_leap_1_1_bone.html#afbd0fa31db28593e9669c3c56711c0a7">type</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The anatomical type of this bone as a member of the <a class="el" href="class_leap_1_1_bone.html#a1d1cfd8ffb84e947f82999c682b666a7" title="Enumerates the names of the bones. ">Bone::Type</a> enumeration. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a49775584c76a5ecbefa51065cadbc304"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The average width of the flesh around the bone in millimeters. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> width = bone.<a class="code" href="class_leap_1_1_bone.html#a49775584c76a5ecbefa51065cadbc304">width</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The width of the flesh around the bone in millimeters. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="adc0863cdedabbce67b8aacfcaf3cd90c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_leap_1_1_bone.html">Bone</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes a brief, human readable description of the <a class="el" href="class_leap_1_1_bone.html" title="The Bone class represents a tracked bone. ">Bone</a> object to an output stream. </p>
+<dl class="section since"><dt>Since</dt><dd>2.0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">C++ Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Bone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_circle_gesture.html">CircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger_list.html">FingerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_float_array.html">FloatArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture.html">Gesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture_list.html">GestureList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand_list.html">HandList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image_list.html">ImageList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_key_tap_gesture.html">KeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_listener.html">Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable.html">Pointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable_list.html">PointableList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool.html">Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool_list.html">ToolList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>C++</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

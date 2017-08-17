@@ -1,0 +1,1012 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Config &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap" href="namespace_leap.html" />
+    <link rel="next" title="ConfigChangeEventArgs" href="class_leap_1_1_config_change_event_args.html" />
+    <link rel="prev" title="ClockCorrelator" href="class_leap_1_1_clock_correlator.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_config.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_config.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_config.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_config.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_config.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_config.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_config.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_config.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_config.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_config.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_clock_correlator.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_config_change_event_args.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap.html" accesskey="U">Leap</a>&raquo;
+  Config
+</span> -->
+        
+  <div class="section" id="config">
+<h1>Config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_config.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="class_leap_1_1_config-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.Config Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="class_leap_1_1_config.html" title="The Config class provides access to Leap Motion system configuration information.">Config</a> class provides access to <a class="el" href="namespace_leap.html">Leap</a> Motion system configuration information.  
+ <a href="class_leap_1_1_config.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aee9819af7eacacc324aa72619310a9d8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#aee9819af7eacacc324aa72619310a9d8">ValueType</a> { <br/>
+&#160;&#160;<a class="el" href="class_leap_1_1_config.html#aee9819af7eacacc324aa72619310a9d8">TYPE_UNKNOWN</a> = 0, 
+<a class="el" href="class_leap_1_1_config.html#aee9819af7eacacc324aa72619310a9d8">TYPE_BOOLEAN</a> = 1, 
+<a class="el" href="class_leap_1_1_config.html#aee9819af7eacacc324aa72619310a9d8">TYPE_INT32</a> = 2, 
+<a class="el" href="class_leap_1_1_config.html#aee9819af7eacacc324aa72619310a9d8">TYPE_FLOAT</a> = 6, 
+<br/>
+&#160;&#160;<a class="el" href="class_leap_1_1_config.html#aee9819af7eacacc324aa72619310a9d8">TYPE_STRING</a> = 8
+<br/>
+ }</td></tr>
+<tr class="memdesc:aee9819af7eacacc324aa72619310a9d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the possible data types for configuration values.  <a href="class_leap_1_1_config.html#aee9819af7eacacc324aa72619310a9d8">More...</a><br/></td></tr>
+<tr class="separator:aee9819af7eacacc324aa72619310a9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a5e0c85350a233e20b508189204fde82f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#a5e0c85350a233e20b508189204fde82f">Config</a> (int connectionKey)</td></tr>
+<tr class="memdesc:a5e0c85350a233e20b508189204fde82f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="class_leap_1_1_config.html" title="The Config class provides access to Leap Motion system configuration information.">Config</a> object for setting runtime configuration settings.  <a href="#a5e0c85350a233e20b508189204fde82f"></a><br/></td></tr>
+<tr class="separator:a5e0c85350a233e20b508189204fde82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4196147f26b176afb93dc165fedfc8d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#a4196147f26b176afb93dc165fedfc8d0">Get&lt; T &gt;</a> (string key, Action&lt; T &gt; onResult)</td></tr>
+<tr class="memdesc:a4196147f26b176afb93dc165fedfc8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests a configuration value.  <a href="#a4196147f26b176afb93dc165fedfc8d0"></a><br/></td></tr>
+<tr class="separator:a4196147f26b176afb93dc165fedfc8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad3addef437788d854f8fd5fcd5f6be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#abad3addef437788d854f8fd5fcd5f6be">GetBool</a> (string key)</td></tr>
+<tr class="memdesc:abad3addef437788d854f8fd5fcd5f6be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the boolean representation for the specified key.  <a href="#abad3addef437788d854f8fd5fcd5f6be"></a><br/></td></tr>
+<tr class="separator:abad3addef437788d854f8fd5fcd5f6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead7d2a5648223fe040b3b53e51ac5b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#aead7d2a5648223fe040b3b53e51ac5b6">GetFloat</a> (string key)</td></tr>
+<tr class="memdesc:aead7d2a5648223fe040b3b53e51ac5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the floating point representation for the specified key.  <a href="#aead7d2a5648223fe040b3b53e51ac5b6"></a><br/></td></tr>
+<tr class="separator:aead7d2a5648223fe040b3b53e51ac5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd25aba72fa00937fbec3d499f52a70a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#abd25aba72fa00937fbec3d499f52a70a">GetInt32</a> (string key)</td></tr>
+<tr class="memdesc:abd25aba72fa00937fbec3d499f52a70a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the 32-bit integer representation for the specified key.  <a href="#abd25aba72fa00937fbec3d499f52a70a"></a><br/></td></tr>
+<tr class="separator:abd25aba72fa00937fbec3d499f52a70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50bd7b7209f1d9428910e88278c6b750"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#a50bd7b7209f1d9428910e88278c6b750">GetString</a> (string key)</td></tr>
+<tr class="memdesc:a50bd7b7209f1d9428910e88278c6b750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the string representation for the specified key.  <a href="#a50bd7b7209f1d9428910e88278c6b750"></a><br/></td></tr>
+<tr class="separator:a50bd7b7209f1d9428910e88278c6b750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631db08c670e9df74b6873669d9636eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#a631db08c670e9df74b6873669d9636eb">Save</a> ()</td></tr>
+<tr class="memdesc:a631db08c670e9df74b6873669d9636eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the current state of the config.  <a href="#a631db08c670e9df74b6873669d9636eb"></a><br/></td></tr>
+<tr class="separator:a631db08c670e9df74b6873669d9636eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd77254986861d4e7592b5a619a82388"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#acd77254986861d4e7592b5a619a82388">Set&lt; T &gt;</a> (string key, T value, Action&lt; bool &gt; onResult)</td></tr>
+<tr class="memdesc:acd77254986861d4e7592b5a619a82388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a configuration value.  <a href="#acd77254986861d4e7592b5a619a82388"></a><br/></td></tr>
+<tr class="separator:acd77254986861d4e7592b5a619a82388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ee08f47555ecc07da20e24c64a34b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#a48ee08f47555ecc07da20e24c64a34b4">SetBool</a> (string key, bool value)</td></tr>
+<tr class="memdesc:a48ee08f47555ecc07da20e24c64a34b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the boolean representation for the specified key.  <a href="#a48ee08f47555ecc07da20e24c64a34b4"></a><br/></td></tr>
+<tr class="separator:a48ee08f47555ecc07da20e24c64a34b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea39b0e2cb819f87d8356ac216a525cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#aea39b0e2cb819f87d8356ac216a525cb">SetFloat</a> (string key, float value)</td></tr>
+<tr class="memdesc:aea39b0e2cb819f87d8356ac216a525cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the floating point representation for the specified key.  <a href="#aea39b0e2cb819f87d8356ac216a525cb"></a><br/></td></tr>
+<tr class="separator:aea39b0e2cb819f87d8356ac216a525cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a787f4eb383b5e56216345227efb6d378"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#a787f4eb383b5e56216345227efb6d378">SetInt32</a> (string key, int value)</td></tr>
+<tr class="memdesc:a787f4eb383b5e56216345227efb6d378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the 32-bit integer representation for the specified key.  <a href="#a787f4eb383b5e56216345227efb6d378"></a><br/></td></tr>
+<tr class="separator:a787f4eb383b5e56216345227efb6d378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc49204d44638f4ffe3ea91449a2492"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#a1fc49204d44638f4ffe3ea91449a2492">SetString</a> (string key, string value)</td></tr>
+<tr class="memdesc:a1fc49204d44638f4ffe3ea91449a2492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the string representation for the specified key.  <a href="#a1fc49204d44638f4ffe3ea91449a2492"></a><br/></td></tr>
+<tr class="separator:a1fc49204d44638f4ffe3ea91449a2492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a67e016a5034c5f939c778b1cd5c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_config.html#aee9819af7eacacc324aa72619310a9d8">Config.ValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#a00a67e016a5034c5f939c778b1cd5c21">Type</a> (string key)</td></tr>
+<tr class="memdesc:a00a67e016a5034c5f939c778b1cd5c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data type for a configuration parameter.  <a href="#a00a67e016a5034c5f939c778b1cd5c21"></a><br/></td></tr>
+<tr class="separator:a00a67e016a5034c5f939c778b1cd5c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae7192b33d33e3484f0027fcad97ef7d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#ae7192b33d33e3484f0027fcad97ef7d5">handleConfigChange</a> (object sender, <a class="el" href="class_leap_1_1_config_change_event_args.html">ConfigChangeEventArgs</a> eventArgs)</td></tr>
+<tr class="separator:ae7192b33d33e3484f0027fcad97ef7d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48749bfcf8e049a77774526c71fb913"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#ad48749bfcf8e049a77774526c71fb913">handleConfigResponse</a> (object sender, <a class="el" href="class_leap_1_1_set_config_response_event_args.html">SetConfigResponseEventArgs</a> eventArgs)</td></tr>
+<tr class="separator:ad48749bfcf8e049a77774526c71fb913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a027ca51c82d66838cf945473d2f2df9e"><td class="memItemLeft" align="right" valign="top">Connection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#a027ca51c82d66838cf945473d2f2df9e">_connection</a></td></tr>
+<tr class="separator:a027ca51c82d66838cf945473d2f2df9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110e4a07489b87ea4566a72239c06a36"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; UInt32, object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_config.html#a110e4a07489b87ea4566a72239c06a36">_transactions</a> = new Dictionary&lt;UInt32, object&gt;()</td></tr>
+<tr class="separator:a110e4a07489b87ea4566a72239c06a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_leap_1_1_config.html" title="The Config class provides access to Leap Motion system configuration information.">Config</a> class provides access to <a class="el" href="namespace_leap.html">Leap</a> Motion system configuration information. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="aee9819af7eacacc324aa72619310a9d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_config.html#aee9819af7eacacc324aa72619310a9d8">Leap.Config.ValueType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates the possible data types for configuration values. </p>
+<p>The Config::type() function returns an item from the ValueType enumeration. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="aee9819af7eacacc324aa72619310a9d8"></a>TYPE_UNKNOWN</em>&nbsp;</td><td>
+<p>The data type is unknown. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aee9819af7eacacc324aa72619310a9d8"></a>TYPE_BOOLEAN</em>&nbsp;</td><td>
+<p>A boolean value. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aee9819af7eacacc324aa72619310a9d8"></a>TYPE_INT32</em>&nbsp;</td><td>
+<p>A 32-bit integer. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aee9819af7eacacc324aa72619310a9d8"></a>TYPE_FLOAT</em>&nbsp;</td><td>
+<p>A floating-point number. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aee9819af7eacacc324aa72619310a9d8"></a>TYPE_STRING</em>&nbsp;</td><td>
+<p>A string of characters. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a5e0c85350a233e20b508189204fde82f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Leap.Config.Config </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>connectionKey</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="class_leap_1_1_config.html" title="The Config class provides access to Leap Motion system configuration information.">Config</a> object for setting runtime configuration settings. </p>
+<p>Note that the <a class="el" href="class_leap_1_1_controller.html#a12503273371b21d58952a99b5fc5b0d9" title="Returns a Config object, which you can use to query the Leap Motion system for configuration informat...">Controller.Config</a> provides a properly initialized <a class="el" href="class_leap_1_1_config.html" title="The Config class provides access to Leap Motion system configuration information.">Config</a> object already.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connectionKey</td><td>The id of the connnection. This id must match the key used to create the <a class="el" href="class_leap_1_1_controller.html" title="The Controller class is your main interface to the Leap Motion Controller.">Controller</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a4196147f26b176afb93dc165fedfc8d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Config.Get&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>onResult</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requests a configuration value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The string identifier for the setting. </td></tr>
+    <tr><td class="paramname">onResult</td><td>The action to take when the <a class="el" href="namespace_leap.html">Leap</a> service returns the config value. The Action delegate must take a parameter matching the config value type. The current value of the setting is passed to this delegate.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abad3addef437788d854f8fd5fcd5f6be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Config.GetBool </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the boolean representation for the specified key. </p>
+<p>@ deprecated use Get&lt;bool&gt;(key, delegate)</p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aead7d2a5648223fe040b3b53e51ac5b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Config.GetFloat </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the floating point representation for the specified key. </p>
+<p>@ deprecated use Get&lt;float&gt;(key, delegate) </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abd25aba72fa00937fbec3d499f52a70a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Config.GetInt32 </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the 32-bit integer representation for the specified key. </p>
+<p>@ deprecated use Get&lt;Int32&gt;(key, delegate) </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a50bd7b7209f1d9428910e88278c6b750"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Config.GetString </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the string representation for the specified key. </p>
+<p>@ deprecated use Get&lt;string&gt;(key, delegate) </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae7192b33d33e3484f0027fcad97ef7d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Config.handleConfigChange </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_config_change_event_args.html">ConfigChangeEventArgs</a>&#160;</td>
+          <td class="paramname"><em>eventArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad48749bfcf8e049a77774526c71fb913"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Config.handleConfigResponse </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_set_config_response_event_args.html">SetConfigResponseEventArgs</a>&#160;</td>
+          <td class="paramname"><em>eventArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a631db08c670e9df74b6873669d9636eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Config.Save </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves the current state of the config. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>no longer required, configuration changes are saved immediately. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>always returns false. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acd77254986861d4e7592b5a619a82388"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Config.Set&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action&lt; bool &gt;&#160;</td>
+          <td class="paramname"><em>onResult</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a configuration value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The string identifier for the setting. </td></tr>
+    <tr><td class="paramname">onResult</td><td>The action to take when the <a class="el" href="namespace_leap.html">Leap</a> service sets the config value. The Action delegate must take a boolean parameter. The service calls this delegate with the value true if the setting was changed successfully and false, otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0 </dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b><dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>IConvertible</em></td><td>&#160;</td></tr>
+</table>
+</dl>
+</div>
+
+</div>
+</div>
+<a class="anchor" id="a48ee08f47555ecc07da20e24c64a34b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Config.SetBool </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the boolean representation for the specified key. </p>
+<div class="fragment"><div class="line">controller.Config.Set&lt;<span class="keywordtype">bool</span>&gt; (<span class="stringliteral">&quot;websockets_enabled&quot;</span>, <span class="keyword">true</span>, delegate( <span class="keywordtype">bool</span> success){</div>
+<div class="line">    <span class="keywordflow">if</span>(!success)</div>
+<div class="line">        Console.WriteLine(<span class="stringliteral">&quot;Warning: Could not enable WebSockets&quot;</span>);</div>
+<div class="line">});</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>true on success, false on failure. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aea39b0e2cb819f87d8356ac216a525cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Config.SetFloat </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the floating point representation for the specified key. </p>
+<div class="fragment"><div class="line">controller.Config.Set&lt;<span class="keywordtype">float</span>&gt; (<span class="stringliteral">&quot;Key.For.Float.Setting&quot;</span>, 15, delegate(<span class="keywordtype">bool</span> success){</div>
+<div class="line">    <span class="keywordflow">if</span>(!success)</div>
+<div class="line">        Console.WriteLine(<span class="stringliteral">&quot;Warning: Could not set configuration.&quot;</span>);</div>
+<div class="line">});</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>true on success, false on failure. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a787f4eb383b5e56216345227efb6d378"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Config.SetInt32 </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the 32-bit integer representation for the specified key. </p>
+<div class="fragment"><div class="line">controller.Config.Set&lt;Int32&gt; (<span class="stringliteral">&quot;Key.For.Integer.Setting&quot;</span>, 12, delegate(<span class="keywordtype">bool</span> success){</div>
+<div class="line">    <span class="keywordflow">if</span>(!success)</div>
+<div class="line">        Console.WriteLine(<span class="stringliteral">&quot;Warning: Could not set configuration.&quot;</span>);</div>
+<div class="line">});</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>true on success, false on failure. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1fc49204d44638f4ffe3ea91449a2492"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Config.SetString </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the string representation for the specified key. </p>
+<div class="fragment"><div class="line">controller.Config.Set&lt;<span class="keywordtype">string</span>&gt; (<span class="stringliteral">&quot;Key.For.String.Setting&quot;</span>, <span class="stringliteral">&quot;A String&quot;</span>, delegate(<span class="keywordtype">bool</span> success){</div>
+<div class="line">    <span class="keywordflow">if</span>(!success)</div>
+<div class="line">        Console.WriteLine(<span class="stringliteral">&quot;Warning: Could not set configuration.&quot;</span>);</div>
+<div class="line">});</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>true on success, false on failure. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a00a67e016a5034c5f939c778b1cd5c21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_config.html#aee9819af7eacacc324aa72619310a9d8">Config.ValueType</a> Leap.Config.Type </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The data type for a configuration parameter. </p>
+<p>@ deprecated Always returns Config.ValueType.TYPE_UNKNOWN </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a027ca51c82d66838cf945473d2f2df9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Connection Leap.Config._connection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a110e4a07489b87ea4566a72239c06a36"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;UInt32, object&gt; Leap.Config._transactions = new Dictionary&lt;UInt32, object&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap.html">Leap</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_c_sharp_extensions.html">CSharpExtensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_clock_correlator.html">ClockCorrelator</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_config_change_event_args.html">ConfigChangeEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_connection_event_args.html">ConnectionEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_connection_lost_event_args.html">ConnectionLostEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_constants.html">Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_copy_from_other_extensions.html">CopyFromOtherExtensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device_event_args.html">DeviceEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device_failure_event_args.html">DeviceFailureEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_distortion_data.html">DistortionData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_distortion_event_args.html">DistortionEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_dropped_frame_event_args.html">DroppedFrameEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_frame_event_args.html">FrameEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface_leap_1_1_i_controller.html">IController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_image.html">Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_image_event_args.html">ImageEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_image_request_failed_event_args.html">ImageRequestFailedEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_internal_frame_event_args.html">InternalFrameEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_leap_event_args.html">LeapEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_leap_quaternion.html">LeapQuaternion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_leap_transform.html">LeapTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_log_event_args.html">LogEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_matrix.html">Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_policy_event_args.html">PolicyEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_set_config_response_event_args.html">SetConfigResponseEventArgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_test_hand_factory.html">TestHandFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_time_bracket.html">TimeBracket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_transform_extensions.html">TransformExtensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

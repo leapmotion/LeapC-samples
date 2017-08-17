@@ -1,0 +1,1362 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Matrix &mdash; Leap Motion C++ SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion C++ SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="Pointable" href="class_leap_1_1_pointable.html" />
+    <link rel="prev" title="Listener" href="class_leap_1_1_listener.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'cpp';
+    var hasAPI = {};
+    hasAPI.cpp = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'cpp/api/gen-cpp/struct_leap_1_1_matrix.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-cpp/struct_leap_1_1_matrix.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-cpp/struct_leap_1_1_matrix.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-cpp/struct_leap_1_1_matrix.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-cpp/struct_leap_1_1_matrix.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-cpp/struct_leap_1_1_matrix.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-cpp/struct_leap_1_1_matrix.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-cpp/struct_leap_1_1_matrix.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-cpp/struct_leap_1_1_matrix.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'cpp/api/gen-cpp/struct_leap_1_1_matrix.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_listener.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_pointable.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      C++
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  Matrix
+</span> -->
+        
+  <div class="section" id="matrix">
+<h1>Matrix<a class="headerlink" href="#matrix" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('struct_leap_1_1_matrix.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="struct_leap_1_1_matrix-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Matrix Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> struct represents a transformation matrix.  
+ <a href="struct_leap_1_1_matrix.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a3aede62f513da27e6f61ae7a972b4f96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a> ()</td></tr>
+<tr class="memdesc:a3aede62f513da27e6f61ae7a972b4f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an identity transformation matrix.  <a href="#a3aede62f513da27e6f61ae7a972b4f96">More...</a><br /></td></tr>
+<tr class="separator:a3aede62f513da27e6f61ae7a972b4f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e72b7c50059bf70eca50ada11a4cf88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a5e72b7c50059bf70eca50ada11a4cf88">Matrix</a> (const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;other)</td></tr>
+<tr class="memdesc:a5e72b7c50059bf70eca50ada11a4cf88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a copy of the specified <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> object.  <a href="#a5e72b7c50059bf70eca50ada11a4cf88">More...</a><br /></td></tr>
+<tr class="separator:a5e72b7c50059bf70eca50ada11a4cf88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d48417a910749ad72c379cc9e17defa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a1d48417a910749ad72c379cc9e17defa">Matrix</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;_xBasis, const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;_yBasis, const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;_zBasis)</td></tr>
+<tr class="memdesc:a1d48417a910749ad72c379cc9e17defa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a transformation matrix from the specified basis vectors.  <a href="#a1d48417a910749ad72c379cc9e17defa">More...</a><br /></td></tr>
+<tr class="separator:a1d48417a910749ad72c379cc9e17defa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4683162c0b397365d6a83b5842b66750"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a4683162c0b397365d6a83b5842b66750">Matrix</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;_xBasis, const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;_yBasis, const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;_zBasis, const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;_origin)</td></tr>
+<tr class="memdesc:a4683162c0b397365d6a83b5842b66750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a transformation matrix from the specified basis and translation vectors.  <a href="#a4683162c0b397365d6a83b5842b66750">More...</a><br /></td></tr>
+<tr class="separator:a4683162c0b397365d6a83b5842b66750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f94942dcc1acacdfc346a208d78afc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a93f94942dcc1acacdfc346a208d78afc">Matrix</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;axis, float angleRadians)</td></tr>
+<tr class="memdesc:a93f94942dcc1acacdfc346a208d78afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a transformation matrix specifying a rotation around the specified vector.  <a href="#a93f94942dcc1acacdfc346a208d78afc">More...</a><br /></td></tr>
+<tr class="separator:a93f94942dcc1acacdfc346a208d78afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b0d5d6df2793b7e51730662331f6462"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a0b0d5d6df2793b7e51730662331f6462">Matrix</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;axis, float angleRadians, const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;translation)</td></tr>
+<tr class="memdesc:a0b0d5d6df2793b7e51730662331f6462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a transformation matrix specifying a rotation around the specified vector and a translation by the specified vector.  <a href="#a0b0d5d6df2793b7e51730662331f6462">More...</a><br /></td></tr>
+<tr class="separator:a0b0d5d6df2793b7e51730662331f6462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a794f46a3822d62168c9892b12f605c9b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a794f46a3822d62168c9892b12f605c9b">operator!=</a> (const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;other) const </td></tr>
+<tr class="memdesc:a794f46a3822d62168c9892b12f605c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> inequality component-wise.  <a href="#a794f46a3822d62168c9892b12f605c9b">More...</a><br /></td></tr>
+<tr class="separator:a794f46a3822d62168c9892b12f605c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89891039ea560e097eb08132f26aa16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#ac89891039ea560e097eb08132f26aa16">operator*</a> (const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;other) const </td></tr>
+<tr class="memdesc:ac89891039ea560e097eb08132f26aa16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply transform matrices.  <a href="#ac89891039ea560e097eb08132f26aa16">More...</a><br /></td></tr>
+<tr class="separator:ac89891039ea560e097eb08132f26aa16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaffb99e5393d64d86a8d6f40cf6e6791"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#aaffb99e5393d64d86a8d6f40cf6e6791">operator*=</a> (const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;other)</td></tr>
+<tr class="memdesc:aaffb99e5393d64d86a8d6f40cf6e6791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply transform matrices and assign the product.  <a href="#aaffb99e5393d64d86a8d6f40cf6e6791">More...</a><br /></td></tr>
+<tr class="separator:aaffb99e5393d64d86a8d6f40cf6e6791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0505b89eda121fdff45c7a857e485557"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a0505b89eda121fdff45c7a857e485557">operator==</a> (const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;other) const </td></tr>
+<tr class="memdesc:a0505b89eda121fdff45c7a857e485557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> equality component-wise.  <a href="#a0505b89eda121fdff45c7a857e485557">More...</a><br /></td></tr>
+<tr class="separator:a0505b89eda121fdff45c7a857e485557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459ac0b66aad576fc297f8ab31ad68c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a459ac0b66aad576fc297f8ab31ad68c4">rigidInverse</a> () const </td></tr>
+<tr class="memdesc:a459ac0b66aad576fc297f8ab31ad68c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a matrix inverse if the matrix consists entirely of rigid transformations (translations and rotations).  <a href="#a459ac0b66aad576fc297f8ab31ad68c4">More...</a><br /></td></tr>
+<tr class="separator:a459ac0b66aad576fc297f8ab31ad68c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab70f4dca575ccefd1a26ef70f84fa131"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#ab70f4dca575ccefd1a26ef70f84fa131">setRotation</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;axis, float angleRadians)</td></tr>
+<tr class="memdesc:ab70f4dca575ccefd1a26ef70f84fa131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this transformation matrix to represent a rotation around the specified vector.  <a href="#ab70f4dca575ccefd1a26ef70f84fa131">More...</a><br /></td></tr>
+<tr class="separator:ab70f4dca575ccefd1a26ef70f84fa131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b864dda6c32f591b97ea49ce18c5166"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3b864dda6c32f591b97ea49ce18c5166"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a3b864dda6c32f591b97ea49ce18c5166">toArray3x3</a> (T *output) const </td></tr>
+<tr class="memdesc:a3b864dda6c32f591b97ea49ce18c5166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the 3x3 <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> object to a 9 element row-major float or double array.  <a href="#a3b864dda6c32f591b97ea49ce18c5166">More...</a><br /></td></tr>
+<tr class="separator:a3b864dda6c32f591b97ea49ce18c5166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3634f0a9b3f5ef2e46cd89d9853d826e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_float_array.html">FloatArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a3634f0a9b3f5ef2e46cd89d9853d826e">toArray3x3</a> () const </td></tr>
+<tr class="memdesc:a3634f0a9b3f5ef2e46cd89d9853d826e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a 3x3 <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> object to a 9 element row-major float array.  <a href="#a3634f0a9b3f5ef2e46cd89d9853d826e">More...</a><br /></td></tr>
+<tr class="separator:a3634f0a9b3f5ef2e46cd89d9853d826e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28afe97f67544ea39fff0be7423df6e1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a28afe97f67544ea39fff0be7423df6e1"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a28afe97f67544ea39fff0be7423df6e1">toArray4x4</a> (T *output) const </td></tr>
+<tr class="memdesc:a28afe97f67544ea39fff0be7423df6e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the 4x4 <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> object to a 16 element row-major float or double array.  <a href="#a28afe97f67544ea39fff0be7423df6e1">More...</a><br /></td></tr>
+<tr class="separator:a28afe97f67544ea39fff0be7423df6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59c66b58ba1ba0c56c904425f55e5cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_float_array.html">FloatArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#ab59c66b58ba1ba0c56c904425f55e5cd">toArray4x4</a> () const </td></tr>
+<tr class="memdesc:ab59c66b58ba1ba0c56c904425f55e5cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a 4x4 <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> object to a 16 element row-major float array.  <a href="#ab59c66b58ba1ba0c56c904425f55e5cd">More...</a><br /></td></tr>
+<tr class="separator:ab59c66b58ba1ba0c56c904425f55e5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee773c13f115577ae034f173b282fadf"><td class="memTemplParams" colspan="2">template&lt;typename Matrix3x3Type &gt; </td></tr>
+<tr class="memitem:aee773c13f115577ae034f173b282fadf"><td class="memTemplItemLeft" align="right" valign="top">const Matrix3x3Type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#aee773c13f115577ae034f173b282fadf">toMatrix3x3</a> () const </td></tr>
+<tr class="memdesc:aee773c13f115577ae034f173b282fadf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Leap::Matrix</a> object to another 3x3 matrix type.  <a href="#aee773c13f115577ae034f173b282fadf">More...</a><br /></td></tr>
+<tr class="separator:aee773c13f115577ae034f173b282fadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a155693163cbc33d47c8a12a02306bbce"><td class="memTemplParams" colspan="2">template&lt;typename Matrix4x4Type &gt; </td></tr>
+<tr class="memitem:a155693163cbc33d47c8a12a02306bbce"><td class="memTemplItemLeft" align="right" valign="top">const Matrix4x4Type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a155693163cbc33d47c8a12a02306bbce">toMatrix4x4</a> () const </td></tr>
+<tr class="memdesc:a155693163cbc33d47c8a12a02306bbce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Leap::Matrix</a> object to another 4x4 matrix type.  <a href="#a155693163cbc33d47c8a12a02306bbce">More...</a><br /></td></tr>
+<tr class="separator:a155693163cbc33d47c8a12a02306bbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a> () const </td></tr>
+<tr class="memdesc:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the matrix to a string in a human readable format.  <a href="#a3f23c97b6c9f2a88e1121d1c633ccafa">More...</a><br /></td></tr>
+<tr class="separator:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511261a46f8e981831029fb606121e47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a511261a46f8e981831029fb606121e47">transformDirection</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;in) const </td></tr>
+<tr class="memdesc:a511261a46f8e981831029fb606121e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a vector with this matrix by transforming its rotation and scale only.  <a href="#a511261a46f8e981831029fb606121e47">More...</a><br /></td></tr>
+<tr class="separator:a511261a46f8e981831029fb606121e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f64c4717e87325da9220f688d2a5890"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a3f64c4717e87325da9220f688d2a5890">transformPoint</a> (const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;in) const </td></tr>
+<tr class="memdesc:a3f64c4717e87325da9220f688d2a5890"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a vector with this matrix by transforming its rotation, scale, and translation.  <a href="#a3f64c4717e87325da9220f688d2a5890">More...</a><br /></td></tr>
+<tr class="separator:a3f64c4717e87325da9220f688d2a5890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:afeb3ac96e5c7973b674c34811a9fba2b"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#afeb3ac96e5c7973b674c34811a9fba2b">identity</a> ()</td></tr>
+<tr class="memdesc:afeb3ac96e5c7973b674c34811a9fba2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the identity matrix specifying no translation, rotation, and scale.  <a href="#afeb3ac96e5c7973b674c34811a9fba2b">More...</a><br /></td></tr>
+<tr class="separator:afeb3ac96e5c7973b674c34811a9fba2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aa86e83d6ba8522f64b07054ca66bbe75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#aa86e83d6ba8522f64b07054ca66bbe75">origin</a></td></tr>
+<tr class="memdesc:aa86e83d6ba8522f64b07054ca66bbe75"><td class="mdescLeft">&#160;</td><td class="mdescRight">The translation factors for all three axes.  <a href="#aa86e83d6ba8522f64b07054ca66bbe75">More...</a><br /></td></tr>
+<tr class="separator:aa86e83d6ba8522f64b07054ca66bbe75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a521fe0389397e15dcf84417d616b27f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a521fe0389397e15dcf84417d616b27f5">xBasis</a></td></tr>
+<tr class="memdesc:a521fe0389397e15dcf84417d616b27f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The basis vector for the x-axis.  <a href="#a521fe0389397e15dcf84417d616b27f5">More...</a><br /></td></tr>
+<tr class="separator:a521fe0389397e15dcf84417d616b27f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a060e37e3e8908f190a117ded7be96b26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a060e37e3e8908f190a117ded7be96b26">yBasis</a></td></tr>
+<tr class="memdesc:a060e37e3e8908f190a117ded7be96b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">The basis vector for the y-axis.  <a href="#a060e37e3e8908f190a117ded7be96b26">More...</a><br /></td></tr>
+<tr class="separator:a060e37e3e8908f190a117ded7be96b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9974130b93e5f0980b363ff22fae6b03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_leap_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a9974130b93e5f0980b363ff22fae6b03">zBasis</a></td></tr>
+<tr class="memdesc:a9974130b93e5f0980b363ff22fae6b03"><td class="mdescLeft">&#160;</td><td class="mdescRight">The basis vector for the z-axis.  <a href="#a9974130b93e5f0980b363ff22fae6b03">More...</a><br /></td></tr>
+<tr class="separator:a9974130b93e5f0980b363ff22fae6b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a5e736a2de52898e1930820f93bfdfba4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_leap_1_1_matrix.html#a5e736a2de52898e1930820f93bfdfba4">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;matrix)</td></tr>
+<tr class="memdesc:a5e736a2de52898e1930820f93bfdfba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the matrix to an output stream in a human readable format.  <a href="#a5e736a2de52898e1930820f93bfdfba4">More...</a><br /></td></tr>
+<tr class="separator:a5e736a2de52898e1930820f93bfdfba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> struct represents a transformation matrix. </p>
+<p>To use this struct to transform a <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a>, construct a matrix containing the desired transformation and then use the <a class="el" href="struct_leap_1_1_matrix.html#a3f64c4717e87325da9220f688d2a5890" title="Transforms a vector with this matrix by transforming its rotation, scale, and translation. ">Matrix::transformPoint()</a> or <a class="el" href="struct_leap_1_1_matrix.html#a511261a46f8e981831029fb606121e47" title="Transforms a vector with this matrix by transforming its rotation and scale only. ...">Matrix::transformDirection()</a> functions to apply the transform.</p>
+<p>Transforms can be combined by multiplying two or more transform matrices using the * operator. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3aede62f513da27e6f61ae7a972b4f96"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an identity transformation matrix. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a> <a class="code" href="struct_leap_1_1_matrix.html#afeb3ac96e5c7973b674c34811a9fba2b">identity</a> = <a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a>();</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5e72b7c50059bf70eca50ada11a4cf88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a copy of the specified <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> object. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a> thisMatrix = <a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a>(thatMatrix);</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1d48417a910749ad72c379cc9e17defa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>_xBasis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>_yBasis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>_zBasis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a transformation matrix from the specified basis vectors. </p>
+<div class="fragment"><div class="line">Vector xBasis = Vector(23, 0, 0);</div>
+<div class="line">Vector yBasis = Vector(0, 12, 0);</div>
+<div class="line">Vector zBasis = Vector(0, 0, 45);</div>
+<div class="line"><a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a> transformMatrix = <a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a>(xBasis, yBasis, zBasis);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_xBasis</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> specifying rotation and scale factors for the x-axis. </td></tr>
+    <tr><td class="paramname">_yBasis</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> specifying rotation and scale factors for the y-axis. </td></tr>
+    <tr><td class="paramname">_zBasis</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> specifying rotation and scale factors for the z-axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4683162c0b397365d6a83b5842b66750"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>_xBasis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>_yBasis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>_zBasis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>_origin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a transformation matrix from the specified basis and translation vectors. </p>
+<div class="fragment"><div class="line">Hand leapHand = frame.<a class="code" href="class_leap_1_1_frame.html#a6251adfa492a6d81efa4ba06b6c60a05">hand</a>(handID);</div>
+<div class="line">Vector handXBasis = leapHand.<a class="code" href="class_leap_1_1_hand.html#a4ff50b291a30106f8306ba26d55ada76">basis</a>().<a class="code" href="struct_leap_1_1_matrix.html#a521fe0389397e15dcf84417d616b27f5">xBasis</a>;</div>
+<div class="line">Vector handYBasis = leapHand.basis().yBasis;</div>
+<div class="line">Vector handZBasis = leapHand.basis().zBasis;</div>
+<div class="line">Vector handOrigin = leapHand.palmPosition();</div>
+<div class="line"><a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a> handTransform = <a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a>(handXBasis, handYBasis, handZBasis, handOrigin);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_xBasis</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> specifying rotation and scale factors for the x-axis. </td></tr>
+    <tr><td class="paramname">_yBasis</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> specifying rotation and scale factors for the y-axis. </td></tr>
+    <tr><td class="paramname">_zBasis</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> specifying rotation and scale factors for the z-axis. </td></tr>
+    <tr><td class="paramname">_origin</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> specifying translation factors on all three axes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a93f94942dcc1acacdfc346a208d78afc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angleRadians</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a transformation matrix specifying a rotation around the specified vector. </p>
+<div class="fragment"><div class="line">Vector axisOfRotation = leapHand.direction();</div>
+<div class="line"><span class="keywordtype">float</span> angleOfRotation = 1.27;</div>
+<div class="line"><a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a> rotator = <a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a>(axisOfRotation, angleOfRotation);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> specifying the axis of rotation. </td></tr>
+    <tr><td class="paramname">angleRadians</td><td>The amount of rotation in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0b0d5d6df2793b7e51730662331f6462"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angleRadians</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>translation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a transformation matrix specifying a rotation around the specified vector and a translation by the specified vector. </p>
+<div class="fragment"><div class="line">Vector rotationAxis = <a class="code" href="struct_leap_1_1_vector.html#a72392cdfddd5dcf24ebd0fc737fb709e">Vector::yAxis</a>();</div>
+<div class="line"><span class="keywordtype">float</span> angle = .733;</div>
+<div class="line">Vector translation = Vector(10,220,103);</div>
+<div class="line"><a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a> transform = <a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a>(rotationAxis, angle, translation);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> specifying the axis of rotation. </td></tr>
+    <tr><td class="paramname">angleRadians</td><td>The angle of rotation in radians. </td></tr>
+    <tr><td class="paramname">translation</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> representing the translation part of the transform. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="afeb3ac96e5c7973b674c34811a9fba2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a>&amp; identity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the identity matrix specifying no translation, rotation, and scale. </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_leap_1_1_matrix.html#a3aede62f513da27e6f61ae7a972b4f96">Matrix</a> identity = <a class="code" href="struct_leap_1_1_matrix.html#afeb3ac96e5c7973b674c34811a9fba2b">Matrix::identity</a>();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The identity matrix. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a794f46a3822d62168c9892b12f605c9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> inequality component-wise. </p>
+<div class="fragment"><div class="line">thisMatrix != thatMatrix;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac89891039ea560e097eb08132f26aa16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Multiply transform matrices. </p>
+<p>Combines two transformations into a single equivalent transformation.</p>
+<div class="fragment"><div class="line">thisMatrix * thatMatrix;</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>A <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> to multiply on the right hand side. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> representing the transformation equivalent to applying the other transformation followed by this transformation. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaffb99e5393d64d86a8d6f40cf6e6791"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a>&amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Multiply transform matrices and assign the product. </p>
+<div class="fragment"><div class="line">thisMatrix *= thatMatrix;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0505b89eda121fdff45c7a857e485557"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> equality component-wise. </p>
+<div class="fragment"><div class="line">thisMatrix == thatMatrix;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a459ac0b66aad576fc297f8ab31ad68c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> rigidInverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Performs a matrix inverse if the matrix consists entirely of rigid transformations (translations and rotations). </p>
+<p>If the matrix is not rigid, this operation will not represent an inverse.</p>
+<div class="fragment"><div class="line">thisMatrix = thatMatrix.rigidInverse();</div>
+</div><!-- fragment --><p>Note that all matrices that are directly returned by the API are rigid.</p>
+<dl class="section return"><dt>Returns</dt><dd>The rigid inverse of the matrix. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab70f4dca575ccefd1a26ef70f84fa131"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRotation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angleRadians</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets this transformation matrix to represent a rotation around the specified vector. </p>
+<div class="fragment"><div class="line">thisMatrix.setRotation(<a class="code" href="struct_leap_1_1_vector.html#a1d8fd8445341e510e049c1355d4f6691">Vector::zAxis</a>(), 1.46);</div>
+</div><!-- fragment --><p>This function erases any previous rotation and scale transforms applied to this matrix, but does not affect translation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> specifying the axis of rotation. </td></tr>
+    <tr><td class="paramname">angleRadians</td><td>The amount of rotation in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b864dda6c32f591b97ea49ce18c5166"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* toArray3x3 </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>output</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the 3x3 <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> object to a 9 element row-major float or double array. </p>
+<p>Translation factors are discarded.</p>
+<p>Returns a pointer to the same data. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3634f0a9b3f5ef2e46cd89d9853d826e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_float_array.html">FloatArray</a> toArray3x3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert a 3x3 <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> object to a 9 element row-major float array. </p>
+<p>Translation factors are discarded.</p>
+<div class="fragment"><div class="line">FloatArray rotations = thisMatrix.toArray3x3();</div>
+</div><!-- fragment --><p>Returns a <a class="el" href="struct_leap_1_1_float_array.html" title="The FloatArray struct is used to allow the returning of native float arrays without requiring dynamic...">FloatArray</a> struct to avoid dynamic memory allocation. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a28afe97f67544ea39fff0be7423df6e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* toArray4x4 </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>output</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the 4x4 <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> object to a 16 element row-major float or double array. </p>
+<p>Returns a pointer to the same data. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab59c66b58ba1ba0c56c904425f55e5cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_float_array.html">FloatArray</a> toArray4x4 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert a 4x4 <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Matrix</a> object to a 16 element row-major float array. </p>
+<div class="fragment"><div class="line">FloatArray transforms = thisMatrix.toArray4x4();</div>
+</div><!-- fragment --><p>Returns a <a class="el" href="struct_leap_1_1_float_array.html" title="The FloatArray struct is used to allow the returning of native float arrays without requiring dynamic...">FloatArray</a> struct to avoid dynamic memory allocation. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aee773c13f115577ae034f173b282fadf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Matrix3x3Type toMatrix3x3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert a <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Leap::Matrix</a> object to another 3x3 matrix type. </p>
+<p>The new type must define a constructor function that takes each matrix element as a parameter in row-major order.</p>
+<p>Translation factors are discarded. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a155693163cbc33d47c8a12a02306bbce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Matrix4x4Type toMatrix4x4 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert a <a class="el" href="struct_leap_1_1_matrix.html" title="The Matrix struct represents a transformation matrix. ">Leap::Matrix</a> object to another 4x4 matrix type. </p>
+<p>The new type must define a constructor function that takes each matrix element as a parameter in row-major order. </p><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f23c97b6c9f2a88e1121d1c633ccafa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write the matrix to a string in a human readable format. </p>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a511261a46f8e981831029fb606121e47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> transformDirection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a vector with this matrix by transforming its rotation and scale only. </p>
+<div class="fragment"><div class="line">Vector newDirection = thisMatrix.transformDirection(oldDirection);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>The <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> to transform. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> representing the transformed original. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f64c4717e87325da9220f688d2a5890"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> transformPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a vector with this matrix by transforming its rotation, scale, and translation. </p>
+<div class="fragment"><div class="line">Vector newPosition = thisMatrix.transformPoint(oldPosition);</div>
+</div><!-- fragment --><p>Translation is applied after rotation and scale.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>The <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> to transform. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="struct_leap_1_1_vector.html" title="The Vector struct represents a three-component mathematical vector or point such as a direction or po...">Vector</a> representing the transformed original. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a5e736a2de52898e1930820f93bfdfba4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_leap_1_1_matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write the matrix to an output stream in a human readable format. </p>
+<div class="fragment"><div class="line">std::cout &lt;&lt; thisMatrix &lt;&lt; std::endl;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aa86e83d6ba8522f64b07054ca66bbe75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> origin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The translation factors for all three axes. </p>
+<div class="fragment"><div class="line">Vector thisTranslation = thisMatrix.origin;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a521fe0389397e15dcf84417d616b27f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> xBasis</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The basis vector for the x-axis. </p>
+<div class="fragment"><div class="line">Vector xTransform = thisMatrix.xBasis;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a060e37e3e8908f190a117ded7be96b26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> yBasis</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The basis vector for the y-axis. </p>
+<div class="fragment"><div class="line">Vector yTransform = thisMatrix.yBasis;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9974130b93e5f0980b363ff22fae6b03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_leap_1_1_vector.html">Vector</a> zBasis</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The basis vector for the z-axis. </p>
+<div class="fragment"><div class="line">Vector zTransform = thisMatrix.zBasis;</div>
+</div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">C++ Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_arm.html">Arm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_bone.html">Bone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_circle_gesture.html">CircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_controller.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_device_list.html">DeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device.html">FailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_failed_device_list.html">FailedDeviceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger.html">Finger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_finger_list.html">FingerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_float_array.html">FloatArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture.html">Gesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_gesture_list.html">GestureList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand.html">Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_hand_list.html">HandList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_image_list.html">ImageList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_interaction_box.html">InteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_key_tap_gesture.html">KeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_listener.html">Listener</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable.html">Pointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_pointable_list.html">PointableList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_screen_tap_gesture.html">ScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_swipe_gesture.html">SwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool.html">Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_leap_1_1_tool_list.html">ToolList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_leap_1_1_vector.html">Vector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>C++</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

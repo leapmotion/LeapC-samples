@@ -1,0 +1,1144 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>RuntimeGizmoManager &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap::Unity::RuntimeGizmos" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html" />
+    <link rel="next" title="RuntimeGizmoToggle" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_toggle.html" />
+    <link rel="prev" title="RuntimeGizmoDrawer" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap_1_1_unity_1_1_runtime_gizmos.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_toggle.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_runtime_gizmos.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_runtime_gizmos.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_runtime_gizmos.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_runtime_gizmos.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_runtime_gizmos.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_runtime_gizmos.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_runtime_gizmos.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html" accesskey="U">Leap::Unity::RuntimeGizmos</a>&raquo;
+  RuntimeGizmoManager
+</span> -->
+        
+  <div class="section" id="runtimegizmomanager">
+<h1>RuntimeGizmoManager<a class="headerlink" href="#runtimegizmomanager" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
+<a href="#events">Events</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.Unity.RuntimeGizmos.RuntimeGizmoManager Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Inherits MonoBehaviour.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a01d7d6c28b7ce9f019f8e2f8f55fa644"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a01d7d6c28b7ce9f019f8e2f8f55fa644">TryGetGizmoDrawer</a> (out <a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">RuntimeGizmoDrawer</a> drawer)</td></tr>
+<tr class="memdesc:a01d7d6c28b7ce9f019f8e2f8f55fa644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to get a gizmo drawer.  <a href="#a01d7d6c28b7ce9f019f8e2f8f55fa644"></a><br/></td></tr>
+<tr class="separator:a01d7d6c28b7ce9f019f8e2f8f55fa644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97fb1a40050e95d69d5cf7796ae3579"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#ae97fb1a40050e95d69d5cf7796ae3579">TryGetGizmoDrawer</a> (GameObject attatchedGameObject, out <a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">RuntimeGizmoDrawer</a> drawer)</td></tr>
+<tr class="memdesc:ae97fb1a40050e95d69d5cf7796ae3579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to get a gizmo drawer for a given gameObject.  <a href="#ae97fb1a40050e95d69d5cf7796ae3579"></a><br/></td></tr>
+<tr class="separator:ae97fb1a40050e95d69d5cf7796ae3579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ab07fd22968543ebaa1b62765221a0341"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#ab07fd22968543ebaa1b62765221a0341">CIRCLE_RESOLUTION</a> = 32</td></tr>
+<tr class="separator:ab07fd22968543ebaa1b62765221a0341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9908e17033f014eb3d4212ee7b87e137"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a9908e17033f014eb3d4212ee7b87e137">DEFAULT_SHADER_NAME</a> = &quot;Hidden/Runtime Gizmos&quot;</td></tr>
+<tr class="separator:a9908e17033f014eb3d4212ee7b87e137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:af968360bff9091bc59085c515db0e081"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#af968360bff9091bc59085c515db0e081">OnDisable</a> ()</td></tr>
+<tr class="separator:af968360bff9091bc59085c515db0e081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56dfb214066df20bdaac0240e08d50f0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a56dfb214066df20bdaac0240e08d50f0">OnEnable</a> ()</td></tr>
+<tr class="separator:a56dfb214066df20bdaac0240e08d50f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7efd4c7507a95cd49a44487057e69d2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a7efd4c7507a95cd49a44487057e69d2f">onPostRender</a> (Camera camera)</td></tr>
+<tr class="separator:a7efd4c7507a95cd49a44487057e69d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d37fc9f8c4a472da2a506047997be3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a18d37fc9f8c4a472da2a506047997be3">OnValidate</a> ()</td></tr>
+<tr class="separator:a18d37fc9f8c4a472da2a506047997be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a970144ca56c74a639e83eea587cc9429"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a970144ca56c74a639e83eea587cc9429">Reset</a> ()</td></tr>
+<tr class="separator:a970144ca56c74a639e83eea587cc9429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20940078be021e8ccc8a96d74c49984"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#ad20940078be021e8ccc8a96d74c49984">Update</a> ()</td></tr>
+<tr class="separator:ad20940078be021e8ccc8a96d74c49984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5feff734a890dfa873db6eb6ec63ed0c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a5feff734a890dfa873db6eb6ec63ed0c">areGizmosDisabled</a> (Transform transform)</td></tr>
+<tr class="separator:a5feff734a890dfa873db6eb6ec63ed0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ab0fa01c61a6fe164f4023641378780a8"><td class="memItemLeft" align="right" valign="top">Mesh&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#ab0fa01c61a6fe164f4023641378780a8">_cubeMesh</a></td></tr>
+<tr class="separator:ab0fa01c61a6fe164f4023641378780a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab534fdb082ce7c5a75833ae7e08ed5da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#ab534fdb082ce7c5a75833ae7e08ed5da">_displayInGameView</a> = true</td></tr>
+<tr class="separator:ab534fdb082ce7c5a75833ae7e08ed5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bf0918df0d852a8de47a79d031dd77d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a7bf0918df0d852a8de47a79d031dd77d">_enabledForBuild</a> = true</td></tr>
+<tr class="separator:a7bf0918df0d852a8de47a79d031dd77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5573de0ed368c2ff35447e1d8e6401b6"><td class="memItemLeft" align="right" valign="top">Shader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a5573de0ed368c2ff35447e1d8e6401b6">_gizmoShader</a></td></tr>
+<tr class="separator:a5573de0ed368c2ff35447e1d8e6401b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0742e61b770f3d116bfbfd36a271bdf6"><td class="memItemLeft" align="right" valign="top">Mesh&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a0742e61b770f3d116bfbfd36a271bdf6">_sphereMesh</a></td></tr>
+<tr class="separator:a0742e61b770f3d116bfbfd36a271bdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:aa0126efce88d0031b0c24c9a1d53bc61"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">RuntimeGizmoDrawer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#aa0126efce88d0031b0c24c9a1d53bc61">_backDrawer</a> = null</td></tr>
+<tr class="separator:aa0126efce88d0031b0c24c9a1d53bc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d7047698652234b6d6394adca102748"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">RuntimeGizmoDrawer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a0d7047698652234b6d6394adca102748">_frontDrawer</a> = null</td></tr>
+<tr class="separator:a0d7047698652234b6d6394adca102748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="events"></a>
+Events</h2></td></tr>
+<tr class="memitem:a604c94ac5df754c6b7c7edbbedb8c004"><td class="memItemLeft" align="right" valign="top">static Action&lt; <a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">RuntimeGizmoDrawer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a604c94ac5df754c6b7c7edbbedb8c004">OnPostRenderGizmos</a></td></tr>
+<tr class="memdesc:a604c94ac5df754c6b7c7edbbedb8c004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to this event if you want to draw gizmos after rendering is complete.  <a href="#a604c94ac5df754c6b7c7edbbedb8c004"></a><br/></td></tr>
+<tr class="separator:a604c94ac5df754c6b7c7edbbedb8c004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a6b94629aea4e03d083714591de485d79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a6b94629aea4e03d083714591de485d79">addCorner</a> (List&lt; int &gt; indexes, int a, int b, int c, int d)</td></tr>
+<tr class="separator:a6b94629aea4e03d083714591de485d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4dd2da602fc35e755e88ea0becf98f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#acd4dd2da602fc35e755e88ea0becf98f">addQuad</a> (List&lt; Vector3 &gt; verts, List&lt; int &gt; indexes, Vector3 normal, Vector3 axis1, Vector3 axis2)</td></tr>
+<tr class="separator:acd4dd2da602fc35e755e88ea0becf98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2bf8f7fa6a1fa252d8778816a7a459"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a0c2bf8f7fa6a1fa252d8778816a7a459">assignDrawerParams</a> ()</td></tr>
+<tr class="separator:a0c2bf8f7fa6a1fa252d8778816a7a459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f896dfb1daef982a9b98f19e8386be9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a2f896dfb1daef982a9b98f19e8386be9">generateMeshes</a> ()</td></tr>
+<tr class="separator:a2f896dfb1daef982a9b98f19e8386be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a11bfd2d507a545dd599f02a9ebf2e06e"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="interface_leap_1_1_unity_1_1_runtime_gizmos_1_1_i_runtime_gizmo_component.html">IRuntimeGizmoComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a11bfd2d507a545dd599f02a9ebf2e06e">_gizmoList</a> = new List&lt;<a class="el" href="interface_leap_1_1_unity_1_1_runtime_gizmos_1_1_i_runtime_gizmo_component.html">IRuntimeGizmoComponent</a>&gt;()</td></tr>
+<tr class="separator:a11bfd2d507a545dd599f02a9ebf2e06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bec97384442a0a1b8af6d94ef58b8f4"><td class="memItemLeft" align="right" valign="top">List&lt; GameObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a3bec97384442a0a1b8af6d94ef58b8f4">_objList</a> = new List&lt;GameObject&gt;()</td></tr>
+<tr class="separator:a3bec97384442a0a1b8af6d94ef58b8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ba4e7ca53f5e2a53ecac95fc5f3377"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a87ba4e7ca53f5e2a53ecac95fc5f3377">_readyForSwap</a> = false</td></tr>
+<tr class="separator:a87ba4e7ca53f5e2a53ecac95fc5f3377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b81aec6161c9431cfa497020e4303cc"><td class="memItemLeft" align="right" valign="top">Mesh&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a6b81aec6161c9431cfa497020e4303cc">_wireCubeMesh</a></td></tr>
+<tr class="separator:a6b81aec6161c9431cfa497020e4303cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264e6a0b3b7fd4d12e6a9e8a27a59d1c"><td class="memItemLeft" align="right" valign="top">Mesh&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_manager.html#a264e6a0b3b7fd4d12e6a9e8a27a59d1c">_wireSphereMesh</a></td></tr>
+<tr class="separator:a264e6a0b3b7fd4d12e6a9e8a27a59d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6b94629aea4e03d083714591de485d79"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.addCorner </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>indexes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acd4dd2da602fc35e755e88ea0becf98f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.addQuad </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; Vector3 &gt;&#160;</td>
+          <td class="paramname"><em>verts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>indexes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>normal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>axis1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>axis2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5feff734a890dfa873db6eb6ec63ed0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.areGizmosDisabled </td>
+          <td>(</td>
+          <td class="paramtype">Transform&#160;</td>
+          <td class="paramname"><em>transform</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0c2bf8f7fa6a1fa252d8778816a7a459"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.assignDrawerParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2f896dfb1daef982a9b98f19e8386be9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.generateMeshes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af968360bff9091bc59085c515db0e081"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.OnDisable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a56dfb214066df20bdaac0240e08d50f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.OnEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7efd4c7507a95cd49a44487057e69d2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.onPostRender </td>
+          <td>(</td>
+          <td class="paramtype">Camera&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a18d37fc9f8c4a472da2a506047997be3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.OnValidate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a970144ca56c74a639e83eea587cc9429"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a01d7d6c28b7ce9f019f8e2f8f55fa644"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.TryGetGizmoDrawer </td>
+          <td>(</td>
+          <td class="paramtype">out <a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">RuntimeGizmoDrawer</a>&#160;</td>
+          <td class="paramname"><em>drawer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tries to get a gizmo drawer. </p>
+<p>Will fail if there is no Gizmo manager in the scene, or if it is disabled.</p>
+<p>The gizmo matrix will be set to the identity matrix. The gizmo color will be set to white. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae97fb1a40050e95d69d5cf7796ae3579"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.TryGetGizmoDrawer </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>attatchedGameObject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out <a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">RuntimeGizmoDrawer</a>&#160;</td>
+          <td class="paramname"><em>drawer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tries to get a gizmo drawer for a given gameObject. </p>
+<p>Will fail if there is no gizmo manager in the scene, or if it is disabled. Will also fail if there is a disable <a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_toggle.html" title="This class controls the display of all the runtime gizmos that are either attatched to this gameObjec...">RuntimeGizmoToggle</a> as a parent of the gameObject.</p>
+<p>The gizmo matrix will be set to the identity matrix. The gizmo color will be set to white. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad20940078be021e8ccc8a96d74c49984"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aa0126efce88d0031b0c24c9a1d53bc61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">RuntimeGizmoDrawer</a> Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._backDrawer = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab0fa01c61a6fe164f4023641378780a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mesh Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._cubeMesh</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab534fdb082ce7c5a75833ae7e08ed5da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._displayInGameView = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7bf0918df0d852a8de47a79d031dd77d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._enabledForBuild = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0d7047698652234b6d6394adca102748"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">RuntimeGizmoDrawer</a> Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._frontDrawer = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a11bfd2d507a545dd599f02a9ebf2e06e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="interface_leap_1_1_unity_1_1_runtime_gizmos_1_1_i_runtime_gizmo_component.html">IRuntimeGizmoComponent</a>&gt; Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._gizmoList = new List&lt;<a class="el" href="interface_leap_1_1_unity_1_1_runtime_gizmos_1_1_i_runtime_gizmo_component.html">IRuntimeGizmoComponent</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5573de0ed368c2ff35447e1d8e6401b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shader Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._gizmoShader</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3bec97384442a0a1b8af6d94ef58b8f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;GameObject&gt; Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._objList = new List&lt;GameObject&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a87ba4e7ca53f5e2a53ecac95fc5f3377"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._readyForSwap = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0742e61b770f3d116bfbfd36a271bdf6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mesh Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._sphereMesh</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6b81aec6161c9431cfa497020e4303cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mesh Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._wireCubeMesh</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a264e6a0b3b7fd4d12e6a9e8a27a59d1c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mesh Leap.Unity.RuntimeGizmos.RuntimeGizmoManager._wireSphereMesh</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab07fd22968543ebaa1b62765221a0341"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.CIRCLE_RESOLUTION = 32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9908e17033f014eb3d4212ee7b87e137"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.DEFAULT_SHADER_NAME = &quot;Hidden/Runtime Gizmos&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Event Documentation</h2>
+<a class="anchor" id="a604c94ac5df754c6b7c7edbbedb8c004"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;<a class="el" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">RuntimeGizmoDrawer</a>&gt; Leap.Unity.RuntimeGizmos.RuntimeGizmoManager.OnPostRenderGizmos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subscribe to this event if you want to draw gizmos after rendering is complete. </p>
+<p>Doing gizmo rendering inside of the normal Camera.onPoseRender event will cause rendering artifacts. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="interface_leap_1_1_unity_1_1_runtime_gizmos_1_1_i_runtime_gizmo_component.html">IRuntimeGizmoComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_collider_gizmos.html">RuntimeColliderGizmos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_drawer.html">RuntimeGizmoDrawer</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">RuntimeGizmoManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_runtime_gizmos_1_1_runtime_gizmo_toggle.html">RuntimeGizmoToggle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

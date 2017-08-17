@@ -1,0 +1,1124 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>InteractionMaterial &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="Leap::Unity::Interaction" href="namespace_leap_1_1_unity_1_1_interaction.html" />
+    <link rel="next" title="InteractionMaterialEditor" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material_editor.html" />
+    <link rel="prev" title="InteractionManagerEditor" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_editor.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+                    redirectedLocation ="namespace_leap_1_1_unity_1_1_interaction.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_editor.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("class_leap_1_1_unity_1_1_interaction_1_1_interaction_material_editor.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=currentnamespace_leap_1_1_unity_1_1_interaction.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">Unity Scripting Reference</a>&raquo;
+    <a href="namespace_leap_1_1_unity_1_1_interaction.html" accesskey="U">Leap::Unity::Interaction</a>&raquo;
+  InteractionMaterial
+</span> -->
+        
+  <div class="section" id="interactionmaterial">
+<h1>InteractionMaterial<a class="headerlink" href="#interactionmaterial" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Leap.Unity.Interaction.InteractionMaterial Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>An <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Engine material that controls several aspects of the interaction between BrushHands and an interactable object.  
+ <a href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#details">More...</a></p>
+
+<p>Inherits ScriptableObject.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material_1_1_controller_attribute.html">ControllerAttribute</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a3eb2f6e4339bc3176b61f25d13d5eddd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a3eb2f6e4339bc3176b61f25d13d5eddd">PhysicMaterialModeEnum</a> { <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a3eb2f6e4339bc3176b61f25d13d5eddd">NoAction</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a3eb2f6e4339bc3176b61f25d13d5eddd">DuplicateExisting</a>, 
+<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a3eb2f6e4339bc3176b61f25d13d5eddd">Replace</a>
+ }</td></tr>
+<tr class="separator:a3eb2f6e4339bc3176b61f25d13d5eddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a459c37db35c609f973597016bbdaf7ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html">IHoldingPoseController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a459c37db35c609f973597016bbdaf7ae">CreateHoldingPoseController</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a> obj)</td></tr>
+<tr class="memdesc:a459c37db35c609f973597016bbdaf7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an instance of the material's HoldingPoseController implementation for an instance of an InteractionBehavior.  <a href="#a459c37db35c609f973597016bbdaf7ae"></a><br/></td></tr>
+<tr class="separator:a459c37db35c609f973597016bbdaf7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d73f93e834c22a0628adf6836fc915"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_layer_controller.html">ILayerController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#ad4d73f93e834c22a0628adf6836fc915">CreateLayerController</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a> obj)</td></tr>
+<tr class="memdesc:ad4d73f93e834c22a0628adf6836fc915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an instance of the material's LayerController implementation for an instance of an InteractionBehavior.  <a href="#ad4d73f93e834c22a0628adf6836fc915"></a><br/></td></tr>
+<tr class="separator:ad4d73f93e834c22a0628adf6836fc915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69565cf10af19dd4ef8044f7e22eaab8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_move_to_controller.html">IMoveToController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a69565cf10af19dd4ef8044f7e22eaab8">CreateMoveToController</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a> obj)</td></tr>
+<tr class="memdesc:a69565cf10af19dd4ef8044f7e22eaab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an instance of the material's MoveToController implementation for an instance of an InteractionBehavior.  <a href="#a69565cf10af19dd4ef8044f7e22eaab8"></a><br/></td></tr>
+<tr class="separator:a69565cf10af19dd4ef8044f7e22eaab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1657e77517df6ceac3fe82e81abe1bbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_suspension_controller.html">ISuspensionController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a1657e77517df6ceac3fe82e81abe1bbe">CreateSuspensionController</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a> obj)</td></tr>
+<tr class="memdesc:a1657e77517df6ceac3fe82e81abe1bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an instance of the material's SuspensionController implementation for an instance of an InteractionBehavior.  <a href="#a1657e77517df6ceac3fe82e81abe1bbe"></a><br/></td></tr>
+<tr class="separator:a1657e77517df6ceac3fe82e81abe1bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54764a066af57785f2559b99e94713d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_throwing_controller.html">IThrowingController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a54764a066af57785f2559b99e94713d9">CreateThrowingController</a> (<a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a> obj)</td></tr>
+<tr class="memdesc:a54764a066af57785f2559b99e94713d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an instance of the material's ThrowingController implementation for an instance of an InteractionBehavior.  <a href="#a54764a066af57785f2559b99e94713d9"></a><br/></td></tr>
+<tr class="separator:a54764a066af57785f2559b99e94713d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aedfebbdfa45f762c44c28b02883dbbd7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#aedfebbdfa45f762c44c28b02883dbbd7">_brushDisableDistance</a> = 0.017f</td></tr>
+<tr class="separator:aedfebbdfa45f762c44c28b02883dbbd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8280ad678c735ca6d9f6128dcf4d2931"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a8280ad678c735ca6d9f6128dcf4d2931">_graphicalReturnTime</a> = 0.25f</td></tr>
+<tr class="separator:a8280ad678c735ca6d9f6128dcf4d2931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c09c99157fd54d36678e2965dafc9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html">IHoldingPoseController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#aa3c09c99157fd54d36678e2965dafc9b">_holdingPoseController</a></td></tr>
+<tr class="separator:aa3c09c99157fd54d36678e2965dafc9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0dabe54f23175a72893da2919c2ade"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_layer_controller.html">ILayerController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a2e0dabe54f23175a72893da2919c2ade">_layerController</a></td></tr>
+<tr class="separator:a2e0dabe54f23175a72893da2919c2ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d4049120541054b6dedde36c14b23b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_move_to_controller.html">IMoveToController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a8d4049120541054b6dedde36c14b23b3">_moveToController</a></td></tr>
+<tr class="separator:a8d4049120541054b6dedde36c14b23b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9799d7831dd321b8f52c598825d08af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a3eb2f6e4339bc3176b61f25d13d5eddd">PhysicMaterialModeEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#aa9799d7831dd321b8f52c598825d08af">_physicMaterialMode</a> = PhysicMaterialModeEnum.DuplicateExisting</td></tr>
+<tr class="separator:aa9799d7831dd321b8f52c598825d08af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d902f95c657a10e6789fc23a8b1e286"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a5d902f95c657a10e6789fc23a8b1e286">_releaseAngle</a> = 45</td></tr>
+<tr class="separator:a5d902f95c657a10e6789fc23a8b1e286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a7b0e76a36246414ef7963dc553352"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#ac0a7b0e76a36246414ef7963dc553352">_releaseDistance</a> = 0.15f</td></tr>
+<tr class="separator:ac0a7b0e76a36246414ef7963dc553352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2389da08a53b1bce7e9e4dd31c7c02c8"><td class="memItemLeft" align="right" valign="top">PhysicMaterial&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a2389da08a53b1bce7e9e4dd31c7c02c8">_replacementMaterial</a></td></tr>
+<tr class="separator:a2389da08a53b1bce7e9e4dd31c7c02c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a762777f6c92bf596a27966edcbb86f40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_suspension_controller.html">ISuspensionController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a762777f6c92bf596a27966edcbb86f40">_suspensionController</a></td></tr>
+<tr class="separator:a762777f6c92bf596a27966edcbb86f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae018f2d394cf6fdc912d9b6a7a2d65e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_throwing_controller.html">IThrowingController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#ae018f2d394cf6fdc912d9b6a7a2d65e3">_throwingController</a></td></tr>
+<tr class="separator:ae018f2d394cf6fdc912d9b6a7a2d65e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab4b7fe53d886fbbcabb59ccec58c27d"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#aab4b7fe53d886fbbcabb59ccec58c27d">_warpCurve</a></td></tr>
+<tr class="separator:aab4b7fe53d886fbbcabb59ccec58c27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd40e9e4abbbbfdfe2bd751b51a0aea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#aebd40e9e4abbbbfdfe2bd751b51a0aea">_warpingEnabled</a> = true</td></tr>
+<tr class="separator:aebd40e9e4abbbbfdfe2bd751b51a0aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a2188d3d262f0c72dcd233e9c6b7c1818"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a2188d3d262f0c72dcd233e9c6b7c1818">BrushDisableDistance</a><code> [get]</code></td></tr>
+<tr class="memdesc:a2188d3d262f0c72dcd233e9c6b7c1818"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance from the closest hand at which an object will go to sleep.  <a href="#a2188d3d262f0c72dcd233e9c6b7c1818"></a><br/></td></tr>
+<tr class="separator:a2188d3d262f0c72dcd233e9c6b7c1818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc04dd53926fd7f008371ff980867b23"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#adc04dd53926fd7f008371ff980867b23">GraphicalReturnTime</a><code> [get]</code></td></tr>
+<tr class="memdesc:adc04dd53926fd7f008371ff980867b23"><td class="mdescLeft">&#160;</td><td class="mdescRight">How long it takes for the graphical anchor to return to the origin after a release.  <a href="#adc04dd53926fd7f008371ff980867b23"></a><br/></td></tr>
+<tr class="separator:adc04dd53926fd7f008371ff980867b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae37a67474e2a008f56fd62c6fdb896c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a3eb2f6e4339bc3176b61f25d13d5eddd">PhysicMaterialModeEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#ae37a67474e2a008f56fd62c6fdb896c7">PhysicMaterialMode</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae37a67474e2a008f56fd62c6fdb896c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls how the <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Engine replaces a rigid body's physics material when the object is picked up.  <a href="#ae37a67474e2a008f56fd62c6fdb896c7"></a><br/></td></tr>
+<tr class="separator:ae37a67474e2a008f56fd62c6fdb896c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad21894a0ff7a031adb9761bbfd37bdda"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#ad21894a0ff7a031adb9761bbfd37bdda">ReleaseAngle</a><code> [get]</code></td></tr>
+<tr class="memdesc:ad21894a0ff7a031adb9761bbfd37bdda"><td class="mdescLeft">&#160;</td><td class="mdescRight">How far an object can twist in the holding hand before it releases.  <a href="#ad21894a0ff7a031adb9761bbfd37bdda"></a><br/></td></tr>
+<tr class="separator:ad21894a0ff7a031adb9761bbfd37bdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c51787410e540cc51469a5559effa36"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a0c51787410e540cc51469a5559effa36">ReleaseDistance</a><code> [get]</code></td></tr>
+<tr class="memdesc:a0c51787410e540cc51469a5559effa36"><td class="mdescLeft">&#160;</td><td class="mdescRight">How far an object can move from the holding hand before it releases.  <a href="#a0c51787410e540cc51469a5559effa36"></a><br/></td></tr>
+<tr class="separator:a0c51787410e540cc51469a5559effa36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c87020649aec4d16905e069ac5a0e1a"><td class="memItemLeft" align="right" valign="top">PhysicMaterial&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a5c87020649aec4d16905e069ac5a0e1a">ReplacementPhysicMaterial</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5c87020649aec4d16905e069ac5a0e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the physics material to use when the parent game object is held and the PhysicMaterialMode is set to PhysicMaterialModeEnum.Replace.  <a href="#a5c87020649aec4d16905e069ac5a0e1a"></a><br/></td></tr>
+<tr class="separator:a5c87020649aec4d16905e069ac5a0e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716f1ccaea5e2e17802baad59af79671"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a716f1ccaea5e2e17802baad59af79671">WarpCurve</a><code> [get]</code></td></tr>
+<tr class="memdesc:a716f1ccaea5e2e17802baad59af79671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the amount of warping based on the distance between the current position and the desired position.  <a href="#a716f1ccaea5e2e17802baad59af79671"></a><br/></td></tr>
+<tr class="separator:a716f1ccaea5e2e17802baad59af79671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964dccfc84cb283425b473c68981f6dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a964dccfc84cb283425b473c68981f6dd">WarpingEnabled</a><code> [get]</code></td></tr>
+<tr class="memdesc:a964dccfc84cb283425b473c68981f6dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies whether the <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Engine can sperate the physic representation and the graphics representation of an interactable object.  <a href="#a964dccfc84cb283425b473c68981f6dd"></a><br/></td></tr>
+<tr class="separator:a964dccfc84cb283425b473c68981f6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Engine material that controls several aspects of the interaction between BrushHands and an interactable object. </p>
+<p>InteractionMaterials can be assigned directly to a the InteractionBehavior component of an interactable object, and can be assigned as the default material of an <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html" title="InteractionManager is the core behaviour that manages the IInteractionBehaviours in the scene...">InteractionManager</a>. A default material is used for any objects that aren't assigned a specific <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html" title="An Interaction Engine material that controls several aspects of the interaction between BrushHands an...">InteractionMaterial</a>.</p>
+<p>To create a new <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Material, you can either use the <a class="el" href="namespace_leap_1_1_unity.html" title="IHandModel defines abstract methods as a template for building Leap hand models.">Unity</a> menu command: Assets&gt;Create&gt;<a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Material, or right-click in the project window and select Create&gt;<a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Material. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a3eb2f6e4339bc3176b61f25d13d5eddd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a3eb2f6e4339bc3176b61f25d13d5eddd">Leap.Unity.Interaction.InteractionMaterial.PhysicMaterialModeEnum</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a3eb2f6e4339bc3176b61f25d13d5eddd"></a>NoAction</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a3eb2f6e4339bc3176b61f25d13d5eddd"></a>DuplicateExisting</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a3eb2f6e4339bc3176b61f25d13d5eddd"></a>Replace</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a459c37db35c609f973597016bbdaf7ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html">IHoldingPoseController</a> Leap.Unity.Interaction.InteractionMaterial.CreateHoldingPoseController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an instance of the material's HoldingPoseController implementation for an instance of an InteractionBehavior. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad4d73f93e834c22a0628adf6836fc915"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_layer_controller.html">ILayerController</a> Leap.Unity.Interaction.InteractionMaterial.CreateLayerController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an instance of the material's LayerController implementation for an instance of an InteractionBehavior. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a69565cf10af19dd4ef8044f7e22eaab8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_move_to_controller.html">IMoveToController</a> Leap.Unity.Interaction.InteractionMaterial.CreateMoveToController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an instance of the material's MoveToController implementation for an instance of an InteractionBehavior. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1657e77517df6ceac3fe82e81abe1bbe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_suspension_controller.html">ISuspensionController</a> Leap.Unity.Interaction.InteractionMaterial.CreateSuspensionController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an instance of the material's SuspensionController implementation for an instance of an InteractionBehavior. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a54764a066af57785f2559b99e94713d9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_throwing_controller.html">IThrowingController</a> Leap.Unity.Interaction.InteractionMaterial.CreateThrowingController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a>&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an instance of the material's ThrowingController implementation for an instance of an InteractionBehavior. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aedfebbdfa45f762c44c28b02883dbbd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionMaterial._brushDisableDistance = 0.017f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8280ad678c735ca6d9f6128dcf4d2931"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionMaterial._graphicalReturnTime = 0.25f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa3c09c99157fd54d36678e2965dafc9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html">IHoldingPoseController</a> Leap.Unity.Interaction.InteractionMaterial._holdingPoseController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2e0dabe54f23175a72893da2919c2ade"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_layer_controller.html">ILayerController</a> Leap.Unity.Interaction.InteractionMaterial._layerController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8d4049120541054b6dedde36c14b23b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_move_to_controller.html">IMoveToController</a> Leap.Unity.Interaction.InteractionMaterial._moveToController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa9799d7831dd321b8f52c598825d08af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a3eb2f6e4339bc3176b61f25d13d5eddd">PhysicMaterialModeEnum</a> Leap.Unity.Interaction.InteractionMaterial._physicMaterialMode = PhysicMaterialModeEnum.DuplicateExisting</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5d902f95c657a10e6789fc23a8b1e286"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionMaterial._releaseAngle = 45</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac0a7b0e76a36246414ef7963dc553352"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionMaterial._releaseDistance = 0.15f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2389da08a53b1bce7e9e4dd31c7c02c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PhysicMaterial Leap.Unity.Interaction.InteractionMaterial._replacementMaterial</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a762777f6c92bf596a27966edcbb86f40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_suspension_controller.html">ISuspensionController</a> Leap.Unity.Interaction.InteractionMaterial._suspensionController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae018f2d394cf6fdc912d9b6a7a2d65e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_throwing_controller.html">IThrowingController</a> Leap.Unity.Interaction.InteractionMaterial._throwingController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aab4b7fe53d886fbbcabb59ccec58c27d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationCurve Leap.Unity.Interaction.InteractionMaterial._warpCurve</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> AnimationCurve(<span class="keyword">new</span> Keyframe(0.0f, 1.0f, 0.0f, 0.0f),</div>
+<div class="line">                                                             <span class="keyword">new</span> Keyframe(0.02f, 0.0f, 0.0f, 0.0f))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aebd40e9e4abbbbfdfe2bd751b51a0aea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionMaterial._warpingEnabled = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a2188d3d262f0c72dcd233e9c6b7c1818"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionMaterial.BrushDisableDistance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The distance from the closest hand at which an object will go to sleep. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adc04dd53926fd7f008371ff980867b23"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionMaterial.GraphicalReturnTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>How long it takes for the graphical anchor to return to the origin after a release. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae37a67474e2a008f56fd62c6fdb896c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material.html#a3eb2f6e4339bc3176b61f25d13d5eddd">PhysicMaterialModeEnum</a> Leap.Unity.Interaction.InteractionMaterial.PhysicMaterialMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Controls how the <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Engine replaces a rigid body's physics material when the object is picked up. </p>
+<ul>
+<li>NoAction &ndash; the material is not replaced.</li>
+<li>DuplicateExisting &ndash; a modified copy of the original material is used.</li>
+<li>Replace &ndash; the material is replaced with material specified by ReplacementPhysicMaterial.</li>
+</ul>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad21894a0ff7a031adb9761bbfd37bdda"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionMaterial.ReleaseAngle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>How far an object can twist in the holding hand before it releases. </p>
+<p>The angle is calculated between the current rotation of the object and the rotation determined by the material's <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html" title="IHoldingPoseController defines the interface used by the Interaction Engine to request the best pose ...">IHoldingPoseController</a>. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0c51787410e540cc51469a5559effa36"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Leap.Unity.Interaction.InteractionMaterial.ReleaseDistance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>How far an object can move from the holding hand before it releases. </p>
+<p>The distance is calculated between the current position of the object and the position determined by the material's <a class="el" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html" title="IHoldingPoseController defines the interface used by the Interaction Engine to request the best pose ...">IHoldingPoseController</a>. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c87020649aec4d16905e069ac5a0e1a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PhysicMaterial Leap.Unity.Interaction.InteractionMaterial.ReplacementPhysicMaterial</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specifies the physics material to use when the parent game object is held and the PhysicMaterialMode is set to PhysicMaterialModeEnum.Replace. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a716f1ccaea5e2e17802baad59af79671"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationCurve Leap.Unity.Interaction.InteractionMaterial.WarpCurve</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Controls the amount of warping based on the distance between the current position and the desired position. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a964dccfc84cb283425b473c68981f6dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Leap.Unity.Interaction.InteractionMaterial.WarpingEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specifies whether the <a class="el" href="namespace_leap_1_1_unity_1_1_interaction.html">Interaction</a> Engine can sperate the physic representation and the graphics representation of an interactable object. </p>
+<p>Warping can decrease perceived latency. </p>
+<dl class="section since"><dt>Since</dt><dd>4.1.4 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../unity/Unity_IE_Overview.html">Interaction Engine Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unity/Unity_IE_Setup.html">Setting up an Interaction Engine Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unity/Unity_IE_Materials.html">Interaction Materials and Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unity/Unity_IE_Layers.html">Interaction Engine Layers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../unity/Unity_IE_Classes.html">Interaction Engine Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html">InteractionManager</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">InteractionMaterial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_bone.html">InteractionBrushBone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_hand.html">InteractionBrushHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_grasp_events.html">InteractionGraspEvents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_hand_events.html">InteractionHandEvents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_holding_pose_controller_kabsch.html">HoldingPoseControllerKabsch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_kinematic.html">MoveToControllerKinematic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_velocity.html">MoveToControllerVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_suspension_controller_default.html">SuspensionControllerDefault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_palm_velocity.html">ThrowingControllerPalmVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_sliding_window.html">ThrowingControllerSlidingWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_layer_controller_custom.html">LayerControllerCustom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">InteractionBehaviourBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_controller_base.html">IControllerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html">IHoldingPoseController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_move_to_controller.html">IMoveToController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_suspension_controller.html">ISuspensionController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_throwing_controller.html">IThrowingController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_layer_controller.html">ILayerController</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap.html">Leap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity.html">Leap::Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attachments.html">Leap::Unity::Attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_attributes.html">Leap::Unity::Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_graphing.html">Leap::Unity::Graphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_input_module.html">Leap::Unity::InputModule</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_interaction.html">Leap::Unity::Interaction</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_manager.html">ActivityManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_monitor.html">ActivityMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_activity_monitor_lite.html">ActivityMonitorLite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_base_call_guard.html">BaseCallGuard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_base_not_called_exception.html">BaseNotCalledException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_begin_not_called_exception.html">BeginNotCalledException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_controller_container.html">ControllerContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_hand_array_builder.html">HandArrayBuilder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_holding_pose_controller_kabsch.html">HoldingPoseControllerKabsch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_activity_monitor.html">IActivityMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_controller_base.html">IControllerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_holding_pose_controller.html">IHoldingPoseController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_interaction_behaviour.html">IInteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_layer_controller.html">ILayerController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_move_to_controller.html">IMoveToController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_suspension_controller.html">ISuspensionController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_i_throwing_controller.html">IThrowingController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour.html">InteractionBehaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base.html">InteractionBehaviourBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_behaviour_base_editor.html">InteractionBehaviourBaseEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_bone.html">InteractionBrushBone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_brush_hand.html">InteractionBrushHand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_grasp_detector.html">InteractionGraspDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_grasp_events.html">InteractionGraspEvents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_hand_events.html">InteractionHandEvents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager.html">InteractionManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_manager_editor.html">InteractionManagerEditor</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">InteractionMaterial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interaction_material_editor.html">InteractionMaterialEditor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_interactive_behavior_grasp_event.html">InteractiveBehaviorGraspEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_layer_controller_custom.html">LayerControllerCustom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_kinematic.html">MoveToControllerKinematic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_move_to_controller_velocity.html">MoveToControllerVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_physic_material_replacer.html">PhysicMaterialReplacer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_leap_1_1_unity_1_1_interaction_1_1_physics_move_info.html">PhysicsMoveInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_physics_utility.html">PhysicsUtility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_rigidbody_warper.html">RigidbodyWarper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_shape_description_pool.html">ShapeDescriptionPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_struct_allocator.html">StructAllocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_suspension_controller_default.html">SuspensionControllerDefault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_palm_velocity.html">ThrowingControllerPalmVelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_throwing_controller_sliding_window.html">ThrowingControllerSlidingWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_leap_1_1_unity_1_1_interaction_1_1_wrong_base_called_exception.html">WrongBaseCalledException</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_playback.html">Leap::Unity::Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query.html">Leap::Unity::Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_query_1_1_test.html">Leap::Unity::Query::Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_leap_1_1_unity_1_1_runtime_gizmos.html">Leap::Unity::RuntimeGizmos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

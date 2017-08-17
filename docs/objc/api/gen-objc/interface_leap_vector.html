@@ -1,0 +1,1336 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LeapVector &mdash; Leap Motion Objective-C SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Objective-C SDK v3.2 Beta documentation" href="../../index.html" />
+    <link rel="up" title="API Reference" href="../Leap_Classes.html" />
+    <link rel="next" title="NSArray(LeapPointableOrHandList)" href="category_n_s_array_07_leap_pointable_or_hand_list_08.html" />
+    <link rel="prev" title="LeapTool" href="interface_leap_tool.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'objc';
+    var hasAPI = {};
+    hasAPI.objc = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'objc/api/gen-objc/interface_leap_vector.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-objc/interface_leap_vector.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-objc/interface_leap_vector.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-objc/interface_leap_vector.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-objc/interface_leap_vector.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-objc/interface_leap_vector.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-objc/interface_leap_vector.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-objc/interface_leap_vector.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-objc/interface_leap_vector.html";
+            } else {
+                    redirectedLocation ="../Leap_Classes.html";
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'objc/api/gen-objc/interface_leap_vector.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){
+            window.location.assign("interface_leap_tool.html");    }
+    else if( character == "K" & e.altKey){
+            window.location.assign("category_n_s_array_07_leap_pointable_or_hand_list_08.html");
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unity'">Unity</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      Objective-C
+    
+  </li>
+  <li>
+      <a href="../Leap_Classes.html?proglang=current" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+    <a href="../Leap_Classes.html" accesskey="U">API Reference</a>&raquo;
+  LeapVector
+</span> -->
+        
+  <div class="section" id="leapvector">
+<h1>LeapVector<a class="headerlink" href="#leapvector" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('interface_leap_vector.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Instance Methods</a> &#124;
+<a href="#pub-static-methods">Class Methods</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+<div class="title">LeapVector Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> class represents a three-component mathematical vector or point such as a direction or position in three-dimensional space.  
+ <a href="interface_leap_vector.html#details">More...</a></p>
+
+<p>Inherits NSObject.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Instance Methods</h2></td></tr>
+<tr class="memitem:a3e3d4b24dcea0016acb0a75c6b5e8c21"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#a3e3d4b24dcea0016acb0a75c6b5e8c21">angleTo:</a></td></tr>
+<tr class="memdesc:a3e3d4b24dcea0016acb0a75c6b5e8c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">The angle between this vector and the specified vector in radians.  <a href="#a3e3d4b24dcea0016acb0a75c6b5e8c21">More...</a><br /></td></tr>
+<tr class="separator:a3e3d4b24dcea0016acb0a75c6b5e8c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd5e86a36f08d4404265590fdc02ef05"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#afd5e86a36f08d4404265590fdc02ef05">cross:</a></td></tr>
+<tr class="memdesc:afd5e86a36f08d4404265590fdc02ef05"><td class="mdescLeft">&#160;</td><td class="mdescRight">The cross product of this vector and the specified vector.  <a href="#afd5e86a36f08d4404265590fdc02ef05">More...</a><br /></td></tr>
+<tr class="separator:afd5e86a36f08d4404265590fdc02ef05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a262fd0724d586c7624c771f286078360"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#a262fd0724d586c7624c771f286078360">distanceTo:</a></td></tr>
+<tr class="memdesc:a262fd0724d586c7624c771f286078360"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance between the point represented by this <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> object and a point represented by the specified <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> object.  <a href="#a262fd0724d586c7624c771f286078360">More...</a><br /></td></tr>
+<tr class="separator:a262fd0724d586c7624c771f286078360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54092845eac92205f13f82d176a1b049"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#a54092845eac92205f13f82d176a1b049">divide:</a></td></tr>
+<tr class="memdesc:a54092845eac92205f13f82d176a1b049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide this vector by a number.  <a href="#a54092845eac92205f13f82d176a1b049">More...</a><br /></td></tr>
+<tr class="separator:a54092845eac92205f13f82d176a1b049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db862e5be2e1bd573f37ee9ee143a5e"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#a0db862e5be2e1bd573f37ee9ee143a5e">dot:</a></td></tr>
+<tr class="memdesc:a0db862e5be2e1bd573f37ee9ee143a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dot product of this vector with another vector.  <a href="#a0db862e5be2e1bd573f37ee9ee143a5e">More...</a><br /></td></tr>
+<tr class="separator:a0db862e5be2e1bd573f37ee9ee143a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4136eb552793660a595cc8c13ccfba4"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#aa4136eb552793660a595cc8c13ccfba4">equals:</a></td></tr>
+<tr class="memdesc:aa4136eb552793660a595cc8c13ccfba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> equality.  <a href="#aa4136eb552793660a595cc8c13ccfba4">More...</a><br /></td></tr>
+<tr class="separator:aa4136eb552793660a595cc8c13ccfba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5807cf4714577e4f79eeab749896738d"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#a5807cf4714577e4f79eeab749896738d">initWithVector:</a></td></tr>
+<tr class="memdesc:a5807cf4714577e4f79eeab749896738d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the specified <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a>.  <a href="#a5807cf4714577e4f79eeab749896738d">More...</a><br /></td></tr>
+<tr class="separator:a5807cf4714577e4f79eeab749896738d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98455ff3346a110086631de1055e397"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#aa98455ff3346a110086631de1055e397">initWithX:y:z:</a></td></tr>
+<tr class="memdesc:aa98455ff3346a110086631de1055e397"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> with the specified component values.  <a href="#aa98455ff3346a110086631de1055e397">More...</a><br /></td></tr>
+<tr class="separator:aa98455ff3346a110086631de1055e397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a981906b92caf838ee6df23e27cabb7a2"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#a981906b92caf838ee6df23e27cabb7a2">minus:</a></td></tr>
+<tr class="memdesc:a981906b92caf838ee6df23e27cabb7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract a vector from this vector.  <a href="#a981906b92caf838ee6df23e27cabb7a2">More...</a><br /></td></tr>
+<tr class="separator:a981906b92caf838ee6df23e27cabb7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e61d0f3fd4eece055f4cfbe2bb53ca3"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#a4e61d0f3fd4eece055f4cfbe2bb53ca3">negate</a></td></tr>
+<tr class="memdesc:a4e61d0f3fd4eece055f4cfbe2bb53ca3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negate this vector.  <a href="#a4e61d0f3fd4eece055f4cfbe2bb53ca3">More...</a><br /></td></tr>
+<tr class="separator:a4e61d0f3fd4eece055f4cfbe2bb53ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e8fdd0826ec308a3d63ce27808f604b"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#a1e8fdd0826ec308a3d63ce27808f604b">plus:</a></td></tr>
+<tr class="memdesc:a1e8fdd0826ec308a3d63ce27808f604b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two vectors.  <a href="#a1e8fdd0826ec308a3d63ce27808f604b">More...</a><br /></td></tr>
+<tr class="separator:a1e8fdd0826ec308a3d63ce27808f604b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a995dedd1960cb7c593eeb1fced90010c"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_leap_vector.html#a995dedd1960cb7c593eeb1fced90010c">times:</a></td></tr>
+<tr class="memdesc:a995dedd1960cb7c593eeb1fced90010c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply this vector by a number.  <a href="#a995dedd1960cb7c593eeb1fced90010c">More...</a><br /></td></tr>
+<tr class="separator:a995dedd1960cb7c593eeb1fced90010c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Class Methods</h2></td></tr>
+<tr class="memitem:aeb6b0cc33c18aad296f1d0ae9137bcd9"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_vector.html#aeb6b0cc33c18aad296f1d0ae9137bcd9">backward</a></td></tr>
+<tr class="memdesc:aeb6b0cc33c18aad296f1d0ae9137bcd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing backward along the positive z-axis: (0, 0, 1).  <a href="#aeb6b0cc33c18aad296f1d0ae9137bcd9">More...</a><br /></td></tr>
+<tr class="separator:aeb6b0cc33c18aad296f1d0ae9137bcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb557118cc263b8c533a3a46a99f3086"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_vector.html#acb557118cc263b8c533a3a46a99f3086">down</a></td></tr>
+<tr class="memdesc:acb557118cc263b8c533a3a46a99f3086"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing down along the negative y-axis: (0, -1, 0).  <a href="#acb557118cc263b8c533a3a46a99f3086">More...</a><br /></td></tr>
+<tr class="separator:acb557118cc263b8c533a3a46a99f3086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9cf02f46238c9efea8a2f02797f26c5"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_vector.html#ac9cf02f46238c9efea8a2f02797f26c5">forward</a></td></tr>
+<tr class="memdesc:ac9cf02f46238c9efea8a2f02797f26c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing forward along the negative z-axis: (0, 0, -1).  <a href="#ac9cf02f46238c9efea8a2f02797f26c5">More...</a><br /></td></tr>
+<tr class="separator:ac9cf02f46238c9efea8a2f02797f26c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f8f43bf98b73a77c471fd10113ab6c"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_vector.html#a37f8f43bf98b73a77c471fd10113ab6c">left</a></td></tr>
+<tr class="memdesc:a37f8f43bf98b73a77c471fd10113ab6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing left along the negative x-axis: (-1, 0, 0).  <a href="#a37f8f43bf98b73a77c471fd10113ab6c">More...</a><br /></td></tr>
+<tr class="separator:a37f8f43bf98b73a77c471fd10113ab6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84fa047103429d222ce04f954dc97a62"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_vector.html#a84fa047103429d222ce04f954dc97a62">right</a></td></tr>
+<tr class="memdesc:a84fa047103429d222ce04f954dc97a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing right along the positive x-axis: (1, 0, 0).  <a href="#a84fa047103429d222ce04f954dc97a62">More...</a><br /></td></tr>
+<tr class="separator:a84fa047103429d222ce04f954dc97a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9830589eebbc19011cde15adfc9bfc83"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_vector.html#a9830589eebbc19011cde15adfc9bfc83">up</a></td></tr>
+<tr class="memdesc:a9830589eebbc19011cde15adfc9bfc83"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unit vector pointing up along the positive y-axis: (0, 1, 0).  <a href="#a9830589eebbc19011cde15adfc9bfc83">More...</a><br /></td></tr>
+<tr class="separator:a9830589eebbc19011cde15adfc9bfc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727725cf5f2b94f6c621bade11d4eaf2"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_vector.html#a727725cf5f2b94f6c621bade11d4eaf2">xAxis</a></td></tr>
+<tr class="memdesc:a727725cf5f2b94f6c621bade11d4eaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The x-axis unit vector: (1, 0, 0).  <a href="#a727725cf5f2b94f6c621bade11d4eaf2">More...</a><br /></td></tr>
+<tr class="separator:a727725cf5f2b94f6c621bade11d4eaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5885d2029c91830c654b165629c81c36"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_vector.html#a5885d2029c91830c654b165629c81c36">yAxis</a></td></tr>
+<tr class="memdesc:a5885d2029c91830c654b165629c81c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">The y-axis unit vector: (0, 1, 0).  <a href="#a5885d2029c91830c654b165629c81c36">More...</a><br /></td></tr>
+<tr class="separator:a5885d2029c91830c654b165629c81c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe7441dedfa7323e15a4d2b6a100ccc4"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_vector.html#abe7441dedfa7323e15a4d2b6a100ccc4">zAxis</a></td></tr>
+<tr class="memdesc:abe7441dedfa7323e15a4d2b6a100ccc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The z-axis unit vector: (0, 0, 1).  <a href="#abe7441dedfa7323e15a4d2b6a100ccc4">More...</a><br /></td></tr>
+<tr class="separator:abe7441dedfa7323e15a4d2b6a100ccc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a243c8902a3151917721e16e474d038d4"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_leap_vector.html#a243c8902a3151917721e16e474d038d4">zero</a></td></tr>
+<tr class="memdesc:a243c8902a3151917721e16e474d038d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The zero vector: (0, 0, 0)  <a href="#a243c8902a3151917721e16e474d038d4">More...</a><br /></td></tr>
+<tr class="separator:a243c8902a3151917721e16e474d038d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a90598eb01c338f4bbab41ad4aab9fcc0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_vector.html#a90598eb01c338f4bbab41ad4aab9fcc0">magnitude</a></td></tr>
+<tr class="memdesc:a90598eb01c338f4bbab41ad4aab9fcc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The magnitude, or length, of this vector.  <a href="#a90598eb01c338f4bbab41ad4aab9fcc0">More...</a><br /></td></tr>
+<tr class="separator:a90598eb01c338f4bbab41ad4aab9fcc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2c055fb056bc6211f4e6ef08904d48"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_vector.html#a7e2c055fb056bc6211f4e6ef08904d48">magnitudeSquared</a></td></tr>
+<tr class="memdesc:a7e2c055fb056bc6211f4e6ef08904d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">The square of the magnitude, or length, of this vector.  <a href="#a7e2c055fb056bc6211f4e6ef08904d48">More...</a><br /></td></tr>
+<tr class="separator:a7e2c055fb056bc6211f4e6ef08904d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad213d2c174233be0dfe9c0af474f33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_leap_vector.html">LeapVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_vector.html#abad213d2c174233be0dfe9c0af474f33">normalized</a></td></tr>
+<tr class="memdesc:abad213d2c174233be0dfe9c0af474f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">A normalized copy of this vector.  <a href="#abad213d2c174233be0dfe9c0af474f33">More...</a><br /></td></tr>
+<tr class="separator:abad213d2c174233be0dfe9c0af474f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282e7d4378d4a18a805b8980295ac86c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_vector.html#a282e7d4378d4a18a805b8980295ac86c">pitch</a></td></tr>
+<tr class="memdesc:a282e7d4378d4a18a805b8980295ac86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pitch angle in radians.  <a href="#a282e7d4378d4a18a805b8980295ac86c">More...</a><br /></td></tr>
+<tr class="separator:a282e7d4378d4a18a805b8980295ac86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fd84d522945b6038221d9e38c7cc39"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_vector.html#a26fd84d522945b6038221d9e38c7cc39">roll</a></td></tr>
+<tr class="memdesc:a26fd84d522945b6038221d9e38c7cc39"><td class="mdescLeft">&#160;</td><td class="mdescRight">The roll angle in radians.  <a href="#a26fd84d522945b6038221d9e38c7cc39">More...</a><br /></td></tr>
+<tr class="separator:a26fd84d522945b6038221d9e38c7cc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3558c7dfe1e663f91de2ba74a2b89dec"><td class="memItemLeft" align="right" valign="top">NSMutableData *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_vector.html#a3558c7dfe1e663f91de2ba74a2b89dec">toFloatPointer</a></td></tr>
+<tr class="memdesc:a3558c7dfe1e663f91de2ba74a2b89dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an NSMutableData object containing the vector components as consecutive floating point values.  <a href="#a3558c7dfe1e663f91de2ba74a2b89dec">More...</a><br /></td></tr>
+<tr class="separator:a3558c7dfe1e663f91de2ba74a2b89dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4631a5f23167c03ad7f91e4317f8e138"><td class="memItemLeft" align="right" valign="top">NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_vector.html#a4631a5f23167c03ad7f91e4317f8e138">toNSArray</a></td></tr>
+<tr class="memdesc:a4631a5f23167c03ad7f91e4317f8e138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an NSArray object containing the vector components in the order: x, y, z.  <a href="#a4631a5f23167c03ad7f91e4317f8e138">More...</a><br /></td></tr>
+<tr class="separator:a4631a5f23167c03ad7f91e4317f8e138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0da36b2558901e21e7a30f6c227a45e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_vector.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></td></tr>
+<tr class="memdesc:ad0da36b2558901e21e7a30f6c227a45e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The horizontal component.  <a href="#ad0da36b2558901e21e7a30f6c227a45e">More...</a><br /></td></tr>
+<tr class="separator:ad0da36b2558901e21e7a30f6c227a45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f0d3eebc3c443f9be81bf48561a217"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_vector.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></td></tr>
+<tr class="memdesc:aa4f0d3eebc3c443f9be81bf48561a217"><td class="mdescLeft">&#160;</td><td class="mdescRight">The vertical component.  <a href="#aa4f0d3eebc3c443f9be81bf48561a217">More...</a><br /></td></tr>
+<tr class="separator:aa4f0d3eebc3c443f9be81bf48561a217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7efc219781df4a1e281cb5d348b7fbf9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_vector.html#a7efc219781df4a1e281cb5d348b7fbf9">yaw</a></td></tr>
+<tr class="memdesc:a7efc219781df4a1e281cb5d348b7fbf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The yaw angle in radians.  <a href="#a7efc219781df4a1e281cb5d348b7fbf9">More...</a><br /></td></tr>
+<tr class="separator:a7efc219781df4a1e281cb5d348b7fbf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73583b1e980b0aa03f9884812e9fd4d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_leap_vector.html#af73583b1e980b0aa03f9884812e9fd4d">z</a></td></tr>
+<tr class="memdesc:af73583b1e980b0aa03f9884812e9fd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The depth component.  <a href="#af73583b1e980b0aa03f9884812e9fd4d">More...</a><br /></td></tr>
+<tr class="separator:af73583b1e980b0aa03f9884812e9fd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> class represents a three-component mathematical vector or point such as a direction or position in three-dimensional space. </p>
+<p>The Leap software employs a right-handed Cartesian coordinate system. Values given are in units of real-world millimeters. The origin is centered at the center of the Leap device. The x- and z-axes lie in the horizontal plane, with the x-axis running parallel to the long edge of the device. The y-axis is vertical, with positive values increasing upwards (in contrast to the downward orientation of most computer graphics coordinate systems). The z-axis has positive values increasing away from the computer screen.</p>
+<div class="image">
+<img src="../docs/images/Leap_Axes.png" />
+</div>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a3e3d4b24dcea0016acb0a75c6b5e8c21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) angleTo: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td>
+          <td class="paramname"><em>vector</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The angle between this vector and the specified vector in radians. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> angleInRadians = [[<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#a727725cf5f2b94f6c621bade11d4eaf2">xAxis</a>] angleTo:[<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#a5885d2029c91830c654b165629c81c36">yAxis</a>]];</div>
+<div class="line"><span class="comment">// angleInRadians = PI/2 (90 degrees)</span></div>
+</div><!-- fragment --><p>The angle is measured in the plane formed by the two vectors. The angle returned is always the smaller of the two conjugate angles. Thus <code>[A angleTo:B] == [B angleTo:A]</code> and is always a positive value less than or equal to pi radians (180 degrees).</p>
+<p>If either vector has zero length, then this function returns zero.</p>
+<div class="image">
+<img src="../docs/images/Math_AngleTo.png" />
+</div>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>A <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The angle between this vector and the specified vector in radians. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeb6b0cc33c18aad296f1d0ae9137bcd9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) backward </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing backward along the positive z-axis: (0, 0, 1). </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *backwardVector = [<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#aeb6b0cc33c18aad296f1d0ae9137bcd9">backward</a>];</div>
+</div><!-- fragment --> <dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afd5e86a36f08d4404265590fdc02ef05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) cross: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td>
+          <td class="paramname"><em>vector</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The cross product of this vector and the specified vector. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *crossProduct = [thisVector cross:thatVector];</div>
+</div><!-- fragment --><p>The cross product is a vector orthogonal to both original vectors. It has a magnitude equal to the area of a parallelogram having the two vectors as sides. The direction of the returned vector is determined by the right-hand rule. Thus <code>[A cross:B] == [[B negate] cross:A]</code>.</p>
+<div class="image">
+<img src="../docs/images/Math_Cross.png" />
+</div>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>A <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The cross product of this vector and the specified vector. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a262fd0724d586c7624c771f286078360"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) distanceTo: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td>
+          <td class="paramname"><em>vector</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The distance between the point represented by this <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> object and a point represented by the specified <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> object. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *aPoint = [[<a class="code" href="interface_leap_vector.html">LeapVector</a> alloc] initWithX:10 <a class="code" href="interface_leap_vector.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a>:0 <a class="code" href="interface_leap_vector.html#af73583b1e980b0aa03f9884812e9fd4d">z</a>:0];</div>
+<div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *origin = [<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#a243c8902a3151917721e16e474d038d4">zero</a>];</div>
+<div class="line"><span class="keywordtype">float</span> distance = [origin distanceTo:aPoint]; <span class="comment">// distance = 10</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>A <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The distance from this point to the specified point. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a54092845eac92205f13f82d176a1b049"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) divide: </td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>scalar</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Divide this vector by a number. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *quotient = [thisVector divide:2.5];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scalar</td><td>The scalar divisor; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The dividend of this <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> divided by a scalar. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0db862e5be2e1bd573f37ee9ee143a5e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) dot: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td>
+          <td class="paramname"><em>vector</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The dot product of this vector with another vector. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> dotProduct = [thisVector dot:thatVector];</div>
+</div><!-- fragment --><p>The dot product is the magnitude of the projection of this vector onto the specified vector.</p>
+<div class="image">
+<img src="../docs/images/Math_Dot.png" />
+</div>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>A <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The dot product of this vector and the specified vector. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acb557118cc263b8c533a3a46a99f3086"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) down </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing down along the negative y-axis: (0, -1, 0). </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *downVector = [<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#acb557118cc263b8c533a3a46a99f3086">down</a>];</div>
+</div><!-- fragment --> <dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa4136eb552793660a595cc8c13ccfba4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) equals: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td>
+          <td class="paramname"><em>vector</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> equality. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> vectorsAreEqual = [thisVector equals:thatVector];</div>
+</div><!-- fragment --><p>Vectors are equal if each corresponding component is equal. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>The <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> to compare. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>YES, if the LeapVectors are equal. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac9cf02f46238c9efea8a2f02797f26c5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) forward </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing forward along the negative z-axis: (0, 0, -1). </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *forwardVector = [<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#ac9cf02f46238c9efea8a2f02797f26c5">forward</a>];</div>
+</div><!-- fragment --> <dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5807cf4714577e4f79eeab749896738d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithVector: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td>
+          <td class="paramname"><em>vector</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copies the specified <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a>. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *copiedVector = [[<a class="code" href="interface_leap_vector.html">LeapVector</a> alloc] initWithVector:otherVector];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>The <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa98455ff3346a110086631de1055e397"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithX: </td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>x</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">y:</td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>y</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">z:</td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> with the specified component values. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *newVector = [[<a class="code" href="interface_leap_vector.html">LeapVector</a> alloc] initWithX:0.5 <a class="code" href="interface_leap_vector.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a>:200.3 <a class="code" href="interface_leap_vector.html#af73583b1e980b0aa03f9884812e9fd4d">z</a>:67];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The horizontal component. </td></tr>
+    <tr><td class="paramname">y</td><td>The vertical component. </td></tr>
+    <tr><td class="paramname">z</td><td>The depth component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a37f8f43bf98b73a77c471fd10113ab6c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) left </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing left along the negative x-axis: (-1, 0, 0). </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *leftVector = [<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#a37f8f43bf98b73a77c471fd10113ab6c">left</a>];</div>
+</div><!-- fragment --> <dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a981906b92caf838ee6df23e27cabb7a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) minus: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td>
+          <td class="paramname"><em>vector</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subtract a vector from this vector. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *difference = [thisVector minus:thatVector];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>the <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> subtrahend. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the difference between the two LeapVectors. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4e61d0f3fd4eece055f4cfbe2bb53ca3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) negate </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Negate this vector. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *negation = thisVector.<a class="code" href="interface_leap_vector.html#a4e61d0f3fd4eece055f4cfbe2bb53ca3">negate</a>;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The negation of this <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a>. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1e8fdd0826ec308a3d63ce27808f604b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) plus: </td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="interface_leap_vector.html">LeapVector</a> *)&#160;</td>
+          <td class="paramname"><em>vector</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds two vectors. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *sum = [thisVector plus:thatVector];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>The <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> addend. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The sum of the two LeapVectors. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a84fa047103429d222ce04f954dc97a62"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) right </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing right along the positive x-axis: (1, 0, 0). </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *rightVector = [<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#a84fa047103429d222ce04f954dc97a62">right</a>];</div>
+</div><!-- fragment --> <dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a995dedd1960cb7c593eeb1fced90010c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) times: </td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>scalar</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiply this vector by a number. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *product = [thisVector times:5.0];</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scalar</td><td>The scalar factor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The product of this <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> and a scalar. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9830589eebbc19011cde15adfc9bfc83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) up </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The unit vector pointing up along the positive y-axis: (0, 1, 0). </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *upVector = [<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#a9830589eebbc19011cde15adfc9bfc83">up</a>];</div>
+</div><!-- fragment --> <dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a727725cf5f2b94f6c621bade11d4eaf2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) xAxis </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The x-axis unit vector: (1, 0, 0). </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *xAxisVector = [<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#a727725cf5f2b94f6c621bade11d4eaf2">xAxis</a>];</div>
+</div><!-- fragment --> <dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5885d2029c91830c654b165629c81c36"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) yAxis </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The y-axis unit vector: (0, 1, 0). </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *yAxisVector = [<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#a5885d2029c91830c654b165629c81c36">yAxis</a>];</div>
+</div><!-- fragment --> <dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abe7441dedfa7323e15a4d2b6a100ccc4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) zAxis </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The z-axis unit vector: (0, 0, 1). </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *zAxisVector = [<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#abe7441dedfa7323e15a4d2b6a100ccc4">zAxis</a>];</div>
+</div><!-- fragment --> <dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a243c8902a3151917721e16e474d038d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_leap_vector.html">LeapVector</a> *) zero </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The zero vector: (0, 0, 0) </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *zeroVector = [<a class="code" href="interface_leap_vector.html">LeapVector</a> <a class="code" href="interface_leap_vector.html#a243c8902a3151917721e16e474d038d4">zero</a>];</div>
+</div><!-- fragment --> <dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a90598eb01c338f4bbab41ad4aab9fcc0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) magnitude</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The magnitude, or length, of this vector. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> length = thisVector.magnitude;</div>
+</div><!-- fragment --><p>The magnitude is the L2 norm, or Euclidean distance between the origin and the point represented by the (x, y, z) components of this <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> object.</p>
+<dl class="section return"><dt>Returns</dt><dd>The length of this vector. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7e2c055fb056bc6211f4e6ef08904d48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) magnitudeSquared</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The square of the magnitude, or length, of this vector. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> lengthSquared = thisVector.magnitudeSquared;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>The square of the length of this vector. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abad213d2c174233be0dfe9c0af474f33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_leap_vector.html">LeapVector</a>*) normalized</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A normalized copy of this vector. </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_leap_vector.html">LeapVector</a> *normalizedVector = otherVector.<a class="code" href="interface_leap_vector.html#abad213d2c174233be0dfe9c0af474f33">normalized</a>;</div>
+</div><!-- fragment --><p>A normalized vector has the same direction as the original vector, but with a length of one.</p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="interface_leap_vector.html" title="The LeapVector class represents a three-component mathematical vector or point such as a direction or...">LeapVector</a> object with a length of one, pointing in the same direction as this Vector object. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a282e7d4378d4a18a805b8980295ac86c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) pitch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The pitch angle in radians. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> pitchInRadians = thisVector.pitch;</div>
+</div><!-- fragment --><p>Pitch is the angle between the negative z-axis and the projection of the vector onto the y-z plane. In other words, pitch represents rotation around the x-axis. If the vector points upward, the returned angle is between 0 and pi radians (180 degrees); if it points downward, the angle is between 0 and -pi radians.</p>
+<div class="image">
+<img src="../docs/images/Math_Pitch_Angle.png" />
+</div>
+<dl class="section return"><dt>Returns</dt><dd>The angle of this vector above or below the horizon (x-z plane). </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a26fd84d522945b6038221d9e38c7cc39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) roll</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The roll angle in radians. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> rollInRadians = thatVector.roll;</div>
+</div><!-- fragment --><p>Roll is the angle between the y-axis and the projection of the vector onto the x-y plane. In other words, roll represents rotation around the z-axis. If the vector points to the left of the y-axis, then the returned angle is between 0 and pi radians (180 degrees); if it points to the right, the angle is between 0 and -pi radians.</p>
+<div class="image">
+<img src="../docs/images/Math_Roll_Angle.png" />
+</div>
+<p>Use this function to get roll angle of the plane to which this vector is a normal. For example, if this vector represents the normal to the palm, then this function returns the tilt or roll of the palm plane compared to the horizontal (x-z) plane.</p>
+<dl class="section return"><dt>Returns</dt><dd>The angle of this vector to the right or left of the y-axis. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3558c7dfe1e663f91de2ba74a2b89dec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSMutableData*) toFloatPointer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an NSMutableData object containing the vector components as consecutive floating point values. </p>
+<div class="fragment"><div class="line">NSData *vectorData = thisVector.toFloatPointer;</div>
+<div class="line"><span class="keywordtype">float</span> <a class="code" href="interface_leap_vector.html#ad0da36b2558901e21e7a30f6c227a45e">x</a>, <a class="code" href="interface_leap_vector.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a>, <a class="code" href="interface_leap_vector.html#af73583b1e980b0aa03f9884812e9fd4d">z</a>;</div>
+<div class="line">[vectorData getBytes:&amp;x length:<span class="keyword">sizeof</span>(float)];</div>
+<div class="line">[vectorData getBytes:&amp;y length:<span class="keyword">sizeof</span>(float)];</div>
+<div class="line">[vectorData getBytes:&amp;z length:<span class="keyword">sizeof</span>(float)];</div>
+<div class="line"><span class="comment">//Or access as an array of float:</span></div>
+<div class="line"><span class="keywordtype">float</span> array[3];</div>
+<div class="line">[vectorData getBytes:&amp;array length:<span class="keyword">sizeof</span>(float) * 3];</div>
+<div class="line">x = array[0];</div>
+<div class="line">y = array[1];</div>
+<div class="line">z = array[2];</div>
+</div><!-- fragment --> <dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4631a5f23167c03ad7f91e4317f8e138"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray*) toNSArray</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an NSArray object containing the vector components in the order: x, y, z. </p>
+<div class="fragment"><div class="line">NSArray *vectorArray = thisVector.toNSArray;</div>
+</div><!-- fragment --><dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad0da36b2558901e21e7a30f6c227a45e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The horizontal component. </p>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa4f0d3eebc3c443f9be81bf48561a217"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The vertical component. </p>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7efc219781df4a1e281cb5d348b7fbf9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) yaw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The yaw angle in radians. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> yawInRadians = thisVector.yaw;</div>
+</div><!-- fragment --><p>Yaw is the angle between the negative z-axis and the projection of the vector onto the x-z plane. In other words, yaw represents rotation around the y-axis. If the vector points to the right of the negative z-axis, then the returned angle is between 0 and pi radians (180 degrees); if it points to the left, the angle is between 0 and -pi radians.</p>
+<div class="image">
+<img src="../docs/images/Math_Yaw_Angle.png" />
+</div>
+<dl class="section return"><dt>Returns</dt><dd>The angle of this vector to the right or left of the negative z-axis. </dd></dl>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af73583b1e980b0aa03f9884812e9fd4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) z</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The depth component. </p>
+<dl class="section user"><dt>Since 1.0</dt><dd></dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Objective-C Docs (v3.2)</a></li>
+          </ul><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practices/Leap_Practices.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides.html">Application Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Leap_Guides2.html">Using the Tracking API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Leap_Classes.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_arm.html">LeapArm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_bone.html">LeapBone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_circle_gesture.html">LeapCircleGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_config.html">LeapConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_controller.html">LeapController</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol_leap_delegate-p.html">LeapDelegate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_device.html">LeapDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_failed_device.html">LeapFailedDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_finger.html">LeapFinger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_frame.html">LeapFrame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_gesture.html">LeapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_hand.html">LeapHand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_image.html">LeapImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_interaction_box.html">LeapInteractionBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_key_tap_gesture.html">LeapKeyTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol_leap_listener-p.html">LeapListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_matrix.html">LeapMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_leap_objective_c_8h.html">LeapObjectiveC.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_pointable.html">LeapPointable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_screen_tap_gesture.html">LeapScreenTapGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_swipe_gesture.html">LeapSwipeGesture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_leap_tool.html">LeapTool</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">LeapVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category_n_s_array_07_leap_pointable_or_hand_list_08.html">NSArray(LeapPointableOrHandList)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+<div class="ribbon">
+    <p>Objective-C</p>
+</div>
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

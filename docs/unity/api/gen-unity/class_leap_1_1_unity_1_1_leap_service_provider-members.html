@@ -1,0 +1,431 @@
+
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>All LeapServiceProvider members &mdash; Leap Motion Unity SDK v3.2 Beta documentation</title>
+    
+    <link rel="stylesheet" href="../../../cpp/_static/bootstrap-3.0.0/css/documentation-bundle.1485809847.css" type="text/css" />
+    
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.2 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+      <script type="text/javascript" src="../../../cpp/_static/bootstrap-3.0.0/js/documentation-bundle.1485809847.js"></script>
+    <link rel="top" title="Leap Motion Unity SDK v3.2 Beta documentation" href="../../index.html" />
+<script type="text/javascript" src="/assets/standalone-header.js?r9"></script>
+<link rel="stylesheet" href="/assets/standalone-header.css?r9" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31536531-1']);
+  _gaq.push(['_setDomainName', 'leapmotion.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+<script>
+
+    function getQueryValue(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+        var relPath = "../../";
+
+    var requestedAPI = getQueryValue("proglang");
+    if(requestedAPI == "current") requestedAPI = localStorage["currentAPI"];
+    var pageAPI = 'unity';
+    var hasAPI = {};
+    hasAPI.unity = true;
+
+    if(requestedAPI && (requestedAPI != pageAPI))
+    {
+        if(pageAPI != 'none'){
+            var redirectedLocation = relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_leap_service_provider-members.html';
+            if( requestedAPI == 'cpp' && hasAPI.cpp){
+                redirectedLocation = relPath + "cpp/api/gen-unity/class_leap_1_1_unity_1_1_leap_service_provider-members.html";
+            }
+            else if( requestedAPI == 'csharp' && hasAPI.csharp){
+                redirectedLocation = relPath + "csharp/api/gen-unity/class_leap_1_1_unity_1_1_leap_service_provider-members.html";
+            }
+            else if( requestedAPI == 'unity' && hasAPI.unity){
+                redirectedLocation = relPath + "unity/api/gen-unity/class_leap_1_1_unity_1_1_leap_service_provider-members.html";
+            }
+            else if( requestedAPI == 'objc' && hasAPI.objc){
+                redirectedLocation = relPath + "objc/api/gen-unity/class_leap_1_1_unity_1_1_leap_service_provider-members.html";
+            }
+            else if( requestedAPI == 'java' && hasAPI.java) {
+                redirectedLocation = relPath + "java/api/gen-unity/class_leap_1_1_unity_1_1_leap_service_provider-members.html";
+            }
+            else if( requestedAPI == 'javascript' && hasAPI.javascript){
+                redirectedLocation = relPath + "javascript/api/gen-unity/class_leap_1_1_unity_1_1_leap_service_provider-members.html";
+            }
+            else if( requestedAPI == 'python' && hasAPI.python){
+                redirectedLocation = relPath + "python/api/gen-unity/class_leap_1_1_unity_1_1_leap_service_provider-members.html";
+            }
+            else if( requestedAPI == 'unreal' && hasAPI.unreal) {
+                redirectedLocation = relPath + "unreal/api/gen-unity/class_leap_1_1_unity_1_1_leap_service_provider-members.html";
+            } else {
+
+                    if( requestedAPI == 'cpp'){
+                        redirectedLocation = relPath + "cpp/index.html?proglang=cpp";
+                    }
+                    else if( requestedAPI == 'csharp'){
+                        redirectedLocation = relPath + "csharp/index.html?proglang=csharp";
+                    }
+                    else if( requestedAPI == 'unity'){
+                        redirectedLocation = relPath + "unity/index.html?proglang=unity";
+                    }
+                    else if( requestedAPI == 'objc'){
+                        redirectedLocation = relPath + "objc/index.html?proglang=objc";
+                    }
+                    else if( requestedAPI == 'java') {
+                        redirectedLocation = relPath + "java/index.html?proglang=java";
+                    }
+                    else if( requestedAPI == 'javascript'){
+                        redirectedLocation = relPath + "javascript/index.html?proglang=javascript";
+                    }
+                    else if( requestedAPI == 'python'){
+                        redirectedLocation = relPath + "python/index.html?proglang=python";
+                    }
+                    else if( requestedAPI == 'unreal') {
+                        redirectedLocation = relPath + "unreal/index.html?proglang=unreal";
+                    } else {
+                        redirectedLocation = relPath + "index.html";
+                    }
+            }
+
+            //Guard against redirecting to the same page (infinitely)
+            if(relPath + 'unity/api/gen-unity/class_leap_1_1_unity_1_1_leap_service_provider-members.html' != redirectedLocation) window.location.replace(redirectedLocation);
+        }
+    }
+
+</script>
+
+<script>
+window.addEventListener('keyup', handleKeyInput);
+function handleKeyInput(e)
+{
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    if( character == "J" & e.altKey){    }
+    else if( character == "K" & e.altKey){
+    }
+
+}
+</script>
+
+
+  </head>
+  <body role="document">
+
+<div class="developer-portal-styles">
+  <header class="navbar navbar-static-top developer-navbar header beta-header">
+    <nav class="container pr">
+      <a class="logo-link pull-left" href="/">
+        <img alt="Leap Motion Developers" class="media-object pull-left white-background" src="../../_static/logo.png" />
+      </a>
+      <span class="inline-block hidden-phone developer-logo-text">
+        <div class="text">
+          <a href="/">
+            <span class="more-than-1199">Developer Portal</span>
+
+          </a>
+        </div>
+      </span>
+
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Everything within here will be hidden at 940px or less, accessible via a button. -->
+      <div class="nav-collapse">
+        <ul class="nav header-navigation developer-links">
+          <li class="external-link"><a href="https://developer.leapmotion.com/features">What's new</a> </li>
+          <li class="external-link"><a href="https://developer.leapmotion.com/downloads/skeletal-beta" class="">Getting Started</a></li>
+          <li><a class="active" href="#" class="">Documentation</a></li>
+          <li class="external-link"> <a href="https://developer.leapmotion.com/gallery" class="">Examples</a> </li>
+          <li class="external-link"> <a href="https://www.leapmotion.com/blog/category/labs/" class="" target="_blank">Blog <i class='fa fa-external-link'></i></a> </li>
+          <li class="external-link"> <a href="https://community.leapmotion.com/category/beta" class="" target="_blank">Community <i class='fa fa-external-link'></i></a> </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+</div>
+<section class="main-wrap">
+  <div data-swiftype-index="true">
+    <div class="second_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              
+
+<ul>
+  <li>
+      <a href="../../javascript/index.html?proglang=javascript" onclick="localStorage['currentAPI'] = 'javascript'">JavaScript</a>
+    
+  </li>
+  <li>
+      Unity
+    
+  </li>
+  <li>
+      <a href="../../csharp/index.html?proglang=csharp" onclick="localStorage['currentAPI'] = 'csharp'">C#</a>
+    
+  </li>
+  <li>
+      <a href="../../cpp/index.html?proglang=cpp" onclick="localStorage['currentAPI'] = 'cpp'">C++</a>
+    
+  </li>
+  <li>
+      <a href="../../java/index.html?proglang=java" onclick="localStorage['currentAPI'] = 'java'">Java</a>
+    
+  </li>
+  <li>
+      <a href="../../python/index.html?proglang=python" onclick="localStorage['currentAPI'] = 'python'">Python</a>
+    
+  </li>
+  <li>
+      <a href="../../objc/index.html?proglang=objc" onclick="localStorage['currentAPI'] = 'objc'">Objective-C</a>
+    
+  </li>
+  <li>
+      <a href="../../unreal/index.html?proglang=unreal" onclick="localStorage['currentAPI'] = 'unreal'">Unreal</a>
+    
+  </li>
+</ul>
+            
+          </div>
+          <div class="col-md-4 search">
+            
+              <script>
+function storeThisPage(){
+    sessionStorage["pageBeforeSearch"] = window.location;
+    return true;
+}
+function doneWithSearch(){
+    var storedPage = sessionStorage["pageBeforeSearch"];
+    if(storedPage){
+        window.location = storedPage;
+    } else {
+        window.location = "index.html"; //fallback
+    }
+    return false;
+}
+</script>
+<div  style="margin-top:-4px">
+<ul style="display:inline; white-space:nowrap"><li>
+<form class="navbar-form" action="../../search.html" method="get" onsubmit="storeThisPage()">
+ <div class="form-group">
+  <input type="search" results="5" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form></li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        //Remove dev portal header and footer when viewing from file system
+       if(window.location.protocol == 'file:'){
+            var navNode = document.querySelector(".developer-links");
+            navNode.parentNode.removeChild(navNode);
+        }
+
+    </script>
+
+
+<div id="wrap" data-spy="scroll" data-target="#sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 pull-right">
+        <!-- 
+ 
+<span id="breadcrumbs">
+  <a href="../../index.html">Home</a>&raquo;
+  All LeapServiceProvider members
+</span> -->
+        
+  <div class="section" id="all-leapserviceprovider-members">
+<h1>All LeapServiceProvider members<a class="headerlink" href="#all-leapserviceprovider-members" title="Permalink to this headline">¶</a></h1>
+<!-- HTML header for doxygen 1.8.13-->
+<link href="../../_static/dox_stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This header removes the body and head elements so html content can be embedded. -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.2 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_leap_1_1_unity_1_1_leap_service_provider.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Leap.Unity.LeapServiceProvider Member List</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is the complete list of members for <a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#acc5d58cd24f2c8e6fdcfe3055b11c236">_fixedOffset</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a58ab122b5e6430d5fb98fccf7e600e54">_frameOptimization</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a437599106555429397100858239774a0">_isHeadMounted</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#af660f0d25c94b815d57bbcf16e0f996a">_overrideDeviceType</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a3675ac36523b136104e21dc191ada868">_overrideDeviceTypeWith</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a03a08f2d279d9884cb6d754ce4412ac2">_smoothedTrackingLatency</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#ac9107794f3884f2ac35bf48f99eddfb9">_temporalWarping</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a47117835925a8d438fa5b27bd275b82f">_transformArray</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a59d1141c5d960ef97315934118fb4afd">_transformedFixedFrame</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#ac15ba4ed3804cbef57d8415dcae4fe42">_transformedUpdateFrame</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a98ea79a3b9e6c2d51ff87ae797ea96c1">_untransformedFixedFrame</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a755ed665a53e5ea05559aad7704179d4">_untransformedUpdateFrame</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#ab8446e82d089fb880d3440899406fcd4">_updateHandInPrecull</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a9d65f610510fdc7bb299d5f9b6bbdd29">_useInterpolation</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a0dbd5c42d7a531d4dab5f2db44035966">Awake</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a7ce59365ab427558123780fa15ca50fd">BounceAmount</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a4e061e0a9f093baec0c17a74a3a978f7">CalculateInterpolationTime</a>(bool endOfFrame=false)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#ac79f148cc55c9680e605c48e744971c7">createController</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a702f0ea7c9a82cdc65738b8545235d60">CurrentFixedFrame</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#ad651609e570c614c6d99de319ad990cd">CurrentFrame</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#aaae9cfba0cd9335579e18dab63c508b0">destroyController</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html#af7fdbc4bae6cb0508424b8c3bdbb4ce1">DispatchFixedFrameEvent</a>(Frame frame)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html">Leap.Unity.LeapProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html#a2b90958e448e8f556d2b9c9af4a9547c">DispatchUpdateFrameEvent</a>(Frame frame)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html">Leap.Unity.LeapProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#ab8edf176edaa9cddcc300f170f61c55e">ExtrapolationAmount</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a98629de6c901a83829c2210e45b4a41a">FixedUpdate</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#aded29faa9adf0b09e63a1659e5b0f82d">FrameOptimizationMode</a> enum name</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a57a1ebeabfd0515141b4af26a1a866cc">GetDeviceInfo</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#aa146d4e24722ff4b68adeb23e6a1c24e">GetLeapController</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#afe6db913061e39dbfc75e095b6b43efb">HAND_ARRAY</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a9615737da503b58ea83402cd157d850c">imageTimeStamp</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#aac308594c2fa554385a8022ce1925f37">initializeFlags</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#aeee4a41aefc20b7268f284340b6f793a">IsConnected</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#ad7ea6b748391d0e64ac9c8fee22925fe">LateUpdateHandTransforms</a>(Camera camera)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#aa264bea428e0a6119481cc3ddc5f6945">leap_controller_</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#ae4667f078aca44823cde1c26b0678b50">manualUpdateHasBeenCalledSinceUpdate</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#ae42e2c2510fece56855279ff52c202f1">NS_TO_S</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a13467308ac2863f83e081b2e4ca10cb7">OnApplicationPause</a>(bool isPaused)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a7843e839d89d0dccdd0ac7e5bcc5f5ce">OnApplicationQuit</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#ae5dc9fe551328a3d46cf7700777124cb">OnDestroy</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a82bc4fa31f23fc3b6046d29fcc38478b">OnDisable</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a38b74295a368f0bb9a6ef2a175718d20">OnEnable</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html#a125e19c25c0006a12f53e3069627b87f">OnFixedFrame</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html">Leap.Unity.LeapProvider</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#aa5658f3913410c8e03b5cc954f8754e6">onHandControllerConnect</a>(object sender, LeapEventArgs args)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html#a4f7285be55b0ff2d23cbb0b4e3fb856a">OnUpdateFrame</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_provider.html">Leap.Unity.LeapProvider</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a6ed561d1faffdda8ee0828370a009c89">resetTransforms</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a2932ad5a045a08e8855405f9fcb50e44">ReTransformFrames</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#ae7d7f62614cc6f5be83e4e5ac10c118e">S_TO_NS</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#aee7af248182bf0df5767cf27f55ec1ca">Start</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a1d33d88b1b770e3391e9c61c8c0c64f0">transformFrame</a>(Frame source, Frame dest, bool resampleTemporalWarping=true)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a5b782558e0d8744fb57027984797c92d">transformHands</a>(ref LeapTransform LeftHand, ref LeapTransform RightHand)</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a8823a3e4e7c2c5f1d71dbe9a9fb937f4">Update</a>()</td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#af86434a19767cdc28f690ffb57d06163">UpdateHandInPrecull</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#a288127128d28ad8659d55f5dc7d4e913">UseInterpolation</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#aadb7216c862e2b226cf17f752a0c2012">warpedPosition</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html#aec71c7bb6b1539d558921bcb1e0753fb">warpedRotation</a></td><td class="entry"><a class="el" href="class_leap_1_1_unity_1_1_leap_service_provider.html">Leap.Unity.LeapServiceProvider</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+</table></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- This footer removes the body and head elements so html content can be embedded. -->
+<!-- start footer part -->
+</div>
+
+
+           <!-- get_disqus_sso -->
+      </div>
+      <div id="sidebar" class="col-md-3">
+        <div class="well-sidebar" data-offset-top="188">
+          <ul>
+            <li><a href="../../index.html" title="Home">Unity Docs (v3.2)</a></li>
+          </ul><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Overview.html">Leap Motion Unity Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_VR.html">Hand Tracking in Virtual Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/Project_Setup.html#setting-up-a-unity3d-project">Setting up a Unity3D project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Custom_Rig.html">Building a Custom VR Rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_DetectionUtilities.html">Detection Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Attachments.html">Attachments Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Hand_Assets.html">Hand Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_Interaction_Engine.html">Interaction Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unity/Unity_UIInput.html">UI Input Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Leap_Classes.html">Unity Scripting Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplements/Leap_Supplements.html">Appendices</a></li>
+</ul>
+
+
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<!--
+
+
+<footer>
+  <div id="footer" class="container">
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright &copy; 2012 - 2017, Leap Motion, Inc.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
